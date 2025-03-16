@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2017/04/cost_function.jpg
+image: /content/2017/04/cost_function.jpg
 categories:
     - 'Machine Learning'
 tags:

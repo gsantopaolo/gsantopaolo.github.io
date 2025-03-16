@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2019/04/AI_for_every_developer.jpg
+image: /content/2019/04/AI_for_every_developer.jpg
 categories:
     - AI
 ---

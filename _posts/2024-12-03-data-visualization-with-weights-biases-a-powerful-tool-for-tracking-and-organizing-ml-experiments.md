@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/wandb_epoch.jpg
+image: /content/2025/03/wandb_epoch.jpg
 categories:
     - 'Machine Learning'
 tags:
@@ -27,7 +27,7 @@ tags:
 
 Weights &amp; Biases (W&amp;B) is not just a logging tool—it’s a robust platform that makes your machine learning experiments organized, reproducible, and visually compelling. In this article, we dive deep into how W&amp;B enhances data visualization while briefly exploring its other capabilities, including artifact management, hyperparameter sweeps, and collaborative experiment tracking.
 
-<figure aria-describedby="caption-attachment-261" class="wp-caption aligncenter" id="attachment_261" style="width: 607px">![](https://genmind.ch/wp-content/uploads/2024/12/wandb_runs_1-2-300x158.jpg)<figcaption class="wp-caption-text" id="caption-attachment-261">W&amp;B dashboard showing multiple runs</figcaption></figure>## Why Experiment Tracking Matters
+<figure aria-describedby="caption-attachment-261" class="wp-caption aligncenter" id="attachment_261" style="width: 607px">![](https://genmind.ch/content/2024/12/wandb_runs_1-2-300x158.jpg)<figcaption class="wp-caption-text" id="caption-attachment-261">W&amp;B dashboard showing multiple runs</figcaption></figure>## Why Experiment Tracking Matters
 
 When I first sat down at my computer—logging into Kaggle with no clear way to track my experiments—I was overwhelmed by the chaos. With W&amp;B, every run is stored under a project, making it easy to recall what you did and compare different configurations side by side.
 
@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
 This code not only trains a model on MNIST but also logs metrics and saves checkpoints, which then appear in the W&amp;B UI as interactive plots. You can easily compare runs, check for overfitting, and even sort runs based on performance metrics.
 
-<figure aria-describedby="caption-attachment-263" class="wp-caption aligncenter" id="attachment_263" style="width: 549px">![](https://genmind.ch/wp-content/uploads/2024/12/wandb_epoch_1-300x181.jpg)<figcaption class="wp-caption-text" id="caption-attachment-263">training and validation loss/accuracy</figcaption></figure>## Beyond Metrics: Artifacts, Sweeps, and More
+<figure aria-describedby="caption-attachment-263" class="wp-caption aligncenter" id="attachment_263" style="width: 549px">![](https://genmind.ch/content/2024/12/wandb_epoch_1-300x181.jpg)<figcaption class="wp-caption-text" id="caption-attachment-263">training and validation loss/accuracy</figcaption></figure>## Beyond Metrics: Artifacts, Sweeps, and More
 
 The transcript dives deeper into other W&amp;B features that extend beyond basic logging:
 

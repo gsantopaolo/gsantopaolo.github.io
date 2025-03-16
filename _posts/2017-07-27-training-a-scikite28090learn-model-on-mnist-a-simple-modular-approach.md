@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/minist_scikit.png
+image: /content/2025/03/minist_scikit.png
 categories:
     - 'Machine Learning'
 tags:

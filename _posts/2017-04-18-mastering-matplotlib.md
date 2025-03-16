@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2017/04/matplotlib_sample.png
+image: /content/2017/04/matplotlib_sample.png
 categories:
     - 'data science'
 tags:
@@ -55,7 +55,7 @@ Let’s dive into these features with a practical example.
 
 That is the image below
 
-![](https://genmind.ch/wp-content/uploads/2017/04/matplotlib_sample-300x150.png)
+![](https://genmind.ch/content/2017/04/matplotlib_sample-300x150.png)
 
 ## Conclusion
 

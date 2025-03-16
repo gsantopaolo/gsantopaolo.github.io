@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/golden-starry.jpg
+image: /content/2025/03/golden-starry.jpg
 categories:
     - 'Deep Learning'
     - 'Machine Learning'
@@ -51,15 +51,15 @@ With this small change, I was able to run the style transfer on my Mac’s GPU, 
 
 For my first test, I applied the Starry Night style to a photo of the Golden Gate Bridge. The transformation was nothing short of extraordinary. (See the screenshot below, captured with asitop, showing the process running on GPU!)
 
-![](https://genmind.ch/wp-content/uploads/2025/03/goldengate-300x169.jpg)
+![](https://genmind.ch/content/2025/03/goldengate-300x169.jpg)
 
 The image of the Golden Gate Bridge I used to apply the Starry Night style
 
-![](https://genmind.ch/wp-content/uploads/2025/03/starry-night-300x225.jpg)
+![](https://genmind.ch/content/2025/03/starry-night-300x225.jpg)
 
 And the result? Check by yourself!
 
-![](https://genmind.ch/wp-content/uploads/2025/03/golden-starry-300x169.jpg)
+![](https://genmind.ch/content/2025/03/golden-starry-300x169.jpg)
 
 ### Big Thanks
 

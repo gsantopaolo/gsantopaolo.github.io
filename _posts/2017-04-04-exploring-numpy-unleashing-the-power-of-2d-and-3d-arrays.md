@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/numpy.png
+image: /content/2025/03/numpy.png
 categories:
     - 'data science'
     - 'Machine Learning'

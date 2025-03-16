@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/visualizingmnist.jpg
+image: /content/2025/03/visualizingmnist.jpg
 categories:
     - 'Deep Learning'
 tags:

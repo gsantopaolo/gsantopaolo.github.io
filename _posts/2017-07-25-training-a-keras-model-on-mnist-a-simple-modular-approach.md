@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/mnist_sample_digits.png
+image: /content/2025/03/mnist_sample_digits.png
 categories:
     - keras
     - 'Machine Learning'

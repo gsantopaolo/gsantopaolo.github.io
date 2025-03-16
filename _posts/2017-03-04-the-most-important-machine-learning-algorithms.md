@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/02/Supervised_and_unsupervised_learning.png
+image: /content/2025/02/Supervised_and_unsupervised_learning.png
 categories:
     - AI
     - 'Machine Learning'

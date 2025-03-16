@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/01/DALL·E-2025-02-20-02.12.41-A-futuristic-digital-illustration-of-a-neural-network-model-being-fine-tuned-highlighting-key-hyperparameters.-The-model-is-depicted-as-an-advanced-A.webp
+image: /content/2025/01/DALL·E-2025-02-20-02.12.41-A-futuristic-digital-illustration-of-a-neural-network-model-being-fine-tuned-highlighting-key-hyperparameters.-The-model-is-depicted-as-an-advanced-A.webp
 categories:
     - 'Fine Tuning'
     - LLM
@@ -52,11 +52,11 @@ tags:
 
 <span style="font-weight: 400;">The model starts at point A (its initial set of weights). It processes the first row of training data through a forward pass, predicting the next tokens. The predicted tokens are then compared with the actual tokens, and the loss is calculated. This loss is backpropagated through the network, updating the model’s weights and moving them from point A to point B.</span>
 
-<figure aria-describedby="caption-attachment-140" class="wp-caption aligncenter" id="attachment_140" style="width: 298px">![](https://genmind.ch/wp-content/uploads/2025/01/batch_size_1_1-298x300.jpg)<figcaption class="wp-caption-text" id="caption-attachment-140">batch size = 1, first data row</figcaption></figure>### <span style="font-weight: 400;">Second Training Sample:</span>
+<figure aria-describedby="caption-attachment-140" class="wp-caption aligncenter" id="attachment_140" style="width: 298px">![](https://genmind.ch/content/2025/01/batch_size_1_1-298x300.jpg)<figcaption class="wp-caption-text" id="caption-attachment-140">batch size = 1, first data row</figcaption></figure>### <span style="font-weight: 400;">Second Training Sample:</span>
 
 <span style="font-weight: 400;">The model now begins at point B (the updated weights from the first sample). It processes the second row of training data, computes the loss based on its predictions versus the actual tokens, and backpropagates this loss. The weights are updated again, moving the model from point B to point C.</span>
 
-<figure aria-describedby="caption-attachment-139" class="wp-caption aligncenter" id="attachment_139" style="width: 300px">![](https://genmind.ch/wp-content/uploads/2025/01/batch_size_1_2-300x231.jpg)<figcaption class="wp-caption-text" id="caption-attachment-139">batch size = 1, second data row</figcaption></figure><span style="font-weight: 400;">In essence, with a batch size of 1, each training sample independently influences the model’s weight update, resulting in a sequential trajectory across the loss surface.</span>
+<figure aria-describedby="caption-attachment-139" class="wp-caption aligncenter" id="attachment_139" style="width: 300px">![](https://genmind.ch/content/2025/01/batch_size_1_2-300x231.jpg)<figcaption class="wp-caption-text" id="caption-attachment-139">batch size = 1, second data row</figcaption></figure><span style="font-weight: 400;">In essence, with a batch size of 1, each training sample independently influences the model’s weight update, resulting in a sequential trajectory across the loss surface.</span>
 
 ## **Case 2: Batch Size = 2**
 
@@ -64,7 +64,7 @@ tags:
 
 <span style="font-weight: 400;">This combined loss represents the net effect of both samples together. Instead of updating the weights first from A to B (based on the first row) and then from B to C (based on the second row) as in the sequential approach, the model takes one update step based on the aggregated loss (P1+P2). This single step moves the model’s weights from point A directly to a new point (let’s call it B1) on the loss surface. Note that point B1 is not equivalent to the sequential update you’d get by processing the samples individually; rather, it reflects the average direction suggested by both samples.</span>
 
-<figure aria-describedby="caption-attachment-138" class="wp-caption aligncenter" id="attachment_138" style="width: 300px">![](https://genmind.ch/wp-content/uploads/2025/01/batch_size_2-300x236.jpg)<figcaption class="wp-caption-text" id="caption-attachment-138">batch size = 2</figcaption></figure><span style="font-weight: 400;">To reiterate, when you use a batch size of one, the model’s weights are updated individually for each row of training data. In this approach, the model explores the loss surface one sample at a time—each update is highly specific to the information contained in that single row.</span>
+<figure aria-describedby="caption-attachment-138" class="wp-caption aligncenter" id="attachment_138" style="width: 300px">![](https://genmind.ch/content/2025/01/batch_size_2-300x236.jpg)<figcaption class="wp-caption-text" id="caption-attachment-138">batch size = 2</figcaption></figure><span style="font-weight: 400;">To reiterate, when you use a batch size of one, the model’s weights are updated individually for each row of training data. In this approach, the model explores the loss surface one sample at a time—each update is highly specific to the information contained in that single row.</span>
 
 <span style="font-weight: 400;">In contrast, when the batch size is increased, the losses from multiple rows are combined—typically by summing and averaging—to compute a single aggregate loss. The model then takes one update step based on this combined loss, effectively averaging the update directions from the individual samples. This averaging reduces the noise inherent in any one sample, leading to more stable and consistent updates across the training process.</span>
 

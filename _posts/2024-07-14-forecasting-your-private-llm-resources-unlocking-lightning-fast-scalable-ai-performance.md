@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/tgi_benchmark.jpg
+image: /content/2025/03/tgi_benchmark.jpg
 categories:
     - LLM
 tags:
@@ -54,7 +54,7 @@ These four pillars are not just theoretical; they form the foundation of perform
 
  The TGI benchmark tool is divided into four key areas:
 
-![TGI Benchmark areas - source Hugging Face](https://genmind.ch/wp-content/uploads/2024/07/TGI-benchmark-tool-numbered-300x177.png)
+![TGI Benchmark areas - source Hugging Face](https://genmind.ch/content/2024/07/TGI-benchmark-tool-numbered-300x177.png)
 
 **1 – Batch Selector:** This component lets you choose the batch size—that is, the number of concurrent requests—to simulate different levels of user load.
 
@@ -74,7 +74,7 @@ The benchmark I conducted was by testing 8,16,32,64,128 and 256 concurrent users
 
 By looking at all the batches and in particular at area 5 Decoding Throughput over Latency (the most important), we can clearly see a soft spot where 64 concurrent users will experience a decent token generation
 
-<figure aria-describedby="caption-attachment-282" class="wp-caption aligncenter" id="attachment_282" style="width: 805px">![](https://genmind.ch/wp-content/uploads/2024/07/tgi_bench_64-300x182.jpg)<figcaption class="wp-caption-text" id="caption-attachment-282">TGI Benchmark – 64 users</figcaption></figure>In just a few clicks we have an understanding of what will happen to our users and the experience they will get: 32 concurrent users will experience a speed response from the LLM fairly similar to the one you have on chatGPT, 64 user will experience something a bit slower but fairly acceptable.
+<figure aria-describedby="caption-attachment-282" class="wp-caption aligncenter" id="attachment_282" style="width: 805px">![](https://genmind.ch/content/2024/07/tgi_bench_64-300x182.jpg)<figcaption class="wp-caption-text" id="caption-attachment-282">TGI Benchmark – 64 users</figcaption></figure>In just a few clicks we have an understanding of what will happen to our users and the experience they will get: 32 concurrent users will experience a speed response from the LLM fairly similar to the one you have on chatGPT, 64 user will experience something a bit slower but fairly acceptable.
 
 Now your role is to understand, given the total number of users in your organizations, how many of them are using the tool.  
 This is a whole different story, I’ve done such study in depth in the past, and they require data, lots of data 🙂

@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/milvus.png
+image: /content/2025/03/milvus.png
 categories:
     - RAG
 tags:

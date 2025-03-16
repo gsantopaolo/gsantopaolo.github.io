@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2025/03/tensorboard_mnist.jpg
+image: /content/2025/03/tensorboard_mnist.jpg
 categories:
     - 'Machine Learning'
 tags:
@@ -31,7 +31,7 @@ Data visualization is far more than a pretty picture. In high-dimensional spaces
 A classic example from MNIST is that **1’s** can look suspiciously like **7’s**—especially if someone writes 7 with a minimal crossbar or a slightly slanted 1. Even if your model scores high overall accuracy, you might see in the embedding visualization that many **1’s** and **7’s** end up clustered together. That indicates the model is more likely to mix them up.  
 In the picture below notice how close some some orange dots (7) and some red dots (1) are
 
-<figure aria-describedby="caption-attachment-248" class="wp-caption alignnone" id="attachment_248" style="width: 202px">![](https://genmind.ch/wp-content/uploads/2020/01/tensorboard_mnist2-202x300.jpg)<figcaption class="wp-caption-text" id="caption-attachment-248">tensorboard mnist</figcaption></figure>This phenomenon has been widely discussed in ML circles.
+<figure aria-describedby="caption-attachment-248" class="wp-caption alignnone" id="attachment_248" style="width: 202px">![](https://genmind.ch/content/2020/01/tensorboard_mnist2-202x300.jpg)<figcaption class="wp-caption-text" id="caption-attachment-248">tensorboard mnist</figcaption></figure>This phenomenon has been widely discussed in ML circles.
 
 ### Key Benefits of Visualizing
 

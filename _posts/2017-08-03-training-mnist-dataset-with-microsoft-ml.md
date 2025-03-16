@@ -18,7 +18,7 @@ theme-transparent-header-meta:
     - default
 astra-migrate-meta-layouts:
     - set
-image: /wp-content/uploads/2017/08/mlnet.jpg
+image: /content/2017/08/mlnet.jpg
 categories:
     - 'Machine Learning'
 tags:
