@@ -1,9 +1,7 @@
 ---
-id: 147
 icon: fas fa-info-circle
-title: 'Gian Paolo Santopaolo'
-date: '2025-02-20T15:22:47+00:00'
-author: 'Gian Paolo'
+layout: archives
+order: 3
 ---
 
 ![Me](/content/2025/02/io-low-res-1-e1740064656809-297x300.jpg){: width="972" height="589" .w-50 .left}
