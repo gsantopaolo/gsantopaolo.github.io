@@ -82,7 +82,7 @@ _SFT Techniques_
 Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
 
 > See [Teaching an LLM How to Fly a Hot Air Balloon](https://genmind.ch/teaching-an-llm-how-to-fly-a-hot-air-balloon/) as example of how to use TRL.
-> {: .prompt-tip }
+{: .prompt-tip }
 
 ---
 
@@ -112,4 +112,4 @@ Fine tuning LLMs is a powerful technique to adapt a general-purpose base model t
 
 And if you need help, feel free to [reach out](https://genmind.ch/about/)!
 
-Happy fine tuning!
+Happy fine-tuning!
