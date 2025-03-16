@@ -2,5 +2,5 @@
 layout: categories
 icon: fas fa-stream
 order: 2
-index: false  # <--- add this line
+index: false  # <--- hide categories from left menu
 ---
