@@ -1,0 +1,20 @@
+---
+---
+
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Hide the right sidebar column */
+.sidebar-right {
+  display: none;
+}
+
+/* Optionally, expand the main content to use the freed space */
+.main-content {
+  width: 100%;
+}
