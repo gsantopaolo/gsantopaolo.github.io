@@ -1,23 +1,7 @@
 ---
-id: 190
 title: 'TrlParser simplifies our fine-tune code'
 date: '2025-01-08T15:43:49+00:00'
 author: 'Gian Paolo'
-layout: post
-guid: 'https://genmind.ch/?p=190'
-permalink: /trlparser-simple-and-easy-way-to-maintain-our-code/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/02/trlparser.png
 categories:
     - 'Fine Tuning'
@@ -44,7 +28,7 @@ The official [TrlParser documentation](https://huggingface.co/docs/trl/main/en/s
 
 Let’s see how you can use TrlParser with YAML in a real-world training script. Imagine you have a YAML file (`config.yaml`) that looks like this:
 
-```
+```yaml
 
 # Dataset config
 dataset_id_or_path: naklecha/minecraft-question-answer-700k
@@ -88,7 +72,7 @@ hub_strategy: every_save
 
 And below the Python script that uses three dataclasses: a custom DatasetConfig, and the built-in ModelConfig and SFTConfig from Trl. The TrlParser loads all these configurations from the YAML file, keeping the code neat and modular.
 
-```
+```python
 
 from trl import TrlParser, ModelConfig, SFTConfig
 from dataclasses import dataclass
@@ -116,15 +100,13 @@ if __name__ == '__main__':
 
 To run the script, simply supply the YAML file using the `--config` flag:
 
-```
-
+```bash
 python your_script.py --config config.yaml
 ```
 
 You can also override specific parameters on the fly. For example:
 
-```
-
+```bash
 python your_script.py --config config.yaml --num_train_epochs 3 
 ```
 
