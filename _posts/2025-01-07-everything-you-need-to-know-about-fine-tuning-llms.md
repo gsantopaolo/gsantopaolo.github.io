@@ -104,7 +104,7 @@ Fine tuning requires careful tuning of several hyperparameters. While the optima
 - **Adapter-Specific Parameters (if using PEFT):**  
     For example, the rank in LoRA can be adjusted to balance performance improvements with resource constraints.
 
-> I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM]({% post_url 2025-01-10--understanding-key-hyperparameters-when-fine-tuning-an-llm %})
+> I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM]({% post_url 2025-01-10-understanding-key-hyperparameters-when-fine-tuning-an-llm %})
 {: .prompt-tip }
 
 ---
