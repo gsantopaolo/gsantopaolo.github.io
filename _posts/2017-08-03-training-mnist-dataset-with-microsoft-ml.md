@@ -25,7 +25,7 @@ tags:
     - MNIST
 ---
 
-This project was is about training a model on the classic [MNIST dataset](http://yann.lecun.com/exdb/mnist/) — a collection of handwritten digits that’s been a staple in the ML community. Let’s take a friendly tour through the code and ideas behind this experiment.
+This project was is about training a model on the classic [MNIST dataset](https://yann.lecun.com/exdb/mnist/) — a collection of handwritten digits that’s been a staple in the ML community. Let’s take a friendly tour through the code and ideas behind this experiment.
 
 ## Setting Up the Experiment
 
@@ -35,7 +35,7 @@ The goal was simple: train a model that can recognize handwritten digits. To ach
 
 ### Data Handling
 
-I created a simple data structure (`MNIST_Data`) to map the CSV data. Each record contains a label (the digit) and an array of pixel values. To make data reading easier, I employed <a data-end="1139" data-start="1088" rel="noopener" target="_new">CsvHelper</a> to load the CSV file into a list of objects. This helper method abstracts away a lot of the manual parsing, letting me focus on the machine learning side of things.
+I created a simple data structure (`MNIST_Data`) to map the CSV data. Each record contains a label (the digit) and an array of pixel values. To make data reading easier, I employed CsvHelper to load the CSV file into a list of objects. This helper method abstracts away a lot of the manual parsing, letting me focus on the machine learning side of things.
 
 ```
  

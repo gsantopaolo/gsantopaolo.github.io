@@ -25,7 +25,7 @@ categories:
 
 I was searching for a dataset to fine-tune an LLM on a specific topic, but I couldn’t find one that met my needs. T This dataset is intended to help fine tune LLMs.
 
-When I began fine-tuning language models for specific topic, I ran into a common problem: finding a high-quality, focused dataset on niche domains isn’t easy, that’s why I decided to create my own datase, and I come up with the idea of using the <a data-end="679" data-start="539" rel="noopener" target="_new">FAA Balloon Flying Handbook (FAA-H-8083-11B)</a>.
+When I began fine-tuning language models for specific topic, I ran into a common problem: finding a high-quality, focused dataset on niche domains isn’t easy, that’s why I decided to create my own datase, and I come up with the idea of using the FAA Balloon Flying Handbook (FAA-H-8083-11B).
 
 I started by downloading the official FAA Balloon Flying Handbook, which, thankfully, is available in PDF form. I used the convenient `pymupdf4llm` library to convert the PDFs into Markdown files.
 
