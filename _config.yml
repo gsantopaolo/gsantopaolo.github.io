@@ -14,9 +14,9 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: GenMind # the main title
+title: Gian Paolo Santopaolo # the main title
 
-tagline: All about generative AI # it will display as the subtitle
+tagline: I like to train deep neural nets on large datasets 🧠🤖💥
 
 description: >- # used by seo meta and the atom feed
   All about generative AI.
