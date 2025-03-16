@@ -1,23 +1,7 @@
 ---
-id: 356
 title: 'Enhance Your AI Engineer Toolbelt with asitop and nvitop'
 date: '2022-05-08T14:54:02+00:00'
 author: 'Gian Paolo'
-layout: post
-guid: 'https://genmind.ch/?p=356'
-permalink: /enhance-your-ai-engineer-toolbelt-with-asitop-and-nvitop/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/nvitop-scaled.jpg
 categories:
     - tools
