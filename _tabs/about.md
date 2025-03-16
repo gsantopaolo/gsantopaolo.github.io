@@ -6,7 +6,8 @@ date: '2025-02-20T15:22:47+00:00'
 author: 'Gian Paolo'
 ---
 
-![](/content/2025/02/io-low-res-1-e1740064656809-297x300.jpg)Hi, this is Gian, and welcome to my blog! I am an experienced ML engineer and technical leader with a strong background in software development, focusing on Machine Learning and DL since 2017.  
+![Me](/content/2025/02/io-low-res-1-e1740064656809-297x300.jpg){: width="972" height="589" .w-50 .left}
+Hi, this is Gian, and welcome to my blog! I am an experienced ML engineer and technical leader with a strong background in software development, focusing on Machine Learning and DL since 2017.  
 I bring a unique blend of hands-on coding expertise and strategic vision, crafting scalable AI solutions for real-world applications.  
 My expertise includes fine-tuning Large Language Models (LLMs), distributed inference on multi-GPU/multi-node setups, and developing scalable AI architectures.  
 Passionate about driving innovation through AI, I place a strong emphasis on ethical considerations and compliance in regulated environments.  
@@ -17,7 +18,8 @@ business innovation.
 
 Despite not holding a formal university degree, my career is built on relentless curiosity and self-taught expertise. I started programming at the age of 8, driven solely by passion for technology. I still remember my very first programming exam—coding in BASIC for the Commodore 64. The task was to implement the Pythagorean theorem, and even though I was too young to have learned it at school, I managed to get it right. Over the years, I’ve led and mentored several teams of engineers, proving that real-world skills and continuous learning can pave the way to leadership and innovation.
 
-<figure aria-describedby="caption-attachment-149" class="wp-caption aligncenter" id="attachment_149" style="width: 596px">![Future Tech 2019 - Amsterdam](/content/2025/02/1556233203410-300x75.jpeg)<figcaption class="wp-caption-text" id="caption-attachment-149">Future Tech 2019 – Amsterdam</figcaption></figure>
+![Future Tech 2019 - Amsterdam](/content/2025/02/1556233203410-300x75.jpeg){: width="972" height="589" }
+_Future Tech 2019 - Amsterdam]_
 
 ### **Core Competencies**
 
