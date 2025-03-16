@@ -58,7 +58,7 @@ The quality of your SFT dataset is crucial to successful fine tuning. Here are s
 
 
 
-> You can also see [The FAA Balloon Flying Handbook Dataset]({% post_url 2023-05-23-the-faa-balloon-flying-handbook-dataset %})
+> You can also see [The FAA Balloon Flying Handbook Dataset]({% post_url 2023-05-03-the-faa-balloon-flying-handbook-dataset %})
 {: .prompt-tip }
 
 ---
