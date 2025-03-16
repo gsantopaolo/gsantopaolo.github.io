@@ -56,7 +56,7 @@ The quality of your SFT dataset is crucial to successful fine tuning. Here are s
     - **Quality Filtering:** Apply rule-based filters or more sophisticated techniques (e.g., using reward models or another language model as a judge) to discard low-quality samples.
     - **Data Exploration:** Utilize tools for clustering and visualization (such as topic clustering algorithms) to understand the dataset and identify areas for improvement.
 
-> You can also see [The FAA Balloon Flying Handbook Dataset](the-faa-balloon-flying-handbook-dataset/)
+> You can also see [The FAA Balloon Flying Handbook Dataset](./the-faa-balloon-flying-handbook-dataset/)
 {: .prompt-tip }
 
 ---
@@ -81,7 +81,7 @@ _SFT Techniques_
 
 Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
 
-> See [Teaching an LLM How to Fly a Hot Air Balloon](teaching-an-llm-how-to-fly-a-hot-air-balloon/) as example of how to use TRL.
+> See [Teaching an LLM How to Fly a Hot Air Balloon](./teaching-an-llm-how-to-fly-a-hot-air-balloon/) as example of how to use TRL.
 {: .prompt-tip }
 
 ---
@@ -101,7 +101,7 @@ Fine tuning requires careful tuning of several hyperparameters. While the optima
 - **Adapter-Specific Parameters (if using PEFT):**  
     For example, the rank in LoRA can be adjusted to balance performance improvements with resource constraints.
 
-> I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM](understanding-key-hyperparameters-when-fine-tuning-an-llm/)
+> I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM](./understanding-key-hyperparameters-when-fine-tuning-an-llm/)
 {: .prompt-tip }
 
 ---
