@@ -27,8 +27,8 @@
       </li>
       <!-- the real tabs -->
       {% for tab in site.tabs %}
-        <!-- hides categories -->
-        {% unless tab.title == "Categories" %}
+        <!-- hides categories and tags from the sidebar-->
+        {% unless tab.title == "Categories" or tab.title == "Tags" %}
           <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
             <a href="{{ tab.url | relative_url }}" class="nav-link">
               <i class="fa-fw {{ tab.icon }}"></i>
