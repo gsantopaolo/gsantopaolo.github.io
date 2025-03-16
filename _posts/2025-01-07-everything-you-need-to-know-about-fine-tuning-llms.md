@@ -76,8 +76,8 @@ When fine tuning, there are several techniques to consider based on your require
 Each technique has its pros and cons. For instance, full fine tuning might be ideal for achieving the highest performance, but adapter-based methods like LoRA offer a great balance between efficiency and effectiveness.
 
 ![](content/2025/01/sft_techniques-300x97.png)
-{: width="972" height="589" }
 _SFT Techniques_
+{: width="972" height="589" }
 
 Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
 
@@ -108,7 +108,7 @@ Fine tuning requires careful tuning of several hyperparameters. While the optima
 
 ## Conclusion
 
-Fine tuning LLMs is a powerful technique to adapt a general-purpose base model to your specific needs. By understanding the training lifecycle, selecting the right fine tuning libraries, meticulously creating your SFT dataset, and carefully choosing your fine tuning techniques and hyperparameters, you can significantly improve model performance. Whether you’re working on a chatbot, a question-answering system, or any other language-based application, these principles provide a solid starting point.
+Fine-tuning LLMs is a powerful technique to adapt a general-purpose base model to your specific needs. By understanding the training lifecycle, selecting the right fine tuning libraries, meticulously creating your SFT dataset, and carefully choosing your fine tuning techniques and hyperparameters, you can significantly improve model performance. Whether you’re working on a chatbot, a question-answering system, or any other language-based application, these principles provide a solid starting point.
 
 And if you need help, feel free to [reach out](https://genmind.ch/about/)!
 
