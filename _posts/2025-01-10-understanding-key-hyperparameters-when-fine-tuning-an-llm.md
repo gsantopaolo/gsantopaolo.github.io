@@ -2,7 +2,7 @@
 id: 133
 title: 'Understanding Key Hyperparameters When Fine-Tuning an LLM'
 date: '2025-01-10T23:31:30+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=133'
 permalink: /understanding-key-hyperparameters-when-fine-tuning-an-llm/

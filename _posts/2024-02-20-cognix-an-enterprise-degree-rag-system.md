@@ -2,7 +2,7 @@
 id: 168
 title: 'Cognix &#8211; An Enterprise Degree RAG System'
 date: '2024-02-20T16:09:44+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=168'
 permalink: /cognix-an-enterprise-degree-rag-system/

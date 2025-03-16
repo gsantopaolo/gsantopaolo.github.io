@@ -2,7 +2,7 @@
 id: 299
 title: 'Pandas: Your Go-To Tool for Data Manipulation in Data Science'
 date: '2017-04-10T21:57:25+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=299'
 permalink: /pandas-your-go-to-tool-for-data-manipulation-in-data-science/

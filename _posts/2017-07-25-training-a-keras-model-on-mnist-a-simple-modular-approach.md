@@ -2,7 +2,7 @@
 id: 227
 title: 'Training a Keras Model on MNIST: A Simple, Modular Approach'
 date: '2017-07-25T09:43:57+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=227'
 permalink: /training-a-keras-model-on-mnist-a-simple-modular-approach/

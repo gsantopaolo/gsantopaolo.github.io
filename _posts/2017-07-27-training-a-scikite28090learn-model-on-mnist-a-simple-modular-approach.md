@@ -2,7 +2,7 @@
 id: 238
 title: 'Training a scikit‐learn Model on MNIST: A Simple, Modular Approach'
 date: '2017-07-27T12:14:42+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=238'
 permalink: /training-a-scikit%e2%80%90learn-model-on-mnist-a-simple-modular-approach/

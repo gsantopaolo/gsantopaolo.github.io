@@ -2,7 +2,7 @@
 id: 317
 title: 'Introducing Whisper: A New Era in Speech Recognition!'
 date: '2022-10-07T19:09:16+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=317'
 permalink: /introducing-whisper-a-new-era-in-speech-recognition/

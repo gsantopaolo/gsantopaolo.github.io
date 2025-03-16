@@ -2,7 +2,7 @@
 id: 252
 title: 'Data Visualization with Weights &#038; Biases: A Powerful Tool for Tracking and Organizing ML Experiments'
 date: '2024-12-03T17:25:30+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=252'
 permalink: /data-visualization-with-weights-biases-a-powerful-tool-for-tracking-and-organizing-ml-experiments/

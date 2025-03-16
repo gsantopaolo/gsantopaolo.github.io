@@ -2,7 +2,7 @@
 id: 244
 title: 'Why Visualizing Data Is So Important'
 date: '2020-01-10T15:37:14+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=244'
 permalink: /why-visualizing-data-is-so-important/

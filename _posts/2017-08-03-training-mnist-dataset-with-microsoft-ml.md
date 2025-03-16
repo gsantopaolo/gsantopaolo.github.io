@@ -2,7 +2,7 @@
 id: 218
 title: 'Training MNIST dataset with Microsoft.ML'
 date: '2017-08-03T10:59:20+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=218'
 permalink: /training-mnist-dataset-with-microsoft-ml/

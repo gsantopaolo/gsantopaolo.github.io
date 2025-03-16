@@ -1,7 +1,7 @@
 ---
 title: 'Exploring NumPy: Unleashing the Power of 2D and 3D Arrays'
 date: '2017-04-04T21:14:39+00:00'
-author: 'Gian Paolo'
+author: gp
 image: /content/2025/03/numpy.png
 categories:
     - 'data science'

@@ -2,7 +2,7 @@
 id: 310
 title: 'PyMuPDF4LLM: Your All-in-One Multi-Format Document Converter for RAG and LLM Workflows'
 date: '2023-01-12T00:58:18+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=310'
 permalink: /pymupdf4llm-your-all-in-one-multi-format-document-converter-for-rag-and-llm-workflows/

@@ -2,7 +2,7 @@
 id: 331
 title: 'The FAA Balloon Flying Handbook Dataset'
 date: '2023-05-03T23:50:07+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=331'
 permalink: /the-faa-balloon-flying-handbook-dataset/

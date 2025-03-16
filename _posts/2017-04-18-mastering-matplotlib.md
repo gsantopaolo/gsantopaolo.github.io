@@ -2,7 +2,7 @@
 id: 371
 title: 'Mastering Matplotlib'
 date: '2017-04-18T15:06:28+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=371'
 permalink: /mastering-matplotlib/

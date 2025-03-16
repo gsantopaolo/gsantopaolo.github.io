@@ -2,7 +2,7 @@
 id: 267
 title: 'Adding TensorBoard to Your Keras Workflow'
 date: '2024-12-04T22:08:55+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=267'
 permalink: /adding-tensorboard-to-your-keras-workflow/

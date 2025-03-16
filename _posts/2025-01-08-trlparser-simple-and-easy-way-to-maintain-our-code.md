@@ -1,7 +1,7 @@
 ---
 title: 'TrlParser simplifies our fine-tune code'
 date: '2025-01-08T15:43:49+00:00'
-author: 'Gian Paolo'
+author: gp
 image: /content/2025/02/trlparser.png
 categories:
     - 'Fine Tuning'

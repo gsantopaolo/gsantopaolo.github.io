@@ -2,7 +2,7 @@
 id: 160
 title: 'All that you need to know to start developing your Deep Neural Network'
 date: '2019-04-19T15:39:50+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=160'
 permalink: /all-that-you-need-to-know-to-start-developing-your-deep-neural-network/

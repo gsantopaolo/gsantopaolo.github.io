@@ -1,7 +1,7 @@
 ---
 title: 'Enhance Your AI Engineer Toolbelt with asitop and nvitop'
 date: '2022-05-08T14:54:02+00:00'
-author: 'Gian Paolo'
+author: gp
 image: /content/2025/03/nvitop-scaled.jpg
 categories:
     - tools

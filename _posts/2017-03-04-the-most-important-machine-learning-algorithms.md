@@ -1,7 +1,7 @@
 ---
 title: 'The Most Important Machine Learning Algorithms'
 date: '2017-03-04T15:58:40+00:00'
-author: 'Gian Paolo'
+author: gp
 categories:
     - AI
     - 'Machine Learning'

@@ -2,7 +2,7 @@
 id: 274
 title: 'Forecasting Your Private LLM Resources: Unlocking Lightning-Fast, Scalable AI Performance'
 date: '2024-07-14T08:50:01+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=274'
 permalink: /forecasting-your-private-llm-resources-unlocking-lightning-fast-scalable-ai-performance/

@@ -2,7 +2,7 @@
 id: 378
 title: 'Milvus: The NATS Compatibility Challenge and Our Move to Qdrant'
 date: '2024-04-26T16:53:49+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=378'
 permalink: /milvus-the-nats-compatibility-challenge-and-our-move-to-qdrant/

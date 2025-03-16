@@ -2,7 +2,7 @@
 id: 173
 title: 'Discussing Natural User Interfaces'
 date: '2018-02-14T16:54:16+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=173'
 permalink: /discussing-natural-user-interfaces/

@@ -2,7 +2,7 @@
 id: 361
 title: 'The Best OSS Style Transfer Implementation I&#8217;ve Tried'
 date: '2022-10-14T18:22:22+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=361'
 permalink: /the-best-oss-style-transfer-implementation-ive-tried/

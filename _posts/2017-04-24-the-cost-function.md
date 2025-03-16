@@ -2,7 +2,7 @@
 id: 383
 title: 'The Cost Function'
 date: '2017-04-24T15:46:34+00:00'
-author: 'Gian Paolo'
+author: gp
 layout: post
 guid: 'https://genmind.ch/?p=383'
 permalink: /the-cost-function/
