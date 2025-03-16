@@ -1,6 +1,6 @@
 ---
 icon: fas fa-info-circle
-layout: archives
+layout: page
 order: 5
 ---
 
