@@ -21,7 +21,7 @@ The training lifecycle typically involves three stages:
 3. **Preference Alignment**  
     Many production models go through an additional stage where human feedback is used to fine tune the model’s behavior further, often resulting in chat-optimized models.
 
-<figure aria-describedby="caption-attachment-427" class="wp-caption aligncenter" id="attachment_427" style="width: 1196px">![](content/2025/01/fine_tuning.jpg)<figcaption class="wp-caption-text" id="caption-attachment-427">Training Pipeline</figcaption></figure>---
+[](content/2025/01/fine_tuning.jpg)<figcaption class="wp-caption-text" id="caption-attachment-427">Training Pipeline</figcaption></figure>---
 
 ## Fine Tuning Libraries
 

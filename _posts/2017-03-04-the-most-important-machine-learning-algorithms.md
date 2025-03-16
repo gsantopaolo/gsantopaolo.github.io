@@ -1,24 +1,7 @@
 ---
-id: 163
 title: 'The Most Important Machine Learning Algorithms'
 date: '2017-03-04T15:58:40+00:00'
 author: 'Gian Paolo'
-layout: post
-guid: 'https://genmind.ch/?p=163'
-permalink: /the-most-important-machine-learning-algorithms/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
-image: /content/2025/02/Supervised_and_unsupervised_learning.png
 categories:
     - AI
     - 'Machine Learning'

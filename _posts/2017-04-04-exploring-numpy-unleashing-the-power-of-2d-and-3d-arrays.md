@@ -1,23 +1,7 @@
 ---
-id: 289
 title: 'Exploring NumPy: Unleashing the Power of 2D and 3D Arrays'
 date: '2017-04-04T21:14:39+00:00'
 author: 'Gian Paolo'
-layout: post
-guid: 'https://genmind.ch/?p=289'
-permalink: /exploring-numpy-unleashing-the-power-of-2d-and-3d-arrays/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/numpy.png
 categories:
     - 'data science'
