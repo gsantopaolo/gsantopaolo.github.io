@@ -30,7 +30,7 @@ As an AI engineer, monitoring your hardware performance is essential—whether y
 
 ### asitop: Performance Monitoring for Apple Silicon Macs
 
-<figure aria-describedby="caption-attachment-354" class="wp-caption aligncenter" id="attachment_354" style="width: 591px">![](https://genmind.ch/content/2025/03/asitop-300x131.jpg)<figcaption class="wp-caption-text" id="caption-attachment-354">asitop</figcaption></figure>  
+<figure aria-describedby="caption-attachment-354" class="wp-caption aligncenter" id="attachment_354" style="width: 591px">![](content/2025/03/asitop-300x131.jpg)<figcaption class="wp-caption-text" id="caption-attachment-354">asitop</figcaption></figure>  
 [Asitop](https://github.com/tlkh/asitop) is a Python-based, `nvtop`-inspired CLI tool designed exclusively for Apple Silicon (M1) Macs running macOS Monterey. It leverages macOS’s built-in `powermetrics` utility (requiring sudo privileges).  
 For local development on your Mac, asitop gives you a fast and lightweight way to ensure your system is not being overtaxed. It’s a handy addition to your AI engineer toolkit, helping you pinpoint performance bottlenecks before they slow down your experiments.
 
@@ -41,7 +41,7 @@ For local development on your Mac, asitop gives you a fast and lightweight way t
 [Nvitop](https://github.com/XuehaiPan/nvitop) is an interactive tool that goes beyond the standard `nvidia-smi` output. Designed for Linux systems with NVIDIA GPUs.  
 When working on a GPU server, nvitop gives you an at-a-glance overview of your hardware’s performance and running processes. Its interactivity and integration capabilities make it perfect for managing heavy computational workloads and troubleshooting in real time.
 
-<figure aria-describedby="caption-attachment-355" class="wp-caption aligncenter" id="attachment_355" style="width: 667px">![](https://genmind.ch/content/2025/03/nvitop-300x112.jpg)<figcaption class="wp-caption-text" id="caption-attachment-355">nvitop</figcaption></figure>---
+<figure aria-describedby="caption-attachment-355" class="wp-caption aligncenter" id="attachment_355" style="width: 667px">![](content/2025/03/nvitop-300x112.jpg)<figcaption class="wp-caption-text" id="caption-attachment-355">nvitop</figcaption></figure>---
 
 ### Final Thoughts
 

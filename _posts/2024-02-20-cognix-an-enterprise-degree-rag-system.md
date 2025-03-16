@@ -43,7 +43,7 @@ Architecture
 
 </div>**Below is a glance at CogniX’s architecture**, showcasing its robust, flexible, and scalable design tailored for modern enterprises.
 
-<figure aria-describedby="caption-attachment-169" class="wp-caption aligncenter" id="attachment_169" style="width: 695px">![](https://genmind.ch/content/2025/02/cognix_architecture-300x195.jpg)<figcaption class="wp-caption-text" id="caption-attachment-169">cognix architecture</figcaption></figure>The RAG Cluster
+<figure aria-describedby="caption-attachment-169" class="wp-caption aligncenter" id="attachment_169" style="width: 695px">![](content/2025/02/cognix_architecture-300x195.jpg)<figcaption class="wp-caption-text" id="caption-attachment-169">cognix architecture</figcaption></figure>The RAG Cluster
 
 The RAG (Retrieval-Augmented Generation) cluster is the heart of CogniX, incorporating all necessary components to:
 

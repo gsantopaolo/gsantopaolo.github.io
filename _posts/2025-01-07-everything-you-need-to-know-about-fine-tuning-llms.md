@@ -35,7 +35,7 @@ The training lifecycle typically involves three stages:
 3. **Preference Alignment**  
     Many production models go through an additional stage where human feedback is used to fine tune the model’s behavior further, often resulting in chat-optimized models.
 
-<figure aria-describedby="caption-attachment-427" class="wp-caption aligncenter" id="attachment_427" style="width: 1196px">![](https://genmind.ch/content/2025/01/fine_tuning.jpg)<figcaption class="wp-caption-text" id="caption-attachment-427">Training Pipeline</figcaption></figure>---
+<figure aria-describedby="caption-attachment-427" class="wp-caption aligncenter" id="attachment_427" style="width: 1196px">![](content/2025/01/fine_tuning.jpg)<figcaption class="wp-caption-text" id="caption-attachment-427">Training Pipeline</figcaption></figure>---
 
 ## Fine Tuning Libraries
 
@@ -88,7 +88,7 @@ When fine tuning, there are several techniques to consider based on your require
 
 Each technique has its pros and cons. For instance, full fine tuning might be ideal for achieving the highest performance, but adapter-based methods like LoRA offer a great balance between efficiency and effectiveness.
 
-<figure aria-describedby="caption-attachment-425" class="wp-caption aligncenter" id="attachment_425" style="width: 773px">![](https://genmind.ch/content/2025/01/sft_techniques-300x97.png)<figcaption class="wp-caption-text" id="caption-attachment-425">SFT Techniques</figcaption></figure>Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
+<figure aria-describedby="caption-attachment-425" class="wp-caption aligncenter" id="attachment_425" style="width: 773px">![](content/2025/01/sft_techniques-300x97.png)<figcaption class="wp-caption-text" id="caption-attachment-425">SFT Techniques</figcaption></figure>Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
 
 See [Teaching an LLM How to Fly a Hot Air Balloon](https://genmind.ch/teaching-an-llm-how-to-fly-a-hot-air-balloon/) as example of how to use TRL.
 

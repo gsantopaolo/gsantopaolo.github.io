@@ -68,7 +68,7 @@ For this example I’m going to use an old post [Training a Keras Model on MNIST
 
 Et voilà, in your terminal to launch the TensorBoard web interface. Here, you can monitor the progress of your training.
 
-<figure aria-describedby="caption-attachment-268" class="wp-caption aligncenter" id="attachment_268" style="width: 691px">![](https://genmind.ch/content/2025/03/tensorboard-300x123.jpg)<figcaption class="wp-caption-text" id="caption-attachment-268">TensorBoard</figcaption></figure>#### How Does TensorBoard Compare to Weights &amp; Biases?
+<figure aria-describedby="caption-attachment-268" class="wp-caption aligncenter" id="attachment_268" style="width: 691px">![](content/2025/03/tensorboard-300x123.jpg)<figcaption class="wp-caption-text" id="caption-attachment-268">TensorBoard</figcaption></figure>#### How Does TensorBoard Compare to Weights &amp; Biases?
 
 While TensorBoard is built into the TensorFlow ecosystem and provides a fast, no-cost solution for basic visualization needs, it can be limited when it comes to advanced experiment tracking. On the other hand, [Weights &amp; Biases](https://wandb.ai/) (W&amp;B) integrates seamlessly with TensorBoard logging but goes further by offering:
 
