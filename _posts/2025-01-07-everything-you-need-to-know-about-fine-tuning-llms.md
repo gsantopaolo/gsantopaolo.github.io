@@ -3,21 +3,7 @@ id: 416
 title: 'Everything You Need to Know About Fine-Tuning LLMs'
 date: '2025-01-07T09:54:48+00:00'
 author: 'Gian Paolo'
-layout: post
-guid: 'https://genmind.ch/?p=416'
-permalink: /everything-you-need-to-know-about-fine-tuning-llms/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
+pin: true
 image: /content/2025/01/fine_tuning.jpg
 categories:
     - 'Fine Tuning'
