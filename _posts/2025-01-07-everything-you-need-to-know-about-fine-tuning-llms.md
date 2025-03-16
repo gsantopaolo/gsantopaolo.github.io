@@ -21,8 +21,8 @@ The training lifecycle typically involves three stages:
 3. **Preference Alignment**  
     Many production models go through an additional stage where human feedback is used to fine tune the model’s behavior further, often resulting in chat-optimized models.
 
-[](/content/2025/01/fine_tuning.jpg)<figcaption class="wp-caption-text" id="caption-attachment-427">Training Pipeline</figcaption></figure>---
-
+[](/content/2025/01/fine_tuning.jpg)
+_Training Pipeline_
 ## Fine Tuning Libraries
 
 There are several robust libraries available to help you fine tune LLMs efficiently. Some popular options include:
@@ -56,7 +56,7 @@ The quality of your SFT dataset is crucial to successful fine tuning. Here are s
     - **Quality Filtering:** Apply rule-based filters or more sophisticated techniques (e.g., using reward models or another language model as a judge) to discard low-quality samples.
     - **Data Exploration:** Utilize tools for clustering and visualization (such as topic clustering algorithms) to understand the dataset and identify areas for improvement.
 
-You can also see [The FAA Balloon Flying Handbook Dataset](https://genmind.ch/the-faa-balloon-flying-handbook-dataset/)
+You can also see [The FAA Balloon Flying Handbook Dataset](https://genmind.ch/the-faa-balloon-flying-handbook-dataset/){: .prompt-tip }
 
 ---
 
@@ -76,7 +76,7 @@ Each technique has its pros and cons. For instance, full fine tuning might be id
 
 <figure aria-describedby="caption-attachment-425" class="wp-caption aligncenter" id="attachment_425" style="width: 773px">![](content/2025/01/sft_techniques-300x97.png)<figcaption class="wp-caption-text" id="caption-attachment-425">SFT Techniques</figcaption></figure>Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
 
-See [Teaching an LLM How to Fly a Hot Air Balloon](https://genmind.ch/teaching-an-llm-how-to-fly-a-hot-air-balloon/) as example of how to use TRL.
+See [Teaching an LLM How to Fly a Hot Air Balloon](https://genmind.ch/teaching-an-llm-how-to-fly-a-hot-air-balloon/) as example of how to use TRL.{: .prompt-tip }
 
 ---
 
@@ -95,7 +95,7 @@ Fine tuning requires careful tuning of several hyperparameters. While the optima
 - **Adapter-Specific Parameters (if using PEFT):**  
     For example, the rank in LoRA can be adjusted to balance performance improvements with resource constraints.
 
-I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM](https://genmind.ch/understanding-key-hyperparameters-when-fine-tuning-an-llm/)
+I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM](https://genmind.ch/understanding-key-hyperparameters-when-fine-tuning-an-llm/){: .prompt-tip }
 
 ---
 
