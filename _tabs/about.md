@@ -4,7 +4,7 @@ layout: page
 order: 5
 ---
 
-![Me](/content/2025/02/io-low-res-1-e1740064656809-297x300.jpg)
+![Me](/content/2025/02/me.jpeg)
 {: width="300" .w-50 .left}
 Hi, this is Gian, and welcome to my blog! I am an experienced ML engineer and technical leader with a strong background in software development, focusing on Machine Learning and DL since 2017.  
 I bring a unique blend of hands-on coding expertise and strategic vision, crafting scalable AI solutions for real-world applications.  
