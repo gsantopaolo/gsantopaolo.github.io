@@ -1,26 +1,12 @@
 ---
-id: 409
 title: 'Feature Scaling in Machine Learning: A Practical Guide'
 date: '2017-05-02T18:47:16+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=409'
-permalink: /409-2/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2017/05/scaling.jpg
 categories:
     - 'data science'
+math: true
 ---
 
 Feature Scaling in Machine Learning: A Practical Guide  
@@ -42,8 +28,7 @@ This operation transforms 𝑥1 so that its values now lie roughly between 0.15 
 
 Below is a simple Python example using scikit-learn:
 
-```
-
+```python
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
@@ -79,8 +64,7 @@ This results in values that might range from approximately –0.18 to 0.82.
 
 Here’s a Python example to perform mean normalization manually:
 
-```
-
+```python
 import numpy as np
 
 # Original feature values for House Size
@@ -110,8 +94,7 @@ This standardizes x1 so that it has a mean of 0 and a standard deviation of 1.
 
 Below is a Python example using scikit-learn’s StandardScaler:
 
-```
-
+```python
 from sklearn.preprocessing import StandardScaler
 
 # Example dataset (same house sizes)

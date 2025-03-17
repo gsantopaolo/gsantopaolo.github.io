@@ -1,23 +1,8 @@
 ---
-id: 317
 title: 'Introducing Whisper: A New Era in Speech Recognition!'
 date: '2022-10-07T19:09:16+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=317'
-permalink: /introducing-whisper-a-new-era-in-speech-recognition/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/whisper.png
 categories:
     - 'Machine Learning'
@@ -33,7 +18,7 @@ I’m happy to share my first impressions of **Whisper**, OpenAI’s brand-new s
 
 Below is a simple Python snippet to get you started with Whisper. This example demonstrates how to load the model and transcribe an audio file:
 
-```
+```python
 
 import whisper
 

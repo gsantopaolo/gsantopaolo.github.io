@@ -1,23 +1,9 @@
 ---
-id: 267
 title: 'Adding TensorBoard to Your Keras Workflow'
 date: '2024-12-04T22:08:55+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=267'
 permalink: /adding-tensorboard-to-your-keras-workflow/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/tensorboard.jpg
 categories:
     - 'Machine Learning'
@@ -34,8 +20,7 @@ For this example I’m going to use an old post [Training a Keras Model on MNIST
 1. **Set Up a Log Directory:**  
     Create a directory (e.g., `logs/mnist`) where TensorBoard will store its logs.
     
-    ```
-    
+    ```python
     LOG_DIR = os.path.join(os.getcwd(), 'logs', 'mnist')
     ```
 2. **Add the TensorBoard Callback:**  
@@ -43,8 +28,7 @@ For this example I’m going to use an old post [Training a Keras Model on MNIST
     xxxxx  
     to the `model.fit()` function. This small change allows you to log training metrics, weight histograms, and even your model graph.
     
-    ```
-    
+    ```python
         # Create a TensorBoard callback to monitor training progress
         tensorboard_callback = tf.keras.callbacks.TensorBoard(
             log_dir=LOG_DIR,  # Directory where TensorBoard logs (scalars, histograms, graphs) will be stored.
@@ -61,8 +45,7 @@ For this example I’m going to use an old post [Training a Keras Model on MNIST
 3. **Visualize Your Metrics:**  
     Once your training begins, run the command
     
-    ```
-    
+    ```bash
     tensorboard --logdir=logs/mnist
     ```
 

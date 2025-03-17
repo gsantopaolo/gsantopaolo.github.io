@@ -4,20 +4,6 @@ title: 'The FAA Balloon Flying Handbook Dataset'
 date: '2023-05-03T23:50:07+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=331'
-permalink: /the-faa-balloon-flying-handbook-dataset/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/balloons-cappadocia.jpg
 categories:
     - dataset
@@ -39,8 +25,7 @@ All these QA pairs, along with their respective context sections, were then comb
 
 You can easily use the dataset [directly from HuggingFace](https://huggingface.co/datasets/gsantopaolo/faa-balloon-flying-handbook) like this:
 
-```
-
+```python
 from datasets import load_dataset
 
 # Load the dataset

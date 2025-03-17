@@ -4,20 +4,6 @@ title: 'Data Visualization with Weights &#038; Biases: A Powerful Tool for Track
 date: '2024-12-03T17:25:30+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=252'
-permalink: /data-visualization-with-weights-biases-a-powerful-tool-for-tracking-and-organizing-ml-experiments/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/wandb_epoch.jpg
 categories:
     - 'Machine Learning'
@@ -39,8 +25,7 @@ The transcript explains that every time you run `wandb.init`, you create a run t
 
 The first step is to log into W&amp;B. The code below shows how to retrieve your API key from an environment variable and initialize a run:
 
-```
-
+```python
 import os
 import wandb
 
@@ -64,8 +49,7 @@ Every run automatically captures configuration parameters—such as learning rat
 
 One of the core features of W&amp;B is its ability to create interactive visualizations of your training and validation metrics. In our MNIST example, we use the following code to log metrics and save our model checkpoints:
 
-```
-
+```python
 import tensorflow as tf
 import tensorflow_datasets as tfds
 from wandb.integration.keras import WandbMetricsLogger, WandbModelCheckpoint

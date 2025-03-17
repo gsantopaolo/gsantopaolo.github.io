@@ -1,23 +1,8 @@
 ---
-id: 378
 title: 'Milvus: The NATS Compatibility Challenge and Our Move to Qdrant'
 date: '2024-04-26T16:53:49+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=378'
-permalink: /milvus-the-nats-compatibility-challenge-and-our-move-to-qdrant/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/milvus.png
 categories:
     - RAG

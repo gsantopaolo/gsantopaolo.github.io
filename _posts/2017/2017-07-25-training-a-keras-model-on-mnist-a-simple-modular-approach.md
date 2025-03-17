@@ -1,23 +1,8 @@
 ---
-id: 227
 title: 'Training a Keras Model on MNIST: A Simple, Modular Approach'
 date: '2017-07-25T09:43:57+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=227'
-permalink: /training-a-keras-model-on-mnist-a-simple-modular-approach/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/mnist_sample_digits.png
 categories:
     - keras
@@ -61,7 +46,7 @@ Finally, our `main` function ties everything together. It loads the data, create
 
 ## Full Code Example
 
-```
+```python
 
 import tensorflow as tf
 import tensorflow_datasets as tfds

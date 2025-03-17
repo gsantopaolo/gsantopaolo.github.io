@@ -1,23 +1,9 @@
 ---
-id: 299
 title: 'Pandas: Your Go-To Tool for Data Manipulation in Data Science'
 date: '2017-04-10T21:57:25+00:00'
 author: gp
 layout: post
 guid: 'https://genmind.ch/?p=299'
-permalink: /pandas-your-go-to-tool-for-data-manipulation-in-data-science/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/pandas.webp
 categories:
     - 'data science'
@@ -49,7 +35,7 @@ Some key features of pandas include:
 **Use Case:** Quickly load and inspect data to understand its structure, detect anomalies, and prepare for further analysis.  
 Imagine you have a CSV file containing sales data (on [my GitHub repository](https://github.com/gsantopaolo/ML) you’ll find both the notebook and data) With just a few lines of code, you can load the data into a DataFrame and get a quick overview:
 
-```
+```python
 
 import pandas as pd
 
@@ -72,7 +58,7 @@ print(df.describe())
 
 Pandas provides easy-to-use methods to fill in missing values or drop rows/columns that lack critical data:
 
-```
+```python
 
 # Fill missing values in the 'revenue' column with the column's mean
 df['revenue'] = df['revenue'].fillna(df['revenue'].mean())
@@ -88,7 +74,7 @@ df_clean = df.dropna()
 **Use Case:** Summarize and analyze data by categorical variables to gain insights into trends across different segments.  
 Suppose you want to see total sales per region. Pandas makes it straightforward to group data and perform aggregations:
 
-```
+```python
 
 # Group data by the 'region' column and sum up the sales
 region_sales = df.groupby('region')['sales'].sum()
@@ -104,7 +90,7 @@ print(region_sales)
 
 Pivot tables allow you to reshape your data for detailed analysis. For instance, you might want to see average sales by region and product category:
 
-```
+```python
 
 pivot_table = pd.pivot_table(df, values='sales', index='region', columns='product_category', aggfunc='mean')
 
@@ -117,7 +103,7 @@ print(pivot_table)
 
 In real-world scenarios, data is often spread across multiple files or sources. Pandas provides robust methods to merge these datasets, similar to SQL joins:
 
-```
+```python
 
 # Suppose you have two DataFrames: one with customer info and another with orders
 customers = pd.read_csv('customers.csv')

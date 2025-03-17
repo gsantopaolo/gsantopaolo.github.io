@@ -1,23 +1,8 @@
 ---
-id: 168
 title: 'Cognix &#8211; An Enterprise Degree RAG System'
 date: '2024-02-20T16:09:44+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=168'
-permalink: /cognix-an-enterprise-degree-rag-system/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/02/cognix_architecture.jpg
 categories:
     - RAG

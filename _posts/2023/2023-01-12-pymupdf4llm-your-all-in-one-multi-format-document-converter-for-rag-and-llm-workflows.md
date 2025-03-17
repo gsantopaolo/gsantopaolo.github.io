@@ -1,23 +1,8 @@
 ---
-id: 310
 title: 'PyMuPDF4LLM: Your All-in-One Multi-Format Document Converter for RAG and LLM Workflows'
 date: '2023-01-12T00:58:18+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=310'
-permalink: /pymupdf4llm-your-all-in-one-multi-format-document-converter-for-rag-and-llm-workflows/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/sidebar-logo-dark.webp
 categories:
     - RAG
@@ -53,8 +38,7 @@ From opening files to extracting text, tables and images, PyMuPDF4LLM in my test
 
 Below is a small code snippet to show just how straightforward it is to open and process a document using PyMuPDF4LLM, at the time of writing, I’m using PyMuPDF==1.23.12:
 
-```
-
+```jupyter
 !pip install pymupdf4llm  # or simply install via pip in your environment
 
 import pymupdf4llm

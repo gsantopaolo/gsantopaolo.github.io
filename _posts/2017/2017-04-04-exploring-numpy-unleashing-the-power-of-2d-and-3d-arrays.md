@@ -24,7 +24,7 @@ NumPy’s array object, known as `ndarray`, allows you to store and manipulate h
 
 One of the most common applications of NumPy is working with matrices. A 2D array can represent a matrix for linear algebra operations. Consider the following example, where we create a 2D array, compute its transpose, and perform matrix multiplication:
 
-```
+```python
 
 import numpy as np
 
@@ -52,7 +52,7 @@ print(result)
 
 2D arrays are perfect for representing tabular data. With NumPy, you can efficiently slice and filter rows and columns. Let’s see how you can extract a specific subset of data:
 
-```
+```python
 
 import numpy as np
 
@@ -77,7 +77,7 @@ print(subset)
 
 Grayscale images can be naturally represented as 2D arrays where each element corresponds to a pixel’s intensity. NumPy makes it straightforward to manipulate these images, such as applying filters or adjusting brightness:
 
-```
+```python
 
 import numpy as np
 
@@ -104,7 +104,7 @@ print(inverted_image)
 
 3D arrays extend the capabilities of 2D arrays by adding another dimension. Imagine simulating a 3D grid for a game environment or a physical simulation. Here’s how to create and manipulate a 3D array:
 
-```
+```python
 
 import numpy as np
 
@@ -127,7 +127,7 @@ print(slice_2d)
 
 Many real-world datasets are inherently multidimensional. For example, colored images are represented as 3D arrays (height x width x channels). Let’s create a simple example of a “fake” RGB image and apply a simple operation:
 
-```
+```python
 
 import numpy as np
 

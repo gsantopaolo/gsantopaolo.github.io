@@ -1,23 +1,8 @@
 ---
-id: 238
 title: 'Training a scikit‐learn Model on MNIST: A Simple, Modular Approach'
 date: '2017-07-27T12:14:42+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=238'
-permalink: /training-a-scikit%e2%80%90learn-model-on-mnist-a-simple-modular-approach/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/minist_scikit.png
 categories:
     - 'Machine Learning'
@@ -39,8 +24,7 @@ The MNIST dataset is a benchmark collection of 70,000 handwritten digits. It’s
 
 We start by fetching the MNIST data from OpenML using scikit‐learn’s built-in function. Then, we split the dataset into training and testing sets and apply standard scaling. Normalizing the data (zero mean and unit variance) is important for faster convergence and improved performance.
 
-```
-
+```python
 import numpy as np
 from sklearn.datasets import fetch_openml
 from sklearn.model_selection import train_test_split
@@ -66,8 +50,7 @@ X_test = scaler.transform(X_test)
 
 For our classifier, we’ll use Logistic Regression from scikit‐learn. This model is easy to implement and interpret while providing competitive accuracy on MNIST. (Feel free to experiment with other models like Support Vector Machines or K-Nearest Neighbors!)
 
-```
-
+```python
 from sklearn.linear_model import LogisticRegression
 
 # Create a logistic regression classifier
@@ -87,8 +70,7 @@ clf = LogisticRegression(
 
 Next, we train the model using our preprocessed training data. The `fit()` method does all the heavy lifting behind the scenes.
 
-```
-
+```python
 # Train the classifier on the training data
 clf.fit(X_train, y_train)
 
@@ -98,7 +80,7 @@ clf.fit(X_train, y_train)
 
 Once the model is trained, we evaluate its performance on the test set by checking the accuracy and visualizing a confusion matrix. You can also inspect individual predictions and even display some of the misclassified images.
 
-```
+```python
 
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
@@ -121,7 +103,7 @@ plt.show()
 
 You might also want to visualize a few test samples alongside their predicted labels:
 
-```
+```python
 
 # Display a few test images with their predictions
 fig, axes = plt.subplots(1, 5, figsize=(10, 3))

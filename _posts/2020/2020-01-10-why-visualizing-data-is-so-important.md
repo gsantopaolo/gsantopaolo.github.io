@@ -1,23 +1,8 @@
 ---
-id: 244
 title: 'Why Visualizing Data Is So Important'
 date: '2020-01-10T15:37:14+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=244'
-permalink: /why-visualizing-data-is-so-important/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/tensorboard_mnist.jpg
 categories:
     - 'Machine Learning'
@@ -46,10 +31,7 @@ In the picture below notice how close some some orange dots (7) and some red dot
 
 Below is a code snippet that generates an embedding for the MNIST test set, writes out a metadata file for the labels, and then uses TensorBoard’s Projector to visualize them. The snippet uses **TF1-style** code with `disable_eager_execution` to ensure the Projector reads the labels correctly.
 
-```
-
-
-
+```python
 import os
 import numpy as np
 import tensorflow as tf
@@ -112,27 +94,19 @@ print(f"tensorboard --logdir={LOG_DIR}")
 1. **Data Loading**:  
     We load `mnist` from `tfds` (TensorFlow Datasets) with `split='test'`. The `as_supervised=True` flag yields `(image, label)` pairs.
 2. **Preprocessing**:
-    
-    
     - Each `image` is reshaped from `(28, 28)` to a single 1D array of length 784.
     - We collect `labels` in a parallel list.
 3. **Creating the Embedding Variable**:  
     `embedding_var = tf.Variable(images, name='embedding')` is the data we’ll visualize in the projector.
 4. **Metadata File**:
-    
-    
     - We open `metadata.tsv` and write a header line, `"label"`.
     - Then we write each label on its own line. This ensures TensorBoard knows there’s a column called `label` for coloring.
 5. **Saving the Checkpoint**:  
     We use `tf.compat.v1.train.Saver` to save the variable’s values in `embedding.ckpt`. TensorBoard will read this checkpoint at runtime.
 6. **Projector Config**:
-    
-    
     - `embedding.tensor_name = embedding_var.name` tells the projector which variable to visualize.
     - `embedding.metadata_path = os.path.abspath(metadata_path)` ensures the metadata file is found.
 7. **Summary Writer**:
-    
-    
     - We create a TF1-style summary writer (`FileWriter`), passing in `sess.graph`.
     - `projector.visualize_embeddings(writer, config)` writes out a `projector_config.pbtxt` that TensorBoard uses.
 8. **TensorBoard**:
@@ -140,8 +114,7 @@ print(f"tensorboard --logdir={LOG_DIR}")
     
     - Finally, we close the writer and print the command to run:
 
-```
-
+```python
 tensorboard --logdir=mnist-tensorboard/log-1
 
 ```

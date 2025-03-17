@@ -38,7 +38,6 @@ The goal was simple: train a model that can recognize handwritten digits. To ach
 I created a simple data structure (`MNIST_Data`) to map the CSV data. Each record contains a label (the digit) and an array of pixel values. To make data reading easier, I employed CsvHelper to load the CSV file into a list of objects. This helper method abstracts away a lot of the manual parsing, letting me focus on the machine learning side of things.
 
 ```
- 
 public class MNIST_Data
 {
     public MNIST_Data()
@@ -63,7 +62,6 @@ public class MNIST_Data
 Next comes the fun part—building the machine learning pipeline. Microsoft.ML’s pipeline concept allows you to chain together data processing and training steps. In this example, I set up a pipeline that reads the data and then applies the **AveragedPerceptronBinaryClassifier**. Even though this is a binary classifier, it was a great starting point to understand how to configure and train a model.
 
 ```
- 
 var pipeline = new LearningPipeline();
 var dataSource = CollectionDataSource.Create(helper.ReadMNIST_Data(trainingDataLocation));
 pipeline.Add(dataSource);

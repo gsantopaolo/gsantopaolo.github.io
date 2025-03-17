@@ -1,23 +1,8 @@
 ---
-id: 361
 title: 'The Best OSS Style Transfer Implementation I&#8217;ve Tried'
 date: '2022-10-14T18:22:22+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=361'
-permalink: /the-best-oss-style-transfer-implementation-ive-tried/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/golden-starry.jpg
 categories:
     - 'Deep Learning'

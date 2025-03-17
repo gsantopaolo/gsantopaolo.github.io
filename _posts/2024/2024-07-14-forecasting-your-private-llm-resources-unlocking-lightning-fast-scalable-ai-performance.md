@@ -4,20 +4,6 @@ title: 'Forecasting Your Private LLM Resources: Unlocking Lightning-Fast, Scalab
 date: '2024-07-14T08:50:01+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=274'
-permalink: /forecasting-your-private-llm-resources-unlocking-lightning-fast-scalable-ai-performance/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/tgi_benchmark.jpg
 categories:
     - LLM

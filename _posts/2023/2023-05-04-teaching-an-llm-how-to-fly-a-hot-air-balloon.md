@@ -52,8 +52,7 @@ Let’s take a look at how these concepts are implemented in the code.
 
 Before training, we set up our environment. This includes loading our FAA hot air balloon dataset and configuring the model and LoRA settings. Notice how we define the model details, cache directory, and fine-tuning tag to track our experiment.
 
-```
-
+```python
 model_id = "Qwen/Qwen1.5-7B-Chat"
 fine_tune_tag = "faa-balloon-flying-handbook"
 cache_dir = "cache"
@@ -62,8 +61,7 @@ upload_to_hf = True
 
 Here, we also prepare our LoRA configuration to focus on key model modules, ensuring that our training is both efficient and effective:
 
-```
-
+```python
 peft_config = LoraConfig(
     r=16,
     modules_to_save=["lm_head", "embed_tokens"],
@@ -80,8 +78,7 @@ peft_config = LoraConfig(
 
 The heart of our dataset is a conversation template that incorporates a system message with detailed instructions from the FAA manual. This guides the AI to generate responses that reflect the practicalities and safety guidelines of hot air balloon flight.
 
-```
-
+```python
 system_message = """answer the given balloon flying handbook question by providing a clear, detailed explanation that references guidance from the balloon flying handbook, operational procedures, and relevant flight concepts.
 
 provide a detailed breakdown of your answer, beginning with an explanation of the question and its context within the balloon flying handbook, followed by step-by-step reasoning based on the information provided in the handbook and applicable flight operation procedures. use logical steps that build upon one another to arrive at a comprehensive solution.
@@ -105,8 +102,7 @@ provide a detailed breakdown of your answer, beginning with an explanation of th
 
 We then create a function to format each sample from our dataset into a conversation structure that our model understands:
 
-```
-
+```python
 def create_conversation(sample):
     return {
         "messages": [
@@ -122,8 +118,7 @@ def create_conversation(sample):
 
 We load our model and tokenizer with a configuration optimized for memory efficiency. This includes 4-bit quantization, which is essential when working with large models.
 
-```
-
+```python
 def load_model_and_tokenizer(model_id, cache_dir):
     model_kwargs = dict(
         device_map="auto",
@@ -150,8 +145,7 @@ def load_model_and_tokenizer(model_id, cache_dir):
 
 After loading the data and applying our conversation template, we tokenize the conversations so the model can process them. The tokenization function joins all messages into a single string, ensuring we respect the maximum sequence length:
 
-```
-
+```python
 def tokenize(sample):
     conversation_strs = []
     for conversation in sample["messages"]:
@@ -165,8 +159,7 @@ def tokenize(sample):
 
 Finally, our training process kicks off with the SFTTrainer. We set parameters like learning rate, batch size, and evaluation strategy to balance performance and resource constraints. The training arguments ensure we can monitor progress and save checkpoints at regular intervals.
 
-```
-
+```python
 trainer = SFTTrainer(
     model=model,
     tokenizer=tokenizer,
