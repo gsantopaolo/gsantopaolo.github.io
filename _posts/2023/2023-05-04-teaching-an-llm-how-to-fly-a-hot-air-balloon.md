@@ -3,12 +3,9 @@ title: 'Teaching an LLM How to Fly a Hot Air Balloon'
 date: '2023-05-04T11:52:12+00:00'
 author: gp
 layout: post
-categories:
-    - 'Fine Tuning'
-    - LLM
-tags:
-    - fine-tuning
-    - trl
+image: /content/2025/03/balloon2.jpg
+categories: ['Fine Tuning', LLM]
+tags: [fine-tuning, trl]
 ---
 
 Welcome to this exciting journey where we merge machine learning with the skies! In this post, we’ll show you how we created a dataset from the FAA manual to fly a hot air balloon—and now it’s time to teach our AI to fly one. We’ll walk through the key ideas and how they’re implemented in our code, mixing concepts with the code itself for a fun, hands-on explanation.
