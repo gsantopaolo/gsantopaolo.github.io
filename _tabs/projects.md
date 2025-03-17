@@ -14,5 +14,6 @@ CogniX is an enterprise-level Retrieval-Augmented Generation (RAG) system, desig
 - **Document Chunking and Embedding:** By breaking down documents and embedding their content using semantic machine-learning models trained on everyday language, CogniX ensures that even the most complex documents are made searchable.
 - **Support for Local LLMs:** With our powerful inference server, CogniX supports high-performance text generation across a wide range of popular open-source Large Language Models (LLMs), including Mixtral, Llama, Falcon, StarCoder, BLOOM, GPT-NeoX, and T5.
 - **Fine-Tuning for Precision:** While CogniX demonstrates robust capabilities, there's also the potential for fine-tuning models to specific domains, such as legal documents in multiple languages, to achieve even more precise results.
-> See [Visit the official CogniX GitHub repo for more information](https://github.com/gen-mind/cognix/tree/main/docs) 
+
+> [Visit the official CogniX GitHub repo for more information](https://github.com/gen-mind/cognix/tree/main/docs) 
 {: .prompt-tip }
