@@ -18,7 +18,7 @@ business innovation.
 Despite not holding a formal university degree, my career is built on relentless curiosity and self-taught expertise. I started programming at the age of 8, driven solely by passion for technology. I still remember my very first programming exam—coding in BASIC for the Commodore 64. The task was to implement the Pythagorean theorem, and even though I was too young to have learned it at school, I managed to get it right. Over the years, I’ve led and mentored several teams of engineers, proving that real-world skills and continuous learning can pave the way to leadership and innovation.
 
 ![Future Tech 2019 - Amsterdam](/content/2025/02/1556233203410-300x75.jpeg){: width="972" height="589" }
-_Future Tech 2019 - Amsterdam]_
+_Future Tech 2019 - Amsterdam_
 
 ### **Core Competencies**
 
