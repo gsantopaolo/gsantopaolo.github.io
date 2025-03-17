@@ -1,23 +1,8 @@
 ---
-id: 173
 title: 'Discussing Natural User Interfaces'
 date: '2018-02-14T16:54:16+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=173'
-permalink: /discussing-natural-user-interfaces/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/02/nui.jpg
 categories:
     - 'Natural User Interface'

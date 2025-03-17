@@ -1,28 +1,13 @@
 ---
-id: 383
 title: 'The Cost Function'
 date: '2017-04-24T15:46:34+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=383'
-permalink: /the-cost-function/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
-image: /content/2017/04/cost_function.jpg
 categories:
     - 'Machine Learning'
 tags:
     - 'cost function'
+math: true
 ---
 
 $$  

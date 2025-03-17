@@ -1,23 +1,8 @@
 ---
-id: 231
 title: 'Visualizing MNIST: Uncovering Hidden Patterns in High-Dimensional Data'
 date: '2017-07-26T11:57:47+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=231'
-permalink: /visualizing-mnist-uncovering-hidden-patterns-in-high-dimensional-data/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
 image: /content/2025/03/visualizingmnist.jpg
 categories:
     - 'Deep Learning'
