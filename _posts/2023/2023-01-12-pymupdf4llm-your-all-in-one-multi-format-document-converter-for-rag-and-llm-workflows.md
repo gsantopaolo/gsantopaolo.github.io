@@ -5,9 +5,9 @@ author: gp
 layout: post
 image: /content/2025/03/sidebar-logo-dark.webp
 categories:
-    - RAG
+  - RAG
 tags:
-    - PyMuPDF4LLM
+  - PyMuPDF4LLM
 ---
 
 **PyMuPDF4LLM** is a fantastic tool that makes it super easy to extract text and other information from a variety of file types. It’s especially handy if you’re working on Retrieval-Augmented Generation (RAG) systems or Large Language Model (LLM) pipelines. Why? Because it converts so many popular file formats directly to Markdown (MD) — and we all know Markdown is widely well understood by LLMs

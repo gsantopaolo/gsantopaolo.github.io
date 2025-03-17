@@ -1,12 +1,11 @@
 ---
-id: 331
 title: 'The FAA Balloon Flying Handbook Dataset'
 date: '2023-05-03T23:50:07+00:00'
 author: gp
 layout: post
 image: /content/2025/03/balloons-cappadocia.jpg
 categories:
-    - dataset
+  - dataset
 ---
 
 I was searching for a dataset to fine-tune an LLM on a specific topic, but I couldn’t find one that met my needs. T This dataset is intended to help fine tune LLMs.

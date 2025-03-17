@@ -1,24 +1,8 @@
 ---
-id: 341
 title: 'Teaching an LLM How to Fly a Hot Air Balloon'
 date: '2023-05-04T11:52:12+00:00'
 author: gp
 layout: post
-guid: 'https://genmind.ch/?p=341'
-permalink: /teaching-an-llm-how-to-fly-a-hot-air-balloon/
-site-sidebar-layout:
-    - default
-ast-site-content-layout:
-    - default
-site-content-style:
-    - default
-site-sidebar-style:
-    - default
-theme-transparent-header-meta:
-    - default
-astra-migrate-meta-layouts:
-    - set
-image: /content/2025/03/ballon2.jpg
 categories:
     - 'Fine Tuning'
     - LLM
