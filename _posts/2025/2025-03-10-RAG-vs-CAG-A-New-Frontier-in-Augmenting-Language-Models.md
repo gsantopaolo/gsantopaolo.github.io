@@ -1,6 +1,6 @@
 ---
 title: 'RAG vs. CAG: A New Frontier in Augmenting Language Models'
-date: '2025-03-10T23:31:30+00:00'
+date: '2025-03-10T10:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/03/rag-vs-cag.jpg
