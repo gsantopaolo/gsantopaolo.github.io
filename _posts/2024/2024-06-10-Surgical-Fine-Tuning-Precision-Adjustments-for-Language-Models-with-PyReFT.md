@@ -1,6 +1,6 @@
 ---
 title: 'Surgical Fine-Tuning: Precision Adjustments for Language Models with PyReFT'
-date: '2024-12-04T22:08:55+00:00'
+date: '2024-06-10T22:08:55+00:00'
 author: gp
 layout: post
 image: /content/2024/06/ReFT.jpg
