@@ -107,5 +107,5 @@ These possibilities make PyReFT an exciting development in the field of natural 
 PyReFT represents a significant step forward in the realm of fine-tuning language models. Its reft-native design offers a 
 flexible, modular, and efficient way to enhance the fine-tuning process, making it accessible to both researchers and practitioners. If you’re interested in experimenting with cutting-edge fine-tuning techniques, I encourage you to explore PyReFT further.
 
-For a complete example of how to use the library, check out my GitHub repository where the full code is available. 
+For a complete example of how to use the library, check out [my GitHub repository](https://github.com/gsantopaolo/fine-tuning) where the full code is available. 
 Happy fine-tuning!
