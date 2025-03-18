@@ -5,7 +5,7 @@ author: gp
 layout: post
 image: /content/2024/06/ReFT.jpg
 categories: ['Fine Tuning']
-tags: ['ReFT', 'pyReFT'']
+tags: ['ReFT', 'pyReFT']
 ---
 
 
