@@ -24,7 +24,7 @@ into the training pipeline. Rather than applying a one-size-fits-all approach, r
 This approach aligns with the ongoing trend in machine learning of creating specialized tools that can be seamlessly 
 integrated into existing pipelines without sacrificing performance.
 
-![](/content/2025/06/ReFT.jpg){: width="500"}
+![](/content/2024/06/ReFT.jpg){: width="500"}
 _Illustration of ReFT_
 
 The left panel depicts an intervention I: the intervention function
