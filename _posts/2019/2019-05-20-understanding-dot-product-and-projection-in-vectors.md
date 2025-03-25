@@ -68,9 +68,9 @@ The **projection** of one vector onto another helps us determine the component o
 1. **Scalar Projection (Component):**  
    This tells you the length of the projection (how much one vector extends in the direction of the other). For a vector \(\mathbf{s}\) onto \(\mathbf{r}\), it is given by:
    
-   \[
+   $$
    \text{comp}_{\mathbf{r}}(\mathbf{s}) = \frac{\mathbf{s} \cdot \mathbf{r}}{\|\mathbf{r}\|}.
-   \]
+   $$
 
 2. **Vector Projection:**  
    This gives you the actual vector in the direction of \(\mathbf{r}\) that represents the projection of \(\mathbf{s}\). It is defined as:
