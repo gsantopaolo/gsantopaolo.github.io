@@ -17,9 +17,9 @@ the second. In this blog post, you’ll learn what vector projection is, why it 
 ---
 
 ## What Is Vector Projection?
-
-Given two vectors $(\mathbf{a})$ and \(\mathbf{b}\), the **projection** of \(\mathbf{a}\) onto \(\mathbf{b}\) (sometimes called the “scalar projection” times \(\mathbf{b}\)) is:
-
+<p>
+Given two vectors (\mathbf{a}\) and \(\mathbf{b}\), the **projection** of \(\mathbf{a}\) onto \(\mathbf{b}\) (sometimes called the “scalar projection” times \(\mathbf{b}\)) is:
+</p>
 $$
 \text{proj}_{\mathbf{b}}(\mathbf{a}) 
 = \left( \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|^2} \right) \mathbf{b}.
