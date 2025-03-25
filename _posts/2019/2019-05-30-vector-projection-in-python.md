@@ -18,7 +18,7 @@ the second. In this blog post, you’ll learn what vector projection is, why it 
 
 ## What Is Vector Projection?
 <p>
-Given two vectors (\mathbf{a}\) and \(\mathbf{b}\), the **projection** of \(\mathbf{a}\) onto \(\mathbf{b}\) (sometimes called the “scalar projection” times \(\mathbf{b}\)) is:
+Given two vectors \(\mathbf{a}\) and \(\mathbf{b}\), the <strong>projection</strong> of \(\mathbf{a}\) onto \(\mathbf{b}\) (sometimes called the “scalar projection” times \(\mathbf{b}\)) is:
 </p>
 $$
 \text{proj}_{\mathbf{b}}(\mathbf{a}) 
@@ -27,9 +27,9 @@ $$
 
 <p> \(\mathbf{a} \cdot \mathbf{b}\) is the dot product of vectors \(\mathbf{a}\) and \(\mathbf{b}\).</p>
 <p> \(\|\mathbf{b}\|^2 = \mathbf{b} \cdot \mathbf{b}\) is the **square** of the magnitude of \(\mathbf{b}\).</p>
-
+<p>
 In simpler terms, \(\mathbf{a} \cdot \mathbf{b}\) tells us how “aligned” \(\mathbf{a}\) is with \(\mathbf{b}\). Dividing by \(\|\mathbf{b}\|^2\) scales this alignment relative to the length of \(\mathbf{b}\). Finally, multiplying by \(\mathbf{b}\) orients the resulting vector along the direction of \(\mathbf{b}\).
-
+</p>
 ---
 
 ## Why Does Vector Projection Matter?
@@ -81,10 +81,11 @@ def vector_projection(a, b):
 
 ### Step-by-Step Explanation
 
-1. **Dot Products**: We use `np.dot(a, b)` to compute \(\mathbf{a} \cdot \mathbf{b}\) and `np.dot(b, b)` to compute \(\|\mathbf{b}\|^2\).  
-2. **Zero Vector Check**: If \(\|\mathbf{b}\|^2 = 0\), then \(\mathbf{b}\) is a zero vector and we can’t project onto it.  
-3. **Projection**: Multiply \(\mathbf{b}\) by the scalar \(\frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|^2}\).  
-
+<p>
+1. <strong>Dot Products</strong>: We use `np.dot(a, b)` to compute \(\mathbf{a} \cdot \mathbf{b}\) and `np.dot(b, b)` to compute \(\|\mathbf{b}\|^2\).  
+2. <strong>Zero Vector Check</strong>: If \(\|\mathbf{b}\|^2 = 0\), then \(\mathbf{b}\) is a zero vector and we can’t project onto it.  
+3. <strong>Projection</strong>: Multiply \(\mathbf{b}\) by the scalar \(\frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{b}\|^2}\).  
+</p>
 ---
 
 ## Trying It Out
@@ -106,9 +107,9 @@ When you run this script, you should see something like:
 ```
 Projection of a onto b: [-1.  2.]
 ```
-
+<p>
 This result corresponds to the component of \(\mathbf{a}\) in the direction of \(\mathbf{b}\).
-
+</p>
 ---
 
 ## Extending to Higher Dimensions
