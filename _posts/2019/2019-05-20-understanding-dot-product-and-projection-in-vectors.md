@@ -37,7 +37,7 @@ $$
 \mathbf{u} \cdot \mathbf{v} = \|\mathbf{u}\| \, \|\mathbf{v}\| \cos(\theta).
 $$
 
-- When the vectors point in the **same direction**, \(\cos(\theta)\) is positive and the dot product is large.
+<p>&#8226;  When the vectors point in the **same direction**, \(\cos(\theta)\) is positive and the dot product is large.</p>
 - When the vectors point in the **same direction**, $(\cos(\theta))$ is positive and the dot product is large.
 
 - When the vectors are **perpendicular**, \(\cos(\theta) = 0\) and the dot product is zero.
