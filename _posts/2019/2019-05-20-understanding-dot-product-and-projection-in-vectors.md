@@ -38,8 +38,6 @@ $$
 $$
 
 <p>&#8226;  When the vectors point in the <strong>same direction</strong>, \(\cos(\theta)\) is positive and the dot product is large.</p>
-<p>&#8226;  When the vectors point in the <strong>same direction</strong>, $(\cos(\theta))$ is positive and the dot product is large.</p>
-
 <p>&#8226;  When the vectors are <strong>perpendicular</strong>, \(\cos(\theta) = 0\) and the dot product is zero.</p>
 <p>&#8226;  When they point in <strong>opposite directions</strong>, \(\cos(\theta)\) is negative, yielding a negative dot product.</p>
 
