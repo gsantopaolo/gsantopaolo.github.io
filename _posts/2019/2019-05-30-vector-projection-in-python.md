@@ -3,7 +3,7 @@ title: 'A Gentle Introduction to Vector Projection in Python with NumPy'
 date: '2019-05-30T15:39:50+00:00'
 author: gp
 layout: post
-image: /content/2019/05/projection.jpg
+image: /content/2019/05/projection2.jpg
 categories:
     - "linear algebra"
 math: true
