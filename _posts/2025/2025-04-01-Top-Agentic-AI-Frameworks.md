@@ -1,5 +1,5 @@
 ---
-title: 'Top AI Agentic Framework'
+title: 'Top Agentic AI Frameworks'
 date: '2025-04-01T10:31:30+00:00'
 author: gp
 layout: post
