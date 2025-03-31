@@ -1,6 +1,6 @@
 ---
 title: 'Top Agentic AI Frameworks'
-date: '2025-04-01T10:31:30+00:00'
+date: '2025-03-31T10:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/04/AI-frameworks.png
