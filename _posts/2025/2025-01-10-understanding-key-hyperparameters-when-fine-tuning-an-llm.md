@@ -56,7 +56,7 @@ When using a batch size of 2, the model processes two training samples simultane
 This combined loss represents the net effect of both samples together. Instead of updating the weights first from A to B (based on the first row) and then from B to C (based on the second row) as in the sequential approach, the model takes one update step based on the aggregated loss (P1+P2). This single step moves the model’s weights from point A directly to a new point (let’s call it B1) on the loss surface. Note that point B1 is not equivalent to the sequential update you’d get by processing the samples individually; rather, it reflects the average direction suggested by both samples.
 
 
-[](content/2025/01/batch_size_2-300x236.jpg)
+![](content/2025/01/batch_size_2-300x236.jpg)
 _batch size = 2_
 
 To reiterate, when you use a batch size of one, the model’s weights are updated individually for each row of training data. In this approach, the model explores the loss surface one sample at a time—each update is highly specific to the information contained in that single row.
