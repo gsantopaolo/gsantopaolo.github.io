@@ -6,8 +6,6 @@ layout: post
 image: /content/2025/03/AI-agents.png
 categories: [Agents, LLM]
 ---
-# The Rise of AI Agents: Building Smarter, More Autonomous Systems
-
 The landscape of artificial intelligence is rapidly evolving, and one of the most exciting developments is 
 the emergence of AI agents. 
 As we approach a new era where 2025 is being hailed as the year of AI agents, 
