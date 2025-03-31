@@ -1,6 +1,6 @@
 ---
-title: 'RAG vs. CAG: A New Frontier in Augmenting Language Models'
-date: '2025-03-10T10:31:30+00:00'
+title: 'The Raise of AI Agents'
+date: '2025-03-20T10:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/03/AI-agents.png
