@@ -27,38 +27,36 @@ Below is a list of widely used agentic AI frameworks along with direct links to 
 
 - **LangChain** – A modular, LLM‑driven framework that supports prompt chaining, memory management, and external tool integration.  
   [GitHub Repo](https://github.com/hwchase17/langchain)  
-  citeturn0search12
+
 
 - **CrewAI** – A role‑based framework focused on collaborative multi‑agent systems where agents share tasks and communicate dynamically.  
-  [GitHub Repo](https://github.com/crewAIInc/crewAI)  
-  citeturn0search12
+  [GitHub Repo](https://github.com/crewAIInc/crewAI)
 
 - **Atomic Agents** – A minimalistic, open‑source library emphasizing control and consistency in multi‑agent pipelines.  
-  [GitHub Repo](https://github.com/BrainBlend-AI/atomic-agents)  
-  citeturn0search5
+  [GitHub Repo](https://github.com/BrainBlend-AI/atomic-agents)
 
 - **Hugging Face Transformers Agents** – Leverages the Transformers ecosystem to build multimodal, task‑specific agents.  
   [GitHub Repo](https://github.com/huggingface/transformers) *(See examples for agent implementations.)*
 
 - **Langflow** – A low‑code, visual interface for quickly prototyping agent workflows.  
-  [GitHub Repo](https://github.com/langflow/langflow)  
-  citeturn0search12
+  [GitHub Repo](https://github.com/langflow-ai/langflow)
 
 - **Dify** – An LLMOps platform with a visual development interface for rapid AI agent deployment.  
-  [GitHub Repo](https://github.com/dify-ai/dify)  
-  citeturn0search12
+  [GitHub Repo](https://github.com/langgenius/dify)
 
 - **Lyzr** – A no‑code platform tailored for enterprises with pre‑built agents across multiple business functions.  
-  *(Repository link may be available from the vendor’s site.)*
+  *[closed source](https://www.lyzr.ai/)*
 
-- **AgentGPT / BabyAGI / MetaGPT / Swarm** – Emerging platforms aimed at both non‑technical users and developers for rapid agent prototyping.  
-  *(Check individual GitHub pages for the latest links.)*
+- **[AgentGPT](https://agentgpt.io/) / [BabyAGI](https://github.com/yoheinakajima/babyagi) / [MetaGPT](https://github.com/geekan/MetaGPT) / [Swarms](https://github.com/kyegomez/swarms)** – Emerging platforms aimed at both non‑technical users and developers for rapid agent prototyping.  
+
 
 ---
 
 ## Comparing the Top 4 Frameworks
 
-For our technical comparison, we now focus on Microsoft AutoGen, Microsoft Semantic Kernel, LangChain, and CrewAI. We demonstrate minimal examples that illustrate how each framework can be used to define and execute a simple task.
+For our technical comparison, we now focus on Microsoft AutoGen, Microsoft Semantic Kernel, LangChain, and 
+CrewAI. We demonstrate minimal examples that illustrate how each framework can be used to define and 
+execute a simple task.
 
 ### 1. Microsoft AutoGen
 
@@ -147,7 +145,8 @@ This code illustrates LangChain’s strength in sequentially processing data thr
 
 ### 4. CrewAI
 
-CrewAI is built for collaborative multi‑agent scenarios where agents assume specialized roles. In this example, we simulate a two-agent team where one agent gathers information and another synthesizes it.
+CrewAI is built for collaborative multi‑agent scenarios where agents assume specialized roles. 
+In this example, we simulate a two-agent team where one agent gathers information and another synthesizes it.
 
 ```python
 # Example using CrewAI (pseudo-code)
@@ -187,8 +186,10 @@ This technical article presented a curated list of popular agentic AI frameworks
 - **LangChain** provides flexible chaining of prompts with memory support.
 - **CrewAI** shines in role‑based, collaborative agent teams.
 
-These examples should give you a starting point to experiment with building your own autonomous workflows and help you choose the right technology stack for your specific use cases.
+These examples should give you a starting point to experiment with building your own autonomous workflows 
+and help you choose the right technology stack for your specific use cases.
 
-Feel free to explore the linked repositories for more detailed documentation and advanced examples. Happy coding!
+Feel free to explore the linked repositories for more detailed documentation and advanced examples. 
+Happy coding!
 
 ---
