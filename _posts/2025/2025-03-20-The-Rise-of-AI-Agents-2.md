@@ -25,7 +25,7 @@ to API integrations and even memory systems—that provide context and real-time
 This integration enables AI agents to perform complex, open-ended tasks that go well beyond 
 basic conversational exchanges.
 
-![](content/2025/03/AI-Agent2.png)
+![](content/2025/03/AI-agents.png)
 _LLM and its connections to various tools_
 
 ---
