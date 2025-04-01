@@ -8,19 +8,25 @@ categories: ['Fine Tuning', LLM]
 tags: [fine-tuning, trl]
 ---
 
-Fine-tuning large language models can quickly become a tangled mess of code and configuration, 
-especially when you're experimenting with different strategies. 
-Recently, we streamlined our process by leveraging **TRLParser** to separate configuration from code entirely. 
+Fine-tuning large language models can quickly become a tangled mess of code and configuration, especially when 
+we're experimenting with different strategies. 
+
+Recently, I rewrote [Teaching an LLM How to Fly a Hot Air Balloon]({% post_url /2023/2023-05-04-teaching-an-llm-how-to-fly-a-hot-air-balloon %}) 
+using TRLParser, which lets me separate configuration from the code entirely. 
 The result? Cleaner, more maintainable code that lets us switch fine-tuning strategies simply by tweaking a YAML file.
+
 
 ## A Cleaner, More Flexible Approach
 
-In our previous setup, changing parameters like learning rate, LoRA configurations, or even the dataset splits required diving into the codebase. This not only made experimentation cumbersome but also increased the risk of inadvertently breaking something. With TRLParser, we've decoupled these parameters from our core training logic.
+In my previous setup, changing parameters like learning rate, LoRA configurations, or even the dataset splits 
+required changes into the code. 
+This not only made experimentation cumbersome but also increased the risk of inadvertently breaking something. 
+With TRLParser, we can decouple parameters from our core training logic.
 
 > See [Teaching an LLM How to Fly a Hot Air Balloon]({% post_url /2023/2023-05-04-teaching-an-llm-how-to-fly-a-hot-air-balloon %}) as fine-tuning sample without TRLParser for comparsion.
 {: .prompt-tip }
 
-By moving all configurable parameters into a YAML file, the main training script remains clean and focused solely on the workflow:
+By moving all configurable parameters into a YAML file, the main training script remains clean and focused on the workflow:
   
 ```python
 # Parse configuration from YAML into three dataclasses:
@@ -42,7 +48,7 @@ This modular approach opens up a world of opportunities for automation and MLOps
 
 ## A Glimpse at Our YAML Configuration
 
-Here's a snippet from our YAML configuration, which defines everything from model parameters to training arguments:
+Here's a snippet from the YAML configuration, which defines everything from model parameters to training arguments:
 
 ```yaml
 # Model arguments
@@ -71,12 +77,14 @@ max_seq_length: 1024
 ...
 ```
 
-With this setup, the code remains generic, and every parameter is just a value waiting to be changed in the YAML. This not only makes the code cleaner but also drastically simplifies maintenance and experimentation.
 
 ## Conclusion
 
-Using TRLParser to decouple our configuration from our fine-tuning code has been a transformative experience. The cleaner codebase and enhanced flexibility now allow us to focus on building better models and deploying robust MLOps pipelines. If you’re looking to streamline your own fine-tuning experiments, give TRLParser a try!
+Using TRLParser to decouple the configuration from our fine-tuning code has been a 
+transformative experience. 
+The cleaner codebase and enhanced flexibility now allow us to focus on building better models 
+and deploying robust MLOps pipelines. 
+If you’re looking to streamline your own fine-tuning experiments, give TRLParser a try!
 
-For more details, check out our complete repository on GitHub:  
-[GitHub - fine-tuning/hot-air-balloon/fine-tune.py](https://github.com/gsantopaolo/fine-tuning/blob/main/hot-air-balloon/fine-tune.py)
-You can easily use the dataset [directly from HuggingFace](https://huggingface.co/datasets/gsantopaolo/faa-balloon-flying-handbook) like this:
+For more details, check out the full working sample on my [GitHub repo](https://github.com/gsantopaolo/fine-tuning/tree/main/hot-air-balloon-trlparser):  
+

@@ -180,4 +180,4 @@ With this setup, our AI is now learning the ins and outs of flying a hot air bal
 
 Now that we have created the dataset from the FAA manual, it’s time to teach our AI to fly a hot air balloon! By blending state-of-the-art fine-tuning techniques with our unique dataset, we’re giving our AI the tools to answer complex questions about hot air balloon operations with confidence.
 
-Check out the full source code on my [GitHub repository](https://github.com/gsantopaolo/fine-tuning) and feel free to contribute or ask questions. Happy flying and fine tuning!
+Check out the full source code on my [GitHub repository](https://github.com/gsantopaolo/fine-tuning/tree/main/hot-air-balloon) and feel free to contribute or ask questions. Happy flying and fine tuning!
