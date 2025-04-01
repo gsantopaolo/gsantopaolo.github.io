@@ -87,6 +87,9 @@ Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Langua
 > See [Teaching an LLM How to Fly a Hot Air Balloon]({% post_url /2023/2023-05-04-teaching-an-llm-how-to-fly-a-hot-air-balloon %}) as example of how to use TRL.
 {: .prompt-tip }
 
+> See [How TRLParser Is Revolutionizing Our Fine-Tuning Workflow]({% post_url /2025/2025-02-12-how-trlparser-is-revolutionizing-our-fine-tuning-workflow %}) as example of how to use TRL and TRL parser.
+{: .prompt-tip }
+
 ---
 
 ## Key Hyperparameters
