@@ -10,7 +10,7 @@ categories: [Agents, LLM, CrewAI]
 
 ## CV-Pilot: A Hands-On Agentic Experiment
 
-At [genmind.ch](https://genmind.ch/), I'm always on the lookout for ways to push the 
+I'm always on the lookout for ways to push the 
 boundaries of what GenAI can do for productivity.
 
 Here’s why I believe agentic AI is the next big leap, what its strengths and challenges are, 
@@ -22,15 +22,17 @@ and how everyone from startups to Salesforce is racing to build with it
 ## Why Agentic AI?
 
 Agentic AI frameworks—Microsoft AutoGen, Semantic Kernel, LangChain, CrewAI, 
-and more—provide structured, goal-driven agents that coordinate to solve complex tasks. 
+and more (I've compared the most famous agenticAI framework in
+[this](https://genmind.ch/posts/Top-Agentic-AI-Frameworks/) blog post) 
+—provide structured, goal-driven agents that coordinate to solve complex tasks. 
 Unlike single-prompt chatbots, these systems:
 
 * Define **specialized roles** (data collector, analyzer, editor).
 * Chain together **multi-step workflows** with memory and tools.
 * Offer **traceability** and checkpoints for human oversight.
-
-I’m extending Crew AI’s sample code into a “CV-Pilot” app, wiring up real scraping tools, 
-file readers, and audit trails—so you can see exactly how each agent arrives at its output.
+* 
+I wanted to try Crew AI on a real-world task, so I extended its resume-tailoring sample 
+to match resumes to job offers and turned it into a fully working app.
 
 ## Pros and Cons of Agentic AI
 
@@ -47,8 +49,6 @@ handle high volumes of queries at scale.
 
 **Cons**
 
-* **Job Displacement**: Automating complex tasks risks replacing roles, potentially 
-increasing unemployment and inequality.
 * **Ethical & Bias Risks**: Training data biases can propagate unfair decisions, 
 and opaque decision paths complicate accountability.
 * **High Costs & Complexity**: Upfront investments in infrastructure, integration, 
@@ -62,7 +62,7 @@ compute resources, heightening sustainability challenges.
 
 The shift from static automation to **dynamic, goal-oriented agents** mirrors demands 
 for adaptable, resilient systems. Agents don’t just execute code—they reason about 
-objectives, recover from failures, and replan on the fly. As **Harvard Business Review** 
+objectives, recover from failures, and replan on the fly. As [**Harvard Business Review** ](https://hbr.org/2024/12/what-is-agentic-ai-and-how-will-it-change-work?utm_source=genmind.ch)
 notes, we’re already seeing agents that can plan travel, manage supply chains, or act as 
 virtual caregivers—ushering in a new era of human-AI 
 collaboration. In finance and HR, AI agents are autonomously handling expense approvals 
