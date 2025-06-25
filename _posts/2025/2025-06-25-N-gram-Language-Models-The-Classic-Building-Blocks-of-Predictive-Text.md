@@ -247,11 +247,12 @@ flowchart LR
     Sliding_Window --- Transformer_Attention
 ```
 
-While n-grams paved the way—powering NLP from the 1970s through \~2012—their “local counts” approach can’t capture long-range dependencies or semantic nuance the way neural LLMs do. But remember: the core lesson from Manning’s class is **scale + better models**, not scale alone. N-grams still shine when you need a tiny, interpretable model with instant on-device predictions. 😉
+While n-grams paved the way—powering NLP from the 1970s through \~2012—their “local counts” approach can’t capture long-range dependencies or semantic nuance the way neural LLMs do. 
+But remember: the core lesson from Professor Manning’s class, [CS224N Natural Language Processing with Deep Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D), is **scale + better models**, not scale alone. N-grams still shine when you need a tiny, interpretable model with instant on-device predictions. 😉
 
 ---
 
-## Conclusion 🎉
+## Conclusion
 
 N-gram language models are the **classic** statistical tool for predicting text. By making a simplifying Markov assumption and counting short word sequences, they enabled:
 
@@ -259,5 +260,5 @@ N-gram language models are the **classic** statistical tool for predicting text.
 * Real-time speech decoders
 * Quick, on-device text generation
 
-Though largely superseded by neural LLMs today, n-grams remain an invaluable teaching example—and a lightweight solution when you need speed and simplicity. Next time your phone nails your next word, tip your hat to these humble models! 🎩
+Though largely superseded by neural LLMs today, n-grams remain an invaluable teaching example—and a lightweight solution when you need speed and simplicity. Next time your phone nails your next word, tip your hat to these humble models!
 
