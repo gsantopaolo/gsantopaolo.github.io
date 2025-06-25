@@ -9,8 +9,6 @@ math: true
 mermaid: true
 ---
 
-# N-gram Language Models: The Classic Building Blocks of Predictive Text 🤓
-
 Have you ever tapped on your phone’s keyboard and seen it guess your next word? That “magic” used to (and often still does!) come from **n-gram language models**—the statistical workhorses that predate today’s fancy LLMs.
 N-gram language models are one of the classic approaches to predicting text. 
 
