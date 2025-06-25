@@ -37,7 +37,7 @@ In natural language processing, an **n-gram** is simply a contiguous sequence of
 
 The value of *n* defines the order of the model: a *bigram model* uses the previous 1 word of context, a *trigram model* uses the previous 2 words, and in general an *n-gram model* looks at the previous *n-1* words of context. By breaking text into these chunks, n-gram models capture local context in language – for instance, that "New" is often followed by "York", or "credit card" is a common two-word phrase.
 ```mermaid
-flowchart LR
+ flowchart LR
     %% nodes for each word
     A[the]
     B[cat]
@@ -136,7 +136,6 @@ $$
 
 More advanced: Good–Turing, Katz back-off, Kneser–Ney…
 ```mermaid
-
 flowchart TD
     A["Start: predict P(w|context)"]
     A --> B{"Count(context + w) > 0?"}
@@ -148,7 +147,6 @@ flowchart TD
     E --> G
     F --> G
     G --> H["Return P(w)"]
-
 ```
 ---
 ## Building an N-gram Model for Word Prediction (Python Example)
