@@ -68,7 +68,15 @@ An n-gram **language model** uses n-grams to estimate how likely a given sequenc
 Let's break that down with an example. Suppose we want to estimate the probability of a sentence *W* = "There was heavy rain". According to the chain rule of probability, we could factor it as:
 
 $$
-P(\text{"There was heavy rain"}) = P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"There was"}) \cdot P(\text{"rain"} \mid \text{"There was heavy"}) \,, 
+\[
+\begin{aligned}
+P\bigl(\text{“There was heavy rain”}\bigr)
+&= P\bigl(\text{“There”}\bigr)\,
+    P\bigl(\text{“was”}\mid\text{“There”}\bigr)\\
+&\quad\times P\bigl(\text{“heavy”}\mid\text{“There was”}\bigr)\,
+    P\bigl(\text{“rain”}\mid\text{“There was heavy”}\bigr)\,.
+\end{aligned}
+\]
 $$
 
 This is exact but in practice hard to compute for long contexts. The Markov assumption simplifies it. If we choose a **bigram (2-gram) model**, we assume each word depends only on *one* previous word. The sentence probability then approximates to:
