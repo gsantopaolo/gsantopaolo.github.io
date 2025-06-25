@@ -3,7 +3,7 @@ id: 416
 title: 'Everything You Need to Know About Fine-Tuning LLMs'
 date: '2025-01-07T09:54:48+00:00'
 author: gp
-pin: true
+#pin: true
 image: /content/2025/01/fine_tuning.jpg
 categories:
     - 'Fine Tuning'
