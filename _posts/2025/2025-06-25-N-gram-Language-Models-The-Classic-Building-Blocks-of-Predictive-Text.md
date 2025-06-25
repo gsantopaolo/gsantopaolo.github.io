@@ -1,16 +1,13 @@
-
 ---
 title: 'N-gram Language Models: The Classic Building Blocks of Predictive Text'
-date: '2025-05-10T10:31:30+00:00'
+date: '2025-06-25T10:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/ngram.png
-categories: [Language Model, N-gram ]
+categories: [Language Model, N-gram]
 math: true
 mermaid: true
 ---
-
-
 
 # N-gram Language Models: The Classic Building Blocks of Predictive Text 🤓
 
