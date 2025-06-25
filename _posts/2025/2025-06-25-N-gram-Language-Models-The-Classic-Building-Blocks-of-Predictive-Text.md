@@ -25,7 +25,7 @@ Let’s get started!
 
 ---
 
-## What Is an “N-gram”? 📚
+## What Is an “N-gram”?
 
 In natural language processing, an **n-gram** is simply a contiguous sequence of *n* items from text. Typically those items are words (though they could also be characters or syllables). For example:
 
@@ -196,7 +196,7 @@ _mock-up of a phone keyboard suggestion bar, annotating how the last two words m
 
 
 ---
-## From N-grams to Modern LLMs: What’s Improved? 🤖
+## From N-grams to Modern LLMs: What’s Improved?
 
 N-gram models are **fast and simple**, but they have clear shortcomings. They consider only a limited context (fixed window of n-1 words) and don't truly understand meaning – they just count occurrences. As we use larger n (4-gram, 5-gram, etc.), we capture a bit more context, but we also run into the problem of data sparsity (many possible word combinations never appear in training) and **combinatorial explosion** in storage. In practice, beyond a certain n (often around 3 to 5), the gain from adding more context is very small compared to the increase in model size and data requirements. For example, SwiftKey's old engine capped at using 2-word context because using 3 or 4 words would require a *huge* database and be too slow on a phone.
 
@@ -211,7 +211,7 @@ It's worth noting that these improvements come at a cost: LLMs are computational
 To put it succinctly, **n-gram models treat language like a collection of frequent snippets, while LLMs attempt to *learn* language, capturing both local and global patterns**. N-gram models were a crucial stepping stone in NLP, but they have been *largely superseded* by neural network models and modern LLMs that achieve far greater accuracy and fluency.
 ---
 
-## Limitations & the Rise of Neural LLMs 🚀
+## Limitations & the Rise of Neural LLMs
 
 | **N-gram Models**            | **Modern LLMs (e.g. GPT-4)**            |
 | ---------------------------- | --------------------------------------- |
