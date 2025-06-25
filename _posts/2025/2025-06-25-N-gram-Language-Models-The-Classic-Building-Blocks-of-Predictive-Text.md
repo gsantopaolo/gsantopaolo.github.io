@@ -68,13 +68,13 @@ An n-gram **language model** uses n-grams to estimate how likely a given sequenc
 Let's break that down with an example. Suppose we want to estimate the probability of a sentence *W* = "There was heavy rain". According to the chain rule of probability, we could factor it as:
 
 $$
-P(\text{"There was heavy rain"}) = P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"There was"}) \cdot P(\text{"rain"} \mid \text{"There was heavy"}) \,. 
+P(\text{"There was heavy rain"}) = P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"There was"}) \cdot P(\text{"rain"} \mid \text{"There was heavy"}) \,, 
 $$
 
 This is exact but in practice hard to compute for long contexts. The Markov assumption simplifies it. If we choose a **bigram (2-gram) model**, we assume each word depends only on *one* previous word. The sentence probability then approximates to:
 
 $$
-P(\text{"There was heavy rain"}) \;\approx\; P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"was"}) \cdot P(\text{"rain"} \mid \text{"heavy"}) \,. 
+P(\text{"There was heavy rain"}) \;\approx\; P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"was"}) \cdot P(\text{"rain"} \mid \text{"heavy"}) \,,
 $$
 
 We dropped the longer context in conditional probabilities, using only the immediate predecessor (previous one word). In a **trigram model**, we would use the previous two words of context for each prediction, and so on. The trade-off is that higher-order models consider more context but also become more complex and data-hungry.
