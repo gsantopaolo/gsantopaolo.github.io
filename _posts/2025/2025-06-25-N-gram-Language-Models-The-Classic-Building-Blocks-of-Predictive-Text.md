@@ -74,7 +74,7 @@ P\bigl(\text{“There was heavy rain”}\bigr)
 &= P\bigl(\text{“There”}\bigr)\,
     P\bigl(\text{“was”}\mid\text{“There”}\bigr)\\
 &\quad\times P\bigl(\text{“heavy”}\mid\text{“There was”}\bigr)\,
-    P\bigl(\text{“rain”}\mid\text{“There was heavy”}\bigr)\,.
+    P\bigl(\text{“rain”}\mid\text{“There was heavy”}\bigr)\,
 \end{aligned}
 
 $$
@@ -87,7 +87,7 @@ P\bigl(\text{“There was heavy rain”}\bigr)
 &\approx P\bigl(\text{“There”}\bigr)\,
     P\bigl(\text{“was”}\mid\text{“There”}\bigr)\\
 &\quad\times P\bigl(\text{“heavy”}\mid\text{“was”}\bigr)\,
-    P\bigl(\text{“rain”}\mid\text{“heavy”}\bigr)\,.
+    P\bigl(\text{“rain”}\mid\text{“heavy”}\bigr)\,
 \end{aligned}
 $$
 
