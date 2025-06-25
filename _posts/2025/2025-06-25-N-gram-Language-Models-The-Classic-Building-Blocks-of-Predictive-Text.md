@@ -65,49 +65,19 @@ By counting how often each n-gram appears in a large corpus, we can estimate how
 
 An n-gram **language model** uses n-grams to estimate how likely a given sequence of words is. The core idea is the **Markov assumption**: the probability of each word depends only on the *preceding* n-1 words, not the entire history. In other words, n-gram models approximate language by looking at a sliding window of n words.
 
-
-### The Markov Assumption & Chain Rule 📈
-
-Given a sentence $w_1, w_2, \dots, w_T$, the full joint probability is:
+Let's break that down with an example. Suppose we want to estimate the probability of a sentence *W* = "There was heavy rain". According to the chain rule of probability, we could factor it as:
 
 $$
-P(w_1, w_2, \dots, w_T)
-= \prod_{t=1}^T P(w_t \mid w_1, \dots, w_{t-1}).
+P(\text{"There was heavy rain"}) = P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"There was"}) \cdot P(\text{"rain"} \mid \text{"There was heavy"}) \,. 
 $$
 
-But keeping track of all preceding words quickly becomes intractable.
-
-> **Markov assumption:** each word depends only on the previous $n-1$ words:
+This is exact but in practice hard to compute for long contexts. The Markov assumption simplifies it. If we choose a **bigram (2-gram) model**, we assume each word depends only on *one* previous word. The sentence probability then approximates to:
 
 $$
-P(w_t \mid w_1,\dots,w_{t-1})
-\approx
-P(w_t \mid w_{t-n+1}, \dots, w_{t-1}).
+P(\text{"There was heavy rain"}) \;\approx\; P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"was"}) \cdot P(\text{"rain"} \mid \text{"heavy"}) \,. 
 $$
 
-* **Bigram (n=2):** only the immediate predecessor
-* **Trigram (n=3):** the previous two words
-
----
-
-## From Counts to Probabilities 🔢
-
-We estimate:
-
-$$
-P(w_t \mid w_{t-n+1},\dots,w_{t-1})
-=
-\frac{\text{count}(w_{t-n+1},\dots,w_t)}
-     {\text{count}(w_{t-n+1},\dots,w_{t-1})}.
-$$
-
-*E.g.*, if “students opened their” appears 1 000 times, and “students opened their books” appears 400 times, then:
-
-$$
-P(\text{“books”} \mid \text{“students opened their”})
-= \frac{400}{1\,000} = 0.4.
-$$
-
+We dropped the longer context in conditional probabilities, using only the immediate predecessor (previous one word). In a **trigram model**, we would use the previous two words of context for each prediction, and so on. The trade-off is that higher-order models consider more context but also become more complex and data-hungry.
 
 ### Counting N-grams and Calculating Probabilities
 
@@ -122,6 +92,8 @@ i.e. the ratio of the count of the whole n-gram to the count of its (n-1)-word p
 These probabilities allow the model to predict text. If you're at a word sequence (context) and want to guess the next word, the model will look at all possible next words that followed this context in the training data, and choose the one with the highest probability (or sample according to those probabilities). In our example above, a bigram model might know *"heavy rain"* is a more frequent combination than *"heavy flood"* in normal language, so after seeing "heavy" it would predict "rain" as the likely next word.
 
 **Note:** To handle sentence boundaries, n-gram models often include special start-of-sentence `<s>` and end-of-sentence `</s>` tokens. For instance, a trigram model estimating the probability of the first word in a sentence would use `<s>` tokens as placeholders for preceding context.
+
+
 
 ### Avoiding the Zero-Probability Problem (Smoothing)
 
