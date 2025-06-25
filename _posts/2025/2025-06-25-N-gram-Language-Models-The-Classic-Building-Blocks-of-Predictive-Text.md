@@ -68,7 +68,7 @@ An n-gram **language model** uses n-grams to estimate how likely a given sequenc
 Let's break that down with an example. Suppose we want to estimate the probability of a sentence *W* = "There was heavy rain". According to the chain rule of probability, we could factor it as:
 
 $$
-\[
+
 \begin{aligned}
 P\bigl(\text{“There was heavy rain”}\bigr)
 &= P\bigl(\text{“There”}\bigr)\,
@@ -76,13 +76,19 @@ P\bigl(\text{“There was heavy rain”}\bigr)
 &\quad\times P\bigl(\text{“heavy”}\mid\text{“There was”}\bigr)\,
     P\bigl(\text{“rain”}\mid\text{“There was heavy”}\bigr)\,.
 \end{aligned}
-\]
+
 $$
 
 This is exact but in practice hard to compute for long contexts. The Markov assumption simplifies it. If we choose a **bigram (2-gram) model**, we assume each word depends only on *one* previous word. The sentence probability then approximates to:
 
 $$
-P(\text{"There was heavy rain"}) \;\approx\; P(\text{"There"}) \cdot P(\text{"was"} \mid \text{"There"}) \cdot P(\text{"heavy"} \mid \text{"was"}) \cdot P(\text{"rain"} \mid \text{"heavy"}) \,,
+\begin{aligned}
+P\bigl(\text{“There was heavy rain”}\bigr)
+&\approx P\bigl(\text{“There”}\bigr)\,
+    P\bigl(\text{“was”}\mid\text{“There”}\bigr)\\
+&\quad\times P\bigl(\text{“heavy”}\mid\text{“was”}\bigr)\,
+    P\bigl(\text{“rain”}\mid\text{“heavy”}\bigr)\,.
+\end{aligned}
 $$
 
 We dropped the longer context in conditional probabilities, using only the immediate predecessor (previous one word). In a **trigram model**, we would use the previous two words of context for each prediction, and so on. The trade-off is that higher-order models consider more context but also become more complex and data-hungry.
@@ -92,7 +98,7 @@ We dropped the longer context in conditional probabilities, using only the immed
 N-gram models are **statistical** models: we build them by counting how often word sequences occur in a large text corpus. These counts are then converted into probabilities. For an n-gram model, the **conditional probability** of a word given its previous n-1 words is calculated as:
 
 $$
-P(w_i \mid w_{i-(n-1)}, \dots, w_{i-1}) \;=\; \frac{\text{count}(w_{i-(n-1)}, \dots, w_{i-1}, w_i)}{\text{count}(w_{i-(n-1)}, \dots, w_{i-1})} \,,
+P(w_i \mid w_{i-(n-1)}, \dots, w_{i-1}) \;=\; \frac{\text{count}(w_{i-(n-1)}, \dots, w_{i-1}, w_i)}{\text{count}(w_{i-(n-1)}, \dots, w_{i-1})} \,
 $$
 
 i.e. the ratio of the count of the whole n-gram to the count of its (n-1)-word prefix. For example, with a bigram model, the probability of "rain" given "heavy" would be the count of the bigram ("heavy", "rain") divided by the count of the word "heavy" in the training text.
