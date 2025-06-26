@@ -51,107 +51,77 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 * **PyCharm version**: this guide applies to PyCharm 2025.1
 ---
 
-## 3. Establish the SSH Connection in PyCharm
+## 3. **Open SSH Configurations**
 
-1. **Open SSH Configurations**
+   * On the bottom-left corner of the IDE click on  **Current Interpreter ▸ Add New Interpreter ▸ On SSH ** and click **Create SSH configuration**.
 
-   * Go to **File ▸ Settings ▸ Tools ▸ SSH Configurations** and click **Create SSH configurations**.
+![Current Interpreter ▸ Add New Interpreter](/content/2025/06/pycharm1.jpg){: width="300" height="500" }
+_Create SSH configuration_
 
-[//]: # (<img)
-
-[//]: # (  src="/content/2025/06/pycharm1.jpg")
-
-[//]: # (  alt="Desktop View")
-
-[//]: # (  width="972")
-
-[//]: # (  height="589")
-
-[//]: # (  style="display:block;margin:0 auto;")
-
-[//]: # (/>)
-
-
-![Desktop View](/content/2025/06/pycharm1.jpg){: width="300" height="500" }
-_Full screen width and center alignment_
-
-2. **Fill in Connection Details**
-
+## 4. **Fill in Connection Details**
    * **Host**: your server’s IP or hostname
    * **Port**: usually `22` (or custom)
-   * **Username**: your Linux user
-   * **Auth**: password or SSH key pair
-3. **Test**
+   * **Username**: your SSH user
+   * click next
+![Connection Details](/content/2025/06/pycharm2.jpg){: width="500" height="400" }
+_fill in the connection details_
 
-   * Click **Test Connection** and verify you can log in without errors.
+## 5. **Fill in Auth Details**
+   * **Select**: Key pair and browse for your private SSH key. On a Mac the default location is YOUR_USER/.ssh . It's a hidden folder - Command + Shift + . (period) to show hidden folders on your pop up, if they are not already shown.
+   * **Fill the passphrase**: if your SSH private key weas generated with a passphrase. 
+   * **Select Save passphrase** 
+   * Click **Nect**.
 
-> **Screenshot suggestion:** Show the populated **SSH Configurations** dialog.
+![Auth Details](/content/2025/06/pycharm3.jpg){: width="500" height="400" }
+_fill in the auth details_
 
+## 6. **Introspecting SSH server**
+   * If you filled all your params correctly you shall see a blank box, just click next
+
+![Introspecting SSH server](/content/2025/06/pycharm4.jpg){: width="500" height="400" }
+_fIntrospecting SSH server_
+
+## 6. **Project directory and Python runtime configuration**
+   * Select the same envoironment you use locally
+   * I leave all the other params as default
+   * Click Create
+![Project directory and Python runtime configuration](/content/2025/06/pycharm5.jpg){: width="500" height="400" }
+_Project directory and Python runtime configuration_
 ---
 
-## 4. Configure the Remote Python Interpreter
 
-1. **Open Interpreter Settings**
 
-   * Navigate to **File ▸ Settings ▸ Project: <Your Project> ▸ Python Interpreter**.
-2. **Add SSH Interpreter**
-
-   * Click **Add Interpreter ▸ On SSH** ([jetbrains.com][3]).
-   * Choose your SSH configuration or create one inline.
-3. **Specify Python Path**
-
-   * Enter the remote path to your Python binary (for example `/usr/bin/python3` or `/home/user/venv/bin/python`).
-4. **Finish Setup**
-
-   * Click **OK**—PyCharm will connect and index the remote environment.
-
-> **Screenshot suggestion:** Capture the **Add SSH Interpreter** dialog with key fields highlighted.
-
----
-
-## 5. Path Mappings & File Synchronization
-
-* **Automatic Mapping**
-  PyCharm tries to map your local project root to a matching folder on the server ([jetbrains.com][9]).
-* **Manual Overrides**
-  Go to **Tools ▸ Deployment ▸ Configuration ▸ Mappings** to verify or adjust local ↔ remote paths.
-* **Exclude Large Folders**
-  Use the **Excluded Paths** tab to skip syncing big data or `.git` directories ([jetbrains.com][9]).
-
-> **Code snippet suggestion:** Show a `<mapping>` entry from `.idea/deployment.xml`.
-
----
 
 ## 6. Running, Testing & Debugging Remotely
 
 * **Run Configurations**
-  Your existing Run/Debug configs automatically use the SSH interpreter ([jetbrains.com][10]).
+  Your existing Run/Debug configs automatically use the SSH interpreter.
 * **Breakpoints & Console**
-  Set breakpoints locally; the debugger runs over SSH, showing remote stack frames and variables ([jetbrains.com][10]).
+  Set breakpoints locally; the debugger runs over SSH, showing remote stack frames and variables.
 * **Remote Python Console**
   Open a Python console that executes commands on the server.
 
-> **Screenshot suggestion:** Show a paused debug session with remote call stack and variable inspector.
-
+![Running, Testing & Debugging Remotely](/content/2025/06/pycharm.jpg){: width="500" height="400" }
+_Running, Testing & Debugging Remotely_
 ---
 
 ## 7. Deployment & Remote Host Tool Window
 
 * **Auto-Upload on Save**
-  In **Deployment Options**, enable “Upload changed files automatically to the default server.”
-* **Browse Remote Host**
-  Open **Tools ▸ Deployment ▸ Browse Remote Host** to manually upload/download files ([jetbrains.com][11]).
+  * When you make a change to your code, it is automatically deployed to the server; nothing else you have to care about
+  * You write code on your laptop, and it gets automatically executed on your GPU server!
+  * Optionally, you may want to open a terminal on your GPU server. On the bottom left of the IDE click on **Terminal** and on the drop down choose your newly created SSH connection
 
-> **Screenshot suggestion:** Display the **Remote Host** pane with a file tree.
-
+![open a terminal on your GPU server](/content/2025/06/pycharm6.jpg){: width="500" height="400" }
+_open a terminal on your GPU server_
 ---
 
 ## 8. Licensing & Limitations
 
 * **License**
-  SSH interpreters require PyCharm **Professional** (Community Edition doesn’t support them) ([jetbrains.com][12]).
+  SSH interpreters require PyCharm **Professional** (Community Edition doesn’t support them) ).
 * **Limitations**
-  Only Linux servers are supported as SSH backends; no remote Windows/macOS interpreters yet ([jetbrains.com][12]).
+  Only Linux servers are supported as SSH backends; no remote Windows/macOS interpreters yet, but hey, I hope you are not using a Windows server to test your ML projects!.
 
 ---
 
@@ -175,10 +145,13 @@ You’ve now unlocked the ability to **code from anywhere**, tapping into remote
 * **Collaborative coding** via Code With Me
 
 
-As for compute, cost-effective GPU backends include Runpod (pay-per-second from \$0.00011/s) ([runpod.io][4]), Lambda AI (H100 at \$1.85/hr) ([lambda.ai][5]), Hetzner bare-metal GPUs (e.g. RTX-powered servers from €0.295/hr) ([hetzner.com][6]), and the Shadeform.ai marketplace (A100 80 GB PCIe at \$1.20/hr up to H200 SXM5 at \$2.45/hr) ([shadeform.ai][7]). Follow along to set everything up step by step!
+As for compute, cost-effective GPU backends:
+- Runpod (pay-per-second from \$0.00011/s) ([runpod.io][4]), 
+- Lambda AI (H100 at \$1.85/hr) ([lambda.ai][5]) 
+- Hetzner bare-metal GPUs (e.g. RTX-powered servers from €0.295/hr) ([hetzner.com][6])
+- The Shadeform.ai marketplace (A100 80 GB PCIe at \$1.20/hr up to H200 SXM5 at \$2.45/hr) ([shadeform.ai][7]). 
 
-
-Drop your questions or share your SSH setup tips in the comments below—happy coding! 😄
+Happy AI coding! 😄
 
 [1]: https://www.jetbrains.com/help/pycharm/remote-development-overview.html?utm_source=genmind.ch "Remote development overview | PyCharm Documentation - JetBrains"
 [2]: https://www.jetbrains.com/help/pycharm/prerequisites.html?utm_source=genmind.ch "System requirements for remote development | PyCharm - JetBrains"
