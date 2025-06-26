@@ -10,11 +10,16 @@ mermaid: true
 ---
 
 
-
+If you landed here, your're probably already using a remote (GPU) for your ML tasks, and you're sick of git push from your laptop and the pull on your
+powerful GPU machine. Ask me why I know that 😉, and you're probably a Pycharm fan as well 😊.
+<br />
+If so you landed in the right place.
+<br />
+On the web there are several guide how to do remote dev for VS code, but I haven't found one that works for PyCharm, so I decieded to write this post.
+<br />
 PyCharm’s SSH-based remote development lets you keep using your familiar IDE while running code on a powerful Linux, GPU powered, 
-machine elsewhere ([jetbrains.com][1]). You’ll need a server with at least 4 vCPUs, 8 GB RAM, \~10 GB free disk, 
-and a supported Linux distro ([jetbrains.com][2]). 
-In PyCharm, you define an SSH configuration and then add an SSH interpreter, pointing to your remote Python executable ([jetbrains.com][3]). As for compute, cost-effective GPU backends include Runpod (pay-per-second from \$0.00011/s) ([runpod.io][4]), Lambda AI (H100 at \$1.85/hr) ([lambda.ai][5]), Hetzner bare-metal GPUs (e.g. RTX-powered servers from €0.295/hr) ([hetzner.com][6]), and the Shadeform.ai marketplace (A100 80 GB PCIe at \$1.20/hr up to H200 SXM5 at \$2.45/hr) ([shadeform.ai][7]). Follow along to set everything up step by step!
+machine elsewhere. You’ll need a server with at least 4 vCPUs, 8 GB RAM, \~10 GB free disk. 
+In PyCharm, you define an SSH configuration and then add an SSH interpreter, pointing to your remote Python executable. 
 
 ---
 
@@ -161,6 +166,10 @@ You’ve now unlocked the ability to **code from anywhere**, tapping into remote
 * **Container-based development** (Docker, Kubernetes)
 * **JetBrains Gateway** for zero-install remote work
 * **Collaborative coding** via Code With Me
+
+
+As for compute, cost-effective GPU backends include Runpod (pay-per-second from \$0.00011/s) ([runpod.io][4]), Lambda AI (H100 at \$1.85/hr) ([lambda.ai][5]), Hetzner bare-metal GPUs (e.g. RTX-powered servers from €0.295/hr) ([hetzner.com][6]), and the Shadeform.ai marketplace (A100 80 GB PCIe at \$1.20/hr up to H200 SXM5 at \$2.45/hr) ([shadeform.ai][7]). Follow along to set everything up step by step!
+
 
 Drop your questions or share your SSH setup tips in the comments below—happy coding! 😄
 
