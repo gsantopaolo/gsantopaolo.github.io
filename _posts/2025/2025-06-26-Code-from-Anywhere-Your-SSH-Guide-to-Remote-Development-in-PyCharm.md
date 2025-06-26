@@ -10,7 +10,7 @@ mermaid: true
 ---
 
 
-If you landed here, your're probably already using a remote (GPU) for your ML tasks, and you're sick of git push from your laptop and the pull on your
+If you landed here, you're probably already using a remote (GPU) for your ML tasks, and you're sick of git push from your laptop and the pull on your
 powerful GPU machine. Ask me why I know that 😉, and you're probably a Pycharm fan as well 😊.
 <br />
 If so, you landed in the right place.
@@ -23,7 +23,7 @@ In PyCharm, you define an SSH configuration and then add an SSH interpreter, poi
 
 ---
 
-## 1. Introduction
+## Introduction
 
 Welcome aboard the world of **SSH-based remote development** with PyCharm! 🚀 Imagine editing your DNN locally in PyCharm 
 while harnessing the power of a remote Linux server—be it a GPU instance on Runpod, a cluster on Lambda AI, a bare-metal GPU box at Hetzner, or the new [Shadeform.ai](https://www.shadeform.ai?utm_source=genmind.ch) marketplace 🌐💻. 
@@ -39,7 +39,7 @@ plus tips on squeezing GPU performance from budget-friendly servers. Let’s sup
 
 ---
 
-## 2. Prerequisites
+## Prerequisites
 
 Before you start, make sure your remote host meets PyCharm’s requirements:
 
@@ -51,14 +51,14 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 * **PyCharm version**: this guide applies to PyCharm 2025.1
 ---
 
-## 3. **Open SSH Configurations**
+## Open SSH Configurations
 
    * On the bottom-left corner of the IDE click on  **Current Interpreter ▸ Add New Interpreter ▸ On SSH ** and click **Create SSH configuration**.
 
 ![Current Interpreter ▸ Add New Interpreter](/content/2025/06/pycharm1.jpg){: width="300" height="500" }
 _Create SSH configuration_
 
-## 4. **Fill in Connection Details**
+## Fill in Connection Details
    * **Host**: your server’s IP or hostname
    * **Port**: usually `22` (or custom)
    * **Username**: your SSH user
@@ -67,7 +67,7 @@ _Create SSH configuration_
 ![Connection Details](/content/2025/06/pycharm2.jpg){: width="500" height="400" }
 _fill in the connection details_
 
-## 5. **Fill in Auth Details**
+## Fill in Auth Details
    * **Select**: Key pair and browse for your private SSH key. On a Mac the default location is YOUR_USER/.ssh . It's a hidden folder - Command + Shift + . (period) to show hidden folders on your pop up, if they are not already shown.
    * **Fill the passphrase**: if your SSH private key weas generated with a passphrase. 
    * **Select Save passphrase** 
@@ -76,13 +76,13 @@ _fill in the connection details_
 ![Auth Details](/content/2025/06/pycharm3.jpg){: width="500" height="400" }
 _fill in the auth details_
 
-## 6. **Introspecting SSH server**
+## Introspecting SSH server
    * If you filled all your params correctly you shall see a blank box, just click next
 <br />
 ![Introspecting SSH server](/content/2025/06/pycharm4.jpg){: width="500" height="400" }
 _fIntrospecting SSH server_
 
-## 6. **Project directory and Python runtime configuration**
+## Project directory and Python runtime configuration
    * Select the same envoironment you use locally
    * I leave all the other params as default
    * Click Create
@@ -94,7 +94,7 @@ _Project directory and Python runtime configuration_
 
 
 
-## 6. Running, Testing & Debugging Remotely
+## Running, Testing & Debugging Remotely
 
 * **Run Configurations**
   Your existing Run/Debug configs automatically use the SSH interpreter.
@@ -107,7 +107,7 @@ _Project directory and Python runtime configuration_
 _Running, Testing & Debugging Remotely_
 ---
 
-## 7. Deployment & Remote Host Tool Window
+## Deployment & Remote Host Tool Window
 
 * **Auto-Upload on Save**
   * When you make a change to your code, it is automatically deployed to the server; nothing else you have to care about
@@ -118,7 +118,7 @@ _Running, Testing & Debugging Remotely_
 _open a terminal on your GPU server_
 ---
 
-## 8. Licensing & Limitations
+## Licensing & Limitations
 
 * **License**
   SSH interpreters require PyCharm **Professional** (Community Edition doesn’t support them) ).
@@ -127,7 +127,7 @@ _open a terminal on your GPU server_
 
 ---
 
-## 9. Troubleshooting Tips
+## Troubleshooting Tips
 
 * **SSH Connection Errors**
   Verify firewall rules, the correct port, and test with `ssh -v user@host`.
@@ -138,7 +138,7 @@ _open a terminal on your GPU server_
 
 ---
 
-## 10. Conclusion & Next Steps
+## Conclusion & Next Steps
 
 You’ve now unlocked the ability to **code from anywhere**, tapping into remote CPUs or GPUs without leaving PyCharm. 🚀 Next, you might explore:
 
