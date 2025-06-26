@@ -56,16 +56,23 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 1. **Open SSH Configurations**
 
    * Go to **File ▸ Settings ▸ Tools ▸ SSH Configurations** and click **Create SSH configurations**.
-<img
-  src="/content/2025/06/pycharm1.jpg"
-  alt="Desktop View"
-  width="972"
-  height="589"
-  style="display:block;margin:0 auto;"
-/>
+
+[//]: # (<img)
+
+[//]: # (  src="/content/2025/06/pycharm1.jpg")
+
+[//]: # (  alt="Desktop View")
+
+[//]: # (  width="972")
+
+[//]: # (  height="589")
+
+[//]: # (  style="display:block;margin:0 auto;")
+
+[//]: # (/>)
 
 
-![Desktop View](/content/2025/06/pycharm1.jpg){: width="972" height="589" }
+![Desktop View](/content/2025/06/pycharm1.jpg){: width="300" height="500" }
 _Full screen width and center alignment_
 
 2. **Fill in Connection Details**
