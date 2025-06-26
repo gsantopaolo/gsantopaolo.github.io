@@ -3,7 +3,7 @@ title: 'Code from Anywhere: Your SSH Guide to Remote Development in PyCharm'
 date: '2025-06-25T10:31:30+00:00'
 author: gp
 layout: post
-image: /content/2025/06/pycharm.png
+image: /content/2025/06/pycharm.jpg
 categories: [PyCharm, Remote Development]
 math: true
 mermaid: true
