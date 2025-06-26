@@ -31,7 +31,7 @@ With a secure SSH tunnel, you get:
 
 No more fighting environment drift or lugging heavyweight workstations. 
 In this guide, we’ll cover every SSH-specific step from host prerequisites to remote interpreter setup, 
-plus tips on squeezing GPU performance from budget-friendly servers. Let’s supercharge your Python workflow! ✨🔗 ([jetbrains.com][1], [runpod.io][4], [lambda.ai][5], [hetzner.com][6], [shadeform.ai][7])
+plus tips on squeezing GPU performance from budget-friendly servers. Let’s supercharge your Python workflow! ([runpod.io][4], [lambda.ai][5], [hetzner.com][6], [shadeform.ai][7])
 
 ---
 
@@ -39,10 +39,10 @@ plus tips on squeezing GPU performance from budget-friendly servers. Let’s sup
 
 Before you start, make sure your remote host meets PyCharm’s requirements:
 
-* **CPU & RAM**: ≥ 4 vCPUs (x86\_64 or arm64), 8 GB RAM. Higher clock speeds beat more cores for this use case ([jetbrains.com][2]).
-* **Disk**: \~10 GB free on local or block storage (avoid NFS/SMB) ([jetbrains.com][2]).
-* **OS**: Ubuntu 18.04/20.04/22.04, CentOS, Debian, or RHEL ([jetbrains.com][2]).
-* **Python & SSH**: A running OpenSSH server on your Linux box and the desired Python version (e.g., `/usr/bin/python3` or a virtualenv) ([jetbrains.com][3]).
+* **CPU & RAM**: ≥ 4 vCPUs (x86\_64 or arm64), 8 GB RAM. Higher clock speeds beat more cores for this use case.
+* **Disk**: \~10 GB free on local or block storage (avoid NFS/SMB).
+* **OS**: Ubuntu 18.04/20.04/22.04, CentOS, Debian, or RHEL.
+* **Python & SSH**: A running OpenSSH server on your Linux box and the desired Python version (e.g., `/usr/bin/python3` or a virtualenv).
 * **Your public SSH key must be deployed on the server.**: If you are running on Runpod, Lambda, Hetzner, it shall be automatically deployed
 * **PyCharm version**: this guide applies to PyCharm 2025.1
 ---
