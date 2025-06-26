@@ -21,8 +21,8 @@ On the web there are several guide how to do remote dev for VS code, but I haven
 
 ## Introduction
 
-Welcome aboard the world of **SSH-based remote development** with PyCharm! 🚀 Imagine editing your DNN locally in PyCharm 
-while harnessing the power of a remote Linux server—be it a GPU instance on Runpod, a cluster on Lambda AI, a bare-metal GPU box at Hetzner, or the new [Shadeform.ai](https://www.shadeform.ai?utm_source=genmind.ch) marketplace 🌐💻. 
+Welcome aboard the world of **SSH-based remote development** with PyCharm! <br /> Imagine editing your DNN locally in PyCharm 
+while harnessing the power of a remote Linux server—be it a GPU instance on Runpod, a cluster on Lambda AI, a bare-metal GPU box at Hetzner, or the new [Shadeform.ai](https://www.shadeform.ai?utm_source=genmind.ch) marketplace. 
 With a secure SSH tunnel, you get:
 
 * **Massive compute on demand**
