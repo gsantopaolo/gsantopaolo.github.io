@@ -43,7 +43,7 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 * **Disk**: \~10 GB free on local or block storage (avoid NFS/SMB).
 * **OS**: Ubuntu 18.04/20.04/22.04, CentOS, Debian, or RHEL.
 * **Python & SSH**: A running OpenSSH server on your Linux box and the desired Python version (e.g., `/usr/bin/python3` or a virtualenv).
-* **Your public SSH key must be deployed on the server.**: If you are running on Runpod, Lambda, Hetzner, it shall be automatically deployed
+* **Your public SSH key**: must be deployed on the server. If you are running on Runpod, Lambda, Hetzner, it shall be automatically deployed
 * **PyCharm version**: this guide applies to PyCharm 2025.1
 ---
 
