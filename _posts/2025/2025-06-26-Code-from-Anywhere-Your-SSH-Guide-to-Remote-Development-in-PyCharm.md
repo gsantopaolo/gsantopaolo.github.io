@@ -11,15 +11,11 @@ mermaid: true
 
 
 If you landed here, you're probably already using a remote (GPU) for your ML tasks, and you're sick of git push from your laptop and the pull on your
-powerful GPU machine. Ask me why I know that 😉, and you're probably a Pycharm fan as well 😊.
+powerful GPU machine. Ask me why I know that, and you're probably a PyCharm fan as well 😊.
 <br />
 If so, you landed in the right place.
 <br />
-On the web there are several guide how to do remote dev for VS code, but I haven't found one that works for PyCharm, so I decieded to write this post.
-<br />
-PyCharm’s SSH-based remote development lets you keep using your familiar IDE while running code on a powerful Linux, GPU powered, 
-machine elsewhere. You’ll need a server with at least 4 vCPUs, 8 GB RAM, \~10 GB free disk. 
-In PyCharm, you define an SSH configuration and then add an SSH interpreter, pointing to your remote Python executable. 
+On the web there are several guide how to do remote dev for VS code, but I haven't found one that works for PyCharm, so I decided to write this post.
 
 ---
 
@@ -47,7 +43,7 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 * **Disk**: \~10 GB free on local or block storage (avoid NFS/SMB) ([jetbrains.com][2]).
 * **OS**: Ubuntu 18.04/20.04/22.04, CentOS, Debian, or RHEL ([jetbrains.com][2]).
 * **Python & SSH**: A running OpenSSH server on your Linux box and the desired Python version (e.g., `/usr/bin/python3` or a virtualenv) ([jetbrains.com][3]).
-* **You public SSH**: Deployed on the server. If you are running on Runpod, Lambda, Hetzner, it shall be automatically deployed
+* **Your public SSH key must be deployed on the server.**: If you are running on Runpod, Lambda, Hetzner, it shall be automatically deployed
 * **PyCharm version**: this guide applies to PyCharm 2025.1
 ---
 
@@ -83,7 +79,7 @@ _fill in the auth details_
 _fIntrospecting SSH server_
 
 ## Project directory and Python runtime configuration
-   * Select the same envoironment you use locally
+   * Select the same environment you use locally
    * I leave all the other params as default
    * Click Create
 <br />
@@ -121,7 +117,7 @@ _open a terminal on your GPU server_
 ## Licensing & Limitations
 
 * **License**
-  SSH interpreters require PyCharm **Professional** (Community Edition doesn’t support them) ).
+  SSH interpreters require PyCharm **Professional** (Community Edition doesn’t support them).
 * **Limitations**
   Only Linux servers are supported as SSH backends; no remote Windows/macOS interpreters yet, but hey, I hope you are not using a Windows server to test your ML projects!.
 
