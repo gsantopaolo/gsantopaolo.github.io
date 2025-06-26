@@ -13,7 +13,7 @@ mermaid: true
 If you landed here, your're probably already using a remote (GPU) for your ML tasks, and you're sick of git push from your laptop and the pull on your
 powerful GPU machine. Ask me why I know that 😉, and you're probably a Pycharm fan as well 😊.
 <br />
-If so you landed in the right place.
+If so, you landed in the right place.
 <br />
 On the web there are several guide how to do remote dev for VS code, but I haven't found one that works for PyCharm, so I decieded to write this post.
 <br />
@@ -63,6 +63,7 @@ _Create SSH configuration_
    * **Port**: usually `22` (or custom)
    * **Username**: your SSH user
    * click next
+<br />
 ![Connection Details](/content/2025/06/pycharm2.jpg){: width="500" height="400" }
 _fill in the connection details_
 
@@ -70,14 +71,14 @@ _fill in the connection details_
    * **Select**: Key pair and browse for your private SSH key. On a Mac the default location is YOUR_USER/.ssh . It's a hidden folder - Command + Shift + . (period) to show hidden folders on your pop up, if they are not already shown.
    * **Fill the passphrase**: if your SSH private key weas generated with a passphrase. 
    * **Select Save passphrase** 
-   * Click **Nect**.
-
+   * Click **Next**.
+<br />
 ![Auth Details](/content/2025/06/pycharm3.jpg){: width="500" height="400" }
 _fill in the auth details_
 
 ## 6. **Introspecting SSH server**
    * If you filled all your params correctly you shall see a blank box, just click next
-
+<br />
 ![Introspecting SSH server](/content/2025/06/pycharm4.jpg){: width="500" height="400" }
 _fIntrospecting SSH server_
 
@@ -85,6 +86,7 @@ _fIntrospecting SSH server_
    * Select the same envoironment you use locally
    * I leave all the other params as default
    * Click Create
+<br />
 ![Project directory and Python runtime configuration](/content/2025/06/pycharm5.jpg){: width="500" height="400" }
 _Project directory and Python runtime configuration_
 ---
@@ -100,7 +102,7 @@ _Project directory and Python runtime configuration_
   Set breakpoints locally; the debugger runs over SSH, showing remote stack frames and variables.
 * **Remote Python Console**
   Open a Python console that executes commands on the server.
-
+<br />
 ![Running, Testing & Debugging Remotely](/content/2025/06/pycharm.jpg){: width="500" height="400" }
 _Running, Testing & Debugging Remotely_
 ---
@@ -111,7 +113,7 @@ _Running, Testing & Debugging Remotely_
   * When you make a change to your code, it is automatically deployed to the server; nothing else you have to care about
   * You write code on your laptop, and it gets automatically executed on your GPU server!
   * Optionally, you may want to open a terminal on your GPU server. On the bottom left of the IDE click on **Terminal** and on the drop down choose your newly created SSH connection
-
+<br />
 ![open a terminal on your GPU server](/content/2025/06/pycharm6.jpg){: width="500" height="400" }
 _open a terminal on your GPU server_
 ---
