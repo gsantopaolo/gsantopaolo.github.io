@@ -42,14 +42,27 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 * **Disk**: \~10 GB free on local or block storage (avoid NFS/SMB) ([jetbrains.com][2]).
 * **OS**: Ubuntu 18.04/20.04/22.04, CentOS, Debian, or RHEL ([jetbrains.com][2]).
 * **Python & SSH**: A running OpenSSH server on your Linux box and the desired Python version (e.g., `/usr/bin/python3` or a virtualenv) ([jetbrains.com][3]).
-
+* **You public SSH**: Deployed on the server. If you are running on Runpod, Lambda, Hetzner, it shall be automatically deployed
+* **PyCharm version**: this guide applies to PyCharm 2025.1
 ---
 
 ## 3. Establish the SSH Connection in PyCharm
 
 1. **Open SSH Configurations**
 
-   * Go to **File ▸ Settings ▸ Tools ▸ SSH Configurations** and click **+** ([jetbrains.com][8]).
+   * Go to **File ▸ Settings ▸ Tools ▸ SSH Configurations** and click **Create SSH configurations**.
+<img
+  src="/content/2025/06/pycharm1.jpg"
+  alt="Desktop View"
+  width="972"
+  height="589"
+  style="display:block;margin:0 auto;"
+/>
+
+
+![Desktop View](/content/2025/06/pycharm1.jpg){: width="972" height="589" }
+_Full screen width and center alignment_
+
 2. **Fill in Connection Details**
 
    * **Host**: your server’s IP or hostname
@@ -158,7 +171,7 @@ Drop your questions or share your SSH setup tips in the comments below—happy c
 [5]: https://lambda.ai/pricing?utm_source=genmind.ch "AI Cloud Pricing | Lambda"
 [6]: https://www.hetzner.com/dedicated-rootserver/matrix-gpu/?utm_source=genmind.ch "Server with GPU: for your AI and machine learning projects. - Hetzner"
 [7]: https://www.shadeform.ai/?utm_source=genmind.ch "Shadeform - The GPU Cloud Marketplace"
-[8]: https://www.jetbrains.com/help/pycharm/create-ssh-configurations.html?utm_source=genmind.ch "Create SSH configurations | PyCharm Documentation - JetBrains"
+[8]: https://www.jetbrains.com/help/pycharm/create-ssh-configurations.html?utm_source=genmind.ch " | PyCharm Documentation - JetBrains"
 [9]: https://www.jetbrains.com/help/pycharm/edit-project-path-mappings-dialog.html?utm_source=genmind.ch "Edit Project Path Mappings dialog | PyCharm - JetBrains"
 [10]: https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html?utm_source=genmind.ch "Remote Debugging with PyCharm - JetBrains"
 [11]: https://www.jetbrains.com/help/pycharm/tutorial-deployment-in-product.html?utm_source=genmind.ch "Tutorial: Deployment in PyCharm - JetBrains"
