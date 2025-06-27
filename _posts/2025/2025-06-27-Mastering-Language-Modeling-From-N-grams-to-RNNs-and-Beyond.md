@@ -1,6 +1,6 @@
 ---
 title: 'Mastering Language Modeling: From N-grams to RNNs and Beyond'
-date: '2025-06-27T8:31:30+00:00'
+date: '2025-06-27T6:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/rnn.png
