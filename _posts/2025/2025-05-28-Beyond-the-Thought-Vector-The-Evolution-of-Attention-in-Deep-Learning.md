@@ -4,7 +4,7 @@ date: '2025-05-28T6:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/attention2.png
-categories: [DNNs, Language Model]
+categories: [DNNs, Language Model, Attention]
 math: true
 mermaid: true
 ---
