@@ -76,8 +76,8 @@ by local derivative matrices, collapsing large Jacobians into efficient vectorâ€
 
 Consider a two-layer MLP:
 
-- **Input** \(\mathbf{x}\in\mathbb{R}d\)  
-- **Hidden layer**: \(\mathbf{W}{[1]}\in\mathbb{R}{h\times d},\; \mathbf{b}{[1]}\in\mathbb{R}h,\; \sigma(\cdot)\)  
+- **Input** $$(\mathbf{x}$$ in $$mathbb{R}d)$$  
+- **Hidden layer**: $$(\mathbf{W}{[1]}\in\mathbb{R}{h\times d},\; \mathbf{b}{[1]}\in\mathbb{R}h,\; \sigma(\cdot)\)$$  
 - **Output layer**: \(\mathbf{W}{[2]}\in\mathbb{R}{k\times h},\; \mathbf{b}{[2]}\in\mathbb{R}k,\; f_{\mathrm{out}}(\cdot)\)  
 - **Loss** \(L(\hat{\mathbf{y}},\mathbf{y})\)
 
