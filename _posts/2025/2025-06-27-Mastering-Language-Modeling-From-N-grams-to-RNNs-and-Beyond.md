@@ -165,13 +165,6 @@ RNN LMs marked a breakthrough beyond n-grams by sharing parameters across time a
 
 ---
 
-**Visual Checklist:**
-
-* RNN unrolled cell (Section 3)
-* LSTM cell diagram (Section 4)
-* Mermaid flow (Section 3.2)
-
-Let me know if you’d like to adjust any depth or add more code samples!
 
 [1]: https://medium.com/%40sakshiba22comp/limitations-of-n-gram-language-models-and-the-need-for-neural-networks-13aa5d2dc190?utm_source=genmind.ch "Limitations of N-gram Language Models and the Need for Neural ..."
 [2]: https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf?utm_source=genmind.ch "[PDF] A Neural Probabilistic Language Model"
