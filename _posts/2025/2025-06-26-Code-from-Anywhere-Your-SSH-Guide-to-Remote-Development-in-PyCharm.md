@@ -1,6 +1,6 @@
 ---
 title: 'Code from Anywhere: Your SSH Guide to Remote Development in PyCharm'
-date: '2025-06-25T10:31:30+00:00'
+date: '2025-06-26T10:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/pycharm.jpg
@@ -49,7 +49,7 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 
 ## Open SSH Configurations
 
-   * On the bottom-left corner of the IDE click on  **Current Interpreter ▸ Add New Interpreter ▸ On SSH ** and click **Create SSH configuration**.
+   * On the bottom-left corner of the IDE click on  **Current Interpreter ▸ Add New Interpreter ▸ On SSH** and click **Create SSH configuration**.
 
 ![Current Interpreter ▸ Add New Interpreter](/content/2025/06/pycharm1.jpg){: width="300" height="500" }
 _Create SSH configuration_
