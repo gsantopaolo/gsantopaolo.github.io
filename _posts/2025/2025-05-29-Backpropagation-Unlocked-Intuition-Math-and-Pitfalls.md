@@ -76,13 +76,13 @@ _Derivatives on a computational graph,” [Chris Olah, “Calculus on Computatio
 
 
 
-### 2.2 Gradients & Jacobians
+### Gradients & Jacobians
 
 For \(\mathbf{y}=f(\mathbf{x})\) mapping \(\mathbb{R}n\to\mathbb{R}m\), the **Jacobian** \(J\) has entries \(J_{ij}=\partial y_i/\partial x_j\).  Backprop never forms full Jacobians; instead it propagates **error signals** \(\delta\) and multiplies by local derivative matrices, collapsing large Jacobians into efficient vector–matrix products[3].
 
 ---
 
-## 3. Deriving Backpropagation for an MLP
+## Deriving Backpropagation for an MLP
 
 Consider a two-layer MLP:
 
@@ -91,7 +91,7 @@ Consider a two-layer MLP:
 - **Output layer**: \(\mathbf{W}{[2]}\in\mathbb{R}{k\times h},\; \mathbf{b}{[2]}\in\mathbb{R}k,\; f_{\mathrm{out}}(\cdot)\)  
 - **Loss** \(L(\hat{\mathbf{y}},\mathbf{y})\)
 
-### 3.1 Forward Pass
+### Forward Pass
 
 \[
 \begin{aligned}
@@ -102,7 +102,7 @@ Consider a two-layer MLP:
 \end{aligned}
 \]
 
-### 3.2 Backward Pass
+### Backward Pass
 
 Let \(\delta{[2]} = \partial L/\partial \mathbf{z}{[2]}\).  Then
 
@@ -139,7 +139,7 @@ Propagating back to layer 1:
 
 ---
 
-## 4. Efficient, Vectorized Implementation
+## Efficient, Vectorized Implementation
 
 Rather than forming giant Jacobians:
 
@@ -159,41 +159,41 @@ for ℓ in reversed(range(1, L+1)):
 ````
 
 **\[INSERT FIGURE: Vectorized backward-pass flowchart (no full Jacobians).]**
-*Source: CS231n, “Derivatives and Backpropagation” ([http://cs231n.stanford.edu/handouts/derivatives.pdf](http://cs231n.stanford.edu/handouts/derivatives.pdf)), p. 4, Fig. 3.*
+*Source: CS231n, “Derivatives and Backpropagation” ([https://cs231n.stanford.edu/handouts/derivatives.pdf](http://cs231n.stanford.edu/handouts/derivatives.pdf)), p. 4, Fig. 3.*
 
 ---
 
-## 5. Common Pitfalls & Intuitions
+## Common Pitfalls & Intuitions
 
-### 5.1 Vanishing & Exploding Gradients
+### Vanishing & Exploding Gradients
 
 Deep stacks of sigmoid or tanh can shrink or blow up gradients exponentially, making training unstable[4].
 
 **\[INSERT FIGURE: Plot of $\sigma'(x)$ vs. $x$, showing vanishing/exploding regimes.]**
 *Source: Andrej Karpathy, “Yes You Should Understand Backprop” ([https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b)), Fig. 3 (“Vanishing Gradients”).*
 
-### 5.2 Dying ReLUs
+### Dying ReLUs
 
 ReLUs can become inactive if inputs stay negative—Leaky ReLU or PReLU keep a small gradient when “off”[5].
 
-### 5.3 Gradient-Clipping & Framework Gotchas
+### Gradient-Clipping & Framework Gotchas
 
-Karpathy recounts a TensorFlow RNN bug where inadvertent buffer reuse clipped gradients, stalling learning[5].
+Karpathy recounts a TensorFlow RNN bug where inadvertent buffer reuse clipped gradients, stalling learning[9].
 
 ---
 
-## 6. Extensions & Variations
+## Extensions & Variations
 
 * **Backpropagation Through Time (BPTT):** Unroll RNNs over timesteps and apply the same chain-rule, with truncation to limit graph size[5].
 * **Batch Normalization:** Adds backward terms for mean/variance—see Collobert et al., Fig. 2[6].
-* **Auto-Differentiation:** Reverse-mode AD generalizes backprop to arbitrary graphs, computing Jacobian–vector products automatically[7].
+* **Auto-Differentiation:** Reverse-mode AD generalizes backprop to arbitrary graphs, computing Jacobian–vector products automatically http://neuralnetworksanddeeplearning.com/chap2.html?utm_source=genmind.ch "How the Backpropagation Algorithm Works".
 
 **\[INSERT FIGURE: Sketch of BPTT unrolling and BN backward-pass flow.]**
 *Source: Collobert et al., “Natural Language Processing (Almost) from Scratch,” JMLR 12:2493–2537 (2011), p. 8, Fig. 2 ([https://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf](https://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf)).*
 
 ---
 
-## 7. Intuitive “Error-Nudges” Walkthrough
+## Intuitive “Error-Nudges” Walkthrough
 
 3Blue1Brown visualizes each output error as a colored “force” that flows backward through the network, nudging weights by their share of responsibility[8].
 
@@ -202,7 +202,7 @@ Karpathy recounts a TensorFlow RNN bug where inadvertent buffer reuse clipped gr
 
 ---
 
-## 8. Conclusion
+## Conclusion
 
 Backpropagation remains the **cornerstone** of deep learning. Master its derivation, efficient implementation, 
 and pitfalls—and visualize the “error-nudge” mechanics—to debug and innovate beyond black-box frameworks.
@@ -217,3 +217,4 @@ and pitfalls—and visualize the “error-nudge” mechanics—to debug and inno
 [6]: https://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf?utm_source=genmind.ch "Natural Language Processing (Almost) from Scratch"
 [7]: http://neuralnetworksanddeeplearning.com/chap2.html?utm_source=genmind.ch "How the Backpropagation Algorithm Works"
 [8]: https://www.3blue1brown.com/lessons/backpropagation?utm_source=genmind.ch "But What Is a Neural Network? | Chapter 3: Backpropagation"
+[9]: https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b?utm_source=genmind.ch "Yes you should understand backprop"
