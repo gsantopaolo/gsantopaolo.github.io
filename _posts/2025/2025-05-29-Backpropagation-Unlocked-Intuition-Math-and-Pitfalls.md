@@ -37,8 +37,7 @@ flowchart LR
     E --> F[2016<br/>Facebook releases PyTorch]
     F --> G[2018<br/>Google releases JAX]
 ```
-
- Timeline of backpropagation’s development—from Werbos (1974) to Rumelhart et al. (1986) to modern frameworks.
+_Timeline of backpropagation’s development—from Werbos (1974) to Rumelhart et al. (1986) to modern frameworks._
 
 ---
 
