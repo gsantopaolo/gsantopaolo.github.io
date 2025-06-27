@@ -83,20 +83,18 @@ Consider a two-layer MLP:
 
 ### Forward Pass
 $$
-\[
 \begin{aligned}
 \mathbf{z}{[1]} &= \mathbf{W}{[1]}\,\mathbf{x} + \mathbf{b}{[1]}, 
 &\mathbf{a}{[1]} &= \sigma(\mathbf{z}{[1]}),\\
 \mathbf{z}{[2]} &= \mathbf{W}{[2]}\,\mathbf{a}{[1]} + \mathbf{b}{[2]},
 &\hat{\mathbf{y}} &= f_{\mathrm{out}}(\mathbf{z}{[2]}).
 \end{aligned}
-\]
 $$
+
 ### Backward Pass
 $$
-Let \(\delta{[2]} = \partial L/\partial \mathbf{z}{[2]}\).  Then
-
-\[
+Let \(\delta{[2]} = \partial L/\partial \mathbf{z}{[2]}\)$$  Then
+$$
 \delta{[2]}
 = \frac{\partial L}{\partial \hat{\mathbf{y}}}
 \;\circ\;
@@ -106,12 +104,10 @@ f_{\mathrm{out}}'(\mathbf{z}{[2]}),
 = \delta{[2]}\,(\mathbf{a}{[1]})\top,
 \quad
 \nabla_{\!b{[2]}}L
-= \delta{[2]}.
-\]
+= \delta{[2]}
 $$
 Propagating back to layer 1:
 $$
-\[
 \delta{[1]}
 = (\mathbf{W}{[2]})\top\,\delta{[2]}
 \;\circ\;
@@ -121,9 +117,9 @@ $$
 = \delta{[1]}\,\mathbf{x}\top,
 \quad
 \nabla_{\!b{[1]}}L
-= \delta{[1]}.
-\]
+= \delta{[1]}
 $$
+
 **[INSERT FIGURE: Full chain-rule derivation on two-layer MLP.]**  
 *Source: P. Vincent, “Backpropagation,” Université de Montréal lecture (https://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf), p. 2, central diagram.*
 
