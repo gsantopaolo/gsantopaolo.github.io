@@ -1,6 +1,6 @@
 ---
 title: 'Beyond the Thought Vector: The Evolution of Attention in Deep Learning'
-date: '2025-05-28T6:31:30+00:00'
+date: '2025-06-28T6:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/attention2.png
