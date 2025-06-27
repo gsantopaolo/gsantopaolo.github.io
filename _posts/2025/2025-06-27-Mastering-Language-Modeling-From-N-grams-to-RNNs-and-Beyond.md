@@ -98,7 +98,7 @@ multiplies gradients by the recurrent Jacobian $\partial h_t/\partial h_{t-1}$ m
 
 
 
-## 4. Long Short-Term Memory (LSTM)
+## Long Short-Term Memory (LSTM)
 
 LSTMs introduce a **cell state** $c_t$ and three gates—forget $f_t$, input $i_t$, and output $o_t$—that control how information is added or removed:
 
@@ -119,7 +119,7 @@ The **additive** update to $c_t$ preserves gradient flow over long sequences, ef
 _LSTM memory cell source [medium.com][5]_
 
 
-## 5. Training Objective: Cross-Entropy & Perplexity
+## Training Objective: Cross-Entropy & Perplexity
 
 We train by minimizing **average cross-entropy** over a dataset of $N$ words $\{w_i\}$:
 
@@ -135,11 +135,14 @@ $$
 
 which measures model uncertainty—**lower is better** ([medium.com][7]).
 
-## 6. Backpropagation Through Time (BPTT) & Truncation
+## Backpropagation Through Time (BPTT) & Truncation
 
-Training involves **unrolling** the RNN for $T$ steps and applying standard backprop on the expanded graph, summing gradients for shared weights $U,W$ across all steps. To reduce memory and computation, one uses **truncated BPTT**, backpropagating through only the last $k\ll T$ steps without severely harming performance ([neptune.ai][8]).
+Training involves **unrolling** the RNN for $T$ steps and applying standard backprop on the expanded graph, 
+summing gradients for shared weights $U,W$ across all steps. To reduce memory and computation, 
+one uses **truncated BPTT**, backpropagating through only the last $k\ll T$ steps without severely 
+harming performance ([medium.com][16]).
 
-## 7. Other Uses of RNNs
+## Other Uses of RNNs
 
 Beyond language modeling, RNNs excel at any sequential signal:
 
@@ -147,21 +150,29 @@ Beyond language modeling, RNNs excel at any sequential signal:
 * **Time-series forecasting**, leveraging hidden states to predict stock prices or sensor data
 * **Machine translation**, via encoder–decoder RNNs that map source to target sequences ([jmlr.org][2])
 
-### 7.1 RNNs in Machine Translation
+### RNNs in Machine Translation
 
-Encoder–decoder RNNs encode a source sentence into a vector, then decode it into a target sentence, forming the basis of early neural MT systems and paving the way for end-to-end translation pipelines ([jmlr.org][2]).
+Encoder–decoder RNNs encode a source sentence into a vector, then decode it into a target sentence, 
+forming the basis of early neural MT systems and paving the way for end-to-end translation pipelines ([jmlr.org][2]).
 
-## 8. Scaling to Billions of Words: Adaptive Softmax
+## Scaling to Billions of Words: Adaptive Softmax
 
-Training on billion-word corpora with million-word vocabularies is intensive. Facebook AI Research’s **adaptive softmax** clusters rare words to reduce per-step computation on GPUs, achieving efficiency close to full Softmax while slashing training time ([engineering.fb.com][9], [arxiv.org][15]).
+Training on billion-word corpora with million-word vocabularies is intensive. 
+Facebook AI Research’s **adaptive softmax** clusters rare words to reduce per-step computation on GPUs, 
+achieving efficiency close to full Softmax while slashing training time ([engineering.fb.com][9], [arxiv.org][15]).
 
-## 9. Limitations: Exploding Gradients & Clipping
+## Limitations: Exploding Gradients & Clipping
 
-In addition to vanishing gradients, RNNs can suffer **exploding gradients**, where errors grow unbounded during BPTT. The standard remedy is **gradient clipping**—rescaling gradients when their norm exceeds a threshold—to stabilize training ([arxiv.org][10]).
+In addition to vanishing gradients, RNNs can suffer **exploding gradients**, where errors grow unbounded during BPTT. 
+The standard remedy is **gradient clipping**—rescaling gradients when their norm exceeds a threshold—to 
+stabilize training ([arxiv.org][10]).
 
-## 10. Conclusion & Next Steps
+## Conclusion & Next Steps
 
-RNN LMs marked a breakthrough beyond n-grams by sharing parameters across time and handling arbitrary contexts, but vanilla RNNs remain handicapped by short-term memory. Gated architectures like LSTM/GRU overcame this, and efficient approximations (adaptive softmax) enabled scaling. In the next post, we’ll dive deeper into LSTM/GRU variants and unveil the **Transformer** revolution, which now dominates sequence modeling ([en.wikipedia.org][11]).
+RNN LMs marked a breakthrough beyond n-grams by sharing parameters across time and handling arbitrary contexts, 
+but vanilla RNNs remain handicapped by short-term memory. Gated architectures like LSTM/GRU overcame this, and 
+efficient approximations (adaptive softmax) enabled scaling. In the next post, we’ll dive deeper into LSTM/GRU 
+variants and unveil the **Transformer** revolution, which now dominates sequence modeling ([en.wikipedia.org][11]).
 
 ---
 
@@ -181,3 +192,4 @@ RNN LMs marked a breakthrough beyond n-grams by sharing parameters across time a
 [13]: https://www.reddit.com/r/deeplearning/comments/txayjp/rnn_vanishing_gradient/?utm_source=genmind.ch "RNN Vanishing Gradient : r/deeplearning - Reddit"
 [14]: https://medium.com/ai-assimilating-intelligence/cross-entropy-in-large-language-models-llms-4f1c842b5fca?utm_source=genmind.ch "Cross Entropy in Large Language Models (LLMs) | by Charles Chi | AI"
 [15]: https://arxiv.org/abs/1609.04309?utm_source=genmind.ch "Efficient softmax approximation for GPUs"
+[16]: https://medium.com/data-science/backpropagation-in-rnn-explained-bdf853b4e1c2 "Backpropagation in RNN Explained"
