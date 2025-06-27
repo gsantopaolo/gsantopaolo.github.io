@@ -45,12 +45,15 @@ flowchart LR
 ## Mathematical Foundations
 
 ### Scalar Derivatives & the Chain Rule
-$$
+
 If  
+$$
 \[
 u = f(v),\quad v = g(w),
 \]
+$$
 then
+$$
 \[
 \frac{du}{dw}
 = \frac{du}{dv}\,\frac{dv}{dw}.
@@ -75,9 +78,11 @@ _Derivatives on a computational graph, [Chris Olah, “Calculus on Computational
 
 
 ### Gradients & Jacobians
-$$
-For \(\mathbf{y}=f(\mathbf{x})\) mapping \(\mathbb{R}n\to\mathbb{R}m\), the **Jacobian** \(J\) has entries \(J_{ij}=\partial y_i/\partial x_j\).  Backprop never forms full Jacobians; instead it propagates **error signals** \(\delta\) and multiplies by local derivative matrices, collapsing large Jacobians into efficient vector–matrix products[3].
-$$
+
+For $$\(\mathbf{y}=f(\mathbf{x})\)$$ mapping $$\(\mathbb{R}n\to\mathbb{R}m\)$$, the **Jacobian** $$\(J\)$$ has entries $$\(J_{ij}=\partial y_i/\partial x_j\)$$.  
+Backprop never forms full Jacobians; instead it propagates **error signals** $$\(\delta\)$$ and multiplies 
+by local derivative matrices, collapsing large Jacobians into efficient vector–matrix products[3].
+
 ---
 
 ## Deriving Backpropagation for an MLP
