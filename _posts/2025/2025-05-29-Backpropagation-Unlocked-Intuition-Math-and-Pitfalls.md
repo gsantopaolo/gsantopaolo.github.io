@@ -159,7 +159,7 @@ for ℓ in reversed(range(1, L+1)):
 ````
 
 **\[INSERT FIGURE: Vectorized backward-pass flowchart (no full Jacobians).]**
-*Source: CS231n, “Derivatives and Backpropagation” ([https://cs231n.stanford.edu/handouts/derivatives.pdf](http://cs231n.stanford.edu/handouts/derivatives.pdf)), p. 4, Fig. 3.*
+*Source: CS231n, “Derivatives and Backpropagation” ([https://cs231n.stanford.edu/handouts/derivatives.pdf](https://cs231n.stanford.edu/handouts/derivatives.pdf)), p. 4, Fig. 3.*
 
 ---
 
