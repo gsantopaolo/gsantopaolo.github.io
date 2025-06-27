@@ -69,15 +69,16 @@ Dot-product is fast and parameter-free, but requires $s$ and $h$ to share dimens
 To reduce $W$’s parameter count, one can factor it into two low-rank matrices (i.e., projections into a lower-dimensional space before dot-product), an idea that underpins the **scaled dot-product attention** in Transformers (next).
 
 
-![Neural Machine Translation by Jointly Learning to Align and Translate](/content/2025/06/attention1.png){: width="300" height="500" }
-_ A sequence-to-sequence RNN with global (Luong) attention. The bottom row shows encoder 
- hidden states $ \bar h_{1}, \bar h_{2}, \dots, \bar h_{S}$ in blue, 
- feeding into the decoder’s hidden state $h_{t}$ (red). 
- From each encoder state, arrows (dashed for lower weights, solid for higher) converge onto 
- the context vector $c_{t}$ in the attention layer. The context vector (blue vertical block) is 
- then concatenated with the decoder’s current hidden state (dark gray block) 
- to produce the combined output vector $\tilde h_{t}$, from which the next token $y_{t}$ is generated, [Luong, Pham & Manning “Effective Approaches to Attention-based Neural Machine Translation,” EMNLP 2015][12]_
+![Neural Machine Translation by Jointly Learning to Align and Translate](/content/2025/06/attention2.png){: width="300" height="500" }
+_A sequence-to-sequence RNN with global (Luong) attention, [Luong, Pham & Manning “Effective Approaches to Attention-based Neural Machine Translation,” EMNLP 2015][12]_
 
+In the diagram above we see sequence-to-sequence RNN with global (Luong) attention. The bottom row shows encoder 
+hidden states $ \bar h_{1}, \bar h_{2}, \dots, \bar h_{S}$ in blue, 
+feeding into the decoder’s hidden state $h_{t}$ (red). 
+From each encoder state, arrows (dashed for lower weights, solid for higher) converge onto 
+the context vector $c_{t}$ in the attention layer. The context vector (blue vertical block) is 
+then concatenated with the decoder’s current hidden state (dark gray block) 
+to produce the combined output vector $\tilde h_{t}$, from which the next token $y_{t}$ is generated
 
 ---
 
