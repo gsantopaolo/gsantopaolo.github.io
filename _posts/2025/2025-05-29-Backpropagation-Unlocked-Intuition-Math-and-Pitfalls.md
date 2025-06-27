@@ -47,18 +47,8 @@ flowchart LR
 ### Scalar Derivatives & the Chain Rule
 
 If  
-$$
-\[
-u = f(v),\quad v = g(w),
-\]
-$$
-then
-$$
-\[
-\frac{du}{dw}
-= \frac{du}{dv}\,\frac{dv}{dw}.
-\]
-$$
+$$u = f(v),\quad v = g(w)$$, then
+$$\frac{du}{dw} = \frac{du}{dv}\,\frac{dv}{dw}$$
 
 $$
 \frac{\partial e}{\partial a}
@@ -70,7 +60,7 @@ $$
 $$
 
 A neural network is a deep composition of such functions, so applying this rule layer by layer yields gradients for 
-every weight and bias[2].
+every weight and bias ["Learning Representations by Back-Propagating Errors"][2].
 
 ![Derivatives on a computational graph](/content/2025/06/derivatives_on_a_computational_graph.png){: width="500" height="250" }
 _Derivatives on a computational graph, [Chris Olah, “Calculus on Computational Graphs: Backpropagation”](https://colah.github.io/posts/2015-08-Backprop/#derivatives)_
@@ -79,9 +69,9 @@ _Derivatives on a computational graph, [Chris Olah, “Calculus on Computational
 
 ### Gradients & Jacobians
 
-For $$\(\mathbf{y}=f(\mathbf{x})\)$$ mapping $$\(\mathbb{R}n\to\mathbb{R}m\)$$, the **Jacobian** $$\(J\)$$ has entries $$\(J_{ij}=\partial y_i/\partial x_j\)$$.  
-Backprop never forms full Jacobians; instead it propagates **error signals** $$\(\delta\)$$ and multiplies 
-by local derivative matrices, collapsing large Jacobians into efficient vector–matrix products[3].
+For $$(\mathbf{y}=f(\mathbf{x})\)$$ mapping $$(\mathbb{R}n\to\mathbb{R}m\)$$, the **Jacobian** $$(J\)$$ has entries $$(J_{ij}=\partial y_i/\partial x_j\)$$.  
+Backprop never forms full Jacobians; instead it propagates **error signals** $$(\delta\)$$ and multiplies 
+by local derivative matrices, collapsing large Jacobians into efficient vector–matrix products ["Neural Networks, Backpropagation"][3].
 
 ---
 
