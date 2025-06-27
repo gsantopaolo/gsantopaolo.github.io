@@ -45,7 +45,7 @@ flowchart LR
 ## Mathematical Foundations
 
 ### Scalar Derivatives & the Chain Rule
-
+$$
 If  
 \[
 u = f(v),\quad v = g(w),
@@ -55,7 +55,7 @@ then
 \frac{du}{dw}
 = \frac{du}{dv}\,\frac{dv}{dw}.
 \]
-
+$$
 $$
 \frac{\partial e}{\partial a}
 = \frac{\partial e}{\partial c}\,\frac{\partial c}{\partial a}
