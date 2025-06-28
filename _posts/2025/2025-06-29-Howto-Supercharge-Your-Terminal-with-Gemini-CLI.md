@@ -1,6 +1,6 @@
 ---
 title: 'How to Supercharge Your Terminal with Gemini CLI'
-date: '2025-06-28T6:31:30+00:00'
+date: '2025-06-29T6:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/gemini-cli.png
