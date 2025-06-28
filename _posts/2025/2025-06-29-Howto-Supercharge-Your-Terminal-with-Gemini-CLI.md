@@ -25,7 +25,7 @@ external MCP servers like Imagen, DuckDuckGo or HuggingFace.
 
 ## Installation
 
-### Install the `gemini-gli` command system-wide.
+### Install the `gemini-cli` command system-wide.
  **Homebrew (macOS/Linux)**:
 
    ```bash
@@ -85,18 +85,18 @@ and watch it create files, install deps, run tests, and show you the results.
 _gemini-cli in action_
 
 After a while the tool was able to create a fully, almost, working solution.
-It just forget to create the __init.py so uviconr was failing to start.
+It just forget to create the `__init__.py` so uviconr was failing to start.
 A quick look and after 10 seconds the APis were working!
 Then I asked to create a simple python file to test the APIs.
-It worked first shoot. I asked some more changes to the tested and everything went well.
+It worked first shot. I asked some more changes to the tested and everything went well.
 In less than ten minutes I had the solution working and even well organized and architected.
 <br />
-This is the proof that Andrej Karpathy it is a visionary and he is totally right about where software development is going 
+This is the proof that Andrej Karpathy is a visionary and he is totally right about where software development is going 
 see his post from 2017 [Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35?utm_source=genmind.ch), and his 
 speech at the AI Startup School in San Francisco [Software Is Changing (Again)](https://www.youtube.com/watch?v=LCEmiRjPEtQ?utm_source=genmind.ch).
-I'm no one, but i can't agree more with him, I saw this happening back in 2019 when I gave my first speech about AI [AI for every developer](https://www.youtube.com/watch?v=ujhtW6UGvhM?utm_source=genmind.ch)
+I'm no one, but I can't agree more with him, I saw this happening back in 2019 when I gave my first speech about AI [AI for every developer](https://www.youtube.com/watch?v=ujhtW6UGvhM?utm_source=genmind.ch)
 <br />
-I diverged a bit, but I'm really exite about the coming revolution in software development. Now back to trak...
+I diverged a bit, but I'm really exited about the coming revolution in software development. Now back to track...
 
 
 ---
