@@ -7,6 +7,7 @@ image: /content/2025/06/attention2.png
 categories: [DNNs, Language Model, Backpropagation]
 math: true
 mermaid: true
+published: false
 ---
 
 Backpropagation—the backbone of modern deep learning—efficiently computes gradients of a scalar loss with 
