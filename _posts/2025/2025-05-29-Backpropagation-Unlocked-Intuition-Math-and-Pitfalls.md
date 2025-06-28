@@ -66,8 +66,8 @@ _Derivatives on a computational graph, [Chris Olah, “Calculus on Computational
 
 ### Gradients & Jacobians
 
-For $$(\mathbf{y}=f(\mathbf{x})\)$$ mapping $$(\mathbb{R}n\to\mathbb{R}m\)$$, the **Jacobian** $$(J)$$ has entries $$(J_{ij}=\partial y_i/partial x_j)$$.  
-Backprop never forms full Jacobians; instead it propagates **error signals** $$(\delta\)$$ and multiplies 
+For $$(\mathbf{y}=f(\mathbf{x}))$$ mapping $$(\mathbb{R}n\to\mathbb{R}m)$$, the **Jacobian** $$(J)$$ has entries $$(J_{ij}=\partial y_i/partial x_j)$$.  
+Backprop never forms full Jacobians; instead it propagates **error signals** $$(\delta)$$ and multiplies 
 by local derivative matrices, collapsing large Jacobians into efficient vector–matrix products ["Neural Networks, Backpropagation"][3].
 
 ---
@@ -76,10 +76,10 @@ by local derivative matrices, collapsing large Jacobians into efficient vector�
 
 Consider a two-layer MLP:
 
-- **Input** $$(\mathbf{x}$$ in $$mathbb{R}d)$$  
-- **Hidden layer**: $$(\mathbf{W}{[1]}\in\mathbb{R}{h\times d},\; \mathbf{b}{[1]}\in\mathbb{R}h,\; \sigma(\cdot)\)$$  
-- **Output layer**: \(\mathbf{W}{[2]}\in\mathbb{R}{k\times h},\; \mathbf{b}{[2]}\in\mathbb{R}k,\; f_{\mathrm{out}}(\cdot)\)  
-- **Loss** \(L(\hat{\mathbf{y}},\mathbf{y})\)
+- **Input** $$(\mathbf{x}$$ in $$(\mathbb{R}d)$$  
+- **Hidden layer**: $$(\mathbf{W}{[1]}\in\mathbb{R}{h\times d},\; \mathbf{b}{[1]}\in\mathbb{R}h,\; \sigma(\cdot))$$  
+- **Output layer**: $$(\mathbf{W}{[2]}\in\mathbb{R}{k\times h},\; \mathbf{b}{[2]}\in\mathbb{R}k,\; f_{\mathrm{out}}(\cdot)\)$$ 
+- **Loss** $$(L(\hat{\mathbf{y}},\mathbf{y})$$
 
 ### Forward Pass
 $$
