@@ -89,7 +89,8 @@ $$
 re-using $\partial L/\partial y$ as the “upstream” signal at each 
 edge ([colah.github.io][3], [cs231n.stanford.edu][4]).
 
-**\[Figure 1 here: Olah’s simple chain-rule graph]**
+![simple chain-rule graph](/content/2025/06/tree-eval-derivs.png){: width="500" height="300" }
+_simple chain-rule graph, source: [Calculus on Computational Graphs: Backpropagation][3]_
 
 ### B. Vectorized Layer-Wise Updates
 
@@ -104,7 +105,10 @@ $$
 
 where $\circ$ is element-wise multiplication ([cs231n.stanford.edu][4], [cs231n.github.io][11]).
 
-**\[Figure 2 here: CS231n vectorized backprop diagram]**
+
+![vectorized backprop](/content/2025/06/vectorized-operations.png){: width="500" height="300" }
+_vectorized backprop, source: [CS231N slide 53][https://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture4.pdf]_
+
 
 ### C. Worked Numerical Example
 
@@ -122,7 +126,9 @@ Sigmoid/tanh saturation ($f'(z)\to0$) shrinks gradients exponentially in depth; 
 initialization can blow them up. Use Xavier/He initialization and, for RNNs, 
 gradient clipping ([karpathy.medium.com][5], [cs231n.stanford.edu][6]).
 
-**\[Figure 3 here: Sigmoid derivative vanishing plot from Karpathy]**
+
+![Sigmoid derivative vanishing plot](/content/2025/06/vectorized-operations.png){: width="500" height="300" }
+_Sigmoid derivative vanishing plot, source: [karpathy.medium.com][5]_
 
 ### 2. Dying ReLUs
 
@@ -150,16 +156,16 @@ innovation. For deeper dives, see:
 * Olah, “Calculus on Computational Graphs: Backpropagation” ([colah.github.io][3])
 
 
-[1]: https://en.wikipedia.org/wiki/Seppo_Linnainmaa?utm_source=chatgpt.com "Seppo Linnainmaa"
-[2]: https://de.wikipedia.org/wiki/Backpropagation?utm_source=chatgpt.com "Backpropagation"
-[3]: https://colah.github.io/posts/2015-08-Backprop/?utm_source=chatgpt.com "Calculus on Computational Graphs: Backpropagation - colah's blog"
-[4]: https://cs231n.stanford.edu/handouts/derivatives.pdf?utm_source=chatgpt.com "[PDF] Derivatives, Backpropagation, and Vectorization - CS231n"
-[5]: https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b?utm_source=chatgpt.com "Yes you should understand backprop | by Andrej Karpathy | Medium"
-[6]: https://cs231n.stanford.edu/slides/2018/cs231n_2018_ds02.pdf?utm_source=chatgpt.com "[PDF] Backpropagation and Gradients - CS231n"
-[7]: https://www.idsia.ch/~juergen/who-invented-backpropagation.html?utm_source=chatgpt.com "Who Invented Backpropagation? - IDSIA"
-[8]: https://news.ycombinator.com/item?id=35479272&utm_source=chatgpt.com "Seppo Linnainmaa, first publisher of \"reverse mode of automatic ..."
-[9]: https://en.wikipedia.org/wiki/Backpropagation?utm_source=chatgpt.com "Backpropagation"
-[10]: https://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf?utm_source=chatgpt.com "[PDF] Natural Language Processing (Almost) from Scratch"
-[11]: https://cs231n.github.io/optimization-2/?utm_source=chatgpt.com "Backpropagation - CS231n Deep Learning for Computer Vision"
-[12]: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/slides/cs224n-2021-lecture03-neuralnets.pdf?utm_source=chatgpt.com "[PDF] Neural net learning: Gradients by hand (matrix calculus) and ..."
-[13]: https://substack.com/home/post/p-163881360?utm_campaign=post&utm_medium=web&utm_source=chatgpt.com "Andrej Karpathy is right, you should understand backprop, in Java."
+[1]: https://en.wikipedia.org/wiki/Seppo_Linnainmaa?utm_source=genmind.ch "Seppo Linnainmaa"
+[2]: https://de.wikipedia.org/wiki/Backpropagation?utm_source=genmind.ch "Backpropagation"
+[3]: https://colah.github.io/posts/2015-08-Backprop/?utm_source=genmind.ch "Calculus on Computational Graphs: Backpropagation - colah's blog"
+[4]: https://cs231n.stanford.edu/handouts/derivatives.pdf?utm_source=genmind.ch "[PDF] Derivatives, Backpropagation, and Vectorization - CS231n"
+[5]: https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b?utm_source=genmind.ch "Yes you should understand backprop | by Andrej Karpathy | Medium"
+[6]: https://cs231n.stanford.edu/slides/2018/cs231n_2018_ds02.pdf?utm_source=genmind.ch "[PDF] Backpropagation and Gradients - CS231n"
+[7]: https://www.idsia.ch/~juergen/who-invented-backpropagation.html?utm_source=genmind.ch "Who Invented Backpropagation? - IDSIA"
+[8]: https://news.ycombinator.com/item?id=35479272&utm_source=genmind.ch "Seppo Linnainmaa, first publisher of \"reverse mode of automatic ..."
+[9]: https://en.wikipedia.org/wiki/Backpropagation?utm_source=genmind.ch "Backpropagation"
+[10]: https://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf?utm_source=genmind.ch "[PDF] Natural Language Processing (Almost) from Scratch"
+[11]: https://cs231n.github.io/optimization-2/?utm_source=genmind.ch "Backpropagation - CS231n Deep Learning for Computer Vision"
+[12]: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/slides/cs224n-2021-lecture03-neuralnets.pdf?utm_source=genmind.ch "[PDF] Neural net learning: Gradients by hand (matrix calculus) and ..."
+[13]: https://substack.com/home/post/p-163881360?utm_campaign=post&utm_medium=web&utm_source=genmind.ch "Andrej Karpathy is right, you should understand backprop, in Java."
