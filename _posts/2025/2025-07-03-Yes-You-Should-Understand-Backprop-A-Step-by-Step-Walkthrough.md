@@ -127,7 +127,7 @@ initialization can blow them up. Use Xavier/He initialization and, for RNNs,
 gradient clipping ([karpathy.medium.com][5], [cs231n.stanford.edu][6]).
 
 
-![Sigmoid derivative vanishing plot](/content/2025/06/vectorized-operations.png){: width="500" height="300" }
+![Sigmoid derivative vanishing plot](/content/2025/06/sigmoid-derivative-vanishing-plot.png){: width="500" height="300" }
 _Sigmoid derivative vanishing plot, source: [karpathy.medium.com][5]_
 
 ### 2. Dying ReLUs
@@ -136,7 +136,9 @@ ReLUs zero-out for negative inputs; if a neuron’s gradient path stays negative
 Karpathy calls this “brain damage.” Leaky-ReLU, PReLU or ELU keep a small slope 
 for $z<0$ ([karpathy.medium.com][5], [substack.com][13]).
 
-**\[Figure 4 here: ReLU zero-slope region from Karpathy]**
+
+![Sigmoid derivative vanishing plot](/content/2025/06/dying-ReLUs.png){: width="500" height="300" }
+_ReLU zero-slope region, source: [karpathy.medium.com][5]_
 
 ### 3. Modern Remedies
 
