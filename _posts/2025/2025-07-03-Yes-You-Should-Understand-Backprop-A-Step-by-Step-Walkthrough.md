@@ -1,6 +1,6 @@
 ---
 title: 'Yes, You Should Understand Backprop: A Step-by-Step Walkthrough'
-date: '2025-07-07T6:31:30+00:00'
+date: '2025-07-03T6:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/backprop.jpg
