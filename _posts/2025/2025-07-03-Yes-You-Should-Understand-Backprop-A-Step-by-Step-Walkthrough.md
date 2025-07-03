@@ -3,7 +3,7 @@ title: 'Yes, You Should Understand Backprop: A Step-by-Step Walkthrough'
 date: '2025-07-07T6:31:30+00:00'
 author: gp
 layout: post
-image: /content/2025/06/attention2.png
+image: /content/2025/06/backprop.jpg
 categories: [DNNs, Language Model, Backpropagation]
 math: true
 mermaid: true
@@ -154,6 +154,7 @@ innovation. For deeper dives, see:
 * CS231n “Derivatives, Backpropagation, and Vectorization” handout ([cs231n.stanford.edu][4])
 * Nielsen, *Neural Networks and Deep Learning*, Ch. 2
 * Olah, “Calculus on Computational Graphs: Backpropagation” ([colah.github.io][3])
+* Inna Logunova, [Backpropagation in Neural Networks](https://serokell.io/blog/understanding-backpropagation?utm_source=genmind.ch)
 
 
 [1]: https://en.wikipedia.org/wiki/Seppo_Linnainmaa?utm_source=genmind.ch "Seppo Linnainmaa"
