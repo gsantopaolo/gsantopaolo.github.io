@@ -5,8 +5,6 @@ author: gp
 layout: post
 #image: /content/2025/06/backprop.jpg
 categories: [AI Clusters, Agentic AI, RAG]
-math: true
-mermaid: true
 published: true
 ---
 
