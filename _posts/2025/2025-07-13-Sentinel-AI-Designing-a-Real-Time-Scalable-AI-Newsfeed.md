@@ -3,7 +3,7 @@ title: 'Sentinel-AI - Designing a Real-Time, Scalable AI Newsfeed'
 date: '2025-07-13T6:31:30+00:00'
 author: gp
 layout: post
-image: /content/2025/07/sentinel3.png
+image: /content/2025/07/sentinel2.png
 categories: [AI Clusters, Agentic AI, RAG]
 published: true
 ---
