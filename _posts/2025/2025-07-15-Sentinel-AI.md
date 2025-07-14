@@ -1,10 +1,10 @@
 ---
 title: 'Sentinel-AI 🚀 — Designing a Real-Time, Scalable AI Newsfeed'
-date: '2025-07-03T6:31:30+00:00'
+date: '2025-07-15T6:31:30+00:00'
 author: gp
 layout: post
 #image: /content/2025/06/backprop.jpg
-categories: [DNNs, Language Model, Backpropagation]
+categories: [AI Clusters, Agentic AI, RAG]
 math: true
 mermaid: true
 published: true
@@ -92,7 +92,8 @@ Open http://localhost:9000 (Portainer) to watch containers boot
 
 <br/>
 Then hit the Web UI to add your first RSS feed.
-![Wb ui pic-AI](/content/2025/07/sentinel1.png){: width="500" height="400" }
+
+[//]: # (![Wb ui pic-AI]&#40;/content/2025/07/sentinel1.png&#41;{: width="500" height="400" })
 
 
 <br/>
