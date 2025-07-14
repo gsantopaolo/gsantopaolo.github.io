@@ -88,23 +88,20 @@ sudo deployment/start.sh   # brings up the whole stack
 Open http://localhost:9000 (Portainer) to watch containers boot
 <br/>
 
-[//]: # (![Sentinel-AI]&#40;/content/2025/07/sentinel1.png&#41;{: width="500" height="400" })
 
 <br/>
 Then hit the Web UI to add your first RSS feed.
 
-[//]: # (![Wb ui pic-AI]&#40;/content/2025/07/sentinel1.png&#41;{: width="500" height="400" })
 
 
 <br/>
 And don't forget to watch services' log on Portainer to see the magic odf a distributed system 
 send messages to each other and execute their tasks.
 
-[//]: # (![portainer pi]&#40;/content/2025/07/sentinel1.png&#41;{: width="500" height="400" })
 
 <br/>
 
-[//]: # (✉️ Problems or feature ideas? Open an issue or reach out on [genmind.ch]&#40;https://genmind.ch/&#41;!)
+> Problems or feature ideas? 👉✉️ Open an issue or reach out on [genmind.ch]&#40;https://genmind.ch/&#41;!)
 
 Closing Thoughts
 Sentinel-AI is more than a demo; it’s a template for production-grade, AI-powered event pipelines.
