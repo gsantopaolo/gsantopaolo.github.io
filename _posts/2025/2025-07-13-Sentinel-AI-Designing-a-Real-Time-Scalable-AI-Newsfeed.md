@@ -1,5 +1,5 @@
 ---
-title: 'Sentinel-AI 🚀 — Designing a Real-Time, Scalable AI Newsfeed'
+title: 'Sentinel-AI - Designing a Real-Time, Scalable AI Newsfeed'
 date: '2025-07-13T6:31:30+00:00'
 author: gp
 layout: post
