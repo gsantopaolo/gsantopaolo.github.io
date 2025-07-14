@@ -3,7 +3,7 @@ title: 'Sentinel-AI - Designing a Real-Time, Scalable AI Newsfeed'
 date: '2025-07-13T6:31:30+00:00'
 author: gp
 layout: post
-#image: /content/2025/06/backprop.jpg
+image: /content/2025/07/sentinel3.png
 categories: [AI Clusters, Agentic AI, RAG]
 published: true
 ---
@@ -82,14 +82,19 @@ cd sentinel-AI
 
 sudo deployment/start.sh   # brings up the whole stack
 ```
+![Sentinel-AI after deployment/start.sh ](/content/2025/07/sentinel1.png){: width="500" height="300" }
+_Sentinel-AI after deployment/start.sh_
+
 
 Open http://localhost:9000 (Portainer) to watch containers boot
 <br/>
-
+![Sentinel-AI logs](/content/2025/07/sentinel3.png){: width="500" height="300" }
+_Sentinel-AI logs_
 
 <br/>
 Then hit the Web UI to add your first RSS feed.
-
+![Sentinel-AI UI](/content/2025/07/sentinel2.png){: width="500" height="300" }
+_Sentinel-AI UI
 
 
 <br/>
