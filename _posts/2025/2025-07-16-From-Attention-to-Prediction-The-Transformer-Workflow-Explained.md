@@ -1,4 +1,3 @@
-```markdown
 ---
 title: "From Attention to Prediction: The Transformer Workflow Explained"
 date: "2025-07-16T06:31:30+00:00"
@@ -112,4 +111,4 @@ Stack \(L\) such layers for the encoder. The **decoder** adds an additional enco
 [9]: https://arxiv.org/pdf/2002.04745  
 [10]: https://www.geeksforgeeks.org/nlp/positional-encoding-in-transformers  
 [11]: https://apxml.com/courses/foundations-transformers-architecture/chapter-2-attention-mechanism-core-concepts/scaled-dot-product-attention  
-```
+
