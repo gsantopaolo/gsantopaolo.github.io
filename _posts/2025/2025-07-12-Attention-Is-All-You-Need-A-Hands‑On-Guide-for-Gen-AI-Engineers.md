@@ -17,7 +17,7 @@ I'm studying [CS224N: Natural Language Processing with Deep Learning](https://on
 In this class, we studied the history of LLM models [from N-grams to RNNs](https://genmind.ch/posts/Mastering-Language-Modeling-From-N-grams-to-RNNs-and-Beyond/), 
 and we are now
 approaching the Transformer architecture, after having going through key concepts like [attention](https://genmind.ch/posts/Beyond-the-Thought-Vector-The-Evolution-of-Attention-in-Deep-Learning/) 
-and [backpropagation through time]().
+and [backpropagation through time](https://genmind.ch/posts/Yes-You-Should-Understand-Backprop-A-Step-by-Step-Walkthrough/).
 <br/>
  
 In this post, I'll try trace the evolution from RNNs to the attention‑only Transformer architecture, 
@@ -100,7 +100,10 @@ and then struggles to recall distant dependencies
 
 ## 3. Derivation of Scaled Dot‑Product Self‑Attention
 
-Given token embeddings $X\in\mathbb{R}^{n\times d}$, we learn three projection matrices $W^Q,W^K,W^V\in\mathbb{R}^{d\times d}$ to produce queries $Q=XW^Q$, keys $K=XW^K$, and values $V=XW^V$ ([itobos.eu][4]). The attention scores between each query–key pair are computed as
+Given token embeddings $X\in\mathbb{R}^{n\times d}$, we learn three projection 
+matrices $W^Q,W^K,W^V\in\mathbb{R}^{d\times d}$ to produce queries $Q=XW^Q$, keys $K=XW^K$, 
+and values $V=XW^V$ ([itobos.eu][4]). 
+The attention scores between each query–key pair are computed as
 
 $$
   \alpha_{ij} = \frac{(QK^\top)_{ij}}{\sqrt{d_k}},
@@ -117,6 +120,24 @@ Scaling by $\sqrt{d_k}$ stabilizes gradients when $d_k$ is large ([Educative][5]
 
 ![Scaled Dot‑Product Attention](/content/2025/07/scaled-dot‑product-attention.png){: width="300" height="500" }
 _Scaled Dot‑Product Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
+
+
+
+Here’s a concise, chef‑themed explanation of **scaled dot‑product self‑attention**, with every sentence backed by diverse sources:
+
+> Imagine Chef Marina standing before a long spice rack (the “values”) with each jar tagged by a 
+> flavor profile (the “keys”) and her tasting spoon representing the current dish’s flavor preference (the “query”) ([AI Mind][1], [KiKaBeN][2]).
+> She measures how well her spoon’s flavor matches each jar by taking the dot‑product of their taste fingerprints—just like computing the matrix product $QK^\top$ to score compatibility between queries and keys ([Medium][3], [d2l.ai][4]).
+> To prevent any single spice from dominating when the flavor profiles are high‑dimensional, Marina divides each raw score by $\sqrt{d_k}$, analogous to scaling dot‑products by $\sqrt{d_k}$ for stable gradients in large $d_k$ ([Reddit][5], [Wikipedia][6]).
+> Next, she conducts a “taste test” by applying softmax to these scaled scores—turning them into weights that sum to 1—so she knows precisely how much of each spice to blend based on their relative match ([Cross Validated][7], [d2l.ai][4]).
+> Finally, Marina scoops out the weighted mix of spices (the value vectors) and combines them into her final dish, just as
+>
+> $$
+>   \mathrm{Attention}(Q,K,V) = \mathrm{softmax}\!\bigl(\tfrac{QK^\top}{\sqrt{d_k}}\bigr)V
+> $$
+>
+> produces the context‑aware output for each query ([Wikipedia][8]).
+
 
 ---
 
