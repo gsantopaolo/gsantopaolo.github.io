@@ -12,23 +12,89 @@ published: true
 
 
 ## Summary
-
-In this post, we trace the evolution from recurrent RNNs and LSTMs to the attention‑only Transformer architecture, highlighting how self‑attention overcomes linear interaction distance ([apxml.com][1], [Medium][2]) and non‑parallelizable sequential computation bottlenecks ([EECS Department][3]). We derive the scaled dot‑product attention mechanism step‑by‑step, including dimensional analysis ([itobos.eu][4], [Educative][5]), explain positional encoding techniques (sinusoidal and learned) for injecting sequence order ([Medium][6], [MachineLearningMastery.com][7]), and detail the core building blocks—multi‑head attention ([GeeksforGeeks][8], [Deep Learning Indaba][9]), residual connections, and layer normalization ([Proceedings of Machine Learning Research][10], [MachineLearningMastery.com][11]). We then introduce the encoder‑decoder framework, provide a runnable PyTorch implementation of a minimal Transformer layer ([PyTorch][12]), compare RNN vs. Transformer performance in throughput and BLEU score improvements ([arXiv][13], [arXiv][14]), and survey efficient attention variants (Reformer, Performer) and applications to vision (ViT) ([arXiv][15]) and music generation ([arXiv][16]).
+As part of my study for the [Artificial Intelligence Professional Program at Stanford](https://online.stanford.edu/programs/artificial-intelligence-professional-program), 
+I'm studying [CS224N: Natural Language Processing with Deep Learning](https://online.stanford.edu/courses/xcs224n-natural-language-processing-deep-learning).
+In this class, we studied the history of LLM models [from N-grams to RNNs](https://genmind.ch/posts/Mastering-Language-Modeling-From-N-grams-to-RNNs-and-Beyond/), 
+and we are now
+approaching the Transformer architecture, after having going through key concepts like [attention](https://genmind.ch/posts/Beyond-the-Thought-Vector-The-Evolution-of-Attention-in-Deep-Learning/) 
+and [backpropagation through time]().
+<br/>
+ 
+In this post, I'll try trace the evolution from RNNs to the attention‑only Transformer architecture, 
+highlighting how self‑attention overcomes linear interaction distance ([apxml.com][1], [Medium][2]) 
+and non‑parallelizable sequential computation bottlenecks ([EECS Department][3]). 
+I'll also try to explain the scaled dot‑product attention mechanism step‑by‑step, 
+including dimensional analysis ([itobos.eu][4], [Educative][5]), 
+explain positional encoding techniques (sinusoidal and learned) 
+for injecting sequence order ([Medium][6], [MachineLearningMastery.com][7]), 
+and detail the core building blocks—multi‑head attention ([GeeksforGeeks][8], [Deep Learning Indaba][9]), 
+residual connections, and layer normalization ([Proceedings of Machine Learning Research][10], [MachineLearningMastery.com][11]). 
+With that done I can then talk about the encoder‑decoder framework, 
+provide a runnable PyTorch implementation of a minimal Transformer layer ([PyTorch][12]), 
+compare RNN vs. Transformer performance in throughput and BLEU score improvements ([arXiv][13], [arXiv][14]), 
+and survey efficient attention variants (Reformer, Performer) and applications to vision (ViT) ([arXiv][15]) a
+nd music generation ([arXiv][16]).
 
 ---
 
 ## 1. Introduction
 
-Recurrent neural networks (RNNs) model sequences by passing a hidden state from one time step to the next, but struggle to capture dependencies between tokens separated by many steps due to vanishing/exploding gradients and linear memory bottlenecks ([apxml.com][1]). Long Short‑Term Memory (LSTM) and Gated Recurrent Unit (GRU) architectures alleviate some gradient issues, but still require O(n) sequential operations that cannot be fully parallelized on GPUs ([Medium][2]). As a result, even optimized RNN implementations suffer from high latency or poor scalability on modern hardware ([EECS Department][3]).
+Recurrent Neural Networks (RNNs) model sequences by passing a hidden state from one 
+time step to the next, but struggle to capture dependencies between tokens 
+separated by many steps due to vanishing/exploding gradients and linear memory 
+bottlenecks ([apxml.com][1]). 
+Long Short‑Term Memory (LSTM) and Gated Recurrent Unit (GRU) 
+architectures alleviate some gradient issues, 
+but still require O(n) sequential operations that cannot be fully 
+parallelized on GPUs ([Medium][2]).
+As a result, even optimized RNN implementations suffer from high latency or poor 
+scalability on modern hardware ([EECS Department][3]).
 
 ![The Transformer – model architecture](/content/2025/07/transformer-architecture.png){: width="500" height="300" }
 _The Transformer – model architecture, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
+
+>  💡 Imagine Chef Marina in her kitchen, she must remember each recipe step from appetizers to dessert, 
+but if her memory of the soup’s seasoning fades by dinnertime, the final course suffers from 
+“vanishing gradients,” the same issue that plagues traditional RNNs when learning long‑range dependencies
+<br/>
+Gated architectures like LSTM and GRU act like recipe cards with built‑in reminders—input, 
+forget, and output gates—to preserve crucial cooking steps over long “time” spans, yet they 
+still must be read one after another, enforcing an O(sequence length) sequential ritual that CPUs and GPUs cannot parallelize
+<br/>
+Waiters start demanding faster service (longer sequences), this one‑at‑a‑time approach causes high 
+<br?>
+latency and poor scalability, much like a single chef vs. a brigade working in parallel.
+<br/>
+Worse, if Marina relies on an ingredient she used a hundred dishes earlier, 
+she must mentally retrace every intermediate step—an analogy for RNNs’ linear interaction distance, 
+which makes distant tokens interact only through many nonlinear transitions.
+<br/>
+Modern GPUs, designed to chop hundreds of vegetables at once, sit idle during these sequential passes, 
+highlighting RNNs’ poor parallelism on parallel hardware 
+<br/>
+.
+Self‑attention, by contrast, lets each “sous‑chef” query any recipe card directly in one shot—overcoming 
+both vanishing gradients and sequential delays, and empowering the Transformer to serve complex “menus” 
+at scale across NLP, vision, and beyond.
 
 ---
 
 ## 2. From RNN/LSTM + Attention to Pure Self‑Attention
 
-Adding an attention layer to an encoder–decoder LSTM lets the decoder flexibly attend to encoder states, reducing the information bottleneck of compressing a sequence into a single vector ([Medium][17], [Wikipedia][18]). However, this hybrid approach still processes tokens sequentially, limiting training and inference speed. The Transformer architecture dispenses with recurrence entirely, relying solely on self‑attention to model token interactions in O(1) “hops” regardless of distance ([arXiv][14]).
+Adding an attention layer to an encoder–decoder LSTM lets the decoder flexibly attend to encoder states, 
+reducing the information bottleneck of compressing a sequence into a single vector ([Medium][17], [Wikipedia][18]). 
+However, this hybrid approach still processes tokens sequentially, limiting training and inference speed. 
+The Transformer architecture dispenses with recurrence entirely, 
+relying solely on self‑attention to model token interactions in O(1) “hops” regardless of 
+distance ([arXiv][14]).
+
+>  💡 Imagine Chef Marina scribbling an entire seven‑course menu onto a single page of her 
+notebook-only to later struggle to read her cramped notes, 
+overlapping notes and forget which dish used which spice. 
+> This mirrors how a basic RNN compresses a whole input sequence into one fixed‑size vector 
+and then struggles to recall distant dependencies 
+
+
 
 ---
 
