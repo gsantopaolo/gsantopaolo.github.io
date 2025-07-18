@@ -12,7 +12,6 @@ published: true
 math: true
 ---
 
-## Summary
 
 Transformer is a neural network architecture for sequence transduction that replaces recurrence and convolutions with **self‑attention**, enabling fully parallel processing of input embeddings \(X\in\mathbb{R}^{n\times d_{\text{model}}}\) via a **scaled dot‑product attention** mechanism for queries, keys, and values ([1], [2]). Introduced in “Attention Is All You Need,” it underpins models such as BERT, GPT, and T5 ([3], [4]).
 
