@@ -22,7 +22,7 @@ In this post, we trace the evolution from recurrent RNNs and LSTMs to the attent
 Recurrent neural networks (RNNs) model sequences by passing a hidden state from one time step to the next, but struggle to capture dependencies between tokens separated by many steps due to vanishing/exploding gradients and linear memory bottlenecks ([apxml.com][1]). Long Short‑Term Memory (LSTM) and Gated Recurrent Unit (GRU) architectures alleviate some gradient issues, but still require O(n) sequential operations that cannot be fully parallelized on GPUs ([Medium][2]). As a result, even optimized RNN implementations suffer from high latency or poor scalability on modern hardware ([EECS Department][3]).
 
 ![The Transformer – model architecture](/content/2025/07/transformer-architecture.png){: width="500" height="300" }
-_The Transformer – model architecture, source: [Attention Is All You Need](http://arxiv.org/html/1706.03762v7)_
+_The Transformer – model architecture, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 ---
 
@@ -50,7 +50,7 @@ Scaling by $\sqrt{d_k}$ stabilizes gradients when $d_k$ is large ([Educative][5]
 
 
 ![Scaled Dot‑Product Attention](/content/2025/07/scaled-dot‑product-attention.png){: width="300" height="500" }
-_Scaled Dot‑Product Attention, source: [Attention Is All You Need](http://arxiv.org/html/1706.03762v7)_
+_Scaled Dot‑Product Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 ---
 
@@ -88,7 +88,7 @@ $$
 $$
 
 ![Residual connection and LayerNorm around each attention/FFN](/content/2025/07/residual-connection-layerNorm.png){: width="300" height="500" }
-_Residual connection and LayerNorm around each attention/FFN, source: [Attention Is All You Need](http://arxiv.org/html/1706.03762v7)_
+_Residual connection and LayerNorm around each attention/FFN, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 
 where LayerNorm normalizes across features 
@@ -98,7 +98,7 @@ significantly improves gradient flow in deep
 stacks ([Proceedings of Machine Learning Research][10], [MachineLearningMastery.com][11]).
 
 ![Multi‑Head Attention](/content/2025/07/multi-head-attention.png){: width="300" height="500" }
-_Multi‑Head Attention, source: [Attention Is All You Need](http://arxiv.org/html/1706.03762v7)_
+_Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 ---
 
@@ -152,7 +152,7 @@ class SimpleTransformerLayer(nn.Module):
 * On WMT’14 English→French, a single Transformer model scores 41.8 BLEU in 3.5 days of training on eight GPUs—far faster than concurrent approaches ([arXiv][14]).
 
 ![Multi‑Head Attention](/content/2025/07/table2.png){: width="300" height="500" }
-_Multi‑Head Attention, source: [Attention Is All You Need](http://arxiv.org/html/1706.03762v7)_
+_Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 
 
@@ -171,7 +171,7 @@ _Multi‑Head Attention, source: [Attention Is All You Need](http://arxiv.org/ht
 * **Music Transformer:** Introduces relative position biases for modeling minute‑long musical compositions with coherent long‑term structure, surpassing LSTM baselines on expressive piano datasets ([arXiv][16]).
 
 ![Multi‑Head Attention](/content/2025/07/table3.png){: width="300" height="500" }
-_Multi‑Head Attention, source: [Attention Is All You Need](http://arxiv.org/html/1706.03762v7)_
+_Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 
 
