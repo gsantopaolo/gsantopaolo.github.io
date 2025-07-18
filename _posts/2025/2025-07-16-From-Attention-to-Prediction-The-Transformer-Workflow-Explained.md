@@ -3,7 +3,7 @@ title: "From Attention to Prediction: The Transformer Workflow Explained"
 date: "2025-07-16T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/2025/07/transformer1.png"
+image: "/content/2025/07/transformer1.png"
 categories:
   - "DNN"
   - "Transformer"
