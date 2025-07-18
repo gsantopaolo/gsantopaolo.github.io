@@ -112,7 +112,7 @@ Stack \$L\$ such layers for the encoder. The **decoder** adds an additional enco
 
 ---
 
-## References
+
 
 [1]: https://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf  
 [2]: https://medium.com/@funcry/in-depth-understanding-of-attention-mechanism-part-ii-scaled-dot-product-attention-and-its-7743804e610e  
