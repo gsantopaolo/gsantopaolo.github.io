@@ -53,7 +53,7 @@ scalability on modern hardware ([EECS Department][3]).
 ![The Transformer – model architecture](/content/2025/07/transformer-architecture.png){: width="500" height="300" }
 _The Transformer – model architecture, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
->  💡 Imagine Chef Marina in her kitchen, she must remember each recipe step from appetizers to dessert, 
+>💡Imagine Chef Marina in her kitchen, she must remember each recipe step from appetizers to dessert, 
 but if her memory of the soup’s seasoning fades by dinnertime, the final course suffers from 
 “vanishing gradients,” the same issue that plagues traditional RNNs when learning long‑range dependencies
 <br/>
@@ -88,7 +88,7 @@ The Transformer architecture dispenses with recurrence entirely,
 relying solely on self‑attention to model token interactions in O(1) “hops” regardless of 
 distance ([arXiv][14]).
 
->  💡 Imagine Chef Marina scribbling an entire seven‑course menu onto a single page of her 
+>💡Imagine Chef Marina scribbling an entire seven‑course menu onto a single page of her 
 notebook-only to later struggle to read her cramped notes, 
 overlapping notes and forget which dish used which spice. 
 > This mirrors how a basic RNN compresses a whole input sequence into one fixed‑size vector 
@@ -125,7 +125,7 @@ _Scaled Dot‑Product Attention, source: [Attention Is All You Need](https://arx
 
 Here’s a concise, chef‑themed explanation of **scaled dot‑product self‑attention**, with every sentence backed by diverse sources:
 
-> Imagine Chef Marina standing before a long spice rack (the “values”) with each jar tagged by a 
+> 💡Imagine Chef Marina standing before a long spice rack (the “values”) with each jar tagged by a 
 > flavor profile (the “keys”) and her tasting spoon representing the current dish’s flavor preference (the “query”) ([AI Mind][1], [KiKaBeN][2]).
 > She measures how well her spoon’s flavor matches each jar by taking the dot‑product of their taste fingerprints—just like computing the matrix product $QK^\top$ to score compatibility between queries and keys ([Medium][3], [d2l.ai][4]).
 > To prevent any single spice from dominating when the flavor profiles are high‑dimensional, Marina divides each raw score by $\sqrt{d_k}$, analogous to scaling dot‑products by $\sqrt{d_k}$ for stable gradients in large $d_k$ ([Reddit][5], [Wikipedia][6]).
@@ -187,6 +187,15 @@ stacks ([Proceedings of Machine Learning Research][10], [MachineLearningMastery.
 ![Multi‑Head Attention](/content/2025/07/multi-head-attention.png){: width="300" height="500" }
 _Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
+> 💡Chef Marina splits her tasting brigade into $h$ sous‑chefs (attention heads), 
+> each with its own Q/K/V “recipe card” set; they sample in parallel, 
+> then she stitches their flavor notes together and refines them with a final 
+> blend $W^O$ ([GeeksforGeeks][1]).
+> To keep each layer from overcooking, Marina adds back the original ingredients 
+> (residual connection) and standardizes the mixture (LayerNorm) so 
+> every batch tastes consistent before moving on.
+
+
 ---
 
 ## 6. Transformer Encoder‑Decoder Architecture (Intro Only)
@@ -198,7 +207,9 @@ cross‑attention, and layer stacks), see the forthcoming dedicated blog post \[
 
 ## 7. Code Example: Minimal PyTorch Transformer Block
 
-Below is a self‑contained PyTorch implementation of one Transformer encoder layer (self‑attention + feed‑forward + norms + residuals). You can also leverage `torch.nn.Transformer` in PyTorch’s standard library ([PyTorch][12]).
+Below is a self‑contained PyTorch implementation of one Transformer encoder layer 
+(self‑attention + feed‑forward + norms + residuals). You can also leverage `torch.nn.Transformer` 
+in PyTorch’s standard library ([PyTorch][12]).
 
 ```python
 import torch
