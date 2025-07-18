@@ -21,7 +21,7 @@ In this post, we trace the evolution from recurrent RNNs and LSTMs to the attent
 
 Recurrent neural networks (RNNs) model sequences by passing a hidden state from one time step to the next, but struggle to capture dependencies between tokens separated by many steps due to vanishing/exploding gradients and linear memory bottlenecks ([apxml.com][1]). Long Short‑Term Memory (LSTM) and Gated Recurrent Unit (GRU) architectures alleviate some gradient issues, but still require O(n) sequential operations that cannot be fully parallelized on GPUs ([Medium][2]). As a result, even optimized RNN implementations suffer from high latency or poor scalability on modern hardware ([EECS Department][3]).
 
-![The Transformer – model architecture](/content/2025/06/transformer-architecture.png){: width="500" height="300" }
+![The Transformer – model architecture](/content/2025/07/transformer-architecture.png){: width="500" height="300" }
 _The Transformer – model architecture, source: [Attention Is All You Need][http://arxiv.org/html/1706.03762v7]_
 
 ---
