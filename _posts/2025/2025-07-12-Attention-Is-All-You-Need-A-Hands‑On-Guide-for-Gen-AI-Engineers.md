@@ -3,7 +3,7 @@ title: 'Attention Is All You Need: A Hands‑On Guide for Gen-AI Engineers '
 date: '2025-07-12T6:31:30+00:00'
 author: gp
 layout: post
-image: /content/2025/06/backprop.jpg
+image: /content/2025/07/attentionisallyouneed.png
 categories: [Attention, Transformer, NLP, Deep Learning]
 math: true
 mermaid: true
