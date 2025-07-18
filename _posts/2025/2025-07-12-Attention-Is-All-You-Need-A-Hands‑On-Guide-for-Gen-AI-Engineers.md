@@ -104,7 +104,8 @@ _Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/h
 
 ## 6. Transformer Encoder‑Decoder Architecture (Intro Only)
 
-For a complete deep dive on the full encoder–decoder stack (masked decoder self‑attention, cross‑attention, and layer stacks), see the forthcoming dedicated blog post \[link to come].
+For a complete deep dive on the full encoder–decoder stack (masked decoder self‑attention, 
+cross‑attention, and layer stacks), see the forthcoming dedicated blog post \[link to come].
 
 ---
 
@@ -151,8 +152,10 @@ class SimpleTransformerLayer(nn.Module):
 * **Transformer** achieves 28.4 BLEU on WMT’14 English→German, surpassing previous state‑of‑the‑art LSTM+attention ensembles by over 2 BLEU points ([arXiv][14]).
 * On WMT’14 English→French, a single Transformer model scores 41.8 BLEU in 3.5 days of training on eight GPUs—far faster than concurrent approaches ([arXiv][14]).
 
-![Multi‑Head Attention](/content/2025/07/table2.png){: width="300" height="500" }
-_Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
+![The Transformer achieves better BLEU scores than previous state-of-the-art models on the
+English-to-German and English-to-French newstest2014 tests at a fraction of the training cost](/content/2025/07/table2.png){: width="300" height="500" }
+_The Transformer achieves better BLEU scores than previous state-of-the-art models on the
+English-to-German and English-to-French newstest2014 tests at a fraction of the training cost, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 
 
@@ -170,8 +173,8 @@ _Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/h
 * **Vision Transformer (ViT):** Adapts pure Transformer encoders to image patches, outperforming CNNs on ImageNet while requiring fewer training FLOPs ([arXiv][15]).
 * **Music Transformer:** Introduces relative position biases for modeling minute‑long musical compositions with coherent long‑term structure, surpassing LSTM baselines on expressive piano datasets ([arXiv][16]).
 
-![Multi‑Head Attention](/content/2025/07/table3.png){: width="300" height="500" }
-_Multi‑Head Attention, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
+![Transformer variations](/content/2025/07/table3.png){: width="300" height="500" }
+_Transformer variations, source: [Attention Is All You Need](https://arxiv.org/html/1706.03762v7)_
 
 
 
