@@ -3,7 +3,7 @@ title: "Software 3.0 Meets Sentinel‑AI: Building Real‑Time AI Newsfeeds with
 date: "2025-07-18T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/07/transformer1.png"
+image: "/content/2025/07/software30.png"
 categories: [Windsurf, AI Tools]
 published: true
 ---
