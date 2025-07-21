@@ -55,9 +55,9 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 _Create SSH configuration_
 
 ## Fill in Connection Details
-   * **Host**: your server’s IP or hostname (in of the Stanford lab, it would be something like scpdxcs@lab-18422c, just copy paste from your connection string)
+   * **Host**: your server’s IP or hostname (in case of the Stanford lab, it would be something like lab-18422c, just copy and paste from your connection string the host name after "@")
    * **Port**: usually `22` (or custom, in case of the Stanford lab, it would be 5084 or anything else provided in the connection string you got after **-p**)
-   * **Username**: your SSH user
+   * **Username**: your SSH user ( (in case of the Stanford lab, it would be something like "scpdxcs", just copy and paste from your connection string the name before "@")
    * click next
 <br />
 ![Connection Details](/content/2025/06/pycharm2.jpg){: width="500" height="400" }
@@ -128,6 +128,38 @@ If you see a connection timeout error, like the one below, Probably your VM has 
 _Connection timeout_
 
 ## Running, Testing & Debugging Remotely
+
+* Activate the environment you created during the setup via
+
+```bash
+conda activate YOUR_ENV_NAME
+```
+![Activate your Conda env](/content/2025/06/activatecondaenv.png){: width="500" height="400" }
+_Activate your Conda env_
+
+* Update your environment
+At this point, if you have a requirements.txt or a yaml file, you'll need to update your Conda environment.
+<br />
+If you have a yaml file, then: 
+```bash
+conda env update \
+  --name YOUR_ENV_NAME \
+  --file YOUR_ENV_YAML \
+  --prune
+```
+In case of the Stanford lab, the name will be "environment_cuda.yml"
+<br />
+If you have a requirements.txt file, then: 
+```bash
+pip install -r requirements.txt
+```
+of course, you need to update your environment only one time. If you log out and then log in again you only need to activate your environment.
+
+> 💡Bonus tip, if you are using a GPU server equipped with an N-Vida GPU you can [install Nvitop](https://genmind.ch/posts/enhance-your-ai-engineer-toolbelt-with-asitop-and-nvitop/) 
+> to have an interactive NVIDIA-GPU process viewer, just "pip install nvitop". And to run it "nvitop", you'll have some fun 😊
+
+
+
 
 * **Run Configurations**
   Your existing Run/Debug configs automatically use the SSH interpreter.
