@@ -82,16 +82,50 @@ _fill in the auth details_
 _fIntrospecting SSH server_
 
 ## Project directory and Python runtime configuration
+If you are setting up a remote connection for the Stanford lab, skip to "Using a remote env"
+### Using a local env
    * Select the same environment you use locally
    * I leave all the other params as default
    * Click Create
 <br />
 ![Project directory and Python runtime configuration](/content/2025/06/pycharm5.jpg){: width="500" height="400" }
-_Project directory and Python runtime configuration_
+_Project directory and Python runtime configuration - local env_
+---
+### Using a remote env
+   * Conda executable: click the folder brose to select "anaconda/condabin/conda"
+   * Select "Create new environment"
+   * Environment name: choose your favorite name
+   * Python version: 3.12
+   * Sync folder: leave it default
+   * Check the option "Automatically upload project files"
+   * Click Create
+<br />
+![Project directory and Python runtime configuration](/content/2025/06/sshstanford1.png){: width="500" height="400" }
+_Project directory and Python runtime configuration - remote env_
 ---
 
+## Connecting to the remote environment
+  * In PyCharm, on the left, select terminal
+  * Click on the dropdown and select the environment you just created (It can take a while before all the file will be transferred)
+![Connecting to the remote environment](/content/2025/06/connecttossh.png){: width="500" height="400" }
+_Connecting to the remote environment_
 
 
+You are now remotely connected to your GPU server.
+<br />
+When you change any file locally, your changes will be automatically uploaded to the server.
+This means that you can code locally and run your code on a remote machine with a powerful GPU.
+All your ML tasks will be much, much faster!
+
+ 
+![Remote server terminal](/content/2025/06/connecttossh.png){: width="500" height="400" }
+_Remote server terminal_
+
+<br />
+If you see a connection timeout error, like the one below, Probably your VM has beed shut down. Go to the portal and reactivate it.
+
+![Connection timeout](/content/2025/06/timeout.png){: width="500" height="400" }
+_Connection timeout_
 
 ## Running, Testing & Debugging Remotely
 
