@@ -55,8 +55,8 @@ Before you start, make sure your remote host meets PyCharm’s requirements:
 _Create SSH configuration_
 
 ## Fill in Connection Details
-   * **Host**: your server’s IP or hostname
-   * **Port**: usually `22` (or custom)
+   * **Host**: your server’s IP or hostname (in of the Stanford lab, it would be something like scpdxcs@lab-18422c, just copy paste from your connection string)
+   * **Port**: usually `22` (or custom, in case of the Stanford lab, it would be 5084 or anything else provided in the connection string you got after **-p**)
    * **Username**: your SSH user
    * click next
 <br />
@@ -68,6 +68,9 @@ _fill in the connection details_
    * **Fill the passphrase**: if your SSH private key weas generated with a passphrase. 
    * **Select Save passphrase** 
    * Click **Next**.
+
+If you are connecting using password then select "Password" fill in you password and enable the check box "Save password" if you want to be 
+automatically sign in everytime you try to connect again to the remote env.
 <br />
 ![Auth Details](/content/2025/06/pycharm3.jpg){: width="500" height="400" }
 _fill in the auth details_
