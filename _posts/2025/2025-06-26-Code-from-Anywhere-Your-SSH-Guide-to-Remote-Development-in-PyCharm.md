@@ -183,6 +183,14 @@ _Running, Testing & Debugging Remotely_
 _open a terminal on your GPU server_
 ---
 
+> ⚠️ Very important:️
+> By default, PyCharm’s Deployment plugin only uploads files you modify locally; it does not monitor or pull in remote file changes automatically.
+> To download the model, or any other file, you created on the remote GPU machine
+> Open the Remote Host window:
+> Tools → Deployment → Browse Remote Host
+> Locate the file or folder you modified on the server. 
+> Right‑click → Download from Here to pull it back into your local project. 
+
 ## Licensing & Limitations
 
 * **License**
