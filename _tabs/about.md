@@ -38,4 +38,6 @@ _Future Tech 2019 - Amsterdam_
     - Skilled in strategic thinking, aligning AI programs with organizational goals, and translating them into actionable roadmaps.
     - Experienced in cross-functional collaboration and managing partnerships with stakeholders.
 
-If you have any questions or need assistance, please don’t hesitate to reach out. You can email me at gianpaolo.santopaolo {at{} gmail.com or contact me to my phone or on WhatsApp at +41 79 450 50 07. I look forward to connecting with you!
+If you have any questions or need assistance, please don’t hesitate to reach out. 
+You can email me at gianpaolo.santopaolo {at} gmail.com or contact me to my phone [call me](tel:+41783403228), on [WhatsApp](https://wa.me/+41783403228), or [Signal](https://signal.me/#p/+41783403228)
+ at +41 78 340 32 28 I look forward to connecting with you!
