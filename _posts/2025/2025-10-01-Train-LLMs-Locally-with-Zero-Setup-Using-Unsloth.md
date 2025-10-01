@@ -1,6 +1,6 @@
 ---
 title: "Train LLMs Locally with Zero Setup Using Unsloth AI’s Docker Image"
-date: "2025-09-30T06:31:30+00:00"
+date: "2025-10-01T06:31:30+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/09/unsloth-docker.png"
