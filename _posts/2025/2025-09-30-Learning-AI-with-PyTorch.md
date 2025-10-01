@@ -43,6 +43,8 @@ Here are the best **free PyTorch-first resources** I started from:
 9. **[PyTorch Official Tutorials (free)](https://docs.pytorch.org/tutorials/?utm_source=chatgpt.com)**  
    Canonical, constantly updated path for APIs and recipes.  
 
+10. **[Part of Stanford CS224N | PyTorch Tutorial](https://www.youtube.com/watch?v=Uv0AIRr3ptg)**  
+   The Colab Notebook used in this tutorial can be found here: [PyTorch Tutorial](https://colab.research.google.com/drive/1XJhrdkcE6rlC3WwtH7Py1bYl8CEVuBSU?usp=sharing).  
 ---
 
 👉 Quick start tip:  
