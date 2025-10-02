@@ -3,13 +3,11 @@ title: "DeltaE: Automated Color Correction for AI-Generated Fashion Photography"
 date: "2025-10-02T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/09/before_after_comparison"
+image: "/content/2025/09/before_after_comparison.png"
 categories: [Fine Tuning, LLM]
 published: true
 mermaid: true
 ---
-
-
 
 ## The Problem: When AI Gets Creative with Colors
 
