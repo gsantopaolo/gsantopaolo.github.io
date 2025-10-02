@@ -159,14 +159,14 @@ _SCI spatial heatmap: Green=excellent, Yellow=good, Orange=acceptable, Red=poor 
 
 Visual output: 4-panel comparison (Reference | Original | Corrected | Difference Maps)
 
-![Triplet Comparison](/content/2025/09/triplet_example.jpg){: width="600" }
+![Triplet Comparison](/content/2025/09/triplet_example.jpg){: width="800" }
 _Left to right: Reference (still-life), Original (before), Corrected (after), Difference Map_
 
 
 
 **Console Output Summary Table:**
 
-![Console Output](/content/2025/09/console_output.png){: width="600" }
+![Console Output](/content/2025/09/console_output.png){: width="800" }
 _Console summary table with triplet analysis results showing quantitative improvements_
 
 ---
