@@ -142,7 +142,7 @@ DeltaE doesn't just claim it works—it **proves** it with comprehensive metrics
 
 Visual output: Color-coded heatmap overlays
 
-![Spatial Heatmap](/content/2025/09/sci_heatmap_example.jpg){: width="400" }
+![Spatial Heatmap](/content/2025/09/sci_heatmap_example.jpg){: width="300" height="800" }
 _SCI spatial heatmap: Green=excellent, Yellow=good, Orange=acceptable, Red=poor correction_
 
 
@@ -159,14 +159,14 @@ _SCI spatial heatmap: Green=excellent, Yellow=good, Orange=acceptable, Red=poor 
 
 Visual output: 4-panel comparison (Reference | Original | Corrected | Difference Maps)
 
-![Triplet Comparison](/content/2025/09/triplet_example.jpg){: width="800" }
+![Triplet Comparison](/content/2025/09/triplet_example.jpg){: width="800" height="500"}
 _Left to right: Reference (still-life), Original (before), Corrected (after), Difference Map_
 
 
 
 **Console Output Summary Table:**
 
-![Console Output](/content/2025/09/console_output.png){: width="800" }
+![Console Output](/content/2025/09/console_output.png){: width="800" height="500" }
 _Console summary table with triplet analysis results showing quantitative improvements_
 
 ---
@@ -242,11 +242,10 @@ Right: Color-corrected result (ΔE = 0.21)
 
 **SCI Spatial Heatmap:**
 
-![SCI spatial heatmap](/content/2025/09/sci_heatmap_example.jpg){: width="800" }
+![SCI spatial heatmap](/content/2025/09/sci_heatmap_example.jpg){: width="300" height="800" }
 _SCI spatial heatmap: Green=excellent, Yellow=good, Orange=acceptable, Red=poor correction_
 
 
-**
 
 ### What Can Metrics Capture?
 
