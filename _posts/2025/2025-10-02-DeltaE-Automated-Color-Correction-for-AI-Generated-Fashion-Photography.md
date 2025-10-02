@@ -142,7 +142,7 @@ DeltaE doesn't just claim it works—it **proves** it with comprehensive metrics
 
 Visual output: Color-coded heatmap overlays
 
-![Spatial Heatmap](/content/2025/09/sci_heatmap_example.jpg){: height="500" }
+![Spatial Heatmap](/content/2025/09/sci_heatmap_example.jpg){: width="400" }
 _SCI spatial heatmap: Green=excellent, Yellow=good, Orange=acceptable, Red=poor correction_
 
 
