@@ -553,7 +553,6 @@ Campaign Status: COMPLETED
 
 ## UI: Completed Campaign View
 
-![Completed Campaign Screenshot - Placeholder](placeholder-screenshot-ui.png)
 
 [Completed Campaign -  Context Enrichment](/content/2025/10/creative1.png){: width="500" height="300" }
 _Completed Campaign -  Context Enrichment_
