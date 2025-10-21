@@ -611,20 +611,7 @@ chmod +x run-creative-campaign.sh
 
 ---
 
-## Performance & Cost Analysis
-
-### Time Comparison
-
-| Task | Manual | Automated | Speedup |
-|------|--------|-----------|---------|
-| Context research | 4 hours | 10 seconds | **1,440x** |
-| Creative copy (4 locales) | 8 hours | 40 seconds | **720x** |
-| Image generation (16 variants) | 2 days | 8 minutes | **360x** |
-| Logo placement | 4 hours | 1 minute | **240x** |
-| Text overlay | 2 hours | 30 seconds | **240x** |
-| **Total** | **3-5 days** | **10 minutes** | **432-720x** |
-
-### Cost Breakdown (32 variants)
+## Cost Breakdown (32 variants)
 
 - Context enrichment: $0.08 (GPT-4o-mini × 4 locales)
 - Creative generation: $0.12 (GPT-4o-mini × 4 locales)
@@ -668,13 +655,6 @@ If you're building AI-powered automation or event-driven systems, I hope this se
 
 ---
 
-**Try it yourself:**
-
-```bash
-curl -O https://raw.githubusercontent.com/gsantopaolo/CreativeCampaign-Agent/main/deployment/run-creative-campaign.sh
-chmod +x run-creative-campaign.sh
-./run-creative-campaign.sh sk-proj-YOUR-API-KEY
-```
 
 **GitHub:** [github.com/gsantopaolo/CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent)
 
