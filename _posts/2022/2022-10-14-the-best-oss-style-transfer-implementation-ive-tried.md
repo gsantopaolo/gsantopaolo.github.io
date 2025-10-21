@@ -28,7 +28,7 @@ Katherine’s implementation based on the paper [“A Neural Algorithm of Artist
 
 While testing on my Mac, I discovered that the code was defaulting to CPU—even though my system supports MPS. After a bit of digging, I found that in `cli.py` ([line 216](https://github.com/crowsonkb/style-transfer-pytorch/blob/master/style_transfer/cli.py)), the device selection wasn’t checking for MPS hardware. Here’s the quick fix I made:
 
-XXXXXXXXXXXXX
+
 
 With this small change, I was able to run the style transfer on my Mac’s GPU, and the performance was fantastic.
 

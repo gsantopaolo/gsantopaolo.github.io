@@ -4,7 +4,7 @@ date: "2025-10-21T06:31:30+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/10/creative1.png"
-categories: [AI tools, LLM]
+categories: [AI Tools, LLM]
 published: true
 mermaid: true
 ---
