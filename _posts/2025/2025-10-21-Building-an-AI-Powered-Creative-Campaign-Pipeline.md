@@ -554,16 +554,16 @@ Campaign Status: COMPLETED
 ## UI: Completed Campaign View
 
 
-[Completed Campaign -  Context Enrichment](/content/2025/10/creative-campaigns1.png){: width="500" height="300" }
+![Completed Campaign -  Context Enrichment](/content/2025/10/creative-campaigns1.png){: width="500" height="300" }
 _Completed Campaign -  Context Enrichment_
 
-[Completed Campaign -  Creative Generation](/content/2025/10/creative-campaigns2.png){: width="500" height="300" }
+![Completed Campaign -  Creative Generation](/content/2025/10/creative-campaigns2.png){: width="500" height="300" }
 _Completed Campaign -  Creative Generation_
 
-[Completed Campaign -  Image Generation](/content/2025/10/creative-campaigns3.png){: width="500" height="300" }
+![Completed Campaign -  Image Generation](/content/2025/10/creative-campaigns3.png){: width="500" height="300" }
 _Completed Campaign -  Image Generation_
 
-[Completed Campaign -  Brand Composition and Text Overlay (Final)](/content/2025/10/creative-campaigns4.png){: width="500" height="300" }
+![Completed Campaign -  Brand Composition and Text Overlay (Final)](/content/2025/10/creative-campaigns4.png){: width="500" height="300" }
 _Completed Campaign -  Brand Composition and Text Overlay (Final)_
 
 
@@ -840,7 +840,7 @@ chmod +x run-creative-campaign.sh
 
 **GitHub:** [github.com/gsantopaolo/CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent)
 
-**Questions?** Open an issue on GitHub or connect at [genmind.ch](https://genmind.ch/).
+**Questions?** Open an issue on [GitHub](https://github.com/gsantopaolo/CreativeCampaign-Agent).
 
 ---
 
