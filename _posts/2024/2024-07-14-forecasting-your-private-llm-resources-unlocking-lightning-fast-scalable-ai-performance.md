@@ -40,7 +40,7 @@ These four pillars are not just theoretical; they form the foundation of perform
 
  The TGI benchmark tool is divided into four key areas:
 
-![TGI Benchmark areas - source Hugging Face](content/2024/07/TGI-benchmark-tool-numbered-300x177.png)
+![TGI Benchmark areas - source Hugging Face](/content/2024/07/TGI-benchmark-tool-numbered-300x177.png)
 
 **1 – Batch Selector:** This component lets you choose the batch size—that is, the number of concurrent requests—to simulate different levels of user load.
 

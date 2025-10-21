@@ -23,7 +23,7 @@ to API integrations and even memory systems—that provide context and real-time
 This integration enables AI agents to perform complex, open-ended tasks that go well beyond 
 basic conversational exchanges.
 
-![](content/2025/03/AI-agents.png)
+![](/content/2025/03/AI-agents.png)
 _LLM and its connections to various tools_
 
 ---
@@ -39,7 +39,7 @@ that highlight different aspects of these systems:
 
 These varied definitions reflect a shared belief: no matter how you define them, AI agents are marked by the central presence of an LLM, the effective use of tools, and a degree of autonomy that allows them to solve complex problems.
 
-![](content/2025/03/AI-Agent3.png)
+![](/content/2025/03/AI-Agent3.png)
 _AI Agent definitions_
 
 ---
@@ -104,7 +104,7 @@ Beyond the stages of agency, several design patterns have emerged for structurin
 
 These patterns allow developers to tailor AI agents to specific applications and performance requirements, making them flexible enough to handle a wide array of tasks.
 
-![](content/2025/03/AI-Agent4.png)
+![](/content/2025/03/AI-Agent4.png)
 _AI Agent design patterns_
 
 ---
