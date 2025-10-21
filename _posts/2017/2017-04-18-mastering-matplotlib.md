@@ -40,7 +40,7 @@ Let’s dive into these features with a practical example.
 
 That is the image below
 
-![](content/2017/04/matplotlib_sample-300x150.png)
+![](/content/2017/04/matplotlib_sample-300x150.png)
 
 ## Conclusion
 

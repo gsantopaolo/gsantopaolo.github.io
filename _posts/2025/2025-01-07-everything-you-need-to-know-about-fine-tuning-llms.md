@@ -77,7 +77,7 @@ When fine tuning, there are several techniques to consider based on your require
 
 Each technique has its pros and cons. For instance, full fine tuning might be ideal for achieving the highest performance, but adapter-based methods like LoRA offer a great balance between efficiency and effectiveness.
 
-![](content/2025/01/sft_techniques-300x97.png)
+![](/content/2025/01/sft_techniques-300x97.png)
 {: width="972" height="589" }
 _SFT Techniques_
 
