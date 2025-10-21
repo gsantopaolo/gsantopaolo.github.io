@@ -3,8 +3,8 @@ title: "Building an AI-Powered Creative Campaign Pipeline: From Brief to Assets 
 date: "2025-10-21T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/10/creative1.png"
-categories: [AI Tools, LLM]
+image: "/content/2025/10/creative-campaigns1.png"
+categories: [Creative Campaigns, LLM]
 published: true
 mermaid: true
 ---
@@ -554,16 +554,16 @@ Campaign Status: COMPLETED
 ## UI: Completed Campaign View
 
 
-[Completed Campaign -  Context Enrichment](/content/2025/10/creative1.png){: width="500" height="300" }
+[Completed Campaign -  Context Enrichment](/content/2025/10/creative-campaigns1.png){: width="500" height="300" }
 _Completed Campaign -  Context Enrichment_
 
-[Completed Campaign -  Creative Generation](/content/2025/10/creative2.png){: width="500" height="300" }
+[Completed Campaign -  Creative Generation](/content/2025/10/creative-campaigns2.png){: width="500" height="300" }
 _Completed Campaign -  Creative Generation_
 
-[Completed Campaign -  Image Generation](/content/2025/10/creative3.png){: width="500" height="300" }
+[Completed Campaign -  Image Generation](/content/2025/10/creative-campaigns3.png){: width="500" height="300" }
 _Completed Campaign -  Image Generation_
 
-[Completed Campaign -  Brand Composition and Text Overlay (Final)](/content/2025/10/creative4.png){: width="500" height="300" }
+[Completed Campaign -  Brand Composition and Text Overlay (Final)](/content/2025/10/creative-campaigns4.png){: width="500" height="300" }
 _Completed Campaign -  Brand Composition and Text Overlay (Final)_
 
 
