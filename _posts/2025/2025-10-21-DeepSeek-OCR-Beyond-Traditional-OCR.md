@@ -209,17 +209,52 @@ made to be vision → text tasks. Not vice versa."
 
 ## Part 2: Deploying DeepSeek-OCR – A Practical Guide
 
-In the **next post**, I will create a dedicated GitHub repository where I will explain all of the following in detail:
+I've created a **production-ready deployment repository** with everything you need to run DeepSeek-OCR:
 
-* Setting up DeepSeek-OCR with vLLM
-* Docker deployment strategies
-* RunPod cloud deployment
-* Performance optimization
-* Production considerations
-* API usage examples
-* Batch processing pipelines
+🔗 **[DeepSeek-OCR Deployment Repository](https://github.com/gsantopaolo/DeepSeek-OCR)**
 
-*Stay tuned — the full deployment guide and repository are coming next!*
+### What's Included:
+
+**1. Ready-to-Use Docker Image**
+- Pre-built image on Docker Hub: [`gsantopaolo/deepseek-ocr:latest`](https://hub.docker.com/r/gsantopaolo/deepseek-ocr/tags)
+- vLLM-optimized with OpenAI-compatible API
+- CUDA 12.1 with cuDNN support for GPU acceleration
+
+**2. RunPod Cloud Deployment**
+- One-click deployment template: [Deploy on RunPod](https://console.runpod.io/deploy?template=2pujxwimeo)
+- 5-minute setup from template to running API
+- Cost-effective: ~$0.69/hour (RTX 4090) to ~$1.89/hour (A100)
+
+**3. Comprehensive Testing Suite**
+- Complete test scripts with real-world document examples
+- Performance benchmarks and validation tools
+
+### Quick Start Options:
+
+**Option A: Deploy on RunPod (No Local GPU Required - Recommended)**  
+Use my [RunPOd Template]([RunPod](https://console.runpod.io/deploy?template=2pujxwimeo).
+By clicking the link above you just need to decide which GPU server to use, scroll down and click deploy.
+Once deployed (it will take a wile since the live container will pull the model from HuggingFace) copy the connection link and pass it to [test.py](https://github.com/gsantopaolo/DeepSeek-OCR/blob/main/src/tests/test.py)
+
+```bash
+python test.py --base-url http://your-runpod-instance:8000 --output results.md
+```
+
+**Option B: Pull & Run Docker Image**
+```bash
+docker run -d \
+  --name deepseek-ocr \
+  --runtime nvidia \
+  --gpus all \
+  -p 8000:8000 \
+  --ipc=host \
+  gsantopaolo/deepseek-ocr:latest
+```
+
+**Option C: Build From Source**  
+Clone the repo and follow the build instructions for custom deployments.
+
+For complete deployment guides, API usage examples, and production considerations, visit the **[GitHub repository](https://github.com/gsantopaolo/DeepSeek-OCR)**.
 
 
 ---
