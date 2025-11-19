@@ -20,7 +20,6 @@ This isn't about reading documents better - it's about fundamentally rethinking 
 ![DeepSe ek-OCR Paper Cover](/content/2025/11/deepseekocr1.png){: width="300" height="800" }
 _Compression ratios on Fox benchmark and performance on OmniDocBench_
 
-
 ## The Real Problem: LLM Context Windows
 
 Large Language Models face a critical computational challenge when processing long contexts. 
