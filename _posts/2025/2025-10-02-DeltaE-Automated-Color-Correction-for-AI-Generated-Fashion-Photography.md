@@ -1,5 +1,5 @@
 ---
-title: "DeltaE: Automated Color Correction for AI-Generated Fashion Photography"
+title: "DeltaE: Automated Color Correction for AI Generated Fashion Photography"
 date: "2025-10-02T06:31:30+00:00"
 author: "gp"
 layout: "post"
