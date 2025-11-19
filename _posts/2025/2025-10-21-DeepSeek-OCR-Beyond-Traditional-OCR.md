@@ -210,26 +210,30 @@ made to be vision → text tasks. Not vice versa."
 
 ---
 
-## Part 2: Deploying DeepSeek-OCR - A Practical Guide
 
-**[PLACEHOLDER - TO BE COMPLETED]**
 
-This section will cover:
-- Setting up DeepSeek-OCR with vLLM
-- Docker deployment strategies
-- RunPod cloud deployment
-- Performance optimization
-- Production considerations
-- API usage examples
-- Batch processing pipelines
+## Part 2: Deploying DeepSeek-OCR – A Practical Guide
 
-*Stay tuned for the complete deployment guide...*
+In the **next post**, I will create a dedicated GitHub repository where I will explain all of the following in detail:
+
+* Setting up DeepSeek-OCR with vLLM
+* Docker deployment strategies
+* RunPod cloud deployment
+* Performance optimization
+* Production considerations
+* API usage examples
+* Batch processing pipelines
+
+*Stay tuned — the full deployment guide and repository are coming next!*
+
 
 ---
 
 ## Conclusion
 
-DeepSeek-OCR represents more than an incremental improvement in OCR technology. It's a proof-of-concept for a fundamental rethinking of how AI systems handle information. By demonstrating that vision tokens can compress text 10-20x while maintaining high accuracy, DeepSeek has opened a path toward:
+DeepSeek-OCR represents more than an incremental improvement in OCR technology. It's a proof-of-concept 
+for a fundamental rethinking of how AI systems handle information. By demonstrating that vision tokens 
+can compress text 10-20x while maintaining high accuracy, DeepSeek has opened a path toward:
 
 - **Practical 10-20M token context windows**
 - **Elimination of tokenizer complexity**
