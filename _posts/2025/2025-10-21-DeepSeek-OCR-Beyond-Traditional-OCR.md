@@ -202,11 +202,6 @@ made to be vision → text tasks. Not vice versa."
 - LaTeX for mathematical content
 - Multi-language support (100+ languages)
 
-## Model Availability
-
-- **GitHub**: [https://github.com/deepseek-ai/DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR)
-- **Hugging Face**: Available for download
-- **Paper**: [ArXiv link - check DeepSeek-AI releases]
 
 ---
 
