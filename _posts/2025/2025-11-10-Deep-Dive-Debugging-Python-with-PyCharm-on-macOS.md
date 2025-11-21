@@ -140,7 +140,7 @@ Never use "Run file in console" for serious debugging. Always create named confi
 
 4. Click **OK**
 
-![Python Run/Debug Configuration](/content/2025/11/debugging-phyton1){: width="300" height="800" }
+![Python Run/Debug Configuration](/content/2025/11/debugging-phyton2.png){: width="300" height="800" }
 _Python Run/Debug Configuration_
 
 
