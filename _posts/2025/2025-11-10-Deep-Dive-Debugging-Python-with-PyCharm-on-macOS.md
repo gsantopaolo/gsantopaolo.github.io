@@ -360,7 +360,7 @@ This is the most "PyCharm-native" approach. PyCharm manages the container lifecy
 From terminal:
 ```bash
 cd /path/to/debugging-phyton
-docker build -t datetime-api:latest -f src/Dockerfile src/
+docker build -t debugging-phyton:latest -f src/Dockerfile src/
 ```
 
 Or use the provided build script:
@@ -371,11 +371,11 @@ chmod +x deployment/build.sh
 
 ### 5.2 Create a Docker-Based Interpreter
 
-1. **Settings** (`⌘,`) → **Project: codechallenge → Python Interpreter**
+1. **Settings** (`⌘,`) → **Project: debugging-phyton → Python Interpreter**
 2. Click the gear icon ⚙️ → **Add Interpreter** → **On Docker...**
 3. Choose **Pull or use existing**
 4. Select your Docker configuration (Docker for Mac)
-5. Image name: `datetime-api:latest`
+5. Image name: `debugging-phyton:latest`
 6. Click **Next**
 
 PyCharm will:
