@@ -161,7 +161,7 @@ A red dot appears. This is your breakpoint.
 #### Starting a Debug Session
 
 1. Click the **Debug** icon next to your configuration dropdown
-![Debug Icon](/content/2025/11/debugging-phyton3.png){: width="300" height="800" }
+![Debug Icon](/content/2025/11/debugging-phyton3.png)
 _Debug Icon_
 
 2. Or: **Run → Debug 'datetime-api-local'**
@@ -210,6 +210,11 @@ Let's practice:
 4. Press `F8` repeatedly to step through the conversion logic
 5. Watch `offset_hours` get assigned from `TIMEZONE_OFFSETS`
 6. Watch `local_dt` get calculated
+
+> To use F1, F2, etc. keys as standard function keys in System Settings → Keyboard → Keyboard Shortcuts → Function Keys. 
+> Temporarily invert behavior by holding fn / globe while pressing the keys.
+> ![F-Keys](/content/2025/11/debugging-phyton4.png)
+{: .prompt-tip }
 
 #### Advanced Debugging Features
 
