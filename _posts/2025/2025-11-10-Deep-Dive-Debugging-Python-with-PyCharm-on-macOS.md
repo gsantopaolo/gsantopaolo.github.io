@@ -12,6 +12,8 @@ mermaid: true
 
 If you're working with PyCharm, Docker, and Python daily, your debugger is either your best friend or that powerful tool you know exists but haven't fully mastered. This guide will change that.
 
+
+
 This is a comprehensive technical guide to debugging Python applications with **PyCharm 2025.2 Professional** on **macOS** using **Docker Desktop**. We'll cover:
 
 - ✅ Local debugging with conda environments
