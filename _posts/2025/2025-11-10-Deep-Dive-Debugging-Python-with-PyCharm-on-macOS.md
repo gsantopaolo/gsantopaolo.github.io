@@ -225,11 +225,17 @@ Let's practice:
 
 **Evaluate Expression** (`⌥F8`):
 1. While paused at line 213, press `⌥F8`
-2. Type: `local_dt.strftime('%Y-%m-%d %H:%M:%S')`
-3. Press Enter to see the formatted result
+2. In the debugger switch to the `console` console tab
+3. Type: `local_dt.strftime('%Y-%m-%d %H:%M:%S')`
+4. Press Enter to see the formatted result
+
+![result](/content/2025/11/debugging-phyton5.png)
+_result_
 
 **Inline Debugging**:
-Variables appear as gray italic text next to code lines. Toggle with the 👁️ icon in the Debug toolbar.
+Variables appear as gray italic text next to code lines. Over on it and select `Add as inline watch`
+![inline watch](/content/2025/11/debugging-phyton6.png)
+_inline watch_
 
 ### 2.5 PyCharm Debugger Settings
 
