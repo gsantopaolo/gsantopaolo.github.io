@@ -8,7 +8,6 @@ categories: [Python, debugger]
 published: true
 mermaid: true
 ---
-# Deep-Dive: Debugging Python with PyCharm on macOS (Local & Docker) 🐍
 
 If you're working with PyCharm, Docker, and Python daily, your debugger is either your best friend or that powerful tool you know exists but haven't fully mastered. This guide will change that.
 
@@ -65,7 +64,7 @@ PyCharm uses `pydevd` (Python Debugger Daemon), a powerful debugging engine that
 ---
 
 ## 2. Local Debugging Setup: Getting the Foundation Right 🎯
-
+First thing you need to clone the sample repo we will use, you can find it on my [GitHub]
 Let's start with local debugging using conda. If this isn't solid, Docker debugging will only amplify the pain.
 
 ### 2.1 Setting Up Your Conda Environment
@@ -92,10 +91,12 @@ Create the environment from your terminal:
 ```bash
 # Navigate to project root
 cd /path/to/DebuggingPython 
-
+```
+```bash
 # Create the conda environment
 conda env create -f environment.yml
-
+```
+```bash
 # Activate it
 conda activate debugging-phyton
 ```
