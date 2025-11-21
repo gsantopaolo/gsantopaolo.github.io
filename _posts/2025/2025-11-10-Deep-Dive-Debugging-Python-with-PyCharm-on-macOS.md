@@ -161,7 +161,10 @@ A red dot appears. This is your breakpoint.
 
 #### Starting a Debug Session
 
-1. Click the **Debug** icon (🐛) next to your configuration dropdown
+1. Click the **Debug** icon next to your configuration dropdown
+![Debug Icon](/content/2025/11/debugging-phyton3.png){: width="300" height="800" }
+_Debug Icon_
+
 2. Or: **Run → Debug 'datetime-api-local'**
 3. The Debug tool window opens at the bottom
 
