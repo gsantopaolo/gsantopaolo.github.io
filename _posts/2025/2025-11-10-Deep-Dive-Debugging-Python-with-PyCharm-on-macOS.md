@@ -3,7 +3,7 @@ title: "Deep-Dive: Debugging Python with PyCharm on macOS (Local & Docker) 🐍"
 date: "2025-11-10T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/11/debugging-phyton1.png"
+image: "/content/2025/11/debugging-python1.png"
 categories: [Python, debugger]
 published: true
 mermaid: true
@@ -72,7 +72,7 @@ Let's start with local debugging using conda. If this isn't solid, Docker debugg
 Our example project includes an `environment.yml` file:
 
 ```yaml
-name: debugging-phyton
+name: debugging-python
 channels:
   - conda-forge
   - defaults
@@ -98,19 +98,19 @@ conda env create -f environment.yml
 ```
 ```bash
 # Activate it
-conda activate debugging-phyton
+conda activate debugging-python
 ```
 
 ### 2.2 Configuring PyCharm to Use Conda
 
 1. Open your project in PyCharm
 2. Open **Settings** (`⌘,` on macOS)
-3. Navigate to **Project: debugging-phyton → Python Interpreter**
+3. Navigate to **Project: debugging-python → Python Interpreter**
 4. Click the gear icon ⚙️ → **Add Interpreter** → **Add Local Interpreter**
 5. Select **Conda Environment** tab
 6. Choose **Existing environment**
 7. Navigate to your conda environments folder:
-   - Default location: `~/miniconda3/envs/debugging-phyton/bin/python` or `~/anaconda3/envs/debugging-phyton/bin/python`
+   - Default location: `~/miniconda3/envs/debugging-python/bin/python` or `~/anaconda3/envs/debugging-python/bin/python`
 8. Click **OK**
 
 PyCharm will now use this interpreter for:
@@ -127,20 +127,20 @@ Never use "Run file in console" for serious debugging. Always create named confi
 2. Click **+** → **Python**
 3. Configure as follows:
 
-**Configuration Name**: `debugging-phyton-local`
+**Configuration Name**: `debugging-python-local`
 
 | Field | Value |
 |-------|-------|
 | **Script path** | Leave empty (we'll use module) |
 | **Module name** | `uvicorn` |
 | **Parameters** | `main:app --reload --log-level debug` |
-| **Working directory** | `/path/to/debugging-phyton/src` |
-| **Python interpreter** | `debugging-phyton` (your conda env) |
+| **Working directory** | `/path/to/debugging-python/src` |
+| **Python interpreter** | `debugging-python` (your conda env) |
 | **Environment variables** | (empty for now, add as needed) |
 
 4. Click **OK**
 
-![Python Run/Debug Configuration](/content/2025/11/debugging-phyton2.png){: width="500" height="800" }
+![Python Run/Debug Configuration](/content/2025/11/debugging-python2.png){: width="500" height="800" }
 _Python Run/Debug Configuration_
 
 
@@ -161,7 +161,7 @@ A red dot appears. This is your breakpoint.
 #### Starting a Debug Session
 
 1. Click the **Debug** icon next to your configuration dropdown
-![Debug Icon](/content/2025/11/debugging-phyton3.png)
+![Debug Icon](/content/2025/11/debugging-python3.png)
 _Debug Icon_
 
 2. Or: **Run → Debug 'datetime-api-local'**
@@ -213,7 +213,7 @@ Let's practice:
 
 > To use F1, F2, etc. keys as standard function keys in System Settings → Keyboard → Keyboard Shortcuts → Function Keys. 
 > Temporarily invert behavior by holding fn / globe while pressing the keys.
-> ![F-Keys](/content/2025/11/debugging-phyton4.png)
+> ![F-Keys](/content/2025/11/debugging-python4.png)
 {: .prompt-tip }
 
 #### Advanced Debugging Features
@@ -229,12 +229,12 @@ Let's practice:
 3. Type: `local_dt.strftime('%Y-%m-%d %H:%M:%S')`
 4. Press Enter to see the formatted result
 
-![result](/content/2025/11/debugging-phyton5.png)
+![result](/content/2025/11/debugging-python5.png)
 _result_
 
 **Inline Debugging**:
 Variables appear as gray italic text next to code lines. Over on it and select `Add as inline watch`
-![inline watch](/content/2025/11/debugging-phyton6.png)
+![inline watch](/content/2025/11/debugging-python6.png)
 _inline watch_
 
 ### 2.5 PyCharm Debugger Settings
@@ -359,8 +359,8 @@ This is the most "PyCharm-native" approach. PyCharm manages the container lifecy
 
 From terminal:
 ```bash
-cd /path/to/debugging-phyton
-docker build -t debugging-phyton:latest -f src/Dockerfile src/
+cd /path/to/debugging-python
+docker build -t debugging-python:latest -f src/Dockerfile src/
 ```
 
 Or use the provided build script:
@@ -371,11 +371,11 @@ chmod +x deployment/build.sh
 
 ### 5.2 Create a Docker-Based Interpreter
 
-1. **Settings** (`⌘,`) → **Project: debugging-phyton → Python Interpreter**
+1. **Settings** (`⌘,`) → **Project: debugging-python → Python Interpreter**
 2. Click the gear icon ⚙️ → **Add Interpreter** → **On Docker...**
 3. Choose **Pull or use existing**
 4. Select your Docker configuration (Docker for Mac)
-5. Image name: `debugging-phyton:latest`
+5. Image name: `debugging-python:latest`
 6. Click **Next**
 
 PyCharm will:
