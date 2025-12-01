@@ -3,13 +3,13 @@ title: "What Is a Tensor? A Practical Guide for AI Engineers"
 date: "2025-12-01T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/12/tensor1.png"
+image: "/content/2025/12/tensor2.jpg"
 categories: [Tensor, PyTorch, NumPy, Deep Learning, GPU]
 published: true
 mermaid: true
 ---
 
-When people hear about deep learning, they quickly encounter the word **tensor**. But what exactly is a tensor? Is it just a fancy name for an array? A mathematical object from physics? Both?
+When dealing with deep learning, we quickly encounter the word **tensor**. But what exactly is a tensor? Is it just a fancy name for an array? A mathematical object from physics? Both?
 
 This guide takes you on a journey from intuitive understanding to practical implementation. We'll explore tensors through four lenses:
 
@@ -18,13 +18,13 @@ This guide takes you on a journey from intuitive understanding to practical impl
 3. **[The hardware view](#why-gpus-love-tensors--the-hardware-perspective)**: Why tensors are the fundamental unit of GPU computation
 4. **[The ML practitioner's view](#tensors-in-pytorch--the-ml-practitioners-toolkit)**: Working with tensors in PyTorch
 
-By the end, you'll understand both *what* tensors are and *how* to use them effectively in your AI projects—from the mathematical foundations to the silicon that accelerates them.
 
 ---
 
 ## Building Intuition — Vectors and Tensors Explained
 
-> *"What's a tensor?"* — The question Dan Fleisch set out to answer
+> *"What's a tensor?"* — The question Dan Fleisch set out to answer i his book [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)
+
 
 The best route to understanding tensors starts with understanding **vectors**. Not just as "arrays of numbers," but as geometric objects with components and basis vectors.
 
