@@ -1,6 +1,6 @@
 ---
 title: "Why GPUs Love Tensors: Understanding Tensor Cores and AI Acceleration"
-date: "2025-12-01T08:00:00+00:00"
+date: "2025-12-03T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/12/tensorcore1.png"
