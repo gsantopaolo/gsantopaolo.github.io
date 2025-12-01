@@ -23,7 +23,7 @@ This guide takes you on a journey from intuitive understanding to practical impl
 
 ## Building Intuition — Vectors and Tensors Explained
 
-> *"What's a tensor?"* — The question Dan Fleisch set out to answer i his book [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)
+> *"What's a tensor?"* — The question Dan Fleisch set out to answer in his book [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)
 
 
 The best route to understanding tensors starts with understanding **vectors**. Not just as "arrays of numbers," but as geometric objects with components and basis vectors.
@@ -911,32 +911,189 @@ Whether you're debugging shape mismatches in your neural network, optimizing GPU
 
 ---
 
-## Practice Exercise
+## Practice Exercises
 
-Try this yourself:
+### Exercise 1: Working with Real Images
+
+Let's see tensors in action with real image data. This example shows how to load an image, manipulate it as a tensor, and save the result.
+
+```python
+import torch
+from PIL import Image
+import torchvision.transforms as transforms
+import matplotlib.pyplot as plt
+
+# 1. Load an image and convert it to a tensor
+image_path = "test.jpg"
+img = Image.open(image_path)
+
+# Convert PIL Image to tensor [C, H, W] with values in [0, 1]
+to_tensor = transforms.ToTensor()
+img_tensor = to_tensor(img)
+
+print(f"Image tensor shape: {img_tensor.shape}")  # e.g., torch.Size([3, 512, 512])
+print(f"Data type: {img_tensor.dtype}")           # torch.float32
+print(f"Value range: [{img_tensor.min():.3f}, {img_tensor.max():.3f}]")
+
+# 2. Manipulate the tensor - let's apply some transformations
+
+# Example A: Increase brightness by 30%
+brightened = torch.clamp(img_tensor * 1.3, 0, 1)
+
+# Example B: Convert to grayscale (weighted average of RGB channels)
+# Standard formula: 0.299*R + 0.587*G + 0.114*B
+weights = torch.tensor([0.299, 0.587, 0.114]).view(3, 1, 1)
+grayscale = (img_tensor * weights).sum(dim=0, keepdim=True)
+# Broadcast back to 3 channels for saving as RGB
+grayscale_rgb = grayscale.repeat(3, 1, 1)
+
+# Example C: Apply a color filter (boost red channel, reduce blue)
+color_adjusted = img_tensor.clone()
+color_adjusted[0] = torch.clamp(img_tensor[0] * 1.5, 0, 1)  # Red channel
+color_adjusted[2] = torch.clamp(img_tensor[2] * 0.5, 0, 1)  # Blue channel
+
+# Example D: Flip image horizontally (flip along width dimension)
+flipped = torch.flip(img_tensor, dims=[2])
+
+# Example E: Add some noise
+noise = torch.randn_like(img_tensor) * 0.05
+noisy = torch.clamp(img_tensor + noise, 0, 1)
+
+# 3. Convert tensors back to PIL Images and save
+to_pil = transforms.ToPILImage()
+
+brightened_img = to_pil(brightened)
+brightened_img.save("test_brightened.jpg")
+
+grayscale_img = to_pil(grayscale_rgb)
+grayscale_img.save("test_grayscale.jpg")
+
+color_adjusted_img = to_pil(color_adjusted)
+color_adjusted_img.save("test_color_adjusted.jpg")
+
+flipped_img = to_pil(flipped)
+flipped_img.save("test_flipped.jpg")
+
+noisy_img = to_pil(noisy)
+noisy_img.save("test_noisy.jpg")
+
+print("\n✓ All manipulated images saved!")
+
+# 4. Visualize the transformations (optional)
+fig, axes = plt.subplots(2, 3, figsize=(15, 10))
+axes = axes.flatten()
+
+images_to_show = [
+    (img_tensor, "Original"),
+    (brightened, "Brightened (+30%)"),
+    (grayscale_rgb, "Grayscale"),
+    (color_adjusted, "Color Adjusted"),
+    (flipped, "Flipped"),
+    (noisy, "Noisy")
+]
+
+for ax, (tensor, title) in zip(axes, images_to_show):
+    # Convert tensor [C, H, W] to [H, W, C] for matplotlib
+    img_array = tensor.permute(1, 2, 0).numpy()
+    ax.imshow(img_array)
+    ax.set_title(title)
+    ax.axis('off')
+
+plt.tight_layout()
+plt.savefig("tensor_transformations.png", dpi=150, bbox_inches='tight')
+print("✓ Visualization saved as tensor_transformations.png")
+```
+
+**Key Concepts Demonstrated:**
+- **Loading**: PIL Image → Tensor with shape `[C, H, W]`
+- **Tensor operations**: Broadcasting, channel manipulation, mathematical operations
+- **Clamping**: Keeping values in valid range `[0, 1]`
+- **Shape manipulation**: `.repeat()`, `.permute()`, `.flip()`
+- **Saving**: Tensor → PIL Image → File
+
+### Exercise 2: Batch Processing Multiple Images
+
+```python
+import torch
+from PIL import Image
+import torchvision.transforms as transforms
+from pathlib import Path
+
+# Batch process multiple images
+image_files = ["test.jpg", "image2.jpg", "image3.jpg"]
+
+# Create a batch of tensors
+batch_tensors = []
+transform = transforms.Compose([
+    transforms.Resize((224, 224)),  # Standardize size
+    transforms.ToTensor()
+])
+
+for img_file in image_files:
+    if Path(img_file).exists():
+        img = Image.open(img_file)
+        tensor = transform(img)
+        batch_tensors.append(tensor)
+
+# Stack into a single batch tensor [N, C, H, W]
+if batch_tensors:
+    batch = torch.stack(batch_tensors)
+    print(f"Batch shape: {batch.shape}")  # e.g., torch.Size([3, 3, 224, 224])
+    
+    # Apply transformation to entire batch
+    # Example: Normalize using ImageNet statistics
+    mean = torch.tensor([0.485, 0.456, 0.406]).view(1, 3, 1, 1)
+    std = torch.tensor([0.229, 0.224, 0.225]).view(1, 3, 1, 1)
+    normalized_batch = (batch - mean) / std
+    
+    print(f"Normalized batch statistics:")
+    print(f"  Mean per channel: {normalized_batch.mean(dim=[0, 2, 3])}")
+    print(f"  Std per channel: {normalized_batch.std(dim=[0, 2, 3])}")
+```
+
+### Exercise 3: Understanding Tensor Shapes with Images
 
 ```python
 import torch
 
-# 1. Create a batch of 16 random "images" (3 channels, 64x64)
+# Create a batch of 16 random "images" (3 channels, 64x64)
 images = torch.randn(16, 3, 64, 64)
 
-# 2. Calculate the mean per channel across the batch
-channel_means = images.mean(dim=[0, 2, 3])
-print(f"Channel means: {channel_means}")  # Should be [3]
+print("Original shape:", images.shape)  # torch.Size([16, 3, 64, 64])
 
-# 3. Normalize each channel
+# 1. Calculate the mean per channel across the batch
+channel_means = images.mean(dim=[0, 2, 3])
+print(f"Channel means: {channel_means}")  # Shape: [3]
+
+# 2. Normalize each channel
 for c in range(3):
     images[:, c] = (images[:, c] - channel_means[c])
 
-# 4. Reshape to a sequence (flatten spatial dimensions)
+# 3. Reshape to a sequence (flatten spatial dimensions)
 sequences = images.view(16, 3, -1)  # [16, 3, 4096]
 print(f"Sequence shape: {sequences.shape}")
 
-# 5. Calculate attention-like scores
+# 4. Calculate attention-like scores
 Q = K = sequences
 scores = torch.bmm(Q, K.transpose(1, 2))  # [16, 3, 3]
 print(f"Attention scores shape: {scores.shape}")
+
+# 5. Common shape transformations
+print("\n--- Shape Transformations ---")
+print(f"Original: {images.shape}")
+print(f"Flattened: {images.flatten().shape}")  # All dims → 1D
+print(f"Permuted (NHWC): {images.permute(0, 2, 3, 1).shape}")  # [N,C,H,W] → [N,H,W,C]
+print(f"Squeezed: {images[:1].squeeze().shape}")  # Remove batch dim if size 1
+print(f"Unsqueezed: {images.unsqueeze(0).shape}")  # Add new dim at front
 ```
 
-Every deep learning model is just tensors flowing through differentiable operations. Master tensors, master deep learning.
+**The Big Picture:**
+
+Every deep learning model is just tensors flowing through differentiable operations:
+
+```
+Image File → Tensor → Neural Network → Output Tensor → Prediction
+   (disk)     [N,C,H,W]   (matrix ops)    [N, classes]    (argmax)
+```
+
+Master tensors, master deep learning.
