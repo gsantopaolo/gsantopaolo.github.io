@@ -282,7 +282,7 @@ print(f"Device: {tensor.device}")         # cuda, mps or cpu
 These attributes tell you:
 - **Shape**: The dimensions of the tensor
 - **Datatype**: The data type of elements (float32, int64, etc.)
-- **Device**: Where the tensor is stored (CPU or GPU)
+- **Device**: Where the tensor is stored (GPU or CPU)
 
 ### Moving Tensors to GPU/Accelerator
 
@@ -298,8 +298,8 @@ if torch.accelerator.is_available():
 if torch.cuda.is_available():
     tensor = tensor.to('cuda')
 ```
-
-**Important**: Copying large tensors across devices is expensive in time and memory!
+> Copying large tensors across devices is expensive in terms of time and memory!
+{: .prompt-warning }
 
 ### Essential Tensor Operations
 
@@ -602,34 +602,14 @@ graph LR
 
 **The actual operation:**
 
+$$D = A \times B + C$$
+
+Where each letter represents a 4×4 matrix computed in a single clock cycle:
+
 $$
-\begin{bmatrix}
-d_{11} & d_{12} & d_{13} & d_{14} \\
-d_{21} & d_{22} & d_{23} & d_{24} \\
-d_{31} & d_{32} & d_{33} & d_{34} \\
-d_{41} & d_{42} & d_{43} & d_{44}
-\end{bmatrix}
-=
-\begin{bmatrix}
-a_{11} & a_{12} & a_{13} & a_{14} \\
-a_{21} & a_{22} & a_{23} & a_{24} \\
-a_{31} & a_{32} & a_{33} & a_{34} \\
-a_{41} & a_{42} & a_{43} & a_{44}
-\end{bmatrix}
-\times
-\begin{bmatrix}
-b_{11} & b_{12} & b_{13} & b_{14} \\
-b_{21} & b_{22} & b_{23} & b_{24} \\
-b_{31} & b_{32} & b_{33} & b_{34} \\
-b_{41} & b_{42} & b_{43} & b_{44}
-\end{bmatrix}
-+
-\begin{bmatrix}
-c_{11} & c_{12} & c_{13} & c_{14} \\
-c_{21} & c_{22} & c_{23} & c_{24} \\
-c_{31} & c_{32} & c_{33} & c_{34} \\
-c_{41} & c_{42} & c_{43} & c_{44}
-\end{bmatrix}
+\begin{aligned}
+D_{4 \times 4} &= A_{4 \times 4} \times B_{4 \times 4} + C_{4 \times 4}
+\end{aligned}
 $$
 
 **All computed in parallel, in a single clock cycle!**
