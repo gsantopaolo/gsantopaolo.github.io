@@ -193,7 +193,7 @@ PyTorch tensors are where theory meets practice in modern deep learning. They're
 
 ### What Makes PyTorch Tensors Special?
 
-From PyTorch's documentation:
+From [PyTorch's documentation](https://docs.pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html):
 
 > *"Tensors are a specialized data structure that are very similar to arrays and matrices. In PyTorch, we use tensors to encode the inputs and outputs of a model, as well as the model's parameters."*
 
