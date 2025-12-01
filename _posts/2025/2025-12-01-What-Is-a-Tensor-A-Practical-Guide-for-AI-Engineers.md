@@ -276,7 +276,7 @@ tensor = torch.rand(3, 4)
 
 print(f"Shape: {tensor.shape}")           # torch.Size([3, 4])
 print(f"Datatype: {tensor.dtype}")        # torch.float32
-print(f"Device: {tensor.device}")         # cpu
+print(f"Device: {tensor.device}")         # cuda, mps or cpu
 ```
 
 These attributes tell you:
