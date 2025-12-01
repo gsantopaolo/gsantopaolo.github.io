@@ -31,12 +31,13 @@ I gave Antigravity a massive, detailed prompt (the kind that usually makes LLMs 
 
 ### The Prompt (Excerpts)
 
-> **You are a senior backend engineer and solutions architect.**
-> 
-> Your task is to **design and implement, from scratch, a system called "Sentinel-AI"** that matches the behavior and architecture described below.
-> 
-> Sentinel-AI is an **event-driven, microservice** platform that ingests IT-related news/events, filters them with LLMs, ranks them deterministically, detects anomalies, stores them in a vector database, and exposes an API + web UI for exploration. It is designed to run on Kubernetes in production (Docker Compose for dev) and scale to millions of users.
+```
+**You are a senior backend engineer and solutions architect.**
 
+Your task is to **design and implement, from scratch, a system called "Sentinel-AI"** that matches the behavior and architecture described below.
+
+Sentinel-AI is an **event-driven, microservice** platform that ingests IT-related news/events, filters them with LLMs, ranks them deterministically, detects anomalies, stores them in a vector database, and exposes an API + web UI for exploration. It is designed to run on Kubernetes in production (Docker Compose for dev) and scale to millions of users.
+```
 ---
 
 **What I Asked For (The Key Requirements):**
