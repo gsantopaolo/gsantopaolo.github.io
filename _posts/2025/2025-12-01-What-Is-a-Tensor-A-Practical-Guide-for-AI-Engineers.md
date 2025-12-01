@@ -183,8 +183,6 @@ print(f'This tensor is of rank {x.ndim}')
 
 In practice, when we say "tensor" in ML, we typically mean **rank-3 or higher** to avoid confusion. Calling the scalar `42` a "tensor" is technically correct but not helpful.
 
-The key insight from the KDnuggets article: **A tensor is a container that can house data in N dimensions**, along with valid linear operations between tensors.
-
 Mathematically speaking, tensors are more than simply a data container. Aside from holding numeric data, tensors also include descriptions of the valid linear transformations between tensors (like cross product and dot product). From a computer science perspective, tensors can be thought of as objects in an object-oriented sense, not just data structures.
 
 ---
