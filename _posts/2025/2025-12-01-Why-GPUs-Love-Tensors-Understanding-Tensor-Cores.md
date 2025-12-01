@@ -7,6 +7,7 @@ image: "/content/2025/12/tensorcore1.png"
 categories: [GPU, Tensor Cores, CUDA, Deep Learning, Hardware]
 published: true
 mermaid: true
+math: true
 ---
 
 Understanding why modern AI is so fast requires understanding the hardware that powers it. 
