@@ -52,7 +52,7 @@ Dan Fleisch uses a beautiful analogy: imagine shining a light perpendicular to a
 
 To find the **x-component**: shine light parallel to the y-axis (perpendicular to x). The shadow on the x-axis is Aₓ.
 
-![Projections using light sources parallel to x- and y-axes.](/content/2025/12/tensor1.png){: width="500" height="800" }
+![Projections using light sources parallel to x- and y-axes.](/content/2025/12/tensor2.png){: width="500" height="800" }
 _Projections using light sources perpendicular to x- and y-axes - image source [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)_
 
 
