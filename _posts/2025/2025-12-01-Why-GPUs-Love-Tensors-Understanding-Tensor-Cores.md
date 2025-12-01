@@ -224,14 +224,6 @@ Now we see the full circle:
 
 ---
 
-## Key Takeaways
-
-- **Tensor Cores** are specialized hardware that compute 4×4 matrix operations in a single clock cycle
-- **Mixed precision** (FP16 inputs, FP32 accumulation) provides ~40× speedup with minimal accuracy loss
-- **PyTorch automatically uses Tensor Cores** when you use FP16 or Automatic Mixed Precision
-- Modern AI's incredible speed comes from hardware designed specifically for tensor operations
-- Understanding this hardware-software co-design is crucial for optimizing deep learning models
-
 ## Further Resources
 
 - **NVIDIA Documentation**: [Tensor Cores Overview](https://www.nvidia.com/en-us/data-center/tensor-cores/)
