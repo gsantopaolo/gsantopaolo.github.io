@@ -247,4 +247,4 @@ Now we see the full circle:
 
 ---
 
-**Next:** Continue with [What Is a Tensor? A Practical Guide for AI Engineers](/2025/12/01/What-Is-a-Tensor-A-Practical-Guide-for-AI-Engineers.html) to understand tensors from mathematical and software perspectives.
+**Next:** Continue with [What Is a Tensor? A Practical Guide for AI Engineers](https://genmind.ch/posts/What-Is-a-Tensor-A-Practical-Guide-for-AI-Engineers/) to understand tensors from mathematical and software perspectives.
