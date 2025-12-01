@@ -45,6 +45,6 @@ Here are the best **free PyTorch-first resources** I started from:
 ---
 
 👉 Quick start tip:  
-Do **#3 (or #2)** → then **#9** for API basics → finish with **#1 or #5** for a deeper, project-driven curriculum.  
+Do **#1 (or #2)** → then **#8** for API basics → finish with **#4** for a deeper, project-driven curriculum.  
 
 
