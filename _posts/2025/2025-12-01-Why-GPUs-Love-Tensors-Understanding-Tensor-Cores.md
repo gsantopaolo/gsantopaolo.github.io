@@ -9,13 +9,9 @@ published: true
 mermaid: true
 ---
 
-Understanding why modern AI is so fast requires understanding the hardware that powers it. This post dives deep into **Tensor Cores**—the specialized hardware that makes tensors the fundamental computational unit of modern GPUs.
-
+Understanding why modern AI is so fast requires understanding the hardware that powers it. 
 > This is a companion post to [What Is a Tensor? A Practical Guide for AI Engineers](https://genmind.ch/posts/What-Is-a-Tensor-A-Practical-Guide-for-AI-Engineers/), focusing specifically on the hardware perspective.
 
----
-
-## The GPU Revolution: From Graphics to AI
 
 GPUs were originally designed for graphics rendering, which requires massive amounts of parallel matrix operations (transforming 3D coordinates, applying textures, computing lighting). This made them naturally good at the exact operations neural networks need: **matrix multiplications**.
 
