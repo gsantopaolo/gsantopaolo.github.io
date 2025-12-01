@@ -4,7 +4,7 @@ date: '2025-06-29T06:31:30+00:00'
 author: gp
 layout: post
 image: /content/2025/06/gemini-cli.png
-categories: [Gemini-Cli, AI Tools]
+categories: [Gemini-Cli, AI Tools, vibe coding]
 math: true
 mermaid: true
 ---

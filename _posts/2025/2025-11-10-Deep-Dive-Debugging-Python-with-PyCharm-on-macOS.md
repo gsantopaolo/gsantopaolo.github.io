@@ -585,7 +585,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Install PyCharm remote debugger (match your PyCharm version)
-RUN pip install pydevd-pycharm~=242.23726
+RUN pip install pydevd-pycharm~=251.28774
 
 # Copy application code
 COPY main.py .
@@ -601,7 +601,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--log-level"
 
 Rebuild:
 ```bash
-docker build -t datetime-api:debug -f src/Dockerfile src/
+docker build -t debugging-python:debug -f src/Dockerfile src/
 ```
 
 ### 7.3 Add Debug Hook to Your Code
