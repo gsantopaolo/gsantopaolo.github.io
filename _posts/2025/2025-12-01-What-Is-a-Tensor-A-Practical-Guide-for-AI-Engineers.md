@@ -23,7 +23,7 @@ This guide takes you on a journey from intuitive understanding to practical impl
 
 ## Building Intuition — Vectors and Tensors Explained
 
-> *"What's a tensor?"* — The question Dan Fleisch set out to answer in his book [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)
+> *"What's a tensor?"* — The question Dan Fleisch set out to answer in his book - A Student's Guide to Vectors and Tensors
 
 
 The best route to understanding tensors starts with understanding **vectors**. Not just as "arrays of numbers," but as geometric objects with components and basis vectors.
@@ -51,6 +51,10 @@ Where:
 Dan Fleisch uses a beautiful analogy: imagine shining a light perpendicular to an axis. The shadow the vector casts on that axis is its component along that direction.
 
 To find the **x-component**: shine light parallel to the y-axis (perpendicular to x). The shadow on the x-axis is Aₓ.
+
+![Projections using light sources parallel to x- and y-axes.](/content/2025/12/tensor1.png){: width="500" height="800" }
+_Projections using light sources parallel to x- and y-axes - image source [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)_
+
 
 Alternatively, think of it as: *"How many x̂ unit vectors and how many ŷ unit vectors would it take to get from the base to the tip of this vector?"*
 
