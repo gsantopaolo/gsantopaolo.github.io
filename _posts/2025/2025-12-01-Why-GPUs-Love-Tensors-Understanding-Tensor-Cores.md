@@ -42,7 +42,6 @@ graph TB
 ### CUDA Cores: The Generalists
 
 Each CUDA core can perform **one** floating-point operation per clock cycle:
-
 $$
 \text{Result} = x + (y \times z) \quad \text{(1 operation/clock)}
 $$
@@ -54,7 +53,6 @@ $$
 ### Tensor Cores: The AI Specialists
 
 Each Tensor Core performs an entire **4×4 matrix multiply-accumulate** operation per clock cycle:
-
 $$
 \mathbf{D}_{4×4} = \mathbf{A}_{4×4} \times \mathbf{B}_{4×4} + \mathbf{C}_{4×4}
 $$
@@ -64,7 +62,6 @@ This single operation replaces **64 multiply operations + 64 add operations** = 
 ## The Power of Mixed Precision
 
 Here's where it gets clever. Tensor Cores use **mixed precision** arithmetic:
-
 $$
 \underbrace{\text{FP16}}_{\text{inputs A, B}} \times \underbrace{\text{FP16}}_{\text{inputs}} \rightarrow \underbrace{\text{FP32}}_{\text{accumulator D}}
 $$
