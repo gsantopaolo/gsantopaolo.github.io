@@ -430,10 +430,6 @@ z = x + y              # y is broadcast to each row
 # - Missing dimensions are added on the left
 ```
 
----
-
-> **🚀 Hardware Deep Dive**: Want to understand why GPUs are so fast at tensor operations? Check out our companion post: [**Why GPUs Love Tensors: Understanding Tensor Cores**](/2025/12/01/Why-GPUs-Love-Tensors-Understanding-Tensor-Cores.html) — a deep dive into CUDA Cores, Tensor Cores, mixed precision training, and the hardware that accelerates modern AI.
-{: .prompt-tip }
 
 ---
 
