@@ -3,7 +3,7 @@ title: "Why GPUs Love Tensors: Understanding Tensor Cores and AI Acceleration"
 date: "2025-12-01T08:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/12/tensor1.png"
+image: "/content/2025/12/tensorcore1.png"
 categories: [GPU, Tensor Cores, CUDA, Deep Learning, Hardware]
 published: true
 mermaid: true
