@@ -16,9 +16,6 @@ This guide takes you on a journey from intuitive understanding to practical impl
 1. **[The intuitive view](#building-intuition--vectors-and-tensors-explained)**: Understanding vectors and tensors through Dan Fleisch's brilliant explanation
 2. **[The computational view](#tensors-in-numpy--from-theory-to-arrays)**: How NumPy handles multi-dimensional arrays
 3. **[The ML practitioner's view](#tensors-in-pytorch--the-ml-practitioners-toolkit)**: Working with tensors in PyTorch
-4. **The hardware view**: [Why GPUs Love Tensors](/2025/12/01/Why-GPUs-Love-Tensors-Understanding-Tensor-Cores.html) (separate deep-dive post)
-
-
 ---
 
 ## Building Intuition — Vectors and Tensors Explained
