@@ -573,33 +573,7 @@ x = torch.tensor([1., 2., 3.], requires_grad=True)
 np_array = x.detach().numpy()  # OK
 ```
 
----
 
-## Key Takeaways
-
-### Theoretical Understanding
-- **Tensors are geometric objects** characterized by rank (number of indices) and dimension (number of axes)
-- **Components change** with coordinate systems, but **tensors themselves don't**
-- Tensors are "facts of the universe" — coordinate-independent descriptions of physical/mathematical relationships
-
-### Practical Understanding
-- In ML: **Tensor ≈ Multi-dimensional array** with shape, datatype, and device
-- **NumPy** provides the foundation for array operations
-- **PyTorch tensors** add GPU acceleration and automatic differentiation
-- Understanding tensor **shapes** is critical for debugging neural networks
-
-### From Theory to Practice
-1. **Scalars** (rank-0): Single numbers
-2. **Vectors** (rank-1): 1D arrays with direction
-3. **Matrices** (rank-2): 2D grids  
-4. **Higher-rank tensors**: 3D, 4D, 5D+ structures for images, video, batches
-
-### Essential Operations
-- **Creation**: `torch.tensor()`, `torch.zeros()`, `torch.rand()`
-- **Manipulation**: `.view()`, `.reshape()`, `.permute()`
-- **Math**: `@`, `.matmul()`, `*`, `.mul()`
-- **Reduction**: `.sum()`, `.mean()`, `.max()`
-- **Device management**: `.to()`, `.cuda()`, `.cpu()`
 
 ---
 
