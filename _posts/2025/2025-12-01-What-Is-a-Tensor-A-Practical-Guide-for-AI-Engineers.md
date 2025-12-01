@@ -655,29 +655,6 @@ if torch.cuda.is_available():
 
 ---
 
-## Conclusion: From Theory to Mastery
-
-The journey from Dan Fleisch's physical intuition through NumPy's computational arrays to PyTorch's deep learning tensors shows that tensors are both deeply mathematical and immediately practical — the perfect tool for modern AI.
-
-**Remember the hierarchy:**
-- **Mathematical tensor**: Coordinate-independent multilinear map
-- **NumPy array**: Multi-dimensional container for numerical data
-- **PyTorch tensor**: ML-optimized array with GPU support and autograd
-
-Whether you're debugging shape mismatches in your neural network, optimizing GPU memory usage, or pondering the mathematical elegance of coordinate-free physics, understanding tensors deeply will make you a better AI engineer.
-
----
-
-## Further Resources
-
-- **Our GPU Deep Dive**: [Why GPUs Love Tensors: Understanding Tensor Cores](/2025/12/01/Why-GPUs-Love-Tensors-Understanding-Tensor-Cores.html)
-- **Dan Fleisch**: *A Student's Guide to Vectors and Tensors* — excellent intuitive introduction
-- **PyTorch Documentation**: [Official Tensor Tutorial](https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html)
-- **NumPy Documentation**: Understanding `ndarray` operations
-- **KDnuggets**: [WTF is a Tensor?](https://www.kdnuggets.com/2018/05/wtf-tensor.html) — practical ML perspective
-
----
-
 ## Practice Exercises
 
 ### Exercise 1: Working with Real Images
@@ -853,6 +830,7 @@ print(f"Permuted (NHWC): {images.permute(0, 2, 3, 1).shape}")  # [N,C,H,W] → [
 print(f"Squeezed: {images[:1].squeeze().shape}")  # Remove batch dim if size 1
 print(f"Unsqueezed: {images.unsqueeze(0).shape}")  # Add new dim at front
 ```
+
 
 **The Big Picture:**
 
