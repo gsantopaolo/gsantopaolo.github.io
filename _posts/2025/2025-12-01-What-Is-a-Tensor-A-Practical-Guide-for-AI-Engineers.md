@@ -3,7 +3,7 @@ title: "What Is a Tensor? A Practical Guide for AI Engineers"
 date: "2025-12-01T06:31:30+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/12/tensor2.jpg"
+image: "/content/2025/12/tensor1.png"
 categories: [Tensor, PyTorch, NumPy, Deep Learning, GPU]
 published: true
 mermaid: true
@@ -80,6 +80,9 @@ Now we can understand the classification:
 - **Rank-3 tensor**: Three directional indicators, **three indices**
   - Components: Tᵢⱼₖ where i, j, k ∈ {x, y, z}
   - In 3D: 3 × 3 × 3 = 27 components
+
+![Tensor classification](/content/2025/12/tensor1.png){: width="500" height="800" }
+_Tensor classification - image source [Avnish's Blog](https://www.avni.sh/)_
 
 ### Why Do We Need Higher-Rank Tensors?
 
