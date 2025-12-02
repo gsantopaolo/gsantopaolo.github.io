@@ -1,6 +1,6 @@
 ---
 title: "What Is a Tensor? A Practical Guide for AI Engineers"
-date: "2025-12-02T06:31:30+00:00"
+date: "2025-12-02T06:30:30+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/12/tensor1.png"
