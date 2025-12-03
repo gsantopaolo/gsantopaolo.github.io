@@ -96,7 +96,8 @@ timeline
     2024 : Blackwell (B100/B200)
          : 5th Gen Tensor Cores
          : FP4/FP6/FP8 support
-         : Up to 30× inference vs Hopper
+         : Up to 25× lower cost & energy vs Hopper for LLM inference
+         : (up to 30× in best-case scenarios)
 ```
 
 ## How Tensor Cores Accelerate Deep Learning
@@ -125,15 +126,15 @@ This seemingly simple operation involves:
 **On CUDA Cores:**
 - Each core: 2 FLOPs per clock (FMA)
 - Hypothetical GPU: 10,000 CUDA cores at 1.5 GHz = 30 TFLOPS (FP32)
-- Time for one layer: ~140 µs (microseconds)
+- Time for one layer: ~0.28 µs (microseconds)
 
 **On Tensor Cores:**
 - Each core: 128 FLOPs per clock (4×4 matrix FMA)
 - Hypothetical GPU: 320 Tensor Cores at 1.5 GHz ≈ **61 TFLOPS (FP16)**
-- Time for one layer: **~69 µs**
+- Time for one layer: **~0.14 µs**
 - **~2× faster in this simplified example**
 
-> **Note:** Real-world speedups are typically **20-40×** depending on model architecture, precision, sparsity, and how well the workload utilizes Tensor Cores. Modern GPUs like A100 achieve 312 TFLOPS (FP16 Tensor Core) vs 19.5 TFLOPS (FP32 CUDA).
+> **Note:** Real-world speedups are typically **8-16× faster for well-optimized tensor-heavy workloads** (up to 32× with sparsity) depending on model architecture, precision, and how efficiently the workload utilizes Tensor Cores. Modern GPUs like A100 achieve 312 TFLOPS (FP16 Tensor Core) vs 19.5 TFLOPS (FP32 CUDA).
 
 ## Real-World Performance Trends
 
