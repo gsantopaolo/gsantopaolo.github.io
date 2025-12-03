@@ -40,9 +40,9 @@ graph TB
 
 ### CUDA Cores: The Generalists
 
-Each CUDA core can perform **one** floating-point operation per clock cycle:
+Each CUDA core can perform **one fused multiply-add (FMA)** per clock cycle:
 $$
-\text{Result} = x + (y \times z) \quad \text{(1 operation/clock)}
+\text{Result} = x + (y \times z) \quad \text{(2 FLOPs/clock: 1 multiply + 1 add)}
 $$
 
 - Designed for general-purpose parallel computing
@@ -78,24 +78,25 @@ timeline
     2017 : Volta (V100)
          : 1st Gen Tensor Cores
          : FP16 × FP16 → FP32
-         : 5× speedup vs Pascal
+         : Up to 5× vs Pascal
     2018 : Turing (RTX 20-series)
          : 2nd Gen Tensor Cores
          : Added INT8, INT4, INT1
-         : 32× speedup vs Pascal
+         : Up to 32× vs Pascal (INT8)
     2020 : Ampere (A100, RTX 30-series)
          : 3rd Gen Tensor Cores
          : TF32, BF16, FP64
          : Sparsity support
-         : 20× speedup for TF32
+         : Up to 20× vs Volta (TF32+sparsity)
     2022 : Hopper (H100)
          : 4th Gen Tensor Cores
          : FP8 support
          : Transformer Engine
-         : 30× speedup vs A100 for LLMs
+         : Up to 4× training vs A100
     2024 : Blackwell (B100/B200)
          : 5th Gen Tensor Cores
-         : Next-gen AI acceleration
+         : FP4/FP6/FP8 support
+         : Up to 30× inference vs Hopper
 ```
 
 ## How Tensor Cores Accelerate Deep Learning
@@ -119,25 +120,37 @@ This seemingly simple operation involves:
 
 ## CUDA Cores vs Tensor Cores: Performance Comparison
 
+**Illustrative Example** (using our layer from above: 4.2M multiply-adds):
+
 **On CUDA Cores:**
-- Each core: 1 operation per clock
-- With 10,000 CUDA cores at 1.5 GHz: 15 TFLOPS (FP32)
-- Time for one layer: ~0.28 ms
+- Each core: 2 FLOPs per clock (FMA)
+- Hypothetical GPU: 10,000 CUDA cores at 1.5 GHz = 30 TFLOPS (FP32)
+- Time for one layer: ~140 µs (microseconds)
 
 **On Tensor Cores:**
-- Each core: 128 operations per clock (4×4 matrix)
-- With 320 Tensor Cores at 1.5 GHz: **640 TFLOPS (FP16)**
-- Time for one layer: **~0.0065 ms**
-- **~43× faster!**
+- Each core: 128 FLOPs per clock (4×4 matrix FMA)
+- Hypothetical GPU: 320 Tensor Cores at 1.5 GHz ≈ **61 TFLOPS (FP16)**
+- Time for one layer: **~69 µs**
+- **~2× faster in this simplified example**
 
-## Real-World Impact
+> **Note:** Real-world speedups are typically **20-40×** depending on model architecture, precision, sparsity, and how well the workload utilizes Tensor Cores. Modern GPUs like A100 achieve 312 TFLOPS (FP16 Tensor Core) vs 19.5 TFLOPS (FP32 CUDA).
 
-| Operation | CUDA Cores (FP32) | Tensor Cores (FP16) | Speedup |
-|-----------|-------------------|---------------------|---------|
-| **Matrix Multiply** (1024×1024) | 2.8 ms | 0.06 ms | **47×** |
-| **Conv2D** (ResNet block) | 5.2 ms | 0.13 ms | **40×** |
-| **Transformer Attention** | 12.4 ms | 0.31 ms | **40×** |
-| **GPT-3 Training** (1 iteration) | 3.2 hours | 4.8 minutes | **40×** |
+## Real-World Performance Trends
+
+**Typical speedups when moving from CUDA Cores (FP32) to Tensor Cores (FP16/mixed precision):**
+
+- **Matrix Multiplication**: 20-40× faster (highly optimized for Tensor Cores)
+- **Convolutional Layers**: 15-30× faster (depends on kernel size, channels)
+- **Transformer Attention**: 10-25× faster (benefits from large batch matmuls)
+- **End-to-End Training**: 2-5× faster (includes non-matmul overhead)
+
+**Key factors affecting real-world performance:**
+- Model architecture (transformer-heavy models benefit most)
+- Batch size and tensor shapes (multiples of 8/16 optimize Tensor Core usage)
+- Memory bandwidth (often the bottleneck, not compute)
+- Framework optimization (PyTorch, TensorFlow with cuDNN/cuBLAS)
+
+> See [NVIDIA's official benchmarks](https://www.nvidia.com/en-us/data-center/tensor-cores/) for architecture-specific numbers on V100, A100, and H100.
 
 ## Why "Tensor" Cores?
 
@@ -184,27 +197,35 @@ Where:
 
 This represents 64 multiplications + 64 additions = **128 FP operations in a single clock cycle!**
 
-## PyTorch Automatically Uses Tensor Cores
+## PyTorch Can Use Tensor Cores Automatically
 
-The beautiful part? PyTorch automatically leverages Tensor Cores when you use certain data types:
+PyTorch can leverage Tensor Cores when **data types, tensor shapes, and operations are compatible**:
+
+**Requirements:**
+- Compatible dtypes: FP16, BF16, or TF32 (enabled by default on Ampere+)
+- Operations go through cuBLAS/cuDNN (matrix multiply, convolutions)
+- Tensor dimensions are often best when multiples of 8 or 16
 
 ```python
 import torch
 
-# Automatic Tensor Core usage with FP16
+# Method 1: Manual FP16 conversion
 model = MyModel().cuda().half()  # Convert to FP16
 input = torch.randn(32, 3, 224, 224).cuda().half()
 
-# This matrix multiply will use Tensor Cores!
+# Matrix multiplies will use Tensor Cores!
 output = model(input)
 
-# Or use Automatic Mixed Precision (AMP)
+# Method 2: Automatic Mixed Precision (AMP) - Recommended
 from torch.cuda.amp import autocast, GradScaler
 
+model = MyModel().cuda()
 scaler = GradScaler()
 
 for data, target in dataloader:
-    with autocast():  # Automatically uses FP16 where beneficial
+    data, target = data.cuda(), target.cuda()  # Move to GPU
+    
+    with autocast():  # Automatically selects FP16/FP32 per operation
         output = model(data)
         loss = criterion(output, target)
     
@@ -212,6 +233,8 @@ for data, target in dataloader:
     scaler.step(optimizer)
     scaler.update()
 ```
+
+> **AMP** (Automatic Mixed Precision) is the recommended approach—it automatically uses FP16 for operations that benefit (like matmuls) while keeping FP32 for operations that need precision (like loss computation).
 
 ## The Complete Picture: Why Tensors Are Fundamental
 
