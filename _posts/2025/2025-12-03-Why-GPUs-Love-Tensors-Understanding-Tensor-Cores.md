@@ -15,7 +15,7 @@ Understanding why modern AI is so fast requires understanding the hardware that 
 
 
 GPUs were originally designed for graphics rendering, which requires massive amounts of parallel matrix operations (transforming 3D coordinates, applying textures, computing lighting). This made them naturally good at the exact operations neural networks need: **matrix multiplications**.
-
+ 
 But in 2017, NVIDIA took a revolutionary step: they introduced **Tensor Cores**—specialized hardware units designed specifically to accelerate tensor operations for AI workloads.
 
 ## CUDA Cores vs Tensor Cores: A Tale of Two Architectures
