@@ -507,7 +507,7 @@ As fashion brands increasingly adopt AI-generated imagery, solutions like DeltaE
 
 **DeltaE makes that future possible, today.**
 
-As always find the full source code and documentation on my [DeltaE repo](https://github.com/gsantopaolo/DeltaE)
+As always find the full source code and documentation on my [DeltaE repo](https://github.com/gsantopaolo/DeltaE?utm_source=genmind.ch)
 ---
 
 

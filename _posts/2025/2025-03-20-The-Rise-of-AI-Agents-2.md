@@ -33,9 +33,9 @@ _LLM and its connections to various tools_
 There isn’t one universal definition of an AI agent; instead, leading organizations offer perspectives 
 that highlight different aspects of these systems:
 
-- **Tool-Focused Systems:** Some definitions emphasize the integration of tools with LLMs, making it possible to execute actions that go beyond text generation[OpenAI](https://openai.com/index/introducing-operator/).
-- **Planning and Execution:** Other views underscore the importance of planning, where the system breaks down complex tasks into manageable steps before executing them [Hugging Face](https://huggingface.co/learn/agents-course/unit1/what-are-agents).
-- **Autonomy:** A third perspective centers on autonomy—systems that can dynamically direct their own processes and decide on the best course of action based on real-world feedback [Anthropic](https://www.anthropic.com/engineering/building-effective-agents).
+- **Tool-Focused Systems:** Some definitions emphasize the integration of tools with LLMs, making it possible to execute actions that go beyond text generation[OpenAI](https://openai.com/index/introducing-operator/?utm_source=genmind.ch).
+- **Planning and Execution:** Other views underscore the importance of planning, where the system breaks down complex tasks into manageable steps before executing them [Hugging Face](https://huggingface.co/learn/agents-course/unit1/what-are-agents?utm_source=genmind.ch).
+- **Autonomy:** A third perspective centers on autonomy—systems that can dynamically direct their own processes and decide on the best course of action based on real-world feedback [Anthropic](https://www.anthropic.com/engineering/building-effective-agents?utm_source=genmind.ch).
 
 These varied definitions reflect a shared belief: no matter how you define them, AI agents are marked by the central presence of an LLM, the effective use of tools, and a degree of autonomy that allows them to solve complex problems.
 

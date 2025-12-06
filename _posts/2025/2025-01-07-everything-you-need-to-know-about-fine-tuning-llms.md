@@ -81,7 +81,7 @@ Each technique has its pros and cons. For instance, full fine tuning might be id
 {: width="972" height="589" }
 _SFT Techniques_
 
-Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717)
+Diagram source: [QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2309.14717?utm_source=genmind.ch)
 
 
 > See [Teaching an LLM How to Fly a Hot Air Balloon]({% post_url /2023/2023-05-04-teaching-an-llm-how-to-fly-a-hot-air-balloon %}) as example of how to use TRL.

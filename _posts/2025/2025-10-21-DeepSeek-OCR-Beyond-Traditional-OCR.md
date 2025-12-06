@@ -10,7 +10,7 @@ mermaid: true
 ---
 
 That is just the case to say: "a picture is worth a thousand words" - but what if a picture could be worth exactly 1,000 text tokens with 97% accuracy? 
-DeepSeek-AI's latest release, [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR), isn't just another OCR model. 
+DeepSeek-AI's latest release, [DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR?utm_source=genmind.ch), isn't just another OCR model. 
 It's a paradigm shift in how we think about AI memory, long-context processing, and the fundamental role of vision in language models.
 
 **The core breakthrough**: DeepSeek-OCR achieves **10x compression** by using 100 vision tokens to represent 1,000 text tokens 
@@ -150,7 +150,7 @@ _Brian Roemmele's microfiche scanning setup with DeepSeek-OCR_
 - Transform offline data curation workflows
 
 
-As [Brian](https://x.com/BrianRoemmele) notes in his analysis:
+As [Brian](https://x.com/BrianRoemmele?utm_source=genmind.ch) notes in his analysis:
 
 > "An entire encyclopedia compressed into a single, high-resolution image! DeepSeek-OCR crushes long documents into vision tokens with a staggering 97% decoding precision at a 10x compression ratio! That's thousands of textual tokens distilled into a mere 100 vision tokens per page, outmuscling GOT-OCR2.0 (256 tokens) and MinerU2.0 (6,000 tokens) by up to 60x fewer tokens."
 
@@ -211,17 +211,17 @@ made to be vision → text tasks. Not vice versa."
 
 I've created a **production-ready deployment repository** with everything you need to run DeepSeek-OCR:
 
-🔗 **[DeepSeek-OCR Deployment Repository](https://github.com/gsantopaolo/DeepSeek-OCR)**
+🔗 **[DeepSeek-OCR Deployment Repository](https://github.com/gsantopaolo/DeepSeek-OCR?utm_source=genmind.ch)**
 
 ### What's Included:
 
 **1. Ready-to-Use Docker Image**
-- Pre-built image on Docker Hub: [`gsantopaolo/deepseek-ocr:latest`](https://hub.docker.com/r/gsantopaolo/deepseek-ocr/tags)
+- Pre-built image on Docker Hub: [`gsantopaolo/deepseek-ocr:latest`](https://hub.docker.com/r/gsantopaolo/deepseek-ocr/tags?utm_source=genmind.ch)
 - vLLM-optimized with OpenAI-compatible API
 - CUDA 12.1 with cuDNN support for GPU acceleration
 
 **2. RunPod Cloud Deployment**
-- One-click deployment template: [Deploy on RunPod](https://console.runpod.io/deploy?template=2pujxwimeo)
+- One-click deployment template: [Deploy on RunPod](https://console.runpod.io/deploy?template=2pujxwimeo&utm_source=genmind.ch)
 - 5-minute setup from template to running API
 - Cost-effective: ~$0.69/hour (RTX 4090) to ~$1.89/hour (A100)
 
@@ -232,9 +232,9 @@ I've created a **production-ready deployment repository** with everything you ne
 ### Quick Start Options:
 
 **Option A: Deploy on RunPod (No Local GPU Required - Recommended)**  
-Use my [RunPOd Template]([RunPod](https://console.runpod.io/deploy?template=2pujxwimeo).
+Use my [RunPOd Template]([RunPod](https://console.runpod.io/deploy?template=2pujxwimeo&utm_source=genmind.ch).
 By clicking the link above you just need to decide which GPU server to use, scroll down and click deploy.
-Once deployed (it will take a wile since the live container will pull the model from HuggingFace) copy the connection link and pass it to [test.py](https://github.com/gsantopaolo/DeepSeek-OCR/blob/main/src/tests/test.py)
+Once deployed (it will take a wile since the live container will pull the model from HuggingFace) copy the connection link and pass it to [test.py](https://github.com/gsantopaolo/DeepSeek-OCR/blob/main/src/tests/test.py?utm_source=genmind.ch)
 
 ```bash
 python test.py --base-url http://your-runpod-instance:8000 --output results.md
@@ -254,7 +254,7 @@ docker run -d \
 **Option C: Build From Source**  
 Clone the repo and follow the build instructions for custom deployments.
 
-For complete deployment guides, API usage examples, and production considerations, visit the **[GitHub repository](https://github.com/gsantopaolo/DeepSeek-OCR)**.
+For complete deployment guides, API usage examples, and production considerations, visit the **[GitHub repository](https://github.com/gsantopaolo/DeepSeek-OCR?utm_source=genmind.ch)**.
 
 
 ---

@@ -11,7 +11,7 @@ published: true
 
 > *“What would a production-grade AI cluster look like if built from scratch for **scale, resilience, and lightning-fast insights**?”*  
 > **Sentinel-AI** is my answer.  
-> Repo 👉 [github.com/gsantopaolo/sentinel-AI](https://github.com/gsantopaolo/sentinel-AI)
+> Repo 👉 [github.com/gsantopaolo/sentinel-AI](https://github.com/gsantopaolo/sentinel-AI?utm_source=genmind.ch)
 
 This project implements a **real-time newsfeed platform** that can **aggregate, filter, store, and rank events from *any* source you choose**—RSS, REST APIs, webhooks, internal logs, you name it. The main goal is to showcase how an AI-centric micro-service cluster should be architected to survive production traffic at **millions-of-users scale**.
 
@@ -68,7 +68,7 @@ Tomorrow, each micro-service can be converted into an *agent* with its own:
 3. **Memory** (Qdrant / Postgres),  
 4. **Self-evaluation loop**.
 
-A starter blueprint lives under [`src/agentic`](https://github.com/gsantopaolo/sentinel-AI/tree/main/src/agentic).  
+A starter blueprint lives under [`src/agentic`](https://github.com/gsantopaolo/sentinel-AI/tree/main/src/agentic?utm_source=genmind.ch).  
 Swapping the current functions for agentic planners is mostly a wiring exercise—no major rewrite required.
 
 ---
@@ -76,7 +76,7 @@ Swapping the current functions for agentic planners is mostly a wiring exercise�
 ## Try It in Two Commands
 
 ```bash
-git clone https://github.com/gsantopaolo/sentinel-AI.git
+git clone https://github.com/gsantopaolo/sentinel-AI.git?utm_source=genmind.ch
 
 cd sentinel-AI 
 

@@ -51,9 +51,9 @@ That’s it. No setup. No troubleshooting. Just train.
 
 ## Resources
 
-⭐ **Quick Start Guide** → [How to Train LLMs with Unsloth and Docker](https://docs.unsloth.ai/new/how-to-train-llms-with-unsloth-and-docker)
-🐳 **Docker Hub Image** → [Unsloth AI Docker](https://hub.docker.com/r/unslothai/unsloth)
-📘 **Full Documentation** → [Unsloth Docs](https://docs.unsloth.ai/new/how-to-train-llms-with-unsloth-and-docker)
+⭐ **Quick Start Guide** → [How to Train LLMs with Unsloth and Docker](https://docs.unsloth.ai/new/how-to-train-llms-with-unsloth-and-docker?utm_source=genmind.ch)
+🐳 **Docker Hub Image** → [Unsloth AI Docker](https://hub.docker.com/r/unslothai/unsloth?utm_source=genmind.ch)
+📘 **Full Documentation** → [Unsloth Docs](https://docs.unsloth.ai/new/how-to-train-llms-with-unsloth-and-docker?utm_source=genmind.ch)
 
 ---
 

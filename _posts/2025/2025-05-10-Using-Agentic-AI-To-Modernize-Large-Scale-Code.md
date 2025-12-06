@@ -110,10 +110,10 @@ These gaps highlight that, even with advanced agentic AI, **human expertise in U
 
 Reforge AI’s agentic approach—anchored by robust documentation with Mermaid diagrams and multi-agent code generation—provides a **scalable blueprint** for modernizing legacy Java systems in banking. While LLMs still need human partners for UI finesse and dependency management, the combined workflow slashes manual effort, mitigates risk, and paves the way for continuous modernization at enterprise scale.
 
-[1]: https://mermaid.js.org/intro/getting-started.html?utm_source=chatgpt.com "Mermaid User Guide"
-[2]: https://www.mermaidchart.com/blog/posts/7-best-practices-for-good-documentation/?utm_source=chatgpt.com "7 best practices (+ examples) for good developer documentation"
-[3]: https://economictimes.indiatimes.com/tech/artificial-intelligence/big-in-big-tech-ai-agents-now-code-alongside-developers/articleshow/121390787.cms?utm_source=chatgpt.com "Big in big tech: AI agents now code alongside developers"
-[4]: https://medium.com/%40adnanmasood/code-generation-with-llms-practical-challenges-gotchas-and-nuances-7b51d394f588?utm_source=chatgpt.com "Code Generation with LLMs: Practical Challenges, Gotchas, and ..."
-[5]: https://medium.com/%40jelkhoury880/why-general-purpose-llms-wont-modernize-your-codebase-and-what-will-eaf768481d38?utm_source=chatgpt.com "Why General-Purpose LLMs Won't Modernize Your Codebase ..."
-[6]: https://fintechos.com/blogpost/how-to-de-risk-core-modernization-in-banking/?utm_source=chatgpt.com "5 Strategies for De-risking Core Modernization in Banking - FintechOS"
-[7]: https://blogs.microsoft.com/blog/2025/04/28/how-agentic-ai-is-driving-ai-first-business-transformation-for-customers-to-achieve-more/?utm_source=chatgpt.com "How agentic AI is driving AI-first business transformation for ..."
+[1]: https://mermaid.js.org/intro/getting-started.html?utm_source=genmind.ch "Mermaid User Guide"
+[2]: https://www.mermaidchart.com/blog/posts/7-best-practices-for-good-documentation/?utm_source=genmind.ch "7 best practices (+ examples) for good developer documentation"
+[3]: https://economictimes.indiatimes.com/tech/artificial-intelligence/big-in-big-tech-ai-agents-now-code-alongside-developers/articleshow/121390787.cms?utm_source=genmind.ch "Big in big tech: AI agents now code alongside developers"
+[4]: https://medium.com/%40adnanmasood/code-generation-with-llms-practical-challenges-gotchas-and-nuances-7b51d394f588?utm_source=genmind.ch "Code Generation with LLMs: Practical Challenges, Gotchas, and ..."
+[5]: https://medium.com/%40jelkhoury880/why-general-purpose-llms-wont-modernize-your-codebase-and-what-will-eaf768481d38?utm_source=genmind.ch "Why General-Purpose LLMs Won't Modernize Your Codebase ..."
+[6]: https://fintechos.com/blogpost/how-to-de-risk-core-modernization-in-banking/?utm_source=genmind.ch "5 Strategies for De-risking Core Modernization in Banking - FintechOS"
+[7]: https://blogs.microsoft.com/blog/2025/04/28/how-agentic-ai-is-driving-ai-first-business-transformation-for-customers-to-achieve-more/?utm_source=genmind.ch "How agentic AI is driving AI-first business transformation for ..."

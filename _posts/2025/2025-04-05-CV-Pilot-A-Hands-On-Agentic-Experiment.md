@@ -106,7 +106,7 @@ losing a human-in-the-loop checkpoint.
 ## Introducing CV-Pilot
 
 To test agentic by myself, I took the official Crew AI sample and built
-[**CV-Pilot**](https://github.com/gsantopaolo/cv-pilot)—an 
+[**CV-Pilot**](https://github.com/gsantopaolo/cv-pilot?utm_source=genmind.ch)—an 
 AI-powered toolkit that automates resume tailoring and motivation-letter writing through 
 two independent pipelines, 
 **gen\_resume** and **gen\_motivation**. Here’s how I extended the sample, 
@@ -228,5 +228,5 @@ thresholds.
 
 
 For more details, check out the full working sample on my 
-[GitHub repo](https://github.com/gsantopaolo/cv-pilot)
+[GitHub repo](https://github.com/gsantopaolo/cv-pilot?utm_source=genmind.ch)
 

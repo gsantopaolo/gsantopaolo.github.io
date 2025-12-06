@@ -18,36 +18,36 @@ In this article, we skip the basics and get straight to the technical details. W
 Below is a list of widely used agentic AI frameworks along with direct links to their GitHub repositories (or equivalent):
 
 - **Microsoft AutoGen** – An open‑source framework for multi‑agent orchestration and autonomous decision‑making.  
-  [GitHub Repo](https://github.com/microsoft/autogen)  
+  [GitHub Repo](https://github.com/microsoft/autogen?utm_source=genmind.ch)  
   citeturn0search7
 
 - **Microsoft Semantic Kernel** – A production‑grade SDK that modularizes AI “skills” for composing complex workflows.  
-  [GitHub Repo](https://github.com/microsoft/semantic-kernel)  
+  [GitHub Repo](https://github.com/microsoft/semantic-kernel?utm_source=genmind.ch)  
   citeturn0search7
 
 - **LangChain** – A modular, LLM‑driven framework that supports prompt chaining, memory management, and external tool integration.  
-  [GitHub Repo](https://github.com/hwchase17/langchain)  
+  [GitHub Repo](https://github.com/hwchase17/langchain?utm_source=genmind.ch)  
 
 
 - **CrewAI** – A role‑based framework focused on collaborative multi‑agent systems where agents share tasks and communicate dynamically.  
-  [GitHub Repo](https://github.com/crewAIInc/crewAI)
+  [GitHub Repo](https://github.com/crewAIInc/crewAI?utm_source=genmind.ch)
 
 - **Atomic Agents** – A minimalistic, open‑source library emphasizing control and consistency in multi‑agent pipelines.  
-  [GitHub Repo](https://github.com/BrainBlend-AI/atomic-agents)
+  [GitHub Repo](https://github.com/BrainBlend-AI/atomic-agents?utm_source=genmind.ch)
 
 - **Hugging Face Transformers Agents** – Leverages the Transformers ecosystem to build multimodal, task‑specific agents.  
-  [GitHub Repo](https://github.com/huggingface/transformers) *(See examples for agent implementations.)*
+  [GitHub Repo](https://github.com/huggingface/transformers?utm_source=genmind.ch) *(See examples for agent implementations.)*
 
 - **Langflow** – A low‑code, visual interface for quickly prototyping agent workflows.  
-  [GitHub Repo](https://github.com/langflow-ai/langflow)
+  [GitHub Repo](https://github.com/langflow-ai/langflow?utm_source=genmind.ch)
 
 - **Dify** – An LLMOps platform with a visual development interface for rapid AI agent deployment.  
-  [GitHub Repo](https://github.com/langgenius/dify)
+  [GitHub Repo](https://github.com/langgenius/dify?utm_source=genmind.ch)
 
 - **Lyzr** – A no‑code platform tailored for enterprises with pre‑built agents across multiple business functions.  
-  *[closed source](https://www.lyzr.ai/)*
+  *[closed source](https://www.lyzr.ai/?utm_source=genmind.ch)*
 
-- **[AgentGPT](https://agentgpt.io/) / [BabyAGI](https://github.com/yoheinakajima/babyagi) / [MetaGPT](https://github.com/geekan/MetaGPT) / [Swarms](https://github.com/kyegomez/swarms)** – Emerging platforms aimed at both non‑technical users and developers for rapid agent prototyping.  
+- **[AgentGPT](https://agentgpt.io/?utm_source=genmind.ch) / [BabyAGI](https://github.com/yoheinakajima/babyagi?utm_source=genmind.ch) / [MetaGPT](https://github.com/geekan/MetaGPT?utm_source=genmind.ch) / [Swarms](https://github.com/kyegomez/swarms?utm_source=genmind.ch)** – Emerging platforms aimed at both non‑technical users and developers for rapid agent prototyping.  
 
 
 ---

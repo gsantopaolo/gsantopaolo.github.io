@@ -1078,11 +1078,11 @@ Start simple, escalate as needed.
 
 ## Resources & References 📚
 
-- **PyCharm Debugging Guide**: [JetBrains Official Docs](https://www.jetbrains.com/help/pycharm/debugging-code.html)
-- **Docker Integration**: [PyCharm Docker Support](https://www.jetbrains.com/help/pycharm/docker.html)
-- **Remote Debugging**: [PyCharm Remote Debug](https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html)
-- **FastAPI Documentation**: [FastAPI Official Docs](https://fastapi.tiangolo.com/)
-- **Docker Desktop for Mac**: [Docker Docs](https://docs.docker.com/desktop/mac/)
+- **PyCharm Debugging Guide**: [JetBrains Official Docs](https://www.jetbrains.com/help/pycharm/debugging-code.html?utm_source=genmind.ch)
+- **Docker Integration**: [PyCharm Docker Support](https://www.jetbrains.com/help/pycharm/docker.html?utm_source=genmind.ch)
+- **Remote Debugging**: [PyCharm Remote Debug](https://www.jetbrains.com/help/pycharm/remote-debugging-with-product.html?utm_source=genmind.ch)
+- **FastAPI Documentation**: [FastAPI Official Docs](https://fastapi.tiangolo.com/?utm_source=genmind.ch)
+- **Docker Desktop for Mac**: [Docker Docs](https://docs.docker.com/desktop/mac/?utm_source=genmind.ch)
 
 ---
 

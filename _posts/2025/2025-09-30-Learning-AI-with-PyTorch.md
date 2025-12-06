@@ -16,28 +16,28 @@ Here are the best **free PyTorch-first resources** I started from:
 
 ---
 
-1. **[freeCodeCamp – PyTorch for Deep Learning & Machine Learning (full course, free)](https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/?utm_source=chatgpt.com)**  
+1. **[freeCodeCamp – PyTorch for Deep Learning & Machine Learning (full course, free)](https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/?utm_source=genmind.ch)**  
    Comprehensive 26-hour video course + GitHub materials.  
 
-2. **[Daniel Bourke – Learn PyTorch for Deep Learning in a Day (free)](https://www.youtube.com/watch?v=Z_ikDlimN6A&utm_source=chatgpt.com)**  
+2. **[Daniel Bourke – Learn PyTorch for Deep Learning in a Day (free)](https://www.youtube.com/watch?v=Z_ikDlimN6A&utm_source=genmind.ch)**  
    Fast, hands-on intro + excellent companion repo/online book.  
 
-3. **[Udacity – Intro to Deep Learning with PyTorch (free course)](https://www.udacity.com/course/deep-learning-pytorch--ud188?utm_source=chatgpt.com)**  
+3. **[Udacity – Intro to Deep Learning with PyTorch (free course)](https://www.udacity.com/course/deep-learning-pytorch--ud188?utm_source=genmind.ch)**  
    Covers CNNs, RNNs, style transfer, sentiment analysis.  
 
-4. **[fast.ai – Practical Deep Learning for Coders (free)](https://course.fast.ai/?utm_source=chatgpt.com)**  
+4. **[fast.ai – Practical Deep Learning for Coders (free)](https://course.fast.ai/?utm_source=genmind.ch)**  
    Legendary PyTorch-based course with companion book.  
 
-5. **[Aladdin Persson – PyTorch Tutorials (playlist, free)](https://www.youtube.com/playlist?list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&utm_source=chatgpt.com)**  
+5. **[Aladdin Persson – PyTorch Tutorials (playlist, free)](https://www.youtube.com/playlist?list=PLhhyoLH6IjfxeoooqP9rhU3HJIAVAJ3Vz&utm_source=genmind.ch)**  
    Clear tutorials moving from beginner to intermediate.  
 
-6. **[Microsoft Learn – PyTorch Fundamentals (free path)](https://www.microsoft.com/en-us/thesource-developer/Event/58/microsoft-learn-pytorch-fundamentals-learn?utm_source=chatgpt.com)**  
+6. **[Microsoft Learn – PyTorch Fundamentals (free path)](https://www.microsoft.com/en-us/thesource-developer/Event/58/microsoft-learn-pytorch-fundamentals-learn?utm_source=genmind.ch)**  
    Short, guided modules (vision, NLP, speech).  
 
-7. **[IBM / Coursera – Intro to Neural Networks and PyTorch (free to audit)](https://www.coursera.org/learn/deep-neural-networks-with-pytorch?utm_source=chatgpt.com)**  
+7. **[IBM / Coursera – Intro to Neural Networks and PyTorch (free to audit)](https://www.coursera.org/learn/deep-neural-networks-with-pytorch?utm_source=genmind.ch)**  
    MOOC with labs. ⭐ ~4.4/5 (1.8k+ reviews).  
 
-8. **[PyTorch Official Tutorials (free)](https://docs.pytorch.org/tutorials/?utm_source=chatgpt.com)**  
+8. **[PyTorch Official Tutorials (free)](https://docs.pytorch.org/tutorials/?utm_source=genmind.ch)**  
    Canonical, constantly updated path for APIs and recipes.  
 
 9. **[Part of Stanford CS224N | PyTorch Tutorial](https://www.youtube.com/watch?v=Uv0AIRr3ptg)**  

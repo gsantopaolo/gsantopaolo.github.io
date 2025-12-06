@@ -69,7 +69,7 @@ where each might excel.
 
 ## RAG vs. CAG: A Practical Comparison
 
-A recent paper titled [Don’t Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](https://arxiv.org/pdf/2412.15605) introduces CAG as a 
+A recent paper titled [Don’t Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](https://arxiv.org/pdf/2412.15605?utm_source=genmind.ch) introduces CAG as a 
 streamlined alternative to RAG for scenarios where the knowledge base is manageable in size. 
 The authors show that by preloading and caching external documents, CAG can often outperform RAG—not only in accuracy (thanks to its unified context) 
 but also in reducing the overall latency caused by real-time retrieval steps.
@@ -119,4 +119,4 @@ What’s your take? Would you choose RAG, CAG, or perhaps a hybrid for your next
 ---
 
 *References:*  
-[Don’t Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](https://arxiv.org/pdf/2412.15605) 
+[Don’t Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](https://arxiv.org/pdf/2412.15605?utm_source=genmind.ch) 

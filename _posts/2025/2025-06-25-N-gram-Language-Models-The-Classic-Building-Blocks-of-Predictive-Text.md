@@ -248,7 +248,7 @@ flowchart LR
 ```
 
 While n-grams paved the way—powering NLP from the 1970s through \~2012—their “local counts” approach can’t capture long-range dependencies or semantic nuance the way neural LLMs do. 
-But remember: the core lesson from Professor Manning’s class, [CS224N Natural Language Processing with Deep Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D), is **scale + better models**, not scale alone. N-grams still shine when you need a tiny, interpretable model with instant on-device predictions. 😉
+But remember: the core lesson from Professor Manning’s class, [CS224N Natural Language Processing with Deep Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rOaMFbaqxPDoLWjDaRAdP9D&utm_source=genmind.ch), is **scale + better models**, not scale alone. N-grams still shine when you need a tiny, interpretable model with instant on-device predictions. 😉
 
 ---
 

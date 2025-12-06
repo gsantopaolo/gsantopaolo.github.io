@@ -13,7 +13,7 @@ The marketing automation problem hasn't changed: creative teams spend days gener
 
 **CreativeCampaign-Agent** automates this end-to-end using event-driven microservices and OpenAI APIs. From campaign brief to production-ready assets in under 10 minutes.
 
-**GitHub:** [github.com/gsantopaolo/CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent)
+**GitHub:** [github.com/gsantopaolo/CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent?utm_source=genmind.ch)
 
 ---
 
@@ -164,7 +164,7 @@ sequenceDiagram
 }
 ```
 
-**Code:** [src/context_enricher/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/context_enricher/main.py)
+**Code:** [src/context_enricher/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/context_enricher/main.py?utm_source=genmind.ch)
 
 ---
 
@@ -224,7 +224,7 @@ sequenceDiagram
 
 **Key:** All content is in the **target language** (German), respecting cultural context from the enricher.
 
-**Code:** [src/creative_generator/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/creative_generator/main.py)
+**Code:** [src/creative_generator/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/creative_generator/main.py?utm_source=genmind.ch)
 
 ---
 
@@ -296,7 +296,7 @@ composition_guidance = {
 
 **Critical:** Images have **NO text** (text overlay happens later) and leave strategic space for logo (top half) and text (bottom half).
 
-**Code:** [src/image_generator/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/image_generator/main.py)
+**Code:** [src/image_generator/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/image_generator/main.py?utm_source=genmind.ch)
 
 ---
 
@@ -407,7 +407,7 @@ Return JSON:
 
 **Cost:** ~$0.001 per image (~$0.032 for 32 variants)
 
-**Code:** [src/brand_composer/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/brand_composer/main.py)
+**Code:** [src/brand_composer/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/brand_composer/main.py?utm_source=genmind.ch)
 
 ---
 
@@ -507,7 +507,7 @@ def calculate_bottom_middle_placement(width, height, text):
 - ✅ $0 cost
 - ✅ Consistent results
 
-**Code:** [src/text_overlay/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/text_overlay/main.py)
+**Code:** [src/text_overlay/main.py](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/src/text_overlay/main.py?utm_source=genmind.ch)
 
 ---
 
@@ -583,14 +583,14 @@ _Completed Campaign -  Brand Composition and Text Overlay (Final)_
 **You don't even need to clone the repo.**
 
 ### Prerequisites
-- Docker ([Get Docker](https://docs.docker.com/get-docker/))
-- OpenAI API key ([Get one](https://platform.openai.com/api-keys))
+- Docker ([Get Docker](https://docs.docker.com/get-docker/?utm_source=genmind.ch))
+- OpenAI API key ([Get one](https://platform.openai.com/api-keys?utm_source=genmind.ch))
 
 ### Run in 3 Commands
 
 ```bash
 # 1. Download runner script
-curl -O https://raw.githubusercontent.com/gsantopaolo/CreativeCampaign-Agent/main/deployment/run-creative-campaign.sh
+curl -O https://raw.githubusercontent.com/gsantopaolo/CreativeCampaign-Agent/main/deployment/run-creative-campaign.sh?utm_source=genmind.ch
 
 # 2. Make executable
 chmod +x run-creative-campaign.sh
@@ -607,7 +607,7 @@ chmod +x run-creative-campaign.sh
 
 **Time to running system:** Under 2 minutes.
 
-**Full setup guide:** [docs/just-run.md](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/just-run.md)
+**Full setup guide:** [docs/just-run.md](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/just-run.md?utm_source=genmind.ch)
 
 ---
 
@@ -630,12 +630,12 @@ Compare to manual: $5,000-$10,000.
 
 Comprehensive docs in the repo:
 
-- [Architecture Deep Dive](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/architecture.md)
-- [Agentic System Design](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/agentic-system-design.md)
-- [AI Logo Placement](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/ai-logo-placement.md)
-- [Implementation Patterns](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/implementation-patterns.md)
-- [Why Microservices?](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/why-microservices.md)
-- [Service Docs](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/) (Context Enricher, Creative Generator, Image Generator, Brand Composer, Text Overlay)
+- [Architecture Deep Dive](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/architecture.md?utm_source=genmind.ch)
+- [Agentic System Design](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/agentic-system-design.md?utm_source=genmind.ch)
+- [AI Logo Placement](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/ai-logo-placement.md?utm_source=genmind.ch)
+- [Implementation Patterns](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/implementation-patterns.md?utm_source=genmind.ch)
+- [Why Microservices?](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/why-microservices.md?utm_source=genmind.ch)
+- [Service Docs](https://github.com/gsantopaolo/CreativeCampaign-Agent/blob/main/docs/?utm_source=genmind.ch) (Context Enricher, Creative Generator, Image Generator, Brand Composer, Text Overlay)
 
 ---
 
@@ -656,7 +656,7 @@ If you're building AI-powered automation or event-driven systems, I hope this se
 ---
 
 
-**GitHub:** [github.com/gsantopaolo/CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent)
+**GitHub:** [github.com/gsantopaolo/CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent?utm_source=genmind.ch)
 
-**Questions?** Open an issue on [GitHub](https://github.com/gsantopaolo/CreativeCampaign-Agent).
+**Questions?** Open an issue on [GitHub](https://github.com/gsantopaolo/CreativeCampaign-Agent?utm_source=genmind.ch).
 

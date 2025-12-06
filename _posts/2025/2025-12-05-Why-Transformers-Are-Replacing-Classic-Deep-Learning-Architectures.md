@@ -176,7 +176,7 @@ But it’s really a window into architectural philosophy.
 And as the AI world shifts toward **scale, transfer, and multimodality**,
 generalists are increasingly becoming the default.
 
-[1]: https://arxiv.org/abs/1706.03762?utm_source=chatgpt.com "[1706.03762] Attention Is All You Need"
-[2]: https://papers.nips.cc/paper/7181-attention-is-all-you-need?utm_source=chatgpt.com "Attention is All you Need"
-[3]: https://dl.acm.org/doi/10.1145/3505244?utm_source=chatgpt.com "Transformers in Vision: A Survey"
-[4]: https://arxiv.org/abs/2103.14030?utm_source=chatgpt.com "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
+[1]: https://arxiv.org/abs/1706.03762?utm_source=genmind.ch "[1706.03762] Attention Is All You Need"
+[2]: https://papers.nips.cc/paper/7181-attention-is-all-you-need?utm_source=genmind.ch "Attention is All you Need"
+[3]: https://dl.acm.org/doi/10.1145/3505244?utm_source=genmind.ch "Transformers in Vision: A Survey"
+[4]: https://arxiv.org/abs/2103.14030?utm_source=genmind.ch "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"

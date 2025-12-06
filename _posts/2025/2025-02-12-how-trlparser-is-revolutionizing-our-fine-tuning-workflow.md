@@ -86,5 +86,5 @@ The cleaner codebase and enhanced flexibility now allow us to focus on building 
 and deploying robust MLOps pipelines. 
 If you’re looking to streamline your own fine-tuning experiments, give TRLParser a try!
 
-For more details, check out the full working sample on my [GitHub repo](https://github.com/gsantopaolo/fine-tuning/tree/main/hot-air-balloon-trlparser):  
+For more details, check out the full working sample on my [GitHub repo](https://github.com/gsantopaolo/fine-tuning/tree/main/hot-air-balloon-trlparser?utm_source=genmind.ch):  
 

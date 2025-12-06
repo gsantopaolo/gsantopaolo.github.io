@@ -11,11 +11,11 @@ tags:
 
 In the ever-changing world of machine learning, keeping our code simple and easy to maintain is more important than ever.
 
-That’s where [TrlParser](https://huggingface.co/docs/trl/v0.15.1/en/script_utils#trl.TrlParser) comes in—a smart extension of Hugging Face’s HfArgumentParser designed to simplify configuration management.
+That’s where [TrlParser](https://huggingface.co/docs/trl/v0.15.1/en/script_utils?utm_source=genmind.ch#trl.TrlParser) comes in—a smart extension of Hugging Face’s HfArgumentParser designed to simplify configuration management.
 
 In this post, we’ll walk through how to use TrlParser with a YAML file (where to store all the configuration parameters) to make our training scripts cleaner and our coding life a whole lot easier.
 
-TrlParser is a subclass of [HfArgumentParser](https://huggingface.co/docs/transformers/en/internal/trainer_utils#transformers.HfArgumentParser) designed specifically for working with Transformer Reinforcement Learning (TRL) library. It supports parsing command-line arguments backed by Python dataclasses and it allows us to provide hyperparameters in a YAML file. With this approach, we benefit from::
+TrlParser is a subclass of [HfArgumentParser](https://huggingface.co/docs/transformers/en/internal/trainer_utils?utm_source=genmind.ch#transformers.HfArgumentParser) designed specifically for working with Transformer Reinforcement Learning (TRL) library. It supports parsing command-line arguments backed by Python dataclasses and it allows us to provide hyperparameters in a YAML file. With this approach, we benefit from::
 
 - **Centralize the configuration:** Maintain default values, hyperparameters, and environment variables in one neat YAML file.
 - **Keep code organized:** Avoid clutter by separating configuration from code logic.
@@ -24,7 +24,7 @@ TrlParser is a subclass of [HfArgumentParser](https://huggingface.co/docs/transf
 - **Neat Code:** Your main script remains clean, focusing solely on the logic, while the configuration is managed externally.
 - **Reproducibility:** Documenting your settings in YAML helps with versioning and reproducibility of experiments.
 
-The official [TrlParser documentation](https://huggingface.co/docs/trl/main/en/script_utils#trl.TrlParser). has some room to improve, but you can check it out for more detailed documentation.
+The official [TrlParser documentation](https://huggingface.co/docs/trl/main/en/script_utils?utm_source=genmind.ch#trl.TrlParser). has some room to improve, but you can check it out for more detailed documentation.
 
 Let’s see how you can use TrlParser with YAML in a real-world training script. Imagine you have a YAML file (`config.yaml`) that looks like this:
 

@@ -50,7 +50,7 @@ Dan Fleisch uses a beautiful analogy: imagine shining a light perpendicular to a
 To find the **x-component**: shine light parallel to the y-axis (perpendicular to x). The shadow on the x-axis is Aₓ.
 
 ![Projections using light sources parallel to x- and y-axes.](/content/2025/12/tensor2.png){: width="500" height="800" }
-_Projections using light sources perpendicular to x- and y-axes - image source [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/)_
+_Projections using light sources perpendicular to x- and y-axes - image source [A Student's Guide to Vectors and Tensors](https://www4.danfleisch.com/sgvt/?utm_source=genmind.ch)_
 
 
 Alternatively, think of it as: *"How many x̂ unit vectors and how many ŷ unit vectors would it take to get from the base to the tip of this vector?"*
@@ -83,7 +83,7 @@ Now we can understand the classification:
   - In 3D: 3 × 3 × 3 = 27 components
 
 ![Tensor classification](/content/2025/12/tensor1.png){: width="500" height="800" }
-_Tensor classification - image source [Avnish's Blog](https://www.avni.sh/)_
+_Tensor classification - image source [Avnish's Blog](https://www.avni.sh/?utm_source=genmind.ch)_
 
 ### Why Do We Need Higher-Rank Tensors?
 
@@ -190,7 +190,7 @@ PyTorch tensors are where theory meets practice in modern deep learning. They're
 
 ### What Makes PyTorch Tensors Special?
 
-From [PyTorch's documentation](https://docs.pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html):
+From [PyTorch's documentation](https://docs.pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html?utm_source=genmind.ch):
 
 > *"Tensors are a specialized data structure that are very similar to arrays and matrices. In PyTorch, we use tensors to encode the inputs and outputs of a model, as well as the model's parameters."*
 

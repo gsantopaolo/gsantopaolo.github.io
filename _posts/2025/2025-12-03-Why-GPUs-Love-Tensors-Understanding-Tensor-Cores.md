@@ -252,10 +252,10 @@ Now we see the full circle:
 
 ## Further Resources
 
-- **NVIDIA Documentation**: [Tensor Cores Overview](https://www.nvidia.com/en-us/data-center/tensor-cores/)
-- **PyTorch AMP Guide**: [Automatic Mixed Precision](https://pytorch.org/docs/stable/amp.html)
-- **DigitalOcean**: [Understanding Tensor Cores](https://www.digitalocean.com/community/tutorials/understanding-tensor-cores)
-- **Research Paper**: [NVIDIA Tensor Core Programming](https://developer.nvidia.com/blog/programming-tensor-cores-cuda-9/)
+- **NVIDIA Documentation**: [Tensor Cores Overview](https://www.nvidia.com/en-us/data-center/tensor-cores/?utm_source=genmind.ch)
+- **PyTorch AMP Guide**: [Automatic Mixed Precision](https://pytorch.org/docs/stable/amp.html?utm_source=genmind.ch)
+- **DigitalOcean**: [Understanding Tensor Cores](https://www.digitalocean.com/community/tutorials/understanding-tensor-cores?utm_source=genmind.ch)
+- **Research Paper**: [NVIDIA Tensor Core Programming](https://developer.nvidia.com/blog/programming-tensor-cores-cuda-9/?utm_source=genmind.ch)
 
 ---
 

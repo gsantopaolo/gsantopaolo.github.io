@@ -114,15 +114,15 @@ Stack \$L\$ such layers for the encoder. The **decoder** adds an additional enco
 
 
 
-[1]: https://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf  
-[2]: https://medium.com/@funcry/in-depth-understanding-of-attention-mechanism-part-ii-scaled-dot-product-attention-and-its-7743804e610e  
-[3]: https://www.geeksforgeeks.org/nlp/multi-head-attention-mechanism  
-[4]: https://medium.com/image-processing-with-python/the-feedforward-network-ffn-in-the-transformer-model-6bb6e0ff18db  
-[5]: https://www.tutorialspoint.com/gen-ai/feed-forward-neural-network-in-transformers.htm  
-[6]: https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model  
-[7]: https://www.machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1  
-[8]: https://medium.com/@punya8147_26846/layer-normalization-and-residual-connections-in-transformer-layers-f7ed9a96a1ae  
-[9]: https://arxiv.org/pdf/2002.04745  
-[10]: https://www.geeksforgeeks.org/nlp/positional-encoding-in-transformers  
-[11]: https://apxml.com/courses/foundations-transformers-architecture/chapter-2-attention-mechanism-core-concepts/scaled-dot-product-attention  
+[1]: https://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf?utm_source=genmind.ch  
+[2]: https://medium.com/@funcry/in-depth-understanding-of-attention-mechanism-part-ii-scaled-dot-product-attention-and-its-7743804e610e?utm_source=genmind.ch  
+[3]: https://www.geeksforgeeks.org/nlp/multi-head-attention-mechanism?utm_source=genmind.ch  
+[4]: https://medium.com/image-processing-with-python/the-feedforward-network-ffn-in-the-transformer-model-6bb6e0ff18db?utm_source=genmind.ch  
+[5]: https://www.tutorialspoint.com/gen-ai/feed-forward-neural-network-in-transformers.htm?utm_source=genmind.ch  
+[6]: https://datascience.stackexchange.com/questions/51065/what-is-the-positional-encoding-in-the-transformer-model?utm_source=genmind.ch  
+[7]: https://www.machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1?utm_source=genmind.ch  
+[8]: https://medium.com/@punya8147_26846/layer-normalization-and-residual-connections-in-transformer-layers-f7ed9a96a1ae?utm_source=genmind.ch  
+[9]: https://arxiv.org/pdf/2002.04745?utm_source=genmind.ch  
+[10]: https://www.geeksforgeeks.org/nlp/positional-encoding-in-transformers?utm_source=genmind.ch  
+[11]: https://apxml.com/courses/foundations-transformers-architecture/chapter-2-attention-mechanism-core-concepts/scaled-dot-product-attention?utm_source=genmind.ch  
 
