@@ -1,6 +1,6 @@
 ---
 title: "Choosing the Right Optimizer for Your Deep Learning Problem"
-date: "2025-12-06T08:00:00+00:00"
+date: "2025-12-07T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/12/optimizer1.png"
