@@ -418,6 +418,87 @@ The architecture (CNN, Transformer, MLP) doesn't change the loss — the *task* 
 
 ---
 
+## Bonus: Visualizing the Loss Landscape
+
+The hero image for this post was generated with the following script, which renders a 3D loss surface using the Himmelblau function — a classic non-convex landscape that resembles real neural network loss surfaces:
+
+```python
+import torch
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+# Toy non-convex loss surface: Himmelblau function
+# Looks similar to classic "NN loss landscape" illustrations.
+def himmelblau(w1, w2):
+    return (w1**2 + w2 - 11)**2 + (w1 + w2**2 - 7)**2
+
+# Create a grid over two "weights"
+w1 = torch.linspace(-6, 6, 200)
+w2 = torch.linspace(-6, 6, 200)
+W1, W2 = torch.meshgrid(w1, w2, indexing="ij")
+L = himmelblau(W1, W2)
+
+# Convert to numpy for plotting
+W1n = W1.numpy()
+W2n = W2.numpy()
+Ln = L.numpy()
+
+# Mark a start point and a target minimum
+start = torch.tensor([-4.5, 4.5])
+target = torch.tensor([3.0, 2.0])  # known minimum vicinity
+
+start_loss = himmelblau(start[0], start[1]).item()
+target_loss = himmelblau(target[0], target[1]).item()
+
+# Plot the surface
+fig = plt.figure(figsize=(10, 6.5))
+ax = fig.add_subplot(111, projection="3d")
+
+surf = ax.plot_surface(
+    W1n, W2n, Ln,
+    linewidth=0,
+    antialiased=True,
+    cmap="viridis",
+    alpha=0.95
+)
+
+# Add floor contours for readability
+z_offset = Ln.min() - 10
+ax.contour(W1n, W2n, Ln, zdir="z", offset=z_offset, levels=15)
+
+# Scatter markers for start/goal
+ax.scatter(start[0].item(), start[1].item(), start_loss, s=60, marker="o")
+ax.scatter(target[0].item(), target[1].item(), target_loss, s=80, marker="o")
+
+# Text annotations
+ax.text(start[0].item(), start[1].item(), start_loss + 15, "Starting here")
+ax.text(target[0].item(), target[1].item(), target_loss + 15, "We want to get to here")
+
+# Labels similar to classic "loss landscape" figures
+ax.set_xlabel("Weights (w1)")
+ax.set_ylabel("Weights (w2)")
+ax.set_zlabel("Loss")
+
+# Ensure the contour floor is visible
+ax.set_zlim(z_offset, Ln.max() * 0.6)
+
+# View angle
+ax.view_init(elev=28, azim=-60)
+
+# Colorbar
+fig.colorbar(surf, shrink=0.6, pad=0.08)
+
+# Save locally
+plt.savefig("loss_landscape_3d.png", dpi=220, bbox_inches="tight")
+plt.close()
+
+print("Saved: loss_landscape_3d.png")
+```
+
+This visualization shows the challenge of optimization: navigating a complex, non-convex surface with multiple local minima to find the global minimum. The loss function defines *what* this surface looks like — the optimizer determines *how* we traverse it.
+
+---
+
 ## References
 
 - [PyTorch CrossEntropyLoss](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html?utm_source=genmind.ch)
