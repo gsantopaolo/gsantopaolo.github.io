@@ -25,7 +25,7 @@ tags:
     - MNIST
 ---
 
-This project was is about training a model on the classic [MNIST dataset](https://yann.lecun.com/exdb/mnist/) — a collection of handwritten digits that’s been a staple in the ML community. Let’s take a friendly tour through the code and ideas behind this experiment.
+This project was is about training a model on the classic [MNIST dataset](https://yann.lecun.com/exdb/mnist/?utm_source=genmind.ch) — a collection of handwritten digits that’s been a staple in the ML community. Let’s take a friendly tour through the code and ideas behind this experiment.
 
 ## Setting Up the Experiment
 
@@ -86,6 +86,6 @@ Looking back, this project was a fantastic learning experience. It demonstrated 
 
 Whether you’re just starting out or are already deep into machine learning, I hope this little trip down memory lane inspires you to experiment and build. The world of ML is vast, and with tools like Microsoft.ML, integrating these powerful techniques into your applications has never been more accessible.
 
-Source code available on my [github repo](https://github.com/gsantopaolo/MNIST_Sample)
+Source code available on my [github repo](https://github.com/gsantopaolo/MNIST_Sample?utm_source=genmind.ch)
 
 Happy coding and keep exploring!

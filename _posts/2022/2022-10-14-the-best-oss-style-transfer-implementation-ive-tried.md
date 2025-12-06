@@ -11,22 +11,22 @@ tags:
     - 'style transfer'
 ---
 
-I’ve was on the hunt for an open-source style transfer implementation able to produce the output I saw on the different papers, after trying several implementations and getting underwhelming outputs, I finally came across [Katherine Crowson’s style-transfer-pytorch](https://github.com/crowsonkb/style-transfer-pytorch). And wow—the results blew me away!
+I’ve was on the hunt for an open-source style transfer implementation able to produce the output I saw on the different papers, after trying several implementations and getting underwhelming outputs, I finally came across [Katherine Crowson’s style-transfer-pytorch](https://github.com/crowsonkb/style-transfer-pytorch?utm_source=genmind.ch). And wow—the results blew me away!
 
 ### What Makes This Implementation Stand Out
 
-Katherine’s implementation based on the paper [“A Neural Algorithm of Artistic Style”](https://arxiv.org/abs/1508.06576) supports both CPUs and Nvidia GPUs, and even goes as far as producing high-resolution, print-ready stylizations. Some of the cool modifications from the original paper include:
+Katherine’s implementation based on the paper [“A Neural Algorithm of Artistic Style”](https://arxiv.org/abs/1508.06576?utm_source=genmind.ch) supports both CPUs and Nvidia GPUs, and even goes as far as producing high-resolution, print-ready stylizations. Some of the cool modifications from the original paper include:
 
 - **Using PyTorch pre-trained VGG-19 weights:** A small change that makes a big difference.
 - **Improved padding:** Changing the first layer’s padding mode to `'replicate'` helps reduce edge artifacts.
 - **Scaled pooling results:** Ensuring the output magnitude remains consistent.
-- **[Wasserstein-2 style loss](https://wandb.ai/johnowhitaker/style_loss_showdown/reports/An-Explanation-of-Style-Transfer-with-a-Showdown-of-Different-Techniques--VmlldzozMDIzNjg0#style-loss-#3:-%22vincent's-loss%22):** For a more refined style comparison.
+- **[Wasserstein-2 style loss](https://wandb.ai/johnowhitaker/style_loss_showdown/reports/An-Explanation-of-Style-Transfer-with-a-Showdown-of-Different-Techniques--VmlldzozMDIzNjg0?utm_source=genmind.ch#style-loss-#3:-%22vincent's-loss%22):** For a more refined style comparison.
 - **Exponential moving average:** To reduce noise and improve the overall output.
 - **Multi-scale stylization:** Stylizing images at progressively larger scales (each larger by a factor of √2).
 
 ### Running on MPS (Mac) Without a Hitch
 
-While testing on my Mac, I discovered that the code was defaulting to CPU—even though my system supports MPS. After a bit of digging, I found that in `cli.py` ([line 216](https://github.com/crowsonkb/style-transfer-pytorch/blob/master/style_transfer/cli.py)), the device selection wasn’t checking for MPS hardware. Here’s the quick fix I made:
+While testing on my Mac, I discovered that the code was defaulting to CPU—even though my system supports MPS. After a bit of digging, I found that in `cli.py` ([line 216](https://github.com/crowsonkb/style-transfer-pytorch?utm_source=genmind.ch/blob/master/style_transfer/cli.py)), the device selection wasn’t checking for MPS hardware. Here’s the quick fix I made:
 
 
 
@@ -50,6 +50,6 @@ And the result? Check by yourself!
 
 A huge shoutout to Katherine Crowson for her exceptional work on this project. If you’re into neural style transfer and want a reliable, high-quality implementation, I highly recommend giving this a try.
 
-<del>As always, you can download the code here.</del> \[Edit\] I’ve pushed this fix to [my fork](https://github.com/gsantopaolo/style-transfer-pytorch)—check it out if you’re interested!
+<del>As always, you can download the code here.</del> \[Edit\] I’ve pushed this fix to [my fork](https://github.com/gsantopaolo/style-transfer-pytorch?utm_source=genmind.ch)—check it out if you’re interested!
 
 Happy styling!

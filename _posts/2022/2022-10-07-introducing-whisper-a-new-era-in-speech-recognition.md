@@ -46,8 +46,8 @@ I tested the large version with some long Italian and German audio, and I must a
 
 For developers and AI enthusiasts, Whisper represents a significant step forward. Not only does it offer robust speech recognition capabilities, but its ease of integration means you can get started quickly with minimal setup. Imagine the possibilities—from improving accessibility to powering innovative voice-controlled applications!
 
-For those interested in the internal implementation details, check out the official [Whisper repository](https://github.com/openai/whisper) on GitHub. It’s a great resource to dive deeper into how this impressive model works under the hood. 🔍
+For those interested in the internal implementation details, check out the official [Whisper repository](https://github.com/openai/whisper?utm_source=genmind.ch) on GitHub. It’s a great resource to dive deeper into how this impressive model works under the hood. 🔍
 
-I hope you find this simple introduction helpful. As always, <del>you can download the full source code here</del> \[edit\] moved the [my GitHub repo](https://github.com/gsantopaolo/ML).
+I hope you find this simple introduction helpful. As always, <del>you can download the full source code here</del> \[edit\] moved the [my GitHub repo](https://github.com/gsantopaolo/ML?utm_source=genmind.ch).
 
 Happy coding! 😄

@@ -123,6 +123,6 @@ tensorboard --logdir=mnist-tensorboard/log-1
 
 When you open TensorBoard’s “Projector” tab, you’ll see how the digits cluster in 2D/3D. Look for areas where **1’s** and **7’s** overlap—they can be visually similar. This overlap might indicate potential misclassifications, reminding you that data visualization can reveal subtle pitfalls that raw accuracy doesn’t always capture.
 
-I hope you find this simple introduction helpful. <del>As always, you can download the full source code</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/dataviz)
+I hope you find this simple introduction helpful. <del>As always, you can download the full source code</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/dataviz?utm_source=genmind.ch)
 
 Happy embedding—and watch out for those tricky 1’s and 7’s!

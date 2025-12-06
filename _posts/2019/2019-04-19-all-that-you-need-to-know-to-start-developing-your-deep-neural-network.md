@@ -13,6 +13,6 @@ It is transforming our lives. As a developer, you should be part of it.
 And this is the right place where to start with a deep overview of what 
 AI (Artificial Intelligence) /ML (Machine Learning) /DL (Deep Learning) /DNN (Deep Neural Network) are, where the technology is, where is going, and how you can be a part of it by starting developing your models. From Machine Learning and Deep Neural Network through TensorFlow, CNTK, ML.Net, WinML, and ONNX. All that you need to know to start developing your Deep Neural Network, which tool to use and when to use it, making your app, site or service intelligent.
 
-You can find the full source code on my [github repo](https://github.com/gsantopaolo/UpdateConference2019)
+You can find the full source code on my [github repo](https://github.com/gsantopaolo/UpdateConference2019?utm_source=genmind.ch)
 
 <div class="ast-oembed-container " style="height: 100%;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="281" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ujhtW6UGvhM?feature=oembed" title="Future Tech 2019: Gian Paolo Santopaolo - AI for every developer" width="500"></iframe></div>

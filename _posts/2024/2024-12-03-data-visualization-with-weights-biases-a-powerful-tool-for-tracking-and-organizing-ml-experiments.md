@@ -127,5 +127,5 @@ Weights &amp; Biases has transformed the way we handle machine learning experime
 
 Check out my GitHub repository for more details and to explore additional data visualization examples. There, you’ll also find other samples that demonstrate different visualization techniques with W&amp;B.
 
-<del>Feel free to download the source code</del>. \[edit\] I’m moved all the code of my blog posts on [my GitHub](https://github.com/gsantopaolo/dataviz)  
+<del>Feel free to download the source code</del>. \[edit\] I’m moved all the code of my blog posts on [my GitHub](https://github.com/gsantopaolo/dataviz?utm_source=genmind.ch)  
 Happy experimenting, and enjoy visualizing your data like never before!

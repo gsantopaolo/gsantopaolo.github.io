@@ -132,4 +132,4 @@ Requirements
 <div class="markdown-heading" dir="auto">## Looking Ahead
 
 </div>CogniX isn’t just about managing documents—it’s about unlocking their full value through intelligent, semantic analysis. Discover how CogniX can transform your document management strategy today. Whether you’re developing applications that require natural language understanding, creating content, or exploring new ways to interact with AI, CogniX provides the technological foundation to achieve your goals with exceptional performance. Discover the future of text generation with CogniX.  
-You can find the sour code on my [GitHub repo](https://github.com/gen-mind/cognix)
+You can find the sour code on my [GitHub repo](https://github.com/gen-mind/cognix?utm_source=genmind.ch)

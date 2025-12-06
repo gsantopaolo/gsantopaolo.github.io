@@ -33,7 +33,7 @@ intervention function used in LoReFT, which finds an edit vector that only modif
 in the linear subspace spanned by the rows of R. Specifically, we show how a rank-2 LoReFT
 operates on 3-dimensional hidden representations.
 
-Source: [ReFT: Representation Finetuning for Language Models](https://arxiv.org/abs/2404.03592) 
+Source: [ReFT: Representation Finetuning for Language Models](https://arxiv.org/abs/2404.03592?utm_source=genmind.ch) 
 
 
 ## Why PyReFT?
@@ -107,5 +107,5 @@ These possibilities make PyReFT an exciting development in the field of natural 
 PyReFT represents a significant step forward in the realm of fine-tuning language models. Its reft-native design offers a 
 flexible, modular, and efficient way to enhance the fine-tuning process, making it accessible to both researchers and practitioners. If you’re interested in experimenting with cutting-edge fine-tuning techniques, I encourage you to explore PyReFT further.
 
-For a complete example of how to use the library, check out [my GitHub repository](https://github.com/gsantopaolo/fine-tuning) where the full code is available. 
+For a complete example of how to use the library, check out [my GitHub repository](https://github.com/gsantopaolo/fine-tuning?utm_source=genmind.ch) where the full code is available. 
 Happy fine-tuning!

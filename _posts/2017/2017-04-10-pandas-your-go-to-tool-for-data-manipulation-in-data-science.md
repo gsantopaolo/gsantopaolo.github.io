@@ -33,7 +33,7 @@ Some key features of pandas include:
 ## Example 1: Data Loading and Basic Exploration
 
 **Use Case:** Quickly load and inspect data to understand its structure, detect anomalies, and prepare for further analysis.  
-Imagine you have a CSV file containing sales data (on [my GitHub repository](https://github.com/gsantopaolo/ML) you’ll find both the notebook and data) With just a few lines of code, you can load the data into a DataFrame and get a quick overview:
+Imagine you have a CSV file containing sales data (on [my GitHub repository](https://github.com/gsantopaolo/ML?utm_source=genmind.ch) you’ll find both the notebook and data) With just a few lines of code, you can load the data into a DataFrame and get a quick overview:
 
 ```python
 
@@ -124,7 +124,7 @@ print(merged_data.head())
 
 Pandas is an indispensable tool in the data scientist’s toolkit. Its intuitive data structures and powerful functionalities allow you to manipulate, analyze, and visualize data efficiently. Whether you’re performing data cleaning, conducting exploratory data analysis, or preparing data for machine learning, pandas can significantly speed up your workflow.
 
-Feel free to download the source code. \[edit\] I’m moved all the code of my blog posts on [my GitHub](https://github.com/gsantopaolo/ML)  
+Feel free to download the source code. \[edit\] I’m moved all the code of my blog posts on [my GitHub](https://github.com/gsantopaolo/ML?utm_source=genmind.ch)  
 Happy coding!
 
 Happy coding!

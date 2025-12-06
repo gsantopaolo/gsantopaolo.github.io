@@ -53,7 +53,7 @@ Et voilà, in your terminal to launch the TensorBoard web interface. Here, you c
 
 <figure aria-describedby="caption-attachment-268" class="wp-caption aligncenter" id="attachment_268" style="width: 691px">![](content/2025/03/tensorboard-300x123.jpg)<figcaption class="wp-caption-text" id="caption-attachment-268">TensorBoard</figcaption></figure>#### How Does TensorBoard Compare to Weights &amp; Biases?
 
-While TensorBoard is built into the TensorFlow ecosystem and provides a fast, no-cost solution for basic visualization needs, it can be limited when it comes to advanced experiment tracking. On the other hand, [Weights &amp; Biases](https://wandb.ai/) (W&amp;B) integrates seamlessly with TensorBoard logging but goes further by offering:
+While TensorBoard is built into the TensorFlow ecosystem and provides a fast, no-cost solution for basic visualization needs, it can be limited when it comes to advanced experiment tracking. On the other hand, [Weights &amp; Biases](https://wandb.ai/?utm_source=genmind.ch) (W&amp;B) integrates seamlessly with TensorBoard logging but goes further by offering:
 
 - **Enhanced Experiment Tracking:** Automatic logging of hyperparameters, code versions, and artifacts.
 - **Robust Comparison Tools:** Easy filtering and grouping of experiments for quick comparisons.
@@ -64,5 +64,5 @@ In short, if you’re looking for a straightforward visualization tool for indiv
 ---
 
 This post quickly shows how a small code change can significantly boost your model tracking capabilities.  
-I hope you find this simple introduction helpful. As always, <del>you can download the full source code here</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/dataviz)  
+I hope you find this simple introduction helpful. As always, <del>you can download the full source code here</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/dataviz?utm_source=genmind.ch)  
 Happy coding!

@@ -22,7 +22,7 @@ All these QA pairs, along with their respective context sections, were then comb
 
 \[edit\]
 
-You can easily use the dataset [directly from HuggingFace](https://huggingface.co/datasets/gsantopaolo/faa-balloon-flying-handbook) like this:
+You can easily use the dataset [directly from HuggingFace](https://huggingface.co/datasets/gsantopaolo/faa-balloon-flying-handbook?utm_source=genmind.ch) like this:
 
 ```python
 from datasets import load_dataset
@@ -36,6 +36,6 @@ for row in dataset["train"][:5]:
     print(row)
 ```
 
-You can use the same approach to create your own datase, and if you need help, feel free to reach me out, all my contacts at the bottom of the [about page](https://genmind.ch/about/). As always, <del>you can download the full source code here</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/datasets/tree/main/balloon)
+You can use the same approach to create your own datase, and if you need help, feel free to reach me out, all my contacts at the bottom of the [about page](https://genmind.ch/about/). As always, <del>you can download the full source code here</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/datasets/tree/main/balloon?utm_source=genmind.ch)
 
 Happy coding!
