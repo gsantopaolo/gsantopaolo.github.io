@@ -9,7 +9,7 @@ order: 5
 
 Hi, I'm **Gian Paolo Santopaolo**—welcome to my blog!
 
-I'm a **Senior Generative AI Engineer** focused on building production-grade multimodal and RAG systems. I work daily with Python and PyTorch and deliver AI solutions from research prototypes to scalable deployments.
+I'm a **Senior Generative AI Engineer** focused on building production-grade AI systems—from **custom neural architectures** (CNNs, DNNs, Transformers) and **LLM/diffusion model fine-tuning** to **RAG platforms** and **agentic pipelines**. I work daily with Python and PyTorch, delivering AI solutions from research prototypes to scalable, multi-GPU deployments.
 
 I developed **[CogniX](https://github.com/gen-mind/cognix?utm_source=genmind.ch)**, an enterprise RAG platform and multimodal AI stack, and integrated generative AI (LLMs, diffusion, vision, speech, OCR) into **Collaboard**, a real-time collaboration product used worldwide.
 
