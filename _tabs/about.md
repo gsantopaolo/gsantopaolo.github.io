@@ -103,20 +103,20 @@ I've shipped AI features to **millions of users** and built open-source projects
 
 ## Education & Certifications
 
-### Stanford Artificial Intelligence Professional Program
-- [CS224N: Natural Language Processing with Deep Learning](https://digitalcredential.stanford.edu/check/CS224N?utm_source=genmind.ch)
-- [CS234: Reinforcement Learning](https://digitalcredential.stanford.edu/check/CS234?utm_source=genmind.ch)
-- [CS236: Deep Generative Models](https://digitalcredential.stanford.edu/check/CS236?utm_source=genmind.ch)
+### [Stanford Artificial Intelligence Professional Program](https://digitalcredential.stanford.edu/check/B52A8FFB6B96F0DAC4000FD84CAAC6F635192EEE5B7D058839267258F84848DDQ0FOMU5jVzhpbnE1ZzlnazI5UTN6OGRpbHRkYWdDazMzQVByc29qcHd1OHYrbDNR)
+- [CS224N: Natural Language Processing with Deep Learning](https://digitalcredential.stanford.edu/check/01E54E385FD93EEC1907740545AEC1BF15B556539262E64CE1357BB9BE0463A2MXBxSWhsd1IwTkxRcXE5SlNWcHpjTklaSWFycXBCV1dVUERpcFhpM3ljRjhNd0NL)
+- [CS234: Reinforcement Learning](https://digitalcredential.stanford.edu/check/962AC48ADE24B2B378208BF2631FC8A7F1585976A9543535DED6343755B78DB6Nkk3RHZtcSs1ci9vU1QzR3k2aVJ1VnI1UnBPWkM0T1BUSS8vcW84dXdyYTdsa25D)
+- [CS236: Deep Generative Models](https://digitalcredential.stanford.edu/check/44BC32942A9E46E729B7FF66E9DB27AD7AF398B0497193DF9FE7F3BEA9D77E05SEJHRlFUc0ljMG43VW5tKzlEeEtPRFRET0FNNUk2Rk5DdU8wWkcrb3lENTFuNlhR)
 
-### Machine Learning Specialization (DeepLearning.AI & Stanford University)
-- [Supervised Machine Learning: Regression and Classification](https://www.coursera.org/account/accomplishments/certificate/ML-SUPERVISED?utm_source=genmind.ch)
-- [Advanced Learning Algorithms](https://www.coursera.org/account/accomplishments/certificate/ML-ADVANCED?utm_source=genmind.ch)
-- [Unsupervised Learning, Recommenders, Reinforcement Learning](https://www.coursera.org/account/accomplishments/certificate/ML-UNSUPERVISED?utm_source=genmind.ch)
+### [Machine Learning Specialization (DeepLearning.AI & Stanford University)](https://coursera.org/share/977e42f1f9171dd46ccb990c0f4cbbe2)
+- [Supervised Machine Learning: Regression and Classification](https://coursera.org/share/17e741421e72852be9c8ae827f4a990e)
+- [Advanced Learning Algorithms](https://coursera.org/share/bad73055b4d33cff1b7a05f23a6d9799)
+- [Unsupervised Learning, Recommenders, Reinforcement Learning](https://coursera.org/share/c8c58154c103a600daa48ca2731b4fe1)
 
 ### Mathematics for Machine Learning Specialization (Imperial College London)
-- [Linear Algebra](https://www.coursera.org/account/accomplishments/certificate/MATH-LINALG?utm_source=genmind.ch)
-- [Multivariate Calculus](https://www.coursera.org/account/accomplishments/certificate/MATH-CALC?utm_source=genmind.ch)
-- [Principal Component Analysis (PCA)](https://www.coursera.org/account/accomplishments/certificate/MATH-PCA?utm_source=genmind.ch)
+- Linear Algebra
+- Multivariate Calculus
+- Principal Component Analysis (PCA)
 
 *Continuous professional development through hands-on projects, research, and industry engagement.*
 
