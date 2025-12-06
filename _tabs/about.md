@@ -118,6 +118,10 @@ I've shipped AI features to **millions of users** and built open-source projects
 - Multivariate Calculus
 - Principal Component Analysis (PCA)
 
+### B.Sc. Applied Artificial Intelligence - IU International University of Applied Sciences 
+- 180 ECTS credits
+- Currently enrolling
+
 *Continuous professional development through hands-on projects, research, and industry engagement.*
 
 ---
