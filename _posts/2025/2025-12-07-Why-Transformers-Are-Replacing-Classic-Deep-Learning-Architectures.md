@@ -1,6 +1,6 @@
 ---
 title: "Why Transformers Are Replacing Classic Deep Learning Architectures (and What That Really Means)"
-date: "2025-12-05T08:00:00+00:00"
+date: "2025-12-07T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/12/tensorcore1.png"
