@@ -79,7 +79,7 @@ The core insight is simple: **matrix multiplications can be parallelized by spli
 Suppose you need to compute $Y = XW$ where $X$ is your input and $W$ is a weight matrix. If you split $W$ into column blocks:
 
 $$
-W = [W_1 | W_2 | ... | W_n]
+W = [W_1 \mid W_2 \mid \ldots \mid W_n]
 $$
 
 Then each GPU computes its slice independently:
@@ -118,10 +118,10 @@ graph LR
 
 ### Row-Parallel Matrix Multiplication
 
-Now suppose you have column-sharded input $X = [X_1 | X_2 | ... | X_n]$ and you split $W$ into matching row blocks:
+Now suppose you have column-sharded input $X = [X_1 \mid X_2 \mid \ldots \mid X_n]$ and you split $W$ into matching row blocks:
 
 $$
-W = \begin{bmatrix} W_1 \\ W_2 \\ ... \\ W_n \end{bmatrix}
+W = \begin{bmatrix} W_1 \\ W_2 \\ \vdots \\ W_n \end{bmatrix}
 $$
 
 Each GPU computes a partial result:
@@ -187,11 +187,11 @@ The attention mechanism has three projection matrices: $W_Q$, $W_K$, $W_V$ (quer
 
 Each GPU gets a subset of attention heads. If you have 32 heads and 4 GPUs, each GPU handles 8 heads.
 
-```python
-# Conceptually, each GPU computes:
-Q_i = X @ W_Q[:, heads_for_gpu_i]  # Column slice
-K_i = X @ W_K[:, heads_for_gpu_i]
-V_i = X @ W_V[:, heads_for_gpu_i]
+```text
+GPU i computes (column slices of weight matrices):
+  Q_i = X × W_Q[all_rows, columns_for_heads_i]
+  K_i = X × W_K[all_rows, columns_for_heads_i]
+  V_i = X × W_V[all_rows, columns_for_heads_i]
 ```
 
 No communication needed — each GPU works independently.
@@ -200,9 +200,9 @@ No communication needed — each GPU works independently.
 
 Since attention heads are independent, each GPU computes attention for its heads locally:
 
-```python
-# Each GPU computes attention for its heads
-attn_i = softmax(Q_i @ K_i.T / sqrt(d_k)) @ V_i
+```text
+GPU i computes attention locally:
+  attn_i = softmax(Q_i × K_i^T / √d_k) × V_i
 ```
 
 Still no communication.
@@ -211,12 +211,12 @@ Still no communication.
 
 The output projection $W_O$ is split by rows. Each GPU multiplies its attention output by its slice of $W_O$, then we all-reduce:
 
-```python
-# Each GPU computes partial output
-partial_i = attn_i @ W_O[rows_for_gpu_i, :]
+```text
+GPU i computes partial output (row slice of W_O):
+  partial_i = attn_i × W_O[rows_for_gpu_i, all_cols]
 
-# All-reduce to get final output
-output = all_reduce_sum(partial_i)
+All GPUs synchronize:
+  output = AllReduce(partial_0 + partial_1 + ... + partial_n)
 ```
 
 **One all-reduce per attention layer.**
@@ -230,14 +230,18 @@ $$
 $$
 
 **First Linear (Column-Parallel):**
-```python
-hidden_i = GELU(x @ W1[:, cols_for_gpu_i])
+```text
+GPU i computes:
+  hidden_i = GELU(x × W1[all_rows, cols_for_gpu_i])
 ```
 
 **Second Linear (Row-Parallel):**
-```python
-partial_i = hidden_i @ W2[rows_for_gpu_i, :]
-output = all_reduce_sum(partial_i)
+```text
+GPU i computes:
+  partial_i = hidden_i × W2[rows_for_gpu_i, all_cols]
+
+All GPUs synchronize:
+  output = AllReduce(sum of all partial_i)
 ```
 
 **One all-reduce per FFN layer.**
