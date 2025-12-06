@@ -506,32 +506,13 @@ scheduler = OneCycleLR(
 
 ### Learning Rate Schedule Comparison
 
-```mermaid
-graph LR
-    subgraph "Constant"
-        C[───────────────]
-    end
-    
-    subgraph "Step Decay"
-        S[────┐<br/>    └────┐<br/>         └────]
-    end
-    
-    subgraph "Cosine Annealing"
-        CA[╲<br/>  ╲<br/>    ╲<br/>      ─]
-    end
-    
-    subgraph "Warmup + Cosine"
-        WC[╱╲<br/>    ╲<br/>      ╲<br/>        ─]
-    end
-```
-
-| Schedule | Best For |
-|----------|----------|
-| Constant | Quick experiments |
-| Step Decay | CNNs (traditional) |
-| Cosine Annealing | Most modern training |
-| Warmup + Cosine | Transformers |
-| OneCycleLR | Fast training, super-convergence |
+| Schedule | Shape | Description | Best For |
+|----------|-------|-------------|----------|
+| **Constant** | `────────` | Fixed LR throughout | Quick experiments |
+| **Step Decay** | `──┐ └──┐ └──` | Drops at milestones | CNNs (traditional) |
+| **Cosine Annealing** | `╲  ╲  ─` | Smooth decay to minimum | Most modern training |
+| **Warmup + Cosine** | `╱╲  ╲  ─` | Ramp up, then decay | Transformers |
+| **OneCycleLR** | `╱ ╲` | Up then down in one cycle | Fast training, super-convergence |
 
 ---
 
