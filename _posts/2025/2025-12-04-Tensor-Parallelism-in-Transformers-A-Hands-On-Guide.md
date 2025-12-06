@@ -4,7 +4,7 @@ date: "2025-12-04T22:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/12/tp1.png"
-categories: [Tensor Parallelism, Transformers, Multi-GPU, PyTorch, RunPod, Lambda Cloud]
+categories: [Tensor Parallelism, Tensor, Transformers, Multi-GPU, PyTorch, RunPod, Lambda Cloud]
 published: true
 mermaid: true
 math: true
