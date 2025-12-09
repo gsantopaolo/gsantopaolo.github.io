@@ -15,7 +15,7 @@ This is where **Tensor Parallelism (TP)** comes in — it splits the model's wei
 
 This guide is hands-on. We'll cover the theory just enough to understand what's happening, then dive straight into code. 
 By the end, you'll have working scripts for running tensor-parallel inference on **RunPod** and **Lambda Cloud**.
-
+ 
 ---
 
 ## Why Tensor Parallelism? The Memory Wall Problem
