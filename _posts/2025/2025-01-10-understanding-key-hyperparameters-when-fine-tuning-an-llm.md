@@ -95,6 +95,12 @@ When fine-tuning an LLM using supervised fine-tuning (SFT), a common starting po
 - **Learning Rate Schedules:  
     Implementing a learning rate schedule—such as starting with a warm-up phase followed by linear decay—can further enhance training stability. The warm-up phase helps the model begin training gently, while decay ensures the learning rate decreases as the model converges.
 
+> For a deep dive into loss functions, see [Choosing the Right Loss Function for your ML Problem]({% post_url /2025/2025-12-05-Choosing-the-Right-Loss-Function-for-your-ML-Problem %}).
+{: .prompt-tip }
+
+> For guidance on optimizers and learning rate schedules, see [Choosing the Right Optimizer for Your Deep Learning Problem]({% post_url /2025/2025-12-07-Choosing-the-Right-Optimizer-for-Your-Deep-Learning-Problem %}).
+{: .prompt-tip }
+
 # **Number of Epochs**
 
 Finding the optimal number of epochs is a balancing act:

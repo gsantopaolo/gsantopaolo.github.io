@@ -110,6 +110,12 @@ Fine tuning requires careful tuning of several hyperparameters. While the optima
 > I wrote a full blog post about the topic, see [Understanding Key Hyperparameters When Fine-Tuning an LLM]({% post_url /2025/2025-01-10-understanding-key-hyperparameters-when-fine-tuning-an-llm %})
 {: .prompt-tip }
 
+> See also [Choosing the Right Loss Function for your ML Problem]({% post_url /2025/2025-12-05-Choosing-the-Right-Loss-Function-for-your-ML-Problem %}) to understand which loss function to use for your task.
+{: .prompt-tip }
+
+> See also [Choosing the Right Optimizer for Your Deep Learning Problem]({% post_url /2025/2025-12-07-Choosing-the-Right-Optimizer-for-Your-Deep-Learning-Problem %}) to pick the right optimizer and learning rate schedule.
+{: .prompt-tip }
+
 ---
 
 ## Conclusion
