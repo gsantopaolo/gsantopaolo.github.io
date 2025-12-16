@@ -45,7 +45,6 @@ graph TB
         F1 --> G1[Real Image]
     end
     style G1 fill:#6c6,stroke:#333,stroke-width:2px
-    style G2 fill:#f96,stroke:#333,stroke-width:2px
 ```
 
 
@@ -65,7 +64,6 @@ graph TB
         E2 --> G2[AI Image]
     end
     
-    style G1 fill:#6c6,stroke:#333,stroke-width:2px
     style G2 fill:#f96,stroke:#333,stroke-width:2px
 ```
 
