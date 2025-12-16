@@ -3,7 +3,7 @@ title: "Detecting AI-Generated Images: What Actually Works in 2025"
 date: "2025-12-15T22:30:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/12/performance_degradation.png"
+image: "/content/2025/12/sample_images_gradients.png"
 categories: [Computer Vision, AI Detection, Deep Learning, PyTorch]
 published: true
 mermaid: true
