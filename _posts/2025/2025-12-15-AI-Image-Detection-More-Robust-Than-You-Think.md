@@ -580,7 +580,7 @@ From the GenImage paper:
 - **GenImage Dataset**: [Million-Scale Benchmark for AI Image Detection](https://arxiv.org/abs/2306.08571?utm_source=genmind.ch)
 - **LGrad (CVPR 2023)**: [Learning on Gradients for GAN Detection](https://github.com/chuangchuangtan/LGrad?utm_source=genmind.ch)
 - **Frequency-based Detection**: [Natural Frequency Deviation for Diffusion Detection](https://openreview.net/forum?id=fPBExgC1m9?utm_source=genmind.ch)
-- **CIFAKE Dataset**: [HuggingFace Dataset](https://huggingface.co/datasets/birgermoell/cifake-real-and-fake-images?utm_source=genmind.ch)
+- **CIFAKE Dataset**: [HuggingFace Dataset](https://huggingface.co/datasets/yanbax/CIFAKE_autotrain_compatible?utm_source=genmind.ch)
 - **Diffusion vs GAN Detection**: [Recent Advances on Diffusion-Generated Image Detection](https://arxiv.org/html/2502.19716?utm_source=genmind.ch)
 
 ---
