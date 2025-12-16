@@ -119,10 +119,6 @@ The gradient magnitude heatmaps show where edges and textures are strongest. Rea
 
 ## The Code: Fully Functional PyTorch Implementation
 
-Here's a complete script that downloads the dataset, extracts features, trains detectors, and visualizes results.
-
-
-### Get the Full Code
 
 The complete implementation is available on GitHub:
 
