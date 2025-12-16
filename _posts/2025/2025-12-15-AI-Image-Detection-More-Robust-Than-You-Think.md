@@ -602,17 +602,43 @@ The test images include both the failures (Midjourney) and successes (real photo
 
 ### ✅ What Works
 
-- **Training on large, diverse datasets** (GenImage-scale, not CIFAR-scale)
 - **Deep learning detectors** with augmentation and degradation in training
 - **Ensemble methods** (combine gradient, frequency, and learned features)
-- **Domain-specific fine-tuning** (medical images ≠ social media photos)
+- **Detection within training distribution** (72-97% AUC on same generator)
+- **Robustness to common degradations** (JPEG Q=75, social media resizing)
+- **Real photo identification** (92% accuracy in our cross-generator test)
 
 ### ⚠️ What Remains Challenging
 
-- **Cross-generator generalization**: Training on Stable Diffusion, testing on DALL-E 3
+- **Cross-generator generalization**: Training on Stable Diffusion, testing on Midjourney (17% accuracy in our test)
 - **Extreme degradations**: Multiple re-compressions, JPEG Q<30, heavy filters
 - **Adversarial attacks**: Generators specifically designed to fool detectors
 - **Newer models**: GPT-4V, Midjourney v6, FLUX may be harder to detect
+
+### 🚀 The Path Forward: GenImage-Scale Training
+
+Our Midjourney test revealed the critical weakness: **training on a single generator doesn't generalize**. The solution? Train on diverse, multi-generator datasets like [GenImage](https://github.com/GenImage-Dataset/GenImage?utm_source=genmind.ch).
+
+**What GenImage provides:**
+- **1M+ images** from 8 different generators
+- **Multiple architectures**: Stable Diffusion, DALL-E, Midjourney, BigGAN, StyleGAN, VQGAN, Glide, ADM
+- **High resolution** images (not limited to 32×32)
+- **Standardized evaluation** protocols
+
+**To build a robust cross-generator detector, you would need to:**
+
+1. **Train on GenImage's full diversity** (8 generators, multiple resolutions)
+2. **Include degradation augmentation** during training (JPEG, resize, blur)
+3. **Use multi-scale architectures** that handle varying resolutions
+4. **Fine-tune on target domains** (social media vs. medical vs. artistic images)
+
+This is **active research territory** and beyond the scope of a single-person demo project. But the current experiment successfully demonstrates:
+
+✅ **The robustness claim** (detection survives JPEG/resize)  
+✅ **The generalization challenge** (fails on unseen generators)  
+✅ **The solution path** (GenImage-scale multi-generator training)
+
+**For production use**, invest in GenImage-scale training or use commercial APIs that have done this work (though verify their cross-generator performance!).
 
 ### 🔬 The Nuanced Reality
 
@@ -648,7 +674,7 @@ The viral narrative is that "detection only works in controlled labs and fails o
 ✅ **Hand-crafted features maintain 70-83% AUC** under all degradations  
 ✅ **CNNs achieve 85-97% AUC range** depending on scenario  
 
-This doesn't mean detection is solved. CNNs show 10-15% degradation under resize, cross-generator generalization remains challenging, and adversarial attacks could potentially fool detectors. But the doom-and-gloom narrative that "detection is impossible in practice" is demonstrably false.
+This doesn't mean detection is solved. Our cross-generator test showed **17% accuracy on Midjourney images** despite 92% accuracy on real photos—a stark reminder that training on one generator (Stable Diffusion) doesn't transfer to others (Midjourney). But the doom-and-gloom narrative that "detection is impossible in practice" oversimplifies the reality.
 
 **The reality is nuanced:**
 - Detection works reasonably well under common conditions (web uploads, social media)
