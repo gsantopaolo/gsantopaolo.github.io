@@ -18,10 +18,10 @@ This narrative is everywhere. But is it actually true?
 
 Recent papers show promising results:
 
-- **[Detecting Diffusion Models (CVPR 2023)](https://arxiv.org/abs/2211.09295)** - Frequency analysis detects diffusion-generated images with >90% accuracy
-- **[GenImage Benchmark (2023)](https://github.com/GenImage-Dataset/GenImage)** - Multi-generator dataset showing detectors work across Stable Diffusion, DALL-E, Midjourney
-- **[LGrad (CVPR 2023)](https://openaccess.thecvf.com/content/CVPR2023/html/Tan_Learning_on_Gradients_Generalized_Artifacts_Representation_for_GAN-Generated_Images_Detection_CVPR_2023_paper.html)** - Gradient-based features generalize across GAN architectures
-- **[Preprocessing Detection (Gragnaniello et al.)](https://arxiv.org/abs/2104.02632)** - Shows FFT can detect synthetic images despite compression
+- **[Detecting Diffusion Models (CVPR 2023)](https://arxiv.org/abs/2211.09295?utm_source=genmind.ch)** - Frequency analysis detects diffusion-generated images with >90% accuracy
+- **[GenImage Benchmark (2023)](https://github.com/GenImage-Dataset/GenImage?utm_source=genmind.ch)** - Multi-generator dataset showing detectors work across Stable Diffusion, DALL-E, Midjourney
+- **[LGrad (CVPR 2023)](https://openaccess.thecvf.com/content/CVPR2023/html/Tan_Learning_on_Gradients_Generalized_Artifacts_Representation_for_GAN-Generated_Images_Detection_CVPR_2023_paper.html?utm_source=genmind.ch)** - Gradient-based features generalize across GAN architectures
+- **[Preprocessing Detection (Gragnaniello et al.)](https://arxiv.org/abs/2104.02632?utm_source=genmind.ch)** - Shows FFT can detect synthetic images despite compression
 
 **The problem:** Most papers test on pristine images. When they mention "robustness," they often test on *different datasets*, not *degraded conditions*.
 
@@ -532,7 +532,7 @@ graph LR
 
 ## Context: The GenImage Benchmark
 
-The [GenImage dataset](https://arxiv.org/abs/2306.08571) is the gold standard for testing AI image detectors. It includes:
+The [GenImage dataset](https://arxiv.org/abs/2306.08571?utm_source=genmind.ch) is the gold standard for testing AI image detectors. It includes:
 - 1M+ images from 8 different generators
 - Degradation protocols (JPEG, blur, resize)
 - Cross-generator evaluation
@@ -581,11 +581,11 @@ From the GenImage paper:
 
 ## References & Further Reading
 
-- **GenImage Dataset**: [Million-Scale Benchmark for AI Image Detection](https://arxiv.org/abs/2306.08571)
-- **LGrad (CVPR 2023)**: [Learning on Gradients for GAN Detection](https://github.com/chuangchuangtan/LGrad)
-- **Frequency-based Detection**: [Natural Frequency Deviation for Diffusion Detection](https://openreview.net/forum?id=fPBExgC1m9)
-- **CIFAKE Dataset**: [HuggingFace Dataset](https://huggingface.co/datasets/birgermoell/cifake-real-and-fake-images)
-- **Diffusion vs GAN Detection**: [Recent Advances on Diffusion-Generated Image Detection](https://arxiv.org/html/2502.19716)
+- **GenImage Dataset**: [Million-Scale Benchmark for AI Image Detection](https://arxiv.org/abs/2306.08571?utm_source=genmind.ch)
+- **LGrad (CVPR 2023)**: [Learning on Gradients for GAN Detection](https://github.com/chuangchuangtan/LGrad?utm_source=genmind.ch)
+- **Frequency-based Detection**: [Natural Frequency Deviation for Diffusion Detection](https://openreview.net/forum?id=fPBExgC1m9?utm_source=genmind.ch)
+- **CIFAKE Dataset**: [HuggingFace Dataset](https://huggingface.co/datasets/birgermoell/cifake-real-and-fake-images?utm_source=genmind.ch)
+- **Diffusion vs GAN Detection**: [Recent Advances on Diffusion-Generated Image Detection](https://arxiv.org/html/2502.19716?utm_source=genmind.ch)
 
 ---
 
@@ -613,4 +613,4 @@ As of 2025, **practical AI image detection is viable**—just not as easy as opt
 
 **Want to verify these results yourself?** 
 
-Download the full code from [github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection) and run your own experiments. Test different generators, degradations, and detection methods. Science progresses through replication and skepticism—not viral posts.
+Download the full code from [github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection?utm_source=genmind.ch) and run your own experiments. Test different generators, degradations, and detection methods. Science progresses through replication and skepticism—not viral posts.
