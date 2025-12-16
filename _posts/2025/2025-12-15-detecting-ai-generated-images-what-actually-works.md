@@ -93,6 +93,15 @@ We'll test three methods on CIFAKE, a dataset of 60k real images (CIFAR-10) vs 6
 
 Then we'll test robustness by applying JPEG compression and resizing to both classes equally.
 
+### Visual Evidence: What Gradients Actually Look Like
+
+Before diving into the code, let's see what gradient features reveal:
+
+![Sample images with gradient visualizations](/content/2025/12/sample_images_gradients.png){: width="800" height="400" }
+_Real vs AI-generated images with their gradient magnitude, horizontal (X), and vertical (Y) components. Notice the subtle differences in gradient patterns._
+
+The gradient magnitude heatmaps show where edges and textures are strongest. Real photos from camera sensors tend to have slightly different gradient distributions than diffusion-generated images, but the differences are subtle and easily destroyed by post-processing.
+
 ---
 
 ## The Code: Fully Functional PyTorch Implementation
@@ -105,40 +114,29 @@ Here's a complete script that downloads the dataset, extracts features, trains d
 pip install torch torchvision numpy matplotlib scikit-learn Pillow datasets
 ```
 
-### Complete Script: `detect_ai_images.py`
+### Get the Full Code
+
+The complete implementation is available on GitHub:
+
+**[github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection)**
+
+Clone and run:
+```bash
+git clone https://github.com/gsantopaolo/synthetic-image-detection
+cd synthetic-image-detection
+pip install -r requirements.txt
+python detect_ai_images.py
+```
+
+Below, I'll walk through the key components that make this experiment work.
+
+---
+
+### 1. Dataset with Degradation Pipeline
+
+The core of the experiment is testing robustness. Here's how we apply JPEG compression and resizing on-the-fly:
 
 ```python
-
-"""
-AI-Generated Image Detection: Gradient, FFT, and CNN approaches
-Tests on CIFAKE dataset with robustness checks for JPEG/resize
-"""
-import io
-import os
-import random
-from pathlib import Path
-from typing import Tuple, Optional
-import numpy as np
-import matplotlib.pyplot as plt
-from PIL import Image, ImageFilter
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from sklearn.decomposition import PCA
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score, accuracy_score
-from sklearn.preprocessing import StandardScaler
-
-# Auto-download CIFAKE from HuggingFace
-try:
-    from datasets import load_dataset
-    HF_AVAILABLE = True
-except ImportError:
-    HF_AVAILABLE = False
-    print("⚠️  'datasets' not installed. Install with: pip install datasets")
-
-
 class CIFAKEDataset(Dataset):
     """CIFAKE dataset: Real CIFAR-10 images vs Stable Diffusion fakes"""
     
@@ -147,51 +145,24 @@ class CIFAKEDataset(Dataset):
         self.jpeg_quality = jpeg_quality
         self.resize_factor = resize_factor
         
-        if not HF_AVAILABLE:
-            raise RuntimeError("Install 'datasets': pip install datasets")
+        # Load from HuggingFace, sample if needed
+        ds = load_dataset("dragonintelligence/CIFAKE-image-dataset", split=split)
+        # ... sampling logic ...
         
-        print(f"📥 Loading CIFAKE {split} split...")
-        ds = load_dataset("birgermoell/cifake-real-and-fake-images", 
-                          split=split, trust_remote_code=True)
-        
-        if limit:
-            random.seed(seed)
-            indices = random.sample(range(len(ds)), min(limit, len(ds)))
-            ds = ds.select(indices)
-        
-        self.data = []
-        self.labels = []
-        
-        for item in ds:
-            img = item['image'].convert('RGB')
-            label = 0 if item['label'] == 1 else 1  # 0=real, 1=fake
-            self.data.append(img)
-            self.labels.append(label)
-        
-        print(f"✅ Loaded {len(self.data)} images "
-              f"({sum(1 for l in self.labels if l==0)} real, "
-              f"{sum(1 for l in self.labels if l==1)} fake)")
-    
-    def __len__(self):
-        return len(self.data)
-    
     def __getitem__(self, idx):
         img = self.data[idx]
         
-        # Apply degradation if specified
+        # THIS IS THE KEY: Apply degradation on-the-fly
         if self.jpeg_quality:
             img = self._jpeg_compress(img, self.jpeg_quality)
         if self.resize_factor != 1.0:
             img = self._resize_and_restore(img, self.resize_factor)
         
-        # Convert to tensor [0, 1]
-        img_array = np.array(img).astype(np.float32) / 255.0
-        img_tensor = torch.from_numpy(img_array).permute(2, 0, 1)
-        
-        return img_tensor, self.labels[idx]
+        return torch.tensor(img), self.labels[idx]
     
     @staticmethod
     def _jpeg_compress(img, quality):
+        """Compress image to JPEG at specified quality"""
         buf = io.BytesIO()
         img.save(buf, format='JPEG', quality=quality)
         buf.seek(0)
@@ -199,24 +170,30 @@ class CIFAKEDataset(Dataset):
     
     @staticmethod
     def _resize_and_restore(img, factor):
+        """Downscale then upscale back (simulates social media)"""
         w, h = img.size
         small = img.resize((int(w*factor), int(h*factor)), Image.BICUBIC)
         return small.resize((w, h), Image.BICUBIC)
+```
 
+**Why this matters**: By applying degradations in `__getitem__`, we can test the same dataset under different conditions without duplicating data. The `_jpeg_compress` and `_resize_and_restore` methods simulate real-world image processing pipelines.
 
+---
+
+### 2. Gradient Feature Extraction
+
+Here's how we compute gradient-based features using Sobel filters:
+
+```python
 def extract_gradient_features(images: torch.Tensor) -> np.ndarray:
-    """
-    Extract gradient-based features from images
-    images: (B, 3, H, W) in [0, 1]
-    Returns: (B, feature_dim) numpy array
-    """
+    """Extract gradient statistics from images"""
     B, _, H, W = images.shape
     
-    # Convert to grayscale (luminance)
+    # Convert to grayscale
     r, g, b = images[:, 0:1], images[:, 1:2], images[:, 2:3]
-    luma = 0.2126 * r + 0.7152 * g + 0.0722 * b  # (B, 1, H, W)
+    luma = 0.2126 * r + 0.7152 * g + 0.0722 * b
     
-    # Sobel filters
+    # Sobel filters for edge detection
     sobel_x = torch.tensor([[-1, 0, 1], 
                             [-2, 0, 2], 
                             [-1, 0, 1]], dtype=torch.float32) / 8.0
@@ -224,258 +201,85 @@ def extract_gradient_features(images: torch.Tensor) -> np.ndarray:
                             [ 0,  0,  0], 
                             [ 1,  2,  1]], dtype=torch.float32) / 8.0
     
-    sobel_x = sobel_x.view(1, 1, 3, 3).to(images.device)
-    sobel_y = sobel_y.view(1, 1, 3, 3).to(images.device)
+    # Apply convolution to get gradients
+    gx = F.conv2d(luma, sobel_x.view(1, 1, 3, 3), padding=1)
+    gy = F.conv2d(luma, sobel_y.view(1, 1, 3, 3), padding=1)
     
-    gx = F.conv2d(luma, sobel_x, padding=1)
-    gy = F.conv2d(luma, sobel_y, padding=1)
-    
-    # Flatten gradients
-    gx_flat = gx.view(B, -1)
-    gy_flat = gy.view(B, -1)
-    
-    # Compute statistics
+    # Compute gradient magnitude
     mag = torch.sqrt(gx**2 + gy**2)
-    mean_mag = mag.mean(dim=(1, 2, 3))
     
-    # Covariance features
-    gx_c = gx_flat - gx_flat.mean(dim=1, keepdim=True)
-    gy_c = gy_flat - gy_flat.mean(dim=1, keepdim=True)
-    
-    cov_xx = (gx_c * gx_c).mean(dim=1)
-    cov_yy = (gy_c * gy_c).mean(dim=1)
-    cov_xy = (gx_c * gy_c).mean(dim=1)
-    
-    # Eigenvalue-based features
-    trace = cov_xx + cov_yy
-    det = cov_xx * cov_yy - cov_xy**2
-    det = torch.clamp(det, min=0.0)
-    
-    # Gradient magnitude histogram (8 bins)
-    mag_hist = []
-    for i in range(B):
-        hist = torch.histc(mag[i], bins=8, min=0, max=1)
-        mag_hist.append(hist)
-    mag_hist = torch.stack(mag_hist)
-    
-    features = torch.cat([
-        mean_mag.unsqueeze(1),
-        cov_xx.unsqueeze(1),
-        cov_yy.unsqueeze(1),
-        cov_xy.unsqueeze(1),
-        trace.unsqueeze(1),
-        det.unsqueeze(1),
-        mag_hist
-    ], dim=1)
+    # Extract statistical features:
+    # - Mean magnitude
+    # - Covariance matrix (gradient structure tensor)
+    # - Gradient histogram (distribution)
+    # ... feature computation ...
     
     return features.detach().cpu().numpy()
+```
 
+**The features**: We extract 14 features per image: mean gradient magnitude, covariance statistics (trace, determinant), and an 8-bin histogram of gradient magnitudes. These capture edge strength and texture patterns.
 
+---
+
+### 3. Frequency Domain (FFT) Features
+
+For frequency analysis, we compute radial energy profiles:
+
+```python
 def extract_fft_features(images: torch.Tensor) -> np.ndarray:
-    """
-    Extract frequency-domain features using FFT
-    images: (B, 3, H, W) in [0, 1]
-    Returns: (B, feature_dim) numpy array
-    """
+    """Extract frequency-domain features using FFT"""
     B, _, H, W = images.shape
     
     # Convert to grayscale
-    r, g, b = images[:, 0:1], images[:, 1:2], images[:, 2:3]
-    gray = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    gray = 0.2126 * images[:,0] + 0.7152 * images[:,1] + 0.0722 * images[:,2]
     
     features = []
     for i in range(B):
-        img_np = gray[i, 0].cpu().numpy()
-        
-        # 2D FFT
-        f = np.fft.fft2(img_np)
+        # 2D FFT and shift to center
+        f = np.fft.fft2(gray[i].cpu().numpy())
         fshift = np.fft.fftshift(f)
         magnitude = np.abs(fshift)
         
-        # Log magnitude spectrum
-        magnitude_db = 20 * np.log10(magnitude + 1e-10)
-        
-        # Radial frequency bins
+        # Compute radial frequency profile
+        # Split spectrum into 8 concentric rings
+        # Measure energy in each ring (low freq → high freq)
         center_h, center_w = H // 2, W // 2
         y, x = np.ogrid[:H, :W]
         radius = np.sqrt((x - center_w)**2 + (y - center_h)**2)
         
-        # Compute energy in frequency bands
-        max_radius = min(H, W) // 2
-        n_bins = 8
         radial_profile = []
-        
-        for r_idx in range(n_bins):
-            r_min = (r_idx / n_bins) * max_radius
-            r_max = ((r_idx + 1) / n_bins) * max_radius
-            mask = (radius >= r_min) & (radius < r_max)
-            energy = np.mean(magnitude[mask]) if mask.any() else 0
+        for ring in range(8):
+            mask = (radius >= ring/8 * max_r) & (radius < (ring+1)/8 * max_r)
+            energy = np.mean(magnitude[mask])
             radial_profile.append(energy)
         
-        # High-frequency ratio
-        high_freq_mask = radius > max_radius * 0.7
-        low_freq_mask = radius < max_radius * 0.3
-        high_energy = np.mean(magnitude[high_freq_mask])
-        low_energy = np.mean(magnitude[low_freq_mask])
-        hf_ratio = high_energy / (low_energy + 1e-10)
-        
-        feat = radial_profile + [hf_ratio]
-        features.append(feat)
+        # Add high-frequency ratio
+        hf_ratio = high_freq_energy / low_freq_energy
+        features.append(radial_profile + [hf_ratio])
     
     return np.array(features)
+```
 
+**The features**: 9 features per image - energy in 8 frequency bands (from DC/low to high) plus high-frequency ratio. This captures the frequency signature differences shown in our earlier plots.
 
-class SimpleCNN(nn.Module):
-    """Simple CNN for binary classification"""
-    
-    def __init__(self):
-        super().__init__()
-        self.features = nn.Sequential(
-            nn.Conv2d(3, 32, 3, padding=1),
-            nn.BatchNorm2d(32),
-            nn.ReLU(),
-            nn.MaxPool2d(2),
-            
-            nn.Conv2d(32, 64, 3, padding=1),
-            nn.BatchNorm2d(64),
-            nn.ReLU(),
-            nn.MaxPool2d(2),
-            
-            nn.Conv2d(64, 128, 3, padding=1),
-            nn.BatchNorm2d(128),
-            nn.ReLU(),
-            nn.AdaptiveAvgPool2d(1)
-        )
-        self.classifier = nn.Sequential(
-            nn.Flatten(),
-            nn.Linear(128, 64),
-            nn.ReLU(),
-            nn.Dropout(0.5),
-            nn.Linear(64, 1)
-        )
-    
-    def forward(self, x):
-        x = self.features(x)
-        x = self.classifier(x)
-        return x
+---
 
+### 4. The CNN Baseline
 
-def train_cnn(train_loader, val_loader, device, epochs=10):
-    """Train simple CNN classifier"""
-    model = SimpleCNN().to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
-    criterion = nn.BCEWithLogitsLoss()
-    
-    best_val_acc = 0
-    
-    for epoch in range(epochs):
-        model.train()
-        train_loss = 0
-        
-        for images, labels in train_loader:
-            images, labels = images.to(device), labels.float().to(device)
-            
-            optimizer.zero_grad()
-            outputs = model(images).squeeze()
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-            
-            train_loss += loss.item()
-        
-        # Validation
-        model.eval()
-        val_preds, val_labels = [], []
-        
-        with torch.no_grad():
-            for images, labels in val_loader:
-                images = images.to(device)
-                outputs = model(images).squeeze()
-                probs = torch.sigmoid(outputs)
-                val_preds.extend(probs.cpu().numpy())
-                val_labels.extend(labels.numpy())
-        
-        val_preds = np.array(val_preds)
-        val_labels = np.array(val_labels)
-        val_acc = accuracy_score(val_labels, (val_preds > 0.5).astype(int))
-        val_auc = roc_auc_score(val_labels, val_preds)
-        
-        if val_acc > best_val_acc:
-            best_val_acc = val_acc
-        
-        print(f"Epoch {epoch+1}/{epochs} - "
-              f"Loss: {train_loss/len(train_loader):.4f} - "
-              f"Val Acc: {val_acc:.4f} - Val AUC: {val_auc:.4f}")
-    
-    return model
+For comparison, we also train a simple CNN (3 conv layers, batch norm, dropout). Standard architecture: `Conv → ReLU → Pool → ... → Linear`. Trained with Adam optimizer and BCE loss. Nothing fancy—just a baseline to see if learned features outperform hand-crafted ones.
 
+---
 
-def evaluate_detector(features, labels, name="Detector"):
-    """Evaluate classical detector with PCA visualization"""
-    
-    # Standardize features
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(features)
-    
-    # PCA for visualization
-    pca = PCA(n_components=2)
-    X_pca = pca.fit_transform(X_scaled)
-    
-    # Train logistic regression with cross-validation
-    from sklearn.model_selection import StratifiedKFold
-    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-    
-    aucs, accs = [], []
-    for train_idx, test_idx in skf.split(X_scaled, labels):
-        clf = LogisticRegression(max_iter=1000)
-        clf.fit(X_scaled[train_idx], labels[train_idx])
-        probs = clf.predict_proba(X_scaled[test_idx])[:, 1]
-        preds = (probs > 0.5).astype(int)
-        
-        aucs.append(roc_auc_score(labels[test_idx], probs))
-        accs.append(accuracy_score(labels[test_idx], preds))
-    
-    print(f"\n{name}:")
-    print(f"  Accuracy: {np.mean(accs):.4f} ± {np.std(accs):.4f}")
-    print(f"  AUC: {np.mean(aucs):.4f} ± {np.std(aucs):.4f}")
-    
-    return X_pca, np.mean(aucs), np.mean(accs)
+### 5. Putting It All Together: The Experiment Loop
 
+Here's the core experiment structure:
 
-def plot_pca_comparison(results, output_dir):
-    """Plot PCA visualizations for all scenarios"""
-    fig, axes = plt.subplots(2, 3, figsize=(15, 10))
-    axes = axes.flatten()
-    
-    for idx, (scenario, data) in enumerate(results.items()):
-        ax = axes[idx]
-        
-        for method, (X_pca, labels, auc) in data.items():
-            real_mask = labels == 0
-            fake_mask = labels == 1
-            
-            ax.scatter(X_pca[real_mask, 0], X_pca[real_mask, 1], 
-                      s=5, alpha=0.4, label='Real', c='green')
-            ax.scatter(X_pca[fake_mask, 0], X_pca[fake_mask, 1], 
-                      s=5, alpha=0.4, label='Fake', c='red')
-            
-            ax.set_title(f"{scenario}\n{method} (AUC: {auc:.3f})")
-            ax.legend()
-            ax.grid(True, alpha=0.3)
-    
-    plt.tight_layout()
-    plt.savefig(output_dir / 'pca_comparison.png', dpi=150)
-    print(f"\n📊 Saved PCA comparison to {output_dir / 'pca_comparison.png'}")
-
-
+```python
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"🔧 Using device: {device}")
-    
     output_dir = Path('detection_results')
-    output_dir.mkdir(exist_ok=True)
     
-    # Test scenarios
+    # Define test scenarios
     scenarios = {
         'Raw Images': {'jpeg_quality': None, 'resize_factor': 1.0},
         'JPEG Q=75': {'jpeg_quality': 75, 'resize_factor': 1.0},
@@ -485,87 +289,50 @@ def main():
     results = {}
     
     for scenario_name, params in scenarios.items():
-        print(f"\n{'='*60}")
-        print(f"Testing: {scenario_name}")
-        print(f"{'='*60}")
-        
-        # Load dataset
+        # Load dataset with degradation parameters
         train_ds = CIFAKEDataset('train', limit=5000, **params)
         val_ds = CIFAKEDataset('test', limit=2000, **params)
         
-        train_loader = DataLoader(train_ds, batch_size=64, shuffle=True)
-        val_loader = DataLoader(val_ds, batch_size=64, shuffle=False)
+        # Extract gradient and FFT features
+        gradient_feats = extract_gradient_features(val_images)
+        fft_feats = extract_fft_features(val_images)
         
-        # Collect features
-        print("\n📊 Extracting features...")
-        gradient_feats, fft_feats, all_labels = [], [], []
+        # Evaluate classical detectors (Logistic Regression on features)
+        grad_auc = evaluate_detector(gradient_feats, labels, "Gradient")
+        fft_auc = evaluate_detector(fft_feats, labels, "FFT")
         
-        with torch.no_grad():
-            for images, labels in val_loader:
-                images = images.to(device)
-                
-                grad_f = extract_gradient_features(images)
-                fft_f = extract_fft_features(images)
-                
-                gradient_feats.append(grad_f)
-                fft_feats.append(fft_f)
-                all_labels.extend(labels.numpy())
-        
-        gradient_feats = np.vstack(gradient_feats)
-        fft_feats = np.vstack(fft_feats)
-        all_labels = np.array(all_labels)
-        
-        # Evaluate detectors
-        grad_pca, grad_auc, grad_acc = evaluate_detector(
-            gradient_feats, all_labels, "Gradient Features")
-        
-        fft_pca, fft_auc, fft_acc = evaluate_detector(
-            fft_feats, all_labels, "FFT Features")
-        
-        # Train CNN
-        print("\n🧠 Training CNN...")
+        # Train and evaluate CNN
         cnn_model = train_cnn(train_loader, val_loader, device, epochs=5)
-        
-        # Evaluate CNN
-        cnn_model.eval()
-        cnn_preds, cnn_labels = [], []
-        with torch.no_grad():
-            for images, labels in val_loader:
-                images = images.to(device)
-                outputs = cnn_model(images).squeeze()
-                probs = torch.sigmoid(outputs)
-                cnn_preds.extend(probs.cpu().numpy())
-                cnn_labels.extend(labels.numpy())
-        
-        cnn_auc = roc_auc_score(cnn_labels, cnn_preds)
-        cnn_acc = accuracy_score(cnn_labels, (np.array(cnn_preds) > 0.5).astype(int))
-        
-        print(f"\nCNN Detector:")
-        print(f"  Accuracy: {cnn_acc:.4f}")
-        print(f"  AUC: {cnn_auc:.4f}")
+        cnn_auc = evaluate_cnn(cnn_model, val_loader)
         
         results[scenario_name] = {
-            'Gradient': (grad_pca, all_labels, grad_auc),
-            'FFT': (fft_pca, all_labels, fft_auc),
+            'Gradient': grad_auc,
+            'FFT': fft_auc,
+            'CNN': cnn_auc
         }
     
-    # Plot comparison
+    # Generate all plots
+    plot_performance_degradation(results, output_dir)
     plot_pca_comparison(results, output_dir)
-    
-    print(f"\n{'='*60}")
-    print("✅ Experiment complete!")
-    print(f"{'='*60}")
-
-
-if __name__ == '__main__':
-    main()
+    plot_sample_images_with_gradients(val_ds, output_dir)
+    plot_fft_spectra(val_ds, output_dir)
+    plot_radial_frequency_profile(val_ds, output_dir)
 ```
+
+**The key insight**: By parameterizing the dataset with `jpeg_quality` and `resize_factor`, we run the exact same experiment pipeline three times with different degradations. This reveals how performance changes under real-world conditions.
+
+For the complete implementation including visualization functions, see the [full code on GitHub](https://github.com/gsantopaolo/synthetic-image-detection).
 
 ---
 
 ## Running the Experiment
 
+Clone the repository and run:
+
 ```bash
+git clone https://github.com/gsantopaolo/synthetic-image-detection
+cd synthetic-image-detection
+pip install -r requirements.txt
 python detect_ai_images.py
 ```
 
@@ -601,29 +368,59 @@ Testing: JPEG Q=75
 
 ## What the Results Show
 
-### Raw Images (No Preprocessing)
+Here's the critical finding: **detection accuracy collapses under real-world conditions**.
 
-**Gradient features**: AUC ~0.92  
-**FFT features**: AUC ~0.89  
-**Simple CNN**: AUC ~0.98
+![Performance degradation across scenarios](/content/2025/12/performance_degradation.png){: width="700" height="500" }
+_AUC scores for Gradient, FFT, and CNN detectors under three conditions: clean images, JPEG compression (Q=75), and resize (0.5x then back). Notice the dramatic drop in all methods when images are degraded._
 
-All three methods work well on clean images. The CNN dominates because it learns task-specific features beyond simple gradients.
+### Key Observations:
 
-### After JPEG Compression (Q=75)
+**On Raw Images (No Preprocessing)**:
+- All three methods work well on pristine images
+- Gradient features achieve ~0.72 AUC (decent but not perfect)
+- FFT features perform better at ~0.83 AUC
+- Simple CNN dominates at ~0.96 AUC
 
-**Gradient features**: AUC drops to ~0.78  
-**FFT features**: AUC drops to ~0.72  
-**Simple CNN**: AUC drops to ~0.87
+The CNN wins because it learns task-specific features beyond simple gradients. But even the CNN isn't bulletproof.
 
-JPEG compression introduces its own gradient artifacts and frequency patterns, making the separation less clean. The CNN is more robust but still degraded.
+**After JPEG Compression (Q=75)**:
+- **All methods degrade significantly**
+- Performance drops across all detectors
+- FFT features remain relatively stable
+- CNN drops but stays above 0.9 AUC
 
-### After Resize (0.5x then back to original)
+JPEG compression introduces its own gradient artifacts and frequency patterns that can overwhelm subtle generator signatures. The 8×8 DCT blocks create their own high-frequency patterns.
 
-**Gradient features**: AUC drops to ~0.71  
-**FFT features**: AUC drops to ~0.69  
-**Simple CNN**: AUC drops to ~0.81
+**After Resize (0.5x then back to original)**:
+- **Further degradation across the board**
+- Gradient features struggle most with spatial distortions
+- FFT features also degrade as high frequencies are lost
+- CNN remains strongest but is still degraded
 
-Downsampling destroys high-frequency information that both methods rely on. This simulates what happens when images are shared on social media.
+Downsampling destroys high-frequency information that all methods rely on. The bicubic interpolation when upscaling back smooths out telltale artifacts. This simulates what happens when images are shared on social media platforms that automatically resize uploads.
+
+### Feature Space Visualization
+
+Here's how the features separate (or don't) after PCA dimensionality reduction:
+
+![PCA comparison across scenarios and methods](/content/2025/12/pca_comparison.png){: width="900" height="600" }
+_PCA projection of gradient and FFT features for each scenario. Green dots = real images, red dots = AI-generated. Notice how the clusters overlap more as degradation increases._
+
+The top row shows decent separation on raw images - you can see two somewhat distinct clusters. The bottom row shows significantly more overlap as degradation increases. The classes become harder to separate linearly, which explains why even logistic regression struggles.
+
+### Frequency Domain Analysis
+
+The article claims diffusion models have different frequency characteristics. Let's verify:
+
+![FFT magnitude spectra comparison](/content/2025/12/fft_spectra_comparison.png){: width="900" height="600" }
+_FFT magnitude spectra (log scale) for real vs AI-generated images. The center column shows DC and low frequencies with higher detail._
+
+Real photos show more noise in high frequencies due to sensor characteristics and optical imperfections. AI-generated images tend to have slightly cleaner spectra because the diffusion denoising process can smooth high-frequency content.
+
+![Radial frequency profile](/content/2025/12/radial_frequency_profile.png){: width="800" height="400" }
+_Average radial frequency energy distribution across 50 samples. AI-generated images (red) have slightly different high-frequency energy than real images (green), but notice the substantial overlap shown by the shaded regions._
+
+The shaded regions show standard deviation—there's considerable overlap between the two distributions. This explains why FFT features alone don't provide perfect separation. The difference exists but is subtle and inconsistent.
 
 ---
 
@@ -738,4 +535,4 @@ The viral claim that "gradients reveal AI images reliably" is oversimplified. Mo
 
 The arms race continues. As of 2025, detecting AI images is possible but not trivial. The days of "just check the gradients" are over—if they ever existed at all.
 
-**Want to test your own images?** Use the code above and experiment with different generators, preprocessing pipelines, and detection methods. The best way to understand what works is to break it yourself.
+**Want to test your own images?** Download the full code from [github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection) and experiment with different generators, preprocessing pipelines, and detection methods. The best way to understand what works is to break it yourself.
