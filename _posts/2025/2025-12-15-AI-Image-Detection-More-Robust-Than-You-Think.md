@@ -546,6 +546,58 @@ From the GenImage paper:
 
 ---
 
+## Real-World Test: Cross-Generator Challenge
+
+To stress-test the detector beyond controlled experiments, I tested it on real personal photos and Midjourney-generated images available in the [GitHub repository's test_images folder](https://github.com/gsantopaolo/synthetic-image-detection/tree/main/test_images?utm_source=genmind.ch).
+
+**Test setup:**
+- **41 AI-generated images**: High-resolution Midjourney outputs (WebP/JPEG)
+- **76 Real images**: Personal photos (iPhone + Canon DSLR), including degraded versions
+- **Challenge**: Detector trained on CIFAR-10 (32×32 Stable Diffusion v1.4) tested on high-res Midjourney
+
+### Results: Cross-Generator Failure
+
+| Category | Correct | Accuracy |
+|----------|---------|----------|
+| **AI Images (Midjourney)** | 7 / 41 | **17.1%** ❌ |
+| **Real Images (Photos)** | 70 / 76 | **92.1%** ✅ |
+
+**What happened?** The detector **completely failed** on Midjourney images while performing well on real photos.
+
+**Why?** Looking at individual predictions reveals the problem:
+
+```
+ai1.webp (Midjourney):
+  Gradient: 22.8% AI
+  FFT: 66.8% AI ← Hand-crafted features see something!
+  CNN: 1.4% AI ← Deep learning completely fooled
+  Ensemble: 25.3% AI → Classified as REAL ❌
+```
+
+The CNN, trained on low-resolution Stable Diffusion outputs, learned features that **don't generalize** to:
+- Different generators (SD v1.4 → Midjourney v6)
+- Different resolutions (32×32 → high-res)
+- Different image domains (CIFAR-10 objects → artistic compositions)
+
+### Key Insight: Domain Mismatch
+
+This test **validates the limitations** discussed earlier:
+
+✅ **Detection works well in-distribution** (CIFAKE test set: 72-97% AUC)  
+❌ **Detection fails cross-generator** (Midjourney: 17% accuracy)  
+✅ **Real photos correctly identified** (92% accuracy despite degradation)  
+
+**The takeaway:** Detectors trained on one generator/resolution don't automatically generalize to others. This is exactly what the GenImage paper warned about, and our real-world test confirms it.
+
+**You can verify these results yourself:** Clone the repo and run:
+```bash
+python detector.py test_images/
+```
+
+The test images include both the failures (Midjourney) and successes (real photos + degraded versions), providing a transparent view of where current detection methods excel and where they fall short.
+
+---
+
 ## Practical Takeaways for 2025
 
 ### ✅ What Works
