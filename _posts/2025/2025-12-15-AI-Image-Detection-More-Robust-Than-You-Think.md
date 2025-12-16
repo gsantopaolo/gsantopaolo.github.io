@@ -14,13 +14,28 @@ I keep seeing posts claiming: *"AI image detection completely fails in the real 
 
 This narrative is everywhere. But is it actually true?
 
-I built an experiment to test three popular detection methods—gradient features, frequency analysis, and a simple CNN—under realistic conditions: JPEG compression and social media-style resizing. The results surprised me.
+### Major Research Says Detection Works (In Theory)
+
+Recent papers show promising results:
+
+- **[Detecting Diffusion Models (CVPR 2023)](https://arxiv.org/abs/2211.09295)** - Frequency analysis detects diffusion-generated images with >90% accuracy
+- **[GenImage Benchmark (2023)](https://github.com/GenImage-Dataset/GenImage)** - Multi-generator dataset showing detectors work across Stable Diffusion, DALL-E, Midjourney
+- **[LGrad (CVPR 2023)](https://openaccess.thecvf.com/content/CVPR2023/html/Tan_Learning_on_Gradients_Generalized_Artifacts_Representation_for_GAN-Generated_Images_Detection_CVPR_2023_paper.html)** - Gradient-based features generalize across GAN architectures
+- **[Preprocessing Detection (Gragnaniello et al.)](https://arxiv.org/abs/2104.02632)** - Shows FFT can detect synthetic images despite compression
+
+**The problem:** Most papers test on pristine images. When they mention "robustness," they often test on *different datasets*, not *degraded conditions*.
+
+### Why I Built This Myself
+
+I wanted to answer a simple question: **Do these methods actually survive JPEG compression and social media resizing?**
+
+Not just theoretically—I wanted to see it with real numbers, real degradation, and code anyone could run. Most papers don't show what happens when you apply JPEG Q=75 (typical web quality) or resize to half-resolution (typical social media).
+
+So I built an experiment to test three popular detection methods—gradient features, frequency analysis, and a simple CNN—under realistic conditions. The results surprised me.
 
 **Detection methods are significantly more robust than the skeptics claim.**
 
-This post cuts through the hype with experiments and code. 
-We'll implement three detection approaches, test them on real data, and see what actually 
-survives real-world conditions like JPEG compression and resizing.
+This post cuts through the hype with experiments and code. We'll implement three detection approaches, test them on real data, and see what actually survives real-world conditions like JPEG compression and resizing.
 
 ---
 
@@ -67,19 +82,17 @@ graph TB
     style G2 fill:#f96,stroke:#333,stroke-width:2px
 ```
 
-### What the Research Says
+### The Detection Hypothesis
 
-**Gradient-based detection works for GANs**: [The CVPR 2023 paper "Learning on Gradients" (LGrad)](https://openaccess.thecvf.com/content/CVPR2023/html/Tan_Learning_on_Gradients_Generalized_Artifacts_Representation_for_GAN-Generated_Images_Detection_CVPR_2023_paper.html) 
-showed that gradient features computed via CNN transformations can detect GAN images with 
-good generalization.
+**Why detection should work:**
 
-**Diffusion models are different**: Recent work shows diffusion-generated images tend to have 
-*lower* high-frequency content than real images, while GANs have *higher* high-frequency content. 
-The artifacts are different.
+**Gradient-based features** - Real cameras introduce specific gradient patterns from optics, sensor noise (PRNU), and demosaicing. AI models generate images from noise without these physical constraints.
 
-**The catch**: These methods assume clean images. Real-world images get compressed, resized, 
-filtered, and re-uploaded. Dataset biases (JPEG vs PNG, different resolutions) can produce 
-perfect-looking separation for the wrong reasons.
+**Frequency domain analysis** - Diffusion models tend to have *lower* high-frequency content than real images (too smooth), while GANs have *higher* high-frequency content (oversharpening). The FFT spectrum reveals these differences.
+
+**Deep learning** - CNNs can learn subtle statistical patterns that hand-crafted features miss, potentially adapting to degraded conditions.
+
+**The gap between lab and reality:** Most research tests on pristine images or different datasets. Few studies rigorously test what happens when you apply typical web/social media degradation to the *same* images. This is what we're testing here.
 
 ---
 
@@ -339,20 +352,40 @@ This trains the models and saves them to the `models/` directory (~64 KB total).
 Once models are trained, you can detect AI images using the `detector.py` inference script:
 
 ```bash
-# Detect a single image
+# Detect a single image (ensemble mode - combines all 3 methods)
 python detector.py photo.jpg
-# Output: photo.jpg  Real: 23.0% | AI: 77.0% → AI
+# Output: photo.jpg  Real: 23.0% | AI: 77.0% → 🤖 AI
+#           (Gradient: 65.0%, FFT: 82.0%, CNN: 88.0%)
 
 # Process an entire folder
 python detector.py my_images/
 
-# JSON output for automation
+# JSON output for automation/APIs
 python detector.py photo.jpg --format json
+# Output: {"file": "photo.jpg", "predictions": {...}, "verdict": "AI"}
+
+# Use specific detector
+python detector.py photo.jpg --model cnn        # CNN only (85-97% AUC)
+python detector.py photo.jpg --model gradient   # Gradient only (70-75% AUC)
+
+# Custom threshold (higher = stricter)
+python detector.py photo.jpg --threshold 0.7
 ```
 
-The detector uses an ensemble of all three methods (gradient, FFT, CNN) with weighted averaging. It works on any image size—the script automatically resizes to 32×32 for processing. You can also use individual detectors (`--model gradient`, `--model fft`, `--model cnn`) or adjust the classification threshold (`--threshold 0.7`).
+#### How Ensemble Works
 
-For more usage examples and options, see the [README](https://github.com/gsantopaolo/synthetic-image-detection).
+By default, the detector combines all three methods with **weighted averaging**:
+
+**Ensemble = 20% × Gradient + 30% × FFT + 50% × CNN**
+
+This leverages the CNN's superior accuracy (85-97% AUC) while using hand-crafted features as validators. The ensemble approach is more robust than any single method, especially under degradation.
+
+#### Output Formats
+
+- **`--format simple`** (default): Human-readable with emojis (🤖 for AI, 📷 for Real)
+- **`--format json`**: Machine-readable for automation, APIs, or batch processing
+
+The detector works on any image size—the script automatically resizes to 32×32 for processing. For more usage examples and options, see the [README](https://github.com/gsantopaolo/synthetic-image-detection).
 
 ---
 
