@@ -34,11 +34,6 @@ The argument goes like this:
 - In-camera processing and JPEG compression
 - Result: consistent gradient patterns from real optics
 
-**AI images** are generated from noise:
-- Diffusion models denoise latent representations
-- No physical sensor, no lens aberrations
-- Gradients are "visually plausible but statistically different"
-
 ```mermaid
 graph TB
     subgraph "Real Photo Pipeline"
@@ -52,6 +47,14 @@ graph TB
     style G1 fill:#6c6,stroke:#333,stroke-width:2px
     style G2 fill:#f96,stroke:#333,stroke-width:2px
 ```
+
+
+**AI images** are generated from noise:
+- Diffusion models denoise latent representations
+- No physical sensor, no lens aberrations
+- Gradients are "visually plausible but statistically different"
+
+
 ```mermaid
 graph TB
     subgraph "AI Generation Pipeline"
