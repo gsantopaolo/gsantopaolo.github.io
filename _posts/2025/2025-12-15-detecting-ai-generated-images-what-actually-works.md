@@ -3,7 +3,7 @@ title: "Detecting AI-Generated Images: What Actually Works in 2025"
 date: "2025-12-15T22:30:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2025/12/ai-detection.png"
+image: "/content/2025/12/performance_degradation.png"
 categories: [Computer Vision, AI Detection, Deep Learning, PyTorch]
 published: true
 mermaid: true
@@ -332,6 +332,8 @@ Clone the repository and run:
 ```bash
 git clone https://github.com/gsantopaolo/synthetic-image-detection
 cd synthetic-image-detection
+conda create -n "syntetic-image" python=3.11.7  
+conda activate syntetic-image  
 pip install -r requirements.txt
 python detect_ai_images.py
 ```
