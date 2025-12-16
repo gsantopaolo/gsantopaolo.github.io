@@ -538,9 +538,9 @@ From the GenImage paper:
 **What the experiments show:**
 
 ✅ **Detection works better than skeptics claim** under common conditions (JPEG Q=75, social media resizing)  
-✅ **Simple CNNs are remarkably robust** (92% AUC after resizing)  
+✅ **Simple CNNs remain strongest** (~85-97% AUC depending on degradation)  
 ✅ **Hand-crafted features still useful** (70-83% AUC is better than random)  
-⚠️ **Not a silver bullet** (cross-generator and extreme degradation remain hard)  
+⚠️ **Not a silver bullet** (performance degrades 10-15% under resize, cross-generator remains hard)  
 
 **The arms race continues**, but detection hasn't lost yet. The doom-and-gloom narrative is oversimplified.
 
@@ -562,12 +562,12 @@ From the GenImage paper:
 
 The viral narrative is that "detection only works in controlled labs and fails on real-world images." The experimental evidence tells a different story:
 
-✅ **JPEG Q=75 doesn't destroy detection signals** (0% performance drop)  
-✅ **Resizing has minimal impact** (CNN drops only 2%, gradient actually improves)  
-✅ **Even simple features maintain 70-75% AUC** under degradation  
-✅ **Basic CNNs achieve 92% AUC** after social media-style processing  
+✅ **JPEG Q=75 has minimal impact** (gradient/FFT unchanged, CNN ~4% drop, stays >90% AUC)  
+✅ **Resizing degrades but remains viable** (CNN drops to ~85% AUC, gradient improves to 75%)  
+✅ **Hand-crafted features maintain 70-83% AUC** under all degradations  
+✅ **CNNs achieve 85-97% AUC range** depending on scenario  
 
-This doesn't mean detection is solved. Cross-generator generalization, adversarial attacks, and extreme degradations remain challenges. But the doom-and-gloom narrative that "detection is impossible in practice" is demonstrably false.
+This doesn't mean detection is solved. CNNs show 10-15% degradation under resize, cross-generator generalization remains challenging, and adversarial attacks could potentially fool detectors. But the doom-and-gloom narrative that "detection is impossible in practice" is demonstrably false.
 
 **The reality is nuanced:**
 - Detection works reasonably well under common conditions (web uploads, social media)
