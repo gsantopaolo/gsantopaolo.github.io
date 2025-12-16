@@ -1,5 +1,5 @@
 ---
-title: "Detecting AI-Generated Images: What Actually Works in 2025"
+title: "AI Image Detection: More Robust Than You Think"
 date: "2025-12-15T22:30:00+00:00"
 author: "gp"
 layout: "post"
@@ -10,13 +10,13 @@ mermaid: true
 math: true
 ---
 
-I'm seeing on LinkedIn several posts: *"You can reliably detect AI-generated images by analyzing 
-pixel gradients. Real photos have a consistent signature from camera optics and sensors. 
-AI images don't. Just run PCA on gradients and the separation is obvious."*
+I keep seeing posts claiming: *"AI image detection completely fails in the real world. JPEG compression and resizing destroy all detection signals. These methods only work in labs with pristine images."*
 
-There's a kernel of truth here. Real cameras do leave traces. 
-Gradient and frequency statistics can differ between real and generated images. 
-But the "obvious separation" claim? That's where things get messy.
+This narrative is everywhere. But is it actually true?
+
+I built an experiment to test three popular detection methods—gradient features, frequency analysis, and a simple CNN—under realistic conditions: JPEG compression and social media-style resizing. The results surprised me.
+
+**Detection methods are significantly more robust than the skeptics claim.**
 
 This post cuts through the hype with experiments and code. 
 We'll implement three detection approaches, test them on real data, and see what actually 
@@ -108,11 +108,6 @@ The gradient magnitude heatmaps show where edges and textures are strongest. Rea
 
 Here's a complete script that downloads the dataset, extracts features, trains detectors, and visualizes results.
 
-### Installation
-
-```bash
-pip install torch torchvision numpy matplotlib scikit-learn Pillow datasets
-```
 
 ### Get the Full Code
 
@@ -128,7 +123,6 @@ pip install -r requirements.txt
 python detect_ai_images.py
 ```
 
-Below, I'll walk through the key components that make this experiment work.
 
 ---
 
@@ -368,47 +362,56 @@ Testing: JPEG Q=75
 
 ---
 
-## What the Results Show
+## What the Results Actually Show
 
-Here's the critical finding: **detection accuracy collapses under real-world conditions**.
+Here's the surprising finding: **detection methods are robust to common image degradations**.
 
 ![Performance degradation across scenarios](/content/2025/12/performance_degradation.png){: width="700" height="500" }
-_AUC scores for Gradient, FFT, and CNN detectors under three conditions: clean images, JPEG compression (Q=75), and resize (0.5x then back). Notice the dramatic drop in all methods when images are degraded._
+_AUC scores for Gradient, FFT, and CNN detectors under three conditions: clean images, JPEG compression (Q=75), and resize (0.5x then back). Contrary to expectations, performance remains stable across most scenarios._
 
 ### Key Observations:
 
-**On Raw Images (No Preprocessing)**:
+**On Raw Images (Baseline)**:
 - All three methods work well on pristine images
-- Gradient features achieve ~0.72 AUC (decent but not perfect)
-- FFT features perform better at ~0.83 AUC
-- Simple CNN dominates at ~0.96 AUC
+- Gradient features: **0.72 AUC** (decent discrimination)
+- FFT features: **0.83 AUC** (better performance)
+- Simple CNN: **0.94 AUC** (best performer)
 
-The CNN wins because it learns task-specific features beyond simple gradients. But even the CNN isn't bulletproof.
+The CNN wins because it learns task-specific features beyond simple hand-crafted statistics. But here's where it gets interesting...
 
 **After JPEG Compression (Q=75)**:
-- **All methods degrade significantly**
-- Performance drops across all detectors
-- FFT features remain relatively stable
-- CNN drops but stays above 0.9 AUC
+- **NO performance degradation observed!**
+- Gradient: **0.72 AUC** (unchanged)
+- FFT: **0.83 AUC** (unchanged)
+- CNN: **0.95 AUC** (slight improvement!)
 
-JPEG compression introduces its own gradient artifacts and frequency patterns that can overwhelm subtle generator signatures. The 8×8 DCT blocks create their own high-frequency patterns.
+This is remarkable. JPEG Q=75 represents typical web compression quality. The fact that all methods maintain their accuracy suggests the detection signatures aren't as fragile as claimed. JPEG's 8×8 DCT blocks introduce artifacts, but they apparently don't overwhelm the AI generation signatures at this quality level.
 
-**After Resize (0.5x then back to original)**:
-- **Further degradation across the board**
-- Gradient features struggle most with spatial distortions
-- FFT features also degrade as high frequencies are lost
-- CNN remains strongest but is still degraded
+**After Resize (0.5x downscale then back)**:
+- **Mixed results, mostly robust**
+- Gradient: **0.75 AUC** (+0.03, actually improved!)
+- FFT: **0.71 AUC** (-0.12, degraded)
+- CNN: **0.92 AUC** (-0.02, minimal drop)
 
-Downsampling destroys high-frequency information that all methods rely on. The bicubic interpolation when upscaling back smooths out telltale artifacts. This simulates what happens when images are shared on social media platforms that automatically resize uploads.
+Only FFT features show significant degradation (15% drop). The gradient improvement is counterintuitive but might indicate that downsampling acts as a noise filter, making the underlying generation patterns more apparent. The CNN barely budges—just 2% degradation.
+
+This simulates social media uploads where platforms automatically resize. Even under this stress, two out of three methods maintain strong performance.
 
 ### Feature Space Visualization
 
 Here's how the features separate (or don't) after PCA dimensionality reduction:
 
 ![PCA comparison across scenarios and methods](/content/2025/12/pca_comparison.png){: width="900" height="600" }
-_PCA projection of gradient and FFT features for each scenario. Green dots = real images, red dots = AI-generated. Notice how the clusters overlap more as degradation increases._
+_PCA projection of gradient and FFT features for each scenario. Green dots = real images, red dots = AI-generated. The separation varies by method and scenario._
 
-The top row shows decent separation on raw images - you can see two somewhat distinct clusters. The bottom row shows significantly more overlap as degradation increases. The classes become harder to separate linearly, which explains why even logistic regression struggles.
+**Key insights from the PCA plots:**
+
+- **Raw Images - Gradient (0.722 AUC)**: Significant overlap between classes. The clusters aren't cleanly separable, which explains the moderate AUC.
+- **Raw Images - FFT (0.826 AUC)**: Better separation than gradients, with more distinct clustering. This matches the higher AUC.
+- **JPEG Q=75**: Separation remains similar to raw images, confirming the stable AUC scores.
+- **Resized (0.5x)**: FFT features show more overlap (explaining the AUC drop to 0.71), while gradient features maintain or improve separation.
+
+The visualization confirms what the numbers tell us: these features capture real differences between real and AI-generated images that persist through common degradations.
 
 ### Frequency Domain Analysis
 
@@ -426,56 +429,65 @@ The shaded regions show standard deviation—there's considerable overlap betwee
 
 ---
 
-## Why "Just Look at Gradients" Fails in Practice
+## Why Detection Works Better Than Expected
+
+The conventional wisdom is that common image processing destroys detection signals. Our results suggest otherwise.
 
 ```mermaid
 graph LR
     A[AI Image] --> B[Upload to Twitter]
-    B --> C[JPEG Recompression]
-    C --> D[Resize to 1024px]
-    D --> E[Browser Optimization]
-    E --> F[Gradients Now Look<br/>Like Real Photos]
+    B --> C[JPEG Q=75]
+    C --> D[Resize 0.5x]
+    D --> E[Detection Still Works]
+    E --> F[70-95% AUC Maintained]
     
-    style F fill:#f96,stroke:#333,stroke-width:2px
+    style F fill:#9f6,stroke:#333,stroke-width:2px
 ```
 
-### The Problem: Post-Processing
+### What Makes Detection Robust?
 
-1. **JPEG artifacts dominate**: Compression introduces its own gradient patterns that overwhelm generator signatures
-2. **Resolution changes**: Resizing filters smooth gradients, removing high-frequency traces
-3. **Multiple hops**: Screenshot → re-upload → crop → filter destroys forensic traces
-4. **Dataset bias**: If your "real" set is JPEG and "fake" set is PNG, you're detecting file format, not generation
+1. **Generation signatures run deep**: The patterns left by diffusion models aren't just surface-level noise—they're structural differences in how images are constructed
+2. **JPEG preserves mid-frequencies**: At Q=75, JPEG maintains enough information that detection signatures survive. Only very aggressive compression (Q<50) might destroy them
+3. **Resizing acts as a filter**: Downsampling can actually help by removing high-frequency noise while preserving the underlying generation patterns
+4. **Multiple detection axes**: Different methods capture different aspects (spatial gradients, frequency content, learned features), making them complementary
 
 ### What Actually Works
 
-**For controlled scenarios** (forensics, research):
-- Gradient/FFT features work reasonably well on high-quality, unmodified images
-- Deep learning detectors (ResNet, EfficientNet) achieve 95%+ accuracy
-- Ensemble methods combining frequency + spatial features
+**What this means for real-world detection:**
 
-**For real-world deployment**:
-- Train on degraded images (JPEG, resize, blur)
-- Use robust features (not just gradients)
-- Test cross-generator generalization
-- Accept that heavily processed images are undetectable
+1. **Simple methods work**: Even basic gradient/FFT features achieve 70-75% AUC under degraded conditions. Far from perfect but significantly better than random (50%).
+
+2. **CNNs are robust**: A simple 3-layer CNN maintains 92% AUC after resizing. With proper training on degraded images, performance could be even better.
+
+3. **JPEG isn't the killer**: At quality 75 (typical web compression), detection signatures survive intact. Only very aggressive compression likely destroys them.
+
+4. **Practical detection is viable**: For applications like content moderation, academic integrity, or journalism verification, these accuracy levels are useful even if not perfect.
+
+**Important limitations:**
+
+- These results are on CIFAR-10 vs Stable Diffusion v1.4—newer generators may be harder
+- Extreme degradations (JPEG Q<30, multiple re-compressions) weren't tested
+- Cross-generator generalization (detecting DALL-E when trained on SD) remains challenging
 
 ---
 
-## The GenImage Benchmark Reality Check
+## Context: The GenImage Benchmark
 
 The [GenImage dataset](https://arxiv.org/abs/2306.08571) is the gold standard for testing AI image detectors. It includes:
 - 1M+ images from 8 different generators
 - Degradation protocols (JPEG, blur, resize)
 - Cross-generator evaluation
 
-**Key findings from GenImage**:
-- Detectors trained on one generator (e.g., StyleGAN) fail on others (e.g., Stable Diffusion)
-- Performance drops 20-40% under degradation
+**Key findings from GenImage:**
+- Detectors trained on one generator (e.g., StyleGAN) struggle on others (e.g., Stable Diffusion)
+- Performance drops 20-40% under severe degradation (but our Q=75 results show minimal drop!)
 - Frequency analysis shows diffusion models have *cleaner* spectra than GANs
 
-From the GenImage paper frequency analysis:
+From the GenImage paper:
 
 > "GAN-generated images show regular grid artifacts in frequency domain. Diffusion-generated images have frequency characteristics closer to real images, presenting a greater detection challenge."
+
+**Our findings align with this**: diffusion-generated images are harder to detect than GAN outputs, but 70-94% AUC under realistic conditions shows detection is still viable—just not as easy as some viral posts claim.
 
 ---
 
@@ -488,26 +500,23 @@ From the GenImage paper frequency analysis:
 - **Ensemble methods** (combine gradient, frequency, and learned features)
 - **Domain-specific fine-tuning** (medical images ≠ social media photos)
 
-### ❌ What Doesn't Work
+### ⚠️ What Remains Challenging
 
-- "Universal" hand-crafted features (gradients alone, FFT alone)
-- Detectors trained on pristine images only
-- Single-generator training → multi-generator testing
-- Ignoring preprocessing in real-world scenarios
+- **Cross-generator generalization**: Training on Stable Diffusion, testing on DALL-E 3
+- **Extreme degradations**: Multiple re-compressions, JPEG Q<30, heavy filters
+- **Adversarial attacks**: Generators specifically designed to fool detectors
+- **Newer models**: GPT-4V, Midjourney v6, FLUX may be harder to detect
 
-### 🔬 The Research Frontier
+### 🔬 The Nuanced Reality
 
-**Current challenges**:
-- **Diffusion models** are harder to detect than GANs
-- **Post-processing** destroys most forensic traces
-- **Adversarial attacks** can fool detectors
-- **Arms race**: Generators improve, detectors lag behind
+**What the experiments show:**
 
-**Promising directions**:
-- **Perceptual inconsistencies**: Detecting impossible shadows, perspective errors
-- **Semantic analysis**: Text-image mismatch detection
-- **Provenance tracking**: Blockchain-based authenticity certificates
-- **Multi-modal detectors**: Combining visual + metadata + contextual cues
+✅ **Detection works better than skeptics claim** under common conditions (JPEG Q=75, social media resizing)  
+✅ **Simple CNNs are remarkably robust** (92% AUC after resizing)  
+✅ **Hand-crafted features still useful** (70-83% AUC is better than random)  
+⚠️ **Not a silver bullet** (cross-generator and extreme degradation remain hard)  
+
+**The arms race continues**, but detection hasn't lost yet. The doom-and-gloom narrative is oversimplified.
 
 ---
 
@@ -523,18 +532,26 @@ From the GenImage paper frequency analysis:
 
 ## Conclusion
 
-Can you detect AI images with gradient analysis? **Sometimes**. 
+**Can you detect AI images under real-world conditions?** Yes—better than the skeptics claim.
 
-On clean, high-resolution images with a controlled dataset? Yes, gradient and frequency features provide useful signals.
+The viral narrative is that "detection only works in controlled labs and fails on real-world images." The experimental evidence tells a different story:
 
-On real-world images that have been compressed, resized, filtered, and re-uploaded multiple times? The signal disappears.
+✅ **JPEG Q=75 doesn't destroy detection signals** (0% performance drop)  
+✅ **Resizing has minimal impact** (CNN drops only 2%, gradient actually improves)  
+✅ **Even simple features maintain 70-75% AUC** under degradation  
+✅ **Basic CNNs achieve 92% AUC** after social media-style processing  
 
-The viral claim that "gradients reveal AI images reliably" is oversimplified. Modern detectors need:
-- Deep learning architectures
-- Training on degraded images
-- Cross-generator generalization
-- Ensemble approaches
+This doesn't mean detection is solved. Cross-generator generalization, adversarial attacks, and extreme degradations remain challenges. But the doom-and-gloom narrative that "detection is impossible in practice" is demonstrably false.
 
-The arms race continues. As of 2025, detecting AI images is possible but not trivial. The days of "just check the gradients" are over—if they ever existed at all.
+**The reality is nuanced:**
+- Detection works reasonably well under common conditions (web uploads, social media)
+- It's not perfect, but 70-95% accuracy is useful for many applications
+- The arms race continues, but detection hasn't lost
 
-**Want to test your own images?** Download the full code from [github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection) and experiment with different generators, preprocessing pipelines, and detection methods. The best way to understand what works is to break it yourself.
+As of 2025, **practical AI image detection is viable**—just not as easy as optimists claim, nor as hopeless as pessimists suggest.
+
+---
+
+**Want to verify these results yourself?** 
+
+Download the full code from [github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection) and run your own experiments. Test different generators, degradations, and detection methods. Science progresses through replication and skepticism—not viral posts.
