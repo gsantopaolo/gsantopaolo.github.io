@@ -120,7 +120,7 @@ Clone and run:
 git clone https://github.com/gsantopaolo/synthetic-image-detection
 cd synthetic-image-detection
 pip install -r requirements.txt
-python detect_ai_images.py
+python train.py
 ```
 
 
@@ -329,10 +329,36 @@ cd synthetic-image-detection
 conda create -n "syntetic-image" python=3.11.7  
 conda activate syntetic-image  
 pip install -r requirements.txt
-python detect_ai_images.py
+python train.py
 ```
 
-Expected output:
+This trains the models and saves them to the `models/` directory (~64 KB total). Training takes 15-30 minutes on CPU.
+
+### Detecting AI Images with detector.py
+
+Once models are trained, you can detect AI images using the `detector.py` inference script:
+
+```bash
+# Detect a single image
+python detector.py photo.jpg
+# Output: photo.jpg  Real: 23.0% | AI: 77.0% → AI
+
+# Process an entire folder
+python detector.py my_images/
+
+# JSON output for automation
+python detector.py photo.jpg --format json
+```
+
+The detector uses an ensemble of all three methods (gradient, FFT, CNN) with weighted averaging. It works on any image size—the script automatically resizes to 32×32 for processing. You can also use individual detectors (`--model gradient`, `--model fft`, `--model cnn`) or adjust the classification threshold (`--threshold 0.7`).
+
+For more usage examples and options, see the [README](https://github.com/gsantopaolo/synthetic-image-detection).
+
+---
+
+### Training Output
+
+Expected output from `python train.py`:
 ```
 🔧 Using device: cuda
 📥 Loading CIFAKE train split...
