@@ -401,27 +401,27 @@ _AUC scores for Gradient, FFT, and CNN detectors under three conditions: clean i
 - All three methods work well on pristine images
 - Gradient features: **0.72 AUC** (decent discrimination)
 - FFT features: **0.83 AUC** (better performance)
-- Simple CNN: **0.94 AUC** (best performer)
+- Simple CNN: **~0.94-0.97 AUC** (best performer)
 
-The CNN wins because it learns task-specific features beyond simple hand-crafted statistics. But here's where it gets interesting...
+The CNN wins because it learns task-specific features beyond simple hand-crafted statistics. CNN performance varies slightly across training runs due to random initialization, but consistently outperforms hand-crafted features by 10-15%. Here's where it gets interesting...
 
 **After JPEG Compression (Q=75)**:
-- **NO performance degradation observed!**
+- **Minimal performance degradation**
 - Gradient: **0.72 AUC** (unchanged)
 - FFT: **0.83 AUC** (unchanged)
-- CNN: **0.95 AUC** (slight improvement!)
+- CNN: **0.93 AUC** (slight drop from ~0.97)
 
-This is remarkable. JPEG Q=75 represents typical web compression quality. The fact that all methods maintain their accuracy suggests the detection signatures aren't as fragile as claimed. JPEG's 8×8 DCT blocks introduce artifacts, but they apparently don't overwhelm the AI generation signatures at this quality level.
+JPEG Q=75 represents typical web compression quality. The fact that all methods maintain high accuracy suggests the detection signatures aren't as fragile as claimed. While the CNN shows a small drop (~4%), it remains well above 90% AUC. JPEG's 8×8 DCT blocks introduce artifacts, but they don't overwhelm the AI generation signatures at this quality level.
 
 **After Resize (0.5x downscale then back)**:
-- **Mixed results, mostly robust**
+- **Performance degrades but remains usable**
 - Gradient: **0.75 AUC** (+0.03, actually improved!)
 - FFT: **0.71 AUC** (-0.12, degraded)
-- CNN: **0.92 AUC** (-0.02, minimal drop)
+- CNN: **~0.85-0.92 AUC** (degrades most, 10-15% drop)
 
-Only FFT features show significant degradation (15% drop). The gradient improvement is counterintuitive but might indicate that downsampling acts as a noise filter, making the underlying generation patterns more apparent. The CNN barely budges—just 2% degradation.
+Resizing affects all methods differently. The gradient improvement is counterintuitive but might indicate that downsampling acts as a noise filter. FFT and CNN show expected degradation as high-frequency information is lost. The CNN's performance varies across runs (0.85-0.92 AUC) due to training randomness, but consistently remains the strongest detector.
 
-This simulates social media uploads where platforms automatically resize. Even under this stress, two out of three methods maintain strong performance.
+This simulates social media uploads where platforms automatically resize. Even under this stress, detection remains viable with 70-92% AUC across all methods.
 
 ### Feature Space Visualization
 
