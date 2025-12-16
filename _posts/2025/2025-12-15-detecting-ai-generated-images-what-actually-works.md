@@ -49,7 +49,11 @@ graph TB
         E1 --> F1[JPEG Compression]
         F1 --> G1[Real Image]
     end
-    
+    style G1 fill:#6c6,stroke:#333,stroke-width:2px
+    style G2 fill:#f96,stroke:#333,stroke-width:2px
+```
+```mermaid
+graph TB
     subgraph "AI Generation Pipeline"
         A2[Random Noise] --> B2[Diffusion Model]
         B2 --> C2[Denoising Steps]
