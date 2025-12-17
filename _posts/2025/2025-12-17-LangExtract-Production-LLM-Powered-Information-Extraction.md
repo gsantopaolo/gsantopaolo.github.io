@@ -21,7 +21,7 @@ What if you could extract complex financial information—revenue, risks, busine
 
 In this post, we'll build a production-grade financial information extraction system. We'll fetch real SEC 10-K filings from EDGAR, extract structured data, and export to multiple formats—all with complete source traceability.
 
-**Code Repository**: All examples are [available here](https://github.com/gsantopaolo/langextract/tree/main/articles/2025-12-17-langextract-financial-extraction-code) →
+**Code Repository**: All examples are [available here](https://github.com/gsantopaolo/langextract) →
 
 ---
 
