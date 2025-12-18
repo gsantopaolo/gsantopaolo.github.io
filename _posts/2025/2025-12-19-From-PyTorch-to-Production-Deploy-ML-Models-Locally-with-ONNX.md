@@ -176,7 +176,7 @@ Before deploying, it's helpful to visualize the ONNX model graph to understand i
 - **Web version:** [netron.app](https://netron.app/?utm_source=genmind.ch) - drag and drop your ONNX file
 - **Desktop app:** `pip install netron && netron model.onnx`
 
-![Netron visualization showing EfficientNet-B0 architecture](/content/2025/12/netron_example.png){: width="600" }
+![Netron visualization showing EfficientNet-B0 architecture](/content/2025/12/netron.png){: width="600" }
 _Netron shows every layer, tensor shape, and operator in your model_
 
 Netron helps you:
