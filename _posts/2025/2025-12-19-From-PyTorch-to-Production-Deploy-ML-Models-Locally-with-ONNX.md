@@ -1,6 +1,6 @@
 ---
 title: "From PyTorch to Production: Deploy ML Models Locally with ONNX (Zero Infrastructure Cost)"
-date: "2025-12-18T06:00:00+00:00"
+date: "2025-12-19T06:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2025/12/onnx.png"
