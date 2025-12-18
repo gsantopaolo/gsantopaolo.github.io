@@ -650,6 +650,7 @@ The code is in `training-loop/train.py`. You can run it as-is on the Iris datase
 The seven-line loop is where you start. This template is where you deploy.
 
 ---
+You can find the full source code on my [GitHub repo](https://github.com/gsantopaolo/genmind-samples)
 
 ## References
 
