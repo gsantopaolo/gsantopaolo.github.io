@@ -217,7 +217,7 @@ _AI-generated hybrid creature: cat with colorful parrot feathers. ResNet focuses
 
 ### Example 2: The Griffin
 
-![Eagle-Lion Hybrid](/content/2020/01/resnet1.png){: width="800" height="600" }
+![Eagle-Lion Hybrid](/content/2026/01/resnet1.png){: width="800" height="600" }
 _Griffin-like creature with eagle head and lion body. CNNs are texture-biased (bird classification), while ViTs use global attention (lion classification)._
 
 - **ResNet prediction**: Kite (bird) (76.3% confidence)
