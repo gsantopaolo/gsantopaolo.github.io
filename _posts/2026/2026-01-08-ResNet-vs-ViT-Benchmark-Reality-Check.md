@@ -1,11 +1,11 @@
 ---
 title: "I Benchmarked ResNet vs ViT on 50K Images. They're Nearly Identical."
-date: "2026-01-07T08:00:00+00:00"
+date: "2026-01-08T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/01/results-50000-batch-1.png"
 categories: [Transformers, CNNs, Engineering, Benchmarks]
-published: false
+published: true
 mermaid: true
 math: true
 ---
