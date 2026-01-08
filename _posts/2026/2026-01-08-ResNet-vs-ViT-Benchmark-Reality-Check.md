@@ -5,7 +5,7 @@ author: "gp"
 layout: "post"
 image: "/content/2026/01/results-50000-batch-1.png"
 categories: [Transformers, CNNs, Engineering, Benchmarks]
-published: true
+published: false
 mermaid: true
 math: true
 ---
@@ -60,26 +60,23 @@ I built two tools to run this comparison. Both are available on [GitHub](https:/
 
 ### Tool 1: Single Image Classifier (`classify_image.py`)
 
-For quick experiments on individual images (like the hybrid creatures), I use a simple comparison tool:
+For quick experiments on individual images (like the hybrid creatures):
 
 ```python
 # Load both models
 resnet = timm.create_model("resnet50.a1_in1k", pretrained=True)
-vit_processor = ViTImageProcessor.from_pretrained("google/vit-base-patch16-224")
 vit = AutoModelForImageClassification.from_pretrained("google/vit-base-patch16-224")
 
-# Time ResNet inference
+# Time and compare inference
 start = perf_counter()
 with torch.no_grad():
     resnet_output = resnet(resnet_input)
-    resnet_probabilities = resnet_output.softmax(dim=1) * 100.0
-    resnet_top5 = torch.topk(resnet_probabilities, k=5, dim=1)
 resnet_time = (perf_counter() - start) * 1000  # milliseconds
-
-# Same for ViT...
 ```
 
-**What it does**: Load an image, run it through both models, print Top-5 predictions with timing.
+**What it does**: Loads an image, runs both models, prints Top-5 predictions with timing.
+
+➡️ **Full code**: [`classify_image.py`](https://github.com/gsantopaolo/genmind-samples/blob/main/resnet-vit-benchmark/classify_image.py)
 
 **Usage**:
 ```bash
@@ -101,20 +98,14 @@ tabby cat                                          12.34 %
 
 ### Tool 2: Large-Scale Benchmark (`compare_models.py`)
 
-For the full 50K image evaluation, I built a production-grade benchmark:
+For the full 50K image evaluation:
 
 ```python
-# Timing breakdown for each image
 for img_path, wnid in samples:
-    # Load image (timed)
+    # Time each stage separately
     img_load_start = perf_counter()
     img = Image.open(img_path).convert("RGB")
     img_load_time = (perf_counter() - img_load_start) * 1000
-    
-    # ResNet preprocessing (timed)
-    resnet_preprocess_start = perf_counter()
-    resnet_input = resnet_transform(img).unsqueeze(0).to(device)
-    resnet_preprocess_time = (perf_counter() - resnet_preprocess_start) * 1000
     
     # ResNet inference (timed)
     resnet_infer_start = perf_counter()
@@ -122,83 +113,35 @@ for img_path, wnid in samples:
         resnet_logits = resnet(resnet_input)
     resnet_infer_time = (perf_counter() - resnet_infer_start) * 1000
     
-    # Track correctness
-    resnet_top1_correct = (resnet_pred_idx == gt_idx)
-    resnet_top5_correct = (gt_idx in resnet_top5_idx[0].tolist())
-    
-    # Same for ViT...
-    
-    # Save per-image results to CSV
+    # Track correctness and save to CSV
     results.append({
         "image": img_name,
-        "gt_label": gt_label,
         "resnet_pred_label": resnet_pred_label,
-        "resnet_top1_correct": resnet_top1_correct,
+        "resnet_top1_correct": (resnet_pred_idx == gt_idx),
         "resnet_inference_ms": resnet_infer_time,
         "vit_pred_label": vit_pred_label,
-        "vit_top1_correct": vit_top1_correct,
         "vit_inference_ms": vit_infer_time,
-        # ... more metrics
+        # ... and more metrics
     })
 ```
 
-**What it measures**:
-- ✅ Top-1 and Top-5 accuracy
-- ✅ Per-image inference time (preprocessing + forward pass)
-- ✅ Agreement/disagreement analysis
-- ✅ Model loading time
-- ✅ Throughput (images/second)
+**Measures**: Top-1/Top-5 accuracy, inference time, agreement/disagreement, throughput
 
-**Outputs**:
-- CSV file with all 50K predictions
-- Comparison charts (6-panel visualization)
-- Terminal summary with statistics
+**Outputs**: CSV with 50K predictions, 6-panel comparison charts, terminal summary
+
+➡️ **Full code**: [`compare_models.py`](https://github.com/gsantopaolo/genmind-samples/blob/main/resnet-vit-benchmark/compare_models.py)
 
 **Usage**:
 ```bash
 python compare_models.py --val-dir imagenet-val --output-csv results.csv
 ```
 
-### Key Implementation Details
-
-**Device Selection**:
-```python
-device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
-```
-Supports NVIDIA GPUs (CUDA), Apple Silicon (MPS), or CPU fallback.
-
-**Proper ImageNet Label Mapping**:
-```python
-# Map folder wnid (e.g., 'n01440764') to class index (0-999)
-with urlopen("https://raw.githubusercontent.com/.../imagenet_class_index.json") as f:
-    class_index = json.load(f)
-wnid_to_global_idx = {v[0]: int(k) for k, v in class_index.items()}
-```
-
-**Visualization Generation**:
-```python
-fig, axes = plt.subplots(2, 3, figsize=(15, 10))
-# Plot 1: Model load time
-# Plot 2: Inference speed
-# Plot 3: Throughput
-# Plot 4: Accuracy (Top-1/Top-5)
-# Plot 5: Agreement pie chart
-# Plot 6: Inference time distribution (box plot)
-plt.savefig("results.png", dpi=150)
-```
-
-### Full Code Repository
-
-All code, including the optimizer visualization and helper scripts, is available at:
-
-**https://github.com/gsantopaolo/genmind-samples/tree/main/resnet-vit-benchmark**
-
-The repository includes:
-- `classify_image.py`: Single-image comparison tool
-- `compare_models.py`: Full benchmark with timing/metrics
-- `optimizer_visualization.py`: Saddle point trajectory plots
-- Sample hybrid creature images
-- CSV results from 50K image runs
+**Key features**:
+- Device-agnostic (CUDA/MPS/CPU auto-detection)
+- Proper ImageNet label mapping (wnid → class index)
+- 6-panel matplotlib visualizations
+- Per-image timing breakdown
+- CSV export with all predictions
 
 ---
 
@@ -276,7 +219,7 @@ _AI-generated hybrid creature: cat with colorful parrot feathers. ResNet focuses
 
 ### Example 2: The Griffin
 
-![Eagle-Lion Hybrid](/content/2026/01/resnet1.png){: width="800" height="600" }
+![Eagle-Lion Hybrid](/content/2020/01/test1.png){: width="800" height="600" }
 _Griffin-like creature with eagle head and lion body. CNNs are texture-biased (bird classification), while ViTs use global attention (lion classification)._
 
 - **ResNet prediction**: Kite (bird) (76.3% confidence)
@@ -388,25 +331,6 @@ Everyone wants to throw a massive Transformer at physiological data. Papers show
 Recent literature ([Transformers in biosignal analysis, 2024][3]) confirms: **Transformers excel when you have massive datasets and cloud compute**. For resource-constrained medical devices, CNNs remain the workhorse.
 
 The lesson: **Architecture choice depends on deployment constraints**, not just benchmark accuracy.
-
-### The Optimization Landscape: Why Hardware Matters
-
-Both CNNs and Transformers navigate complex loss landscapes during training. To visualize this, I created a saddle point surface and traced how different optimizers (SGD, Adam, AdamW, RMSprop, etc.) find their way to the minimum:
-
-![Optimizer Trajectories 3D](/content/2026/01/results_optimizer_saddle.png){: width="1000" height="700" }
-_3D visualization of optimizer paths on a saddle point surface. Modern optimizers like Adam and AdamW (blue/purple) navigate complex landscapes more efficiently than vanilla SGD, which is critical for both CNN and Transformer training._
-
-![Optimizer Trajectories Contour](/content/2026/01/results_optimizer_contour.png){: width="1000" height="700" }
-_Contour view showing how different optimizers converge. Momentum-based methods (NAG, Adam, AdamW) escape saddle points faster, which matters when training large models on GPUs/TPUs._
-
-**Why this matters for CNNs vs ViTs:**
-
-- **Hardware acceleration**: Matrix operations (Transformers) benefit more from GPU parallelization than convolutions
-- **Optimizer efficiency**: Both architectures need sophisticated optimizers (Adam/AdamW), but ViTs are particularly sensitive to learning rate and warmup schedules
-- **Training stability**: CNNs' inductive biases make them easier to train with simpler optimizers (even SGD+Momentum works well)
-- **Convergence speed**: ViTs need more epochs to converge when training from scratch, increasing compute costs
-
-This is why **pretrained models** are so important—you inherit the optimization cost someone else already paid.
 
 ---
 
