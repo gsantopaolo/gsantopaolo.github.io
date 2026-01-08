@@ -418,13 +418,11 @@ async function preprocessImage(imageFile: File): Promise<Float32Array> {
 Browser performance requires careful optimization:
 
 ```typescript
-// Load model on page mount (not on first inference!)
 useEffect(() => {
   const loadModelOnMount = async () => {
     console.log('⏳ Loading model on page load...');
     const loadStart = performance.now();
     
-    // Load ONNX model
     const session = await ort.InferenceSession.create('/model.onnx', {
       executionProviders: ['webgl', 'wasm'],
       graphOptimizationLevel: 'all'
@@ -433,13 +431,16 @@ useEffect(() => {
     const loadTime = (performance.now() - loadStart).toFixed(2);
     console.log(`✅ Model loaded in ${loadTime}ms`);
     
-    // Warmup inference to compile WebGL shaders
     console.log('🔥 Warming up WebGL session...');
     const warmupStart = performance.now();
-    const dummyInput = new ort.Tensor('float32', new Float32Array(1 * 3 * 224 * 224), [1, 3, 224, 224]);
+    const dummyInput = new ort.Tensor(
+      'float32',
+      new Float32Array(1 * 3 * 224 * 224),
+      [1, 3, 224, 224]
+    );
     await session.run({ input: dummyInput });
     const warmupTime = (performance.now() - warmupStart).toFixed(2);
-    console.log(`✅ Warmup complete in ${warmupTime}ms (WebGL shaders compiled)`);
+    console.log(`✅ Warmup complete in ${warmupTime}ms`);
     
     sessionRef.current = session;
   };
