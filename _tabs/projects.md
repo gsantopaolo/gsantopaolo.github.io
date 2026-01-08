@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-code
-order: 4
+order: 5
 ---
 
 Production AI systems built for scale, deployed in real-world environments serving millions of users. Each project demonstrates end-to-end engineering—from research prototypes to production-grade microservices.

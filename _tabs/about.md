@@ -1,7 +1,7 @@
 ---
 icon: fas fa-info-circle
 layout: page
-order: 5
+order: 6
 ---
 
 ![Me](/content/2025/02/io-low-res-1-e1740064656809-297x300.jpg)
