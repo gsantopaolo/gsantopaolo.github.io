@@ -63,15 +63,17 @@ I built two tools to run this comparison. Both are available on [GitHub](https:/
 For quick experiments on individual images (like the hybrid creatures):
 
 ```python
-# Load both models
 resnet = timm.create_model("resnet50.a1_in1k", pretrained=True)
 vit = AutoModelForImageClassification.from_pretrained("google/vit-base-patch16-224")
+```
 
-# Time and compare inference
+**Time and compare inference:**
+
+```python
 start = perf_counter()
 with torch.no_grad():
     resnet_output = resnet(resnet_input)
-resnet_time = (perf_counter() - start) * 1000  # milliseconds
+resnet_time = (perf_counter() - start) * 1000
 ```
 
 **What it does**: Loads an image, runs both models, prints Top-5 predictions with timing.
@@ -102,18 +104,15 @@ For the full 50K image evaluation:
 
 ```python
 for img_path, wnid in samples:
-    # Time each stage separately
     img_load_start = perf_counter()
     img = Image.open(img_path).convert("RGB")
     img_load_time = (perf_counter() - img_load_start) * 1000
     
-    # ResNet inference (timed)
     resnet_infer_start = perf_counter()
     with torch.no_grad():
         resnet_logits = resnet(resnet_input)
     resnet_infer_time = (perf_counter() - resnet_infer_start) * 1000
     
-    # Track correctness and save to CSV
     results.append({
         "image": img_name,
         "resnet_pred_label": resnet_pred_label,
@@ -121,7 +120,6 @@ for img_path, wnid in samples:
         "resnet_inference_ms": resnet_infer_time,
         "vit_pred_label": vit_pred_label,
         "vit_inference_ms": vit_infer_time,
-        # ... and more metrics
     })
 ```
 
