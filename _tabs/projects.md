@@ -1,6 +1,6 @@
 ---
 layout: page
-icon: fas fa-briefcase
+icon: fas fa-code
 order: 4
 ---
 
