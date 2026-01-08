@@ -100,19 +100,29 @@ tabby cat                                          12.34 %
 
 ### Tool 2: Large-Scale Benchmark (`compare_models.py`)
 
-For the full 50K image evaluation:
+For the full 50K image evaluation, I time each stage separately:
+
+**Load and preprocess images:**
 
 ```python
 for img_path, wnid in samples:
     img_load_start = perf_counter()
     img = Image.open(img_path).convert("RGB")
     img_load_time = (perf_counter() - img_load_start) * 1000
-    
+```
+
+**Run inference:**
+
+```python
     resnet_infer_start = perf_counter()
     with torch.no_grad():
         resnet_logits = resnet(resnet_input)
     resnet_infer_time = (perf_counter() - resnet_infer_start) * 1000
-    
+```
+
+**Save results to CSV:**
+
+```python
     results.append({
         "image": img_name,
         "resnet_pred_label": resnet_pred_label,
