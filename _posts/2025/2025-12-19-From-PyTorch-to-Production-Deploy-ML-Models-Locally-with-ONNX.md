@@ -95,28 +95,30 @@ import torch
 import torch.nn as nn
 from torchvision import models
 
-# Load pretrained EfficientNet-B0
 model = models.efficientnet_b0(weights="IMAGENET1K_V1")
-
-# Replace classifier for 3 classes
 num_classes = 3
 model.classifier[1] = nn.Linear(model.classifier[1].in_features, num_classes)
+```
 
-# Two-phase training
-# Phase 1: Freeze backbone, train classifier only (10 epochs)
+**Two-phase training strategy:**
+
+**Phase 1:** Freeze backbone, train classifier only (10 epochs)
+
+```python
 for param in model.features.parameters():
     param.requires_grad = False
 
 optimizer = torch.optim.Adam(model.classifier.parameters(), lr=0.001)
-
 # ... train for 10 epochs ...
+```
 
-# Phase 2: Unfreeze, fine-tune entire network (20 more epochs)
+**Phase 2:** Unfreeze, fine-tune entire network (20 more epochs)
+
+```python
 for param in model.features.parameters():
     param.requires_grad = True
 
 optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
-
 # ... train for 20 more epochs ...
 ```
 
@@ -134,34 +136,40 @@ This is where you convert PyTorch to ONNX format. **Key consideration:** batch s
 import torch
 import onnx
 
-# Load trained PyTorch model
 model = load_model("checkpoints/best_model.pt")
 model.eval()
+```
 
-# Create dummy input (CRITICAL: this defines the input shape)
-batch_size = 1  # Fixed batch size for browser compatibility
+**Create dummy input** (this defines the input shape):
+
+```python
+batch_size = 1
 dummy_input = torch.randn(batch_size, 3, 224, 224)
+```
 
-# Export to ONNX
+**Export to ONNX:**
+
+```python
 torch.onnx.export(
     model,
     dummy_input,
     "models_onnx/model.onnx",
     export_params=True,
-    opset_version=14,  # Use opset 14 for broad compatibility
+    opset_version=14,
     input_names=['input'],
-    output_names=['output'],
-    # DO NOT use dynamic_axes if targeting WebGL
-    # WebGL doesn't support dynamic batch sizes
+    output_names=['output']
 )
+```
 
-# Verify the export
+**Verify the export:**
+
+```python
 onnx_model = onnx.load("models_onnx/model.onnx")
 onnx.checker.check_model(onnx_model)
 print("✅ ONNX export successful!")
 ```
 
-**Critical detail:** WebGL (browser GPU backend) **does not support dynamic batch sizes**. You must export with a fixed `batch_size=1`. This is a WebGL limitation, not an ONNX limitation.
+**Critical detail:** WebGL (browser GPU backend) **does not support dynamic batch sizes**. You must export with a fixed `batch_size=1`. DO NOT use `dynamic_axes` if targeting WebGL. This is a WebGL limitation, not an ONNX limitation.
 
 **Export code:** [`to_onnx.py`](https://github.com/gsantopaolo/genmind-samples/blob/main/browser-inference/cnn/to_onnx.py?utm_source=genmind.ch)
 
@@ -195,20 +203,23 @@ ONNX Runtime can use platform-specific accelerators:
 import onnxruntime as ort
 import numpy as np
 
-# Create session with CoreML acceleration (Mac)
 session = ort.InferenceSession(
     "models_onnx/model.onnx",
     providers=['CoreMLExecutionProvider', 'CPUExecutionProvider']
 )
+```
 
-# Prepare input
-image = preprocess_image("test.jpg")  # Shape: (1, 3, 224, 224)
+**Run inference:**
 
-# Run inference
+```python
+image = preprocess_image("test.jpg")
 outputs = session.run(None, {'input': image})
 probabilities = softmax(outputs[0][0])
+```
 
-# Get prediction
+**Get prediction:**
+
+```python
 class_names = ['angular_leaf_spot', 'bean_rust', 'healthy']
 predicted_class = class_names[np.argmax(probabilities)]
 confidence = probabilities[np.argmax(probabilities)]
@@ -233,19 +244,23 @@ This is where it gets interesting. **Run the same ONNX model in a browser with G
 ```typescript
 import * as ort from 'onnxruntime-web';
 
-// Configure WebGL backend
 ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.14.0/dist/';
+```
 
-// Load model (happens once on page load)
+**Load model** (happens once on page load):
+
+```typescript
 const session = await ort.InferenceSession.create('/model.onnx', {
-  executionProviders: ['webgl', 'wasm'],  // Try WebGL GPU, fallback to WASM CPU
+  executionProviders: ['webgl', 'wasm'],
   graphOptimizationLevel: 'all'
 });
+```
 
-// Preprocess image to tensor
+**Run inference** (on GPU via WebGL!):
+
+```typescript
 const tensor = new ort.Tensor('float32', imageData, [1, 3, 224, 224]);
 
-// Run inference (on GPU via WebGL!)
 const startTime = performance.now();
 const results = await session.run({ input: tensor });
 const inferenceTime = performance.now() - startTime;
@@ -254,7 +269,6 @@ const logits = results.output.data;
 const probabilities = softmax(logits);
 
 console.log(`⏱️ Inference time: ${inferenceTime.toFixed(2)}ms`);
-// Example output: "Inference time: 26.76ms"
 ```
 
 **Performance in Chrome (M2 Max):**
@@ -350,50 +364,48 @@ Bundle Size:         ~8MB (onnxruntime-web + WASM)
 
 All three platforms must use **identical preprocessing**:
 
+**Python (PyTorch/ONNX):**
+
 ```python
-# Python (PyTorch/ONNX)
 from torchvision import transforms
 
 preprocess = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.ToTensor(),  # Converts PIL image to [0, 1] tensor
+    transforms.ToTensor(),
     transforms.Normalize(
-        mean=[0.485, 0.456, 0.406],  # ImageNet normalization
+        mean=[0.485, 0.456, 0.406],
         std=[0.229, 0.224, 0.225]
     )
 ])
 
 image = Image.open("test.jpg").convert("RGB")
-tensor = preprocess(image).unsqueeze(0)  # Add batch dimension: (1, 3, 224, 224)
+tensor = preprocess(image).unsqueeze(0)
 ```
 
+**JavaScript (Browser):**
+
 ```typescript
-// JavaScript (Browser)
 async function preprocessImage(imageFile: File): Promise<Float32Array> {
-  // 1. Load image
   const img = await createImageBitmap(imageFile);
   
-  // 2. Resize to 224x224
   const canvas = new OffscreenCanvas(224, 224);
   const ctx = canvas.getContext('2d')!;
   ctx.drawImage(img, 0, 0, 224, 224);
   
-  // 3. Get pixel data
   const imageData = ctx.getImageData(0, 0, 224, 224);
-  const pixels = imageData.data;  // RGBA values [0-255]
+  const pixels = imageData.data;
   
-  // 4. Convert to NCHW format with ImageNet normalization
   const float32Data = new Float32Array(3 * 224 * 224);
   const mean = [0.485, 0.456, 0.406];
   const std = [0.229, 0.224, 0.225];
   
   for (let i = 0; i < 224 * 224; i++) {
-    float32Data[i] = ((pixels[i * 4] / 255) - mean[0]) / std[0];       // R
-    float32Data[i + 224 * 224] = ((pixels[i * 4 + 1] / 255) - mean[1]) / std[1];  // G
-    float32Data[i + 224 * 224 * 2] = ((pixels[i * 4 + 2] / 255) - mean[2]) / std[2];  // B
+    float32Data[i] = ((pixels[i * 4] / 255) - mean[0]) / std[0];
+    float32Data[i + 224 * 224] = ((pixels[i * 4 + 1] / 255) - mean[1]) / std[1];
+    float32Data[i + 224 * 224 * 2] = ((pixels[i * 4 + 2] / 255) - mean[2]) / std[2];
   }
   
-  return float32Data;  // Shape: (1, 3, 224, 224) flattened
+  return float32Data;
 }
 ```
 
