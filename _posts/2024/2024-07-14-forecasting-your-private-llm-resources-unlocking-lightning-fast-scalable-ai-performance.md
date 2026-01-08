@@ -68,3 +68,11 @@ This is a whole different story, I’ve done such study in depth in the past, an
 ## Conclusion: The Journey Has Just Begun
 
 This post barely scratches the surface of text generation inference deployment. If you’re ready to dive deeper, I can help with detailed analyses, forecasts, and hands-on deployment strategies drawn from my extensive experience in this space. Reach out for assistance and let’s ensure your LLM serves your users flawlessly—while keeping your data safely within your company’s walls.
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -32,3 +32,11 @@ When working on a GPU server, nvitop gives you an at-a-glance overview of your h
 Both asitop and nvitop serve as essential tools in the AI engineer’s toolkit—allowing you to quickly assess GPU performance and overall machine health, regardless of your platform. Use asitop when working locally on your Mac and rely on nvitop for a comprehensive view of your GPU processes on Linux servers.
 
 Happy monitoring!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -66,3 +66,11 @@ With a few lines of code, we’ve opened a document, converted it to Markdown, a
 
 I’ve tested various documents in different formats, and PyMuPDF4LLM consistently stands out. A few line of code and the document is converted in MD.  
 A Note about licensing, looks like a bit complicated between PyMuPDF4LLM and PyMuPDF, make sure to review it before using the tool in production. Happy coding! 😄
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

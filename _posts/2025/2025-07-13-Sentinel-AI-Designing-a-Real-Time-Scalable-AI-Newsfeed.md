@@ -111,3 +111,11 @@ Sentinel-AI is more than a demo; it’s a template for production-grade, AI-powe
 If you need real-time insights, bullet-proof reliability, and the freedom to plug in future agentic intelligence, feel free to fork, extend, and deploy.
 
 Happy hacking! 💡🚀
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

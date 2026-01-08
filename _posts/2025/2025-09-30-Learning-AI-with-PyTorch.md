@@ -45,6 +45,12 @@ Here are the best **free PyTorch-first resources** I started from:
 ---
 
 👉 Quick start tip:  
-Do **#1 (or #2)** → then **#8** for API basics → finish with **#4** for a deeper, project-driven curriculum.  
+Do **#1 (or #2)** → then **#8** for API basics → finish with **#4** for a deeper, project-driven curriculum.
 
+---
 
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

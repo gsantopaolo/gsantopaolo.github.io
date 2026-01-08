@@ -809,3 +809,11 @@ Image File → Tensor → Neural Network → Output Tensor → Prediction
 ```
 
 Master tensors, master deep learning.
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

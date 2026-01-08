@@ -260,3 +260,11 @@ Now we see the full circle:
 ---
 
 **Next:** Continue with [What Is a Tensor? A Practical Guide for AI Engineers](https://genmind.ch/posts/What-Is-a-Tensor-A-Practical-Guide-for-AI-Engineers/) to understand tensors from mathematical and software perspectives.
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

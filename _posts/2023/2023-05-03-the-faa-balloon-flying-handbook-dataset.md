@@ -39,3 +39,11 @@ for row in dataset["train"][:5]:
 You can use the same approach to create your own datase, and if you need help, feel free to reach me out, all my contacts at the bottom of the [about page](https://genmind.ch/about/). As always, <del>you can download the full source code here</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/datasets/tree/main/balloon?utm_source=genmind.ch)
 
 Happy coding!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

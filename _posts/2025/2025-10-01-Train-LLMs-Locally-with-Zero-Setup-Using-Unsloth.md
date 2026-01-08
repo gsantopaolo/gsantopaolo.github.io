@@ -64,3 +64,11 @@ This is a huge step forward for anyone looking to train or fine-tune LLMs locall
 If you’ve been putting off LLM training because of the environment setup nightmare, now’s the time to jump in.
 
 ---
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

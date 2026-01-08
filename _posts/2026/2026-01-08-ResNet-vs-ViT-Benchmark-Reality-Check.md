@@ -520,3 +520,10 @@ And remember: **the best model is the one running in production, not the one on 
 [3]: https://www.sciencedirect.com/science/article/abs/pii/S1566253524004755 "Transformers in biosignal analysis: A review"
 [4]: https://arxiv.org/abs/2103.14030 "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows"
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

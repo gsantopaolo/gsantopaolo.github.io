@@ -193,3 +193,11 @@ Feel free to explore the linked repositories for more detailed documentation and
 Happy coding!
 
 ---
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

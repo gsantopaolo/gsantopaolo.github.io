@@ -124,5 +124,12 @@ Stack \$L\$ such layers for the encoder. The **decoder** adds an additional enco
 [8]: https://medium.com/@punya8147_26846/layer-normalization-and-residual-connections-in-transformer-layers-f7ed9a96a1ae?utm_source=genmind.ch  
 [9]: https://arxiv.org/pdf/2002.04745?utm_source=genmind.ch  
 [10]: https://www.geeksforgeeks.org/nlp/positional-encoding-in-transformers?utm_source=genmind.ch  
-[11]: https://apxml.com/courses/foundations-transformers-architecture/chapter-2-attention-mechanism-core-concepts/scaled-dot-product-attention?utm_source=genmind.ch  
+[11]: https://apxml.com/courses/foundations-transformers-architecture/chapter-2-attention-mechanism-core-concepts/scaled-dot-product-attention?utm_source=genmind.ch
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

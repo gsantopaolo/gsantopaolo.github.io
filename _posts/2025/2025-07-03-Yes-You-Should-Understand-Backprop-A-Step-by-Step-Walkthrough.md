@@ -172,3 +172,11 @@ innovation. For deeper dives, see:
 [11]: https://cs231n.github.io/optimization-2/?utm_source=genmind.ch "Backpropagation - CS231n Deep Learning for Computer Vision"
 [12]: https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1214/slides/cs224n-2021-lecture03-neuralnets.pdf?utm_source=genmind.ch "[PDF] Neural net learning: Gradients by hand (matrix calculus) and ..."
 [13]: https://substack.com/home/post/p-163881360?utm_campaign=post&utm_medium=web&utm_source=genmind.ch "Andrej Karpathy is right, you should understand backprop, in Java."
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

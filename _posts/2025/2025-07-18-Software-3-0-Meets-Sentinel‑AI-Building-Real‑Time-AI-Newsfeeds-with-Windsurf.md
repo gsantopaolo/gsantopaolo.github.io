@@ -217,3 +217,11 @@ Happy coding and welcome to **Software 3.0**!
 [10]: https://www.reddit.com/r/Codeium/comments/1gwz0sd/my_experience_with_windsurf_editor_with_cascade/?utm_source=genmind.ch "My Experience with Windsurf Editor with Cascade (Claude Sonnet 3.5)"
 [11]: https://www.usesaaskit.com/blog/how-to-set-up-windsurf-ai-code-editor?utm_source=genmind.ch "How to Set Up Windsurf AI Code Editor: A Step-by-Step Guide"
 [12]: https://damiandabrowski.medium.com/day-77-of-100-days-agentic-engineer-challenge-windsurf-cascade-813878ab2d32?utm_source=genmind.ch "Day 77 of 100 Days Agentic Engineer Challenge: Windsurf Cascade"
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

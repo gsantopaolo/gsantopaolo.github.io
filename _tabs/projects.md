@@ -76,5 +76,13 @@ Research and production work on fine-tuning LLMs (Pixtral multimodal text+vision
 
 ---
 
+## Need Help with Your AI Project?
+
+Looking to build a similar production AI system for your organization? Book a free consultation to discuss how I can help.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}
+
+---
+
 > All projects demonstrate production engineering patterns: event-driven microservices, horizontal scaling, fault tolerance, observability, and comprehensive testing. Built for real-world deployment serving millions of users.
 {: .prompt-info }

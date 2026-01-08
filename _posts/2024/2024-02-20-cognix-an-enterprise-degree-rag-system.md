@@ -133,3 +133,11 @@ Requirements
 
 </div>CogniX isn’t just about managing documents—it’s about unlocking their full value through intelligent, semantic analysis. Discover how CogniX can transform your document management strategy today. Whether you’re developing applications that require natural language understanding, creating content, or exploring new ways to interact with AI, CogniX provides the technological foundation to achieve your goals with exceptional performance. Discover the future of text generation with CogniX.  
 You can find the sour code on my [GitHub repo](https://github.com/gen-mind/cognix?utm_source=genmind.ch)
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

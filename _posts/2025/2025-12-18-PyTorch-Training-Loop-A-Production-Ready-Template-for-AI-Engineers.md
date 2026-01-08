@@ -659,3 +659,11 @@ You can find the full source code on my [GitHub repo](https://github.com/gsantop
 - [torch.inference_mode() vs no_grad()](https://pytorch.org/docs/stable/generated/torch.inference_mode.html?utm_source=genmind.ch)
 - [PyTorch DataLoader Documentation](https://pytorch.org/docs/stable/data.html?utm_source=genmind.ch)
 - [HuggingFace Datasets](https://huggingface.co/docs/datasets?utm_source=genmind.ch)
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -543,3 +543,10 @@ The free tier with **Gemini 3 Pro** makes this a no-brainer to try.
 **Try it yourself:** [Download Google Antigravity](https://antigravity.google/?utm_source=genmind.ch)  
 **Original Sentinel-AI project:** [github.com/gsantopaolo/sentinel-AI](https://github.com/gsantopaolo/sentinel-AI?utm_source=genmind.ch)
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

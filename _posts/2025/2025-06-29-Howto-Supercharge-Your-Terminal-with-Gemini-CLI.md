@@ -240,3 +240,11 @@ Happy prompting!
 [3]: https://www.datacamp.com/tutorial/gemini-cli?utm_source=genmind.ch "Gemini CLI: A Guide With Practical Examples - DataCamp"
 [4]: https://github.com/reugn/gemini-cli?utm_source=genmind.ch "reugn/gemini-cli: A command-line interface (CLI) for Google ... - GitHub"
 [5]: https://github.com/google-gemini/gemini-cli/discussions/2301?utm_source=genmind.ch "Gemini CLI v0.1.6 Introduces New Privacy Command, Improved ..."
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

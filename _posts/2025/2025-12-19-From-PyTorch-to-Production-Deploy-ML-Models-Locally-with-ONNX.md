@@ -688,3 +688,10 @@ The ONNX ecosystem makes this trivial. Train in PyTorch (the best training frame
 
 **Questions?** Open an issue on [GitHub](https://github.com/gsantopaolo/genmind-samples?utm_source=genmind.ch) or find me on Twitter.
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -274,5 +274,10 @@ This continues DeepSeek's pattern of challenging conventional approaches (as see
 
 The future of LLMs might not be about better tokenizers - it might be about eliminating them entirely.
 
+---
 
+## Need Help with Your AI Project?
 
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

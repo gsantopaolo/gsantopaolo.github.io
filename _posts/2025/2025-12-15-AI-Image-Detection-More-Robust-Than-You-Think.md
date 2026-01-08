@@ -688,3 +688,11 @@ As of 2025, **practical AI image detection is viable**—just not as easy as opt
 **Want to verify these results yourself?** 
 
 Download the full code from [github.com/gsantopaolo/synthetic-image-detection](https://github.com/gsantopaolo/synthetic-image-detection?utm_source=genmind.ch) and run your own experiments. Test different generators, degradations, and detection methods. Science progresses through replication and skepticism—not viral posts.
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -262,3 +262,10 @@ N-gram language models are the **classic** statistical tool for predicting text.
 
 Though largely superseded by neural LLMs today, n-grams remain an invaluable teaching example—and a lightweight solution when you need speed and simplicity. Next time your phone nails your next word, tip your hat to these humble models!
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

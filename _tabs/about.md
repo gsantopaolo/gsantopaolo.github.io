@@ -133,4 +133,12 @@ I've shipped AI features to **millions of users** and built open-source projects
 💻 **GitHub:** [github.com/gsantopaolo](https://github.com/gsantopaolo?utm_source=genmind.ch)  
 🔗 **CogniX:** [github.com/gen-mind/cognix](https://github.com/gen-mind/cognix?utm_source=genmind.ch)
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution, scaling an existing system, or training your team, I can help. Book a free consultation to discuss your needs.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}
+
 I look forward to connecting with you!

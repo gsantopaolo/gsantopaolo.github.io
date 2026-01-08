@@ -139,3 +139,11 @@ This might sound obvious, but before you invest in fine-tuning, test a few diffe
 Throughout the fine-tuning process, it’s essential to keep a close eye on your training and validation losses. As discussed, validation loss is a key indicator of overfitting or underfitting, while fluctuations in training loss can provide early clues about the model’s convergence behavior. Tools like TensorBoard are invaluable for visualizing these metrics in real-time, allowing you to adjust your learning rate, batch size, and epoch count as needed. In a future article, I’ll show you how to set up and effectively use these visualization tools.
 
 By balancing the selection of the right LLM with careful hyperparameter tuning and robust monitoring, you can optimize your model’s performance and ensure it generalizes well to your specific use case.
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

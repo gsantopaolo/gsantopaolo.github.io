@@ -66,3 +66,11 @@ In short, if you’re looking for a straightforward visualization tool for indiv
 This post quickly shows how a small code change can significantly boost your model tracking capabilities.  
 I hope you find this simple introduction helpful. As always, <del>you can download the full source code here</del> \[edit\] I moved all the code on my [GitHub repo](https://github.com/gsantopaolo/dataviz?utm_source=genmind.ch)  
 Happy coding!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

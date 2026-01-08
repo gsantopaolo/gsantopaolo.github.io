@@ -829,3 +829,10 @@ This visualization shows how different optimizers handle a saddle point — a co
 - [Which Optimizer Should I Use? (Lightly AI)](https://www.lightly.ai/blog/which-optimizer-should-i-use-for-my-machine-learning-project?utm_source=genmind.ch)
 - [optimi: Fast PyTorch Optimizers](https://optimi.benjaminwarner.dev/?utm_source=genmind.ch)
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -193,3 +193,11 @@ variants and unveil the **Transformer** revolution, which now dominates sequence
 [14]: https://medium.com/ai-assimilating-intelligence/cross-entropy-in-large-language-models-llms-4f1c842b5fca?utm_source=genmind.ch "Cross Entropy in Large Language Models (LLMs) | by Charles Chi | AI"
 [15]: https://arxiv.org/abs/1609.04309?utm_source=genmind.ch "Efficient softmax approximation for GPUs"
 [16]: https://medium.com/data-science/backpropagation-in-rnn-explained-bdf853b4e1c2 "Backpropagation in RNN Explained"
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -125,3 +125,11 @@ Fine-tuning LLMs is a powerful technique to adapt a general-purpose base model t
 And if you need help, feel free to [reach out](https://genmind.ch/about/)!
 
 Happy fine-tuning!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

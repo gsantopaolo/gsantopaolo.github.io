@@ -109,3 +109,11 @@ flexible, modular, and efficient way to enhance the fine-tuning process, making 
 
 For a complete example of how to use the library, check out [my GitHub repository](https://github.com/gsantopaolo/fine-tuning?utm_source=genmind.ch) where the full code is available. 
 Happy fine-tuning!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

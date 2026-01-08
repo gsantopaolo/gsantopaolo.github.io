@@ -300,3 +300,11 @@ Transformers have revolutionized Gen AI by enabling fully parallel sequence mode
 [20]: https://medium.com/%40hexiangnan/understanding-positional-encoding-in-transformer-and-large-language-models-58f1d9a713ed?utm_source=genmind.ch "Understanding Positional Encoding in Transformer and Large ..."
 [21]: https://arxiv.org/abs/2001.04451?utm_source=genmind.ch "Reformer: The Efficient Transformer"
 [22]: https://arxiv.org/abs/2009.06732?utm_source=genmind.ch "Efficient Transformers: A Survey"
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

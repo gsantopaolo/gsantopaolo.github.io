@@ -53,3 +53,11 @@ A huge shoutout to Katherine Crowson for her exceptional work on this project. I
 <del>As always, you can download the code here.</del> \[Edit\] I’ve pushed this fix to [my fork](https://github.com/gsantopaolo/style-transfer-pytorch?utm_source=genmind.ch)—check it out if you’re interested!
 
 Happy styling!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

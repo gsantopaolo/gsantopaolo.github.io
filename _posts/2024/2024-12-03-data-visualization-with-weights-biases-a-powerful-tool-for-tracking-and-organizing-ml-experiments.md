@@ -129,3 +129,11 @@ Check out my GitHub repository for more details and to explore additional data v
 
 <del>Feel free to download the source code</del>. \[edit\] I’m moved all the code of my blog posts on [my GitHub](https://github.com/gsantopaolo/dataviz?utm_source=genmind.ch)  
 Happy experimenting, and enjoy visualizing your data like never before!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -767,3 +767,10 @@ For production inference, consider vLLM which has highly optimized TP implementa
 - [vLLM Documentation](https://docs.vllm.ai/?utm_source=genmind.ch)
 - [PyTorch Distributed Overview](https://pytorch.org/tutorials/beginner/dist_overview.html?utm_source=genmind.ch)
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

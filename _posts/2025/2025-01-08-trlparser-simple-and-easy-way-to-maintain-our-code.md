@@ -113,3 +113,11 @@ python your_script.py --config config.yaml --num_train_epochs 3
 TrlParser, combined with YAML configuration, is a game-changer for fine-tuning and training scripts in the Hugging Face ecosystem. It keeps your code neat, makes parameter management super simple, and provides a flexible, reproducible way to handle configurations.
 
 Happy fine-tuning, and enjoy writing neat, maintainable code!
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

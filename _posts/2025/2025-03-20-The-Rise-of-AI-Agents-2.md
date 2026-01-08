@@ -125,3 +125,11 @@ In conclusion, AI agents are transforming our approach to automation and problem
 Happy innovating!
 
 P.S. All the images in this post were generated with the new chatGPT 4o image generation capability
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

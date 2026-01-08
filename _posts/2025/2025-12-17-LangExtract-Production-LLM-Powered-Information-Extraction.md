@@ -1468,3 +1468,11 @@ The complete financial extraction system we built:
 The future of information extraction isn't about building bigger NER models—it's about better prompting, source grounding, and flexible schemas. LangExtract delivers all three.
 
 Now go extract some insights. 🚀
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

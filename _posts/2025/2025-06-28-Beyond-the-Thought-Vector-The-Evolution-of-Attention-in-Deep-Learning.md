@@ -191,3 +191,11 @@ and transparent attention variants, this family of techniques remains central to
 [10]: https://arxiv.org/abs/1508.04395?utm_source=genmind.ch "End-to-End Attention-based Large Vocabulary Speech Recognition"
 [11]: https://medium.com/%40ckyeungac/how-attention-in-neural-network-works-309f2d95b833?utm_source=genmind.ch "How Attention Works in Neural Network? | by Kit Yeung - Medium"
 [12]: https://aclanthology.org/D15-1166.pdf "Luong, Pham & Manning “Effective Approaches to Attention-based Neural Machine Translation,” EMNLP 2015"
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

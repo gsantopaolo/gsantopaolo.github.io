@@ -506,3 +506,11 @@ This visualization shows the challenge of optimization: navigating a complex, no
 - [PyTorch MultiMarginLoss](https://pytorch.org/docs/stable/generated/torch.nn.MultiMarginLoss.html?utm_source=genmind.ch)
 - [Torchvision Focal Loss](https://pytorch.org/vision/stable/generated/torchvision.ops.sigmoid_focal_loss.html?utm_source=genmind.ch)
 - [Sambasivarao K's original overview](https://medium.com/@SambasivaraoK/choosing-the-right-loss-function-for-your-ml-problem-739f066adfdc?utm_source=genmind.ch)
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

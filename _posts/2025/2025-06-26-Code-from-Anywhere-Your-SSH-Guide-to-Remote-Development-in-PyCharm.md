@@ -241,3 +241,11 @@ Happy AI coding! 😄
 [11]: https://www.jetbrains.com/help/pycharm/tutorial-deployment-in-product.html?utm_source=genmind.ch "Tutorial: Deployment in PyCharm - JetBrains"
 [12]: https://www.jetbrains.com/help/pycharm/faq-about-remote-development.html?utm_source=genmind.ch "FAQ about remote development | PyCharm Documentation - JetBrains"
 [13]: https://intellij-support.jetbrains.com/hc/en-us/community/posts/10630708200594-Unable-to-add-ssh-interpreter?utm_source=genmind.ch "Unable to add ssh interpreter – IDEs Support (IntelliJ Platform)"
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

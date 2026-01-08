@@ -514,3 +514,10 @@ As always find the full source code and documentation on my [DeltaE repo](https:
 
 **Built with ❤️ for scalable, production-ready fashion AI**
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

@@ -660,3 +660,10 @@ If you're building AI-powered automation or event-driven systems, I hope this se
 
 **Questions?** Open an issue on [GitHub](https://github.com/gsantopaolo/CreativeCampaign-Agent?utm_source=genmind.ch).
 
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

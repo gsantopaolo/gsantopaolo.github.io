@@ -117,3 +117,11 @@ Reforge AI’s agentic approach—anchored by robust documentation with Mermaid 
 [5]: https://medium.com/%40jelkhoury880/why-general-purpose-llms-wont-modernize-your-codebase-and-what-will-eaf768481d38?utm_source=genmind.ch "Why General-Purpose LLMs Won't Modernize Your Codebase ..."
 [6]: https://fintechos.com/blogpost/how-to-de-risk-core-modernization-in-banking/?utm_source=genmind.ch "5 Strategies for De-risking Core Modernization in Banking - FintechOS"
 [7]: https://blogs.microsoft.com/blog/2025/04/28/how-agentic-ai-is-driving-ai-first-business-transformation-for-customers-to-achieve-more/?utm_source=genmind.ch "How agentic AI is driving AI-first business transformation for ..."
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}

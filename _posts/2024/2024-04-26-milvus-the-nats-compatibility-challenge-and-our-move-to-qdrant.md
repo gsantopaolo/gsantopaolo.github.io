@@ -45,3 +45,11 @@ This complexity has become a major driver behind our decision to transition to *
 While Milvus remains a powerful vector database for on‑premises applications, its current NATS compatibility confines deployments to standalone mode, hindering true horizontal scalability. This shortcoming, juxtaposed with the effortless scalability of SaaS solutions like Pinecone, makes large‑scale, on‑premises Milvus deployments both technically and financially challenging.
 
 After evaluating alternative message storage solutions such as Pulsar and considering the benefits of integrated object storage with MinIO, our strategic decision is clear. To meet our scalability and cost‑efficiency goals, we are moving to Quadrant—a solution designed to overcome these hurdles while still offering the flexibility of an on‑premises deployment.
+
+---
+
+## Need Help with Your AI Project?
+
+Whether you're building a new AI solution or scaling an existing one, I can help. Book a free consultation to discuss your project.
+
+[Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}
