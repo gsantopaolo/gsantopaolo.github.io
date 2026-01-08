@@ -5,7 +5,7 @@ author: "gp"
 layout: "post"
 image: "/content/2026/01/results-50000-batch-1.png"
 categories: [Transformers, CNNs, Engineering, Benchmarks]
-published: false
+published: true
 mermaid: true
 math: true
 ---
