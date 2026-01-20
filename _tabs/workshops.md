@@ -47,7 +47,7 @@ Design workflows where humans and AI each do what they're best at. Know when to 
 
 ---
 
-## About the Instructor
+## About the Instructors
 
 **Jamie-Leigh Blake** brings 20+ years building technology that changes how humans interact with computers. Co-founded Orbbec (IPO'd), founded OpenKinect, wrote the book on natural user interfaces, and now works at Amazon on AI and inclusive technology.
 
@@ -57,10 +57,16 @@ The hard part isn't building AI—it's thinking clearly about it. Most AI traini
 
 [Learn more about Jamie-Leigh →](https://getclarit.ai/jl)
 
+**Gian Paolo Santopaolo** brings 24+ years in software engineering with deep expertise in production-grade AI systems. Built AI platforms serving 100+ million users, developed CogniX (enterprise RAG platform), and deployed multiple agentic systems including ReforgeAI and Sentinel-AI.
+
+Microsoft MVP (2012–2022) and Regional Director (2018–2020), with hands-on PyTorch expertise spanning custom neural architectures, LLM/diffusion model fine-tuning, multi-GPU distributed inference, and RAG systems at scale.
+
+The gap between research prototypes and production systems is where most AI projects fail. Gian Paolo bridges that gap with battle-tested engineering patterns.
+
+[Learn more about Gian Paolo →](/about/)
+
 ---
 
 ## Ready to Build AI Judgment?
 
 [Book an Intro Call](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary} | [Email Me](mailto:gp@genmind.ch)
-
-Or reach out directly: **gp {@} genmind.ch**
