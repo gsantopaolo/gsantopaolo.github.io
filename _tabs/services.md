@@ -114,4 +114,4 @@ Absolutely. My focus is on delivering value—whether that's through guidance, h
 
 [Book a Free Consultation](https://calendar.app.google/QuNua7HxdsSasCGu9){: .btn .btn-primary}
 
-Or reach out directly: **gianpaolo.santopaolo@gmail.com**
+Or reach out directly: **gp {@} genmind.ch**
