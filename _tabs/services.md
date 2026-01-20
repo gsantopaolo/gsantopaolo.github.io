@@ -44,7 +44,7 @@ I work daily with PyTorch, delivering AI solutions from research prototypes to s
 
 **Here's the thing**: If I told you I like your project, that means I would love to jump in and work out whatever you'll throw at me. I don't do surface-level consulting—I roll up my sleeves and build alongside your team.
 
-[Learn more about my expertise](/tabs/about)
+[Learn more about my expertise](/about/)
 
 ---
 
