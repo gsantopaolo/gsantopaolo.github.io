@@ -101,8 +101,6 @@ Let me walk you through each part of `train.py` so you understand what's happeni
 ### 1. Device Selection (The Smart Way)
 
 ```python
-import torch
-
 def get_best_device() -> torch.device:
     """
     Automatically select the best available device.
@@ -160,16 +158,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 ### 3. Data Loading with Smart Caching
 
 ```python
-import os
-import torch
-from pathlib import Path
-from datasets import load_dataset, DownloadMode
-from typing import Tuple
-import logging
-
-logger = logging.getLogger(__name__)
-
-def load_iris_tensors(datasets_dir: str = "datasets", seed: int = 42) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+def load_iris_tensors(datasets_dir: str = "datasets", seed: int = 42):
     """
     Load Iris dataset from HuggingFace and prepare train/val tensors.
     """
@@ -243,9 +232,6 @@ def load_iris_tensors(datasets_dir: str = "datasets", seed: int = 42) -> Tuple[t
 ### 4. Model: Simple MLP
 
 ```python
-import torch
-import torch.nn as nn
-
 class TinyMLP(nn.Module):
     """
     Simple MLP for multi-class classification.
@@ -271,11 +257,6 @@ class TinyMLP(nn.Module):
 ### 5. Training Loop (The Real One)
 
 ```python
-from typing import Optional
-import torch
-import torch.nn as nn
-from torch.utils.data import DataLoader
-
 def train_one_epoch(
     model: nn.Module,
     loader: DataLoader,
@@ -283,7 +264,7 @@ def train_one_epoch(
     loss_fn: nn.Module,
     device: torch.device,
     use_amp: bool = False,
-    scaler: Optional[torch.cuda.amp.GradScaler] = None
+    scaler: torch.cuda.amp.GradScaler = None
 ) -> float:
     """Train for one epoch."""
     model.train()  # Enable Dropout, BatchNorm training mode
@@ -328,23 +309,12 @@ def train_one_epoch(
 ### 6. Evaluation Loop
 
 ```python
-from typing import Tuple
-import torch
-import torch.nn as nn
-from torch.utils.data import DataLoader
-
-def accuracy_from_logits(logits: torch.Tensor, targets: torch.Tensor) -> float:
-    """Calculate accuracy from logits and target labels."""
-    predictions = logits.argmax(dim=1)
-    correct = (predictions == targets).sum().item()
-    return correct / targets.size(0)
-
 def evaluate(
     model: nn.Module,
     loader: DataLoader,
     loss_fn: nn.Module,
     device: torch.device
-) -> Tuple[float, float]:
+) -> tuple[float, float]:
     """Evaluate on validation/test data."""
     model.eval()  # Disable Dropout, BatchNorm uses running stats
     total_loss = 0.0
@@ -375,14 +345,10 @@ def evaluate(
 ### 7. Loss Tracking and Plotting
 
 ```python
-from typing import List
-import matplotlib.pyplot as plt
-from pathlib import Path
-
 def plot_loss_curves(
-    epoch_count: List[int],
-    train_loss_values: List[float],
-    val_loss_values: List[float],
+    epoch_count: list[int],
+    train_loss_values: list[float],
+    val_loss_values: list[float],
     save_path: str = "training-loop/loss_curve.png"
 ):
     """Plot and save training and validation loss curves."""
@@ -451,8 +417,6 @@ model.eval()
 ## Configuration: One Place to Change Everything
 
 ```python
-from dataclasses import dataclass
-
 @dataclass
 class TrainingConfig:
     """Training hyperparameters"""
@@ -472,11 +436,6 @@ class TrainingConfig:
 ## The Main Loop (Putting It All Together)
 
 ```python
-import torch
-import torch.nn as nn
-from torch.utils.data import DataLoader, TensorDataset
-from pathlib import Path
-
 def main():
     """Main training loop"""
     config = TrainingConfig()
