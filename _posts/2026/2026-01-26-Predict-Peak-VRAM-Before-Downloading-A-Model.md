@@ -20,7 +20,7 @@ If a model is on the Hugging Face Hub in **Safetensors**, you can estimate **mos
 Peak inference VRAM is usually:
 
 $$
-\text{Peak VRAM} \approx \text{Weights} + \text{KV cache} + \text{Overhead}
+\mathrm{Peak\ VRAM} \approx \mathrm{Weights} + \mathrm{KV\ cache} + \mathrm{Overhead}
 $$
 
 - **Weights**: deterministic from Safetensors metadata (no tensor download needed)
@@ -76,16 +76,20 @@ KV cache grows with:
 ### Multi-Head Attention (MHA)
 
 $$
-\text{KV bytes} = B \times T \times L \times (\text{num\_heads} \times \text{head\_dim}) \times 2 \times \text{bytes\_per\_elem}
+\mathrm{KV\ bytes} = B \times T \times L \times (n_{\mathrm{heads}} \times d_{\mathrm{head}}) \times 2 \times b
 $$
 
 ### Grouped-Query Attention (GQA)
 
 $$
-\text{KV bytes} = B \times T \times L \times (\text{num\_kv\_heads} \times \text{head\_dim}) \times 2 \times \text{bytes\_per\_elem}
+\mathrm{KV\ bytes} = B \times T \times L \times (n_{\mathrm{kv}} \times d_{\mathrm{head}}) \times 2 \times b
 $$
 
-The `2` is for K + V.
+Where:
+- B = batch size, T = sequence length, L = number of layers
+- n = number of heads (MHA) or KV heads (GQA), d = head dimension
+- b = bytes per element (2 for FP16, 1 for FP8)
+- The `2` multiplier is for K + V tensors
 
 **Important:** Modern LLMs (Llama 2 70B, Llama 3, Mistral) often use GQA, which can reduce KV cache by `num_heads / num_kv_heads`. For example, Llama 3 uses a grouping factor of 2, so for every two query heads there's one KV head.
 
@@ -397,19 +401,6 @@ Use `hf-mem` for quick checks; use the full script when you need to factor in KV
 
 ---
 
-## References
-
-- [Safetensors metadata parsing via HTTP range requests](https://huggingface.co/docs/safetensors/en/metadata_parsing) - Hugging Face docs
-- [Mastering LLM Techniques: Inference Optimization](https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/) - NVIDIA Developer Blog
-- [A Deep Dive into LLM Inference Latencies](https://blog.hathora.dev/a-deep-dive-into-llm-inference-latencies/) - KV cache formulas and examples
-- [Model memory estimator](https://huggingface.co/docs/accelerate/en/usage_guides/model_size_estimator) - HF Accelerate (loading vs inference caveat)
-- [Quantization](https://huggingface.co/docs/transformers/en/main_classes/quantization) - Hugging Face Transformers (GPTQ, AWQ, bitsandbytes)
-- [Quantized KV Cache](https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache/) - vLLM FP8 KV cache docs
-- [KV Cache Size Calculations in GQA](https://medium.com/@liu.peng.uppsala/key-value-kv-cache-size-calculations-in-grouped-query-attention-gqa-e090d3037ab3) - Medium
-- [Understanding and Coding the KV Cache](https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms) - Sebastian Raschka
-- [hf-mem](https://github.com/alvarobartt/hf-mem) - CLI tool for quick weight memory estimates
-
----
 
 ## Need Help with Your AI Project?
 
