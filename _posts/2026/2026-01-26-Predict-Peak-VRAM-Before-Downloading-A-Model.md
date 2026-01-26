@@ -19,7 +19,9 @@ If a model is on the Hugging Face Hub in **Safetensors**, you can estimate **mos
 
 Peak inference VRAM is usually:
 
-$$\text{Peak VRAM} \approx \text{Weights} + \text{KV cache} + \text{Overhead}$$
+$$
+\text{Peak VRAM} \approx \text{Weights} + \text{KV cache} + \text{Overhead}
+$$
 
 - **Weights**: deterministic from Safetensors metadata (no tensor download needed)
 - **KV cache**: deterministic from `config.json` + your `batch_size` + `context_len` + dtype
@@ -73,11 +75,15 @@ KV cache grows with:
 
 ### Multi-Head Attention (MHA)
 
-$$\text{KV bytes} = B \times T \times L \times (\text{num\_heads} \times \text{head\_dim}) \times 2 \times \text{bytes\_per\_elem}$$
+$$
+\text{KV bytes} = B \times T \times L \times (\text{num\_heads} \times \text{head\_dim}) \times 2 \times \text{bytes\_per\_elem}
+$$
 
 ### Grouped-Query Attention (GQA)
 
-$$\text{KV bytes} = B \times T \times L \times (\text{num\_kv\_heads} \times \text{head\_dim}) \times 2 \times \text{bytes\_per\_elem}$$
+$$
+\text{KV bytes} = B \times T \times L \times (\text{num\_kv\_heads} \times \text{head\_dim}) \times 2 \times \text{bytes\_per\_elem}
+$$
 
 The `2` is for K + V.
 
