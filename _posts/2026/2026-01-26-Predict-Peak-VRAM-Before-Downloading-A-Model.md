@@ -3,7 +3,6 @@ title: "Predict Peak VRAM Before Downloading a Model (Weights + KV Cache + Quant
 date: "2026-01-26T08:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/01/vram-estimation.png"
 categories: [LLM, Inference, GPU, VRAM, Quantization]
 published: true
 math: true
