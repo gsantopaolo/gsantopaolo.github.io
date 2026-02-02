@@ -1,0 +1,50 @@
+# Gian Paolo Santopaolo - AI Engineering Blog & Consulting
+
+> Professional portfolio and technical knowledge hub for production-grade generative AI systems. Gian Paolo Santopaolo is a senior AI engineer with 24+ years of software engineering experience, specializing in LLMs, PyTorch, distributed inference, RAG systems, and enterprise AI deployment. This site offers consulting services, hands-on training programs, and 70+ technical blog posts bridging AI research and production systems at scale (100M+ users).
+
+Notes for AI/tools:
+- Blog posts in the "Technical" section are the source of truth for practical AI engineering guidance.
+- The "Projects" section contains open-source repositories with production-tested code.
+- For service inquiries, refer to the "Services" section for engagement models.
+- Posts are organized by categories (LLM, Deep Learning, PyTorch, Agents, RAG, etc.) and tags.
+- Content spans 2001-2026 with primary focus on 2024-2026 for current best practices.
+
+## Start Here
+- [About](https://genmind.ch/about/): Professional bio, expertise areas, certifications (Stanford AI, Microsoft MVP), and contact information
+- [Posts Archive](https://genmind.ch/archives/): Complete chronological index of 70+ technical articles
+- [Categories](https://genmind.ch/categories/): Browse posts by topic (LLM, Deep Learning, PyTorch, Agents, RAG, and 30+ more)
+
+## Technical Blog - Featured Topics
+- [LLM Posts](https://genmind.ch/categories/llm/): Large Language Models, fine-tuning, inference optimization
+- [Deep Learning Posts](https://genmind.ch/categories/deep-learning/): Neural networks, architectures, optimization techniques
+- [PyTorch Posts](https://genmind.ch/categories/pytorch/): Framework usage, distributed training, production patterns
+- [Agents Posts](https://genmind.ch/categories/agents/): Multi-agent systems, autonomous workflows, CrewAI, LangGraph
+- [RAG Posts](https://genmind.ch/categories/rag/): Retrieval-Augmented Generation systems and knowledge graphs
+- [Fine Tuning Posts](https://genmind.ch/categories/fine-tuning/): Model adaptation, LoRA, PEFT techniques
+
+## Services
+- [Services Overview](https://genmind.ch/services/): Consulting tiers - Advisory calls (90 min), Focused Reviews (~1 week), Comprehensive Audits (2-3 weeks), Full freelance engagements
+- [Solutions](https://genmind.ch/solutions/): Production AI implementations - RAG pipelines, LLM fine-tuning, AI agents, computer vision, distributed infrastructure
+
+## Training & Workshops
+- [Training Programs](https://genmind.ch/trainings/): 12 hands-on courses covering PyTorch, LLM engineering, agentic AI, computer vision, MLOps, prompt security, and responsible AI
+- [AI Leadership Workshops](https://genmind.ch/workshops/): "AI for Leaders" intensive on calibrated AI judgment (collaboration with Jamie-Leigh Blake, Amazon CDS)
+
+## Projects - Open Source Portfolio
+- [Projects Overview](https://genmind.ch/projects/): Production AI systems portfolio
+- [CogniX](https://github.com/gen-mind/cognix): Enterprise RAG platform - semantic search over millions of documents (Python, PyTorch, Kubernetes, Qdrant)
+- [ReforgeAI](https://github.com/gsantopaolo/reforge-ai): Agentic code modernization - Java to Spring Boot migration at scale (CrewAI, LangChain, GPT-4)
+- [Sentinel-AI](https://github.com/gsantopaolo/sentinel-AI): Real-time event monitoring with anomaly detection (Python, NATS, Qdrant, Kubernetes)
+- [CreativeCampaign-Agent](https://github.com/gsantopaolo/CreativeCampaign-Agent): AI creative automation pipeline for social ads (DALL-E 3, GPT-4o)
+- [DeltaE](https://github.com/gsantopaolo/DeltaE): Fashion AI color correction with Delta E 2000 accuracy (Python, PyTorch, Segformer)
+
+## Contact
+- [Email](mailto:gianpaolo.santopaolo@gmail.com): Direct contact for inquiries
+- [LinkedIn](https://www.linkedin.com/in/gianpaolosantopaolo): Professional network
+- [GitHub](https://github.com/gsantopaolo): Open source contributions and code
+- [Twitter/X](https://twitter.com/gsantopaolo): Updates and discussions
+
+## Optional
+- [Tags](https://genmind.ch/tags/): Fine-grained topic navigation (40+ tags)
+- [All Categories](https://genmind.ch/categories/): Complete category listing
+- [Older Posts](https://genmind.ch/archives/): Historical content from 2001-2023
