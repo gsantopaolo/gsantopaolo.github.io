@@ -5,7 +5,7 @@ author: "gp"
 layout: "post"
 image: "/content/2026/02/n8n-echomind.svg"
 categories: [AI Agents, Workflow Automation, n8n, EchoMind]
-published: true
+published: false
 mermaid: true
 ---
 
