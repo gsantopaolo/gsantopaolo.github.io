@@ -1,6 +1,6 @@
 ---
 title: "Securing AI Agents with Zero Trust and Sandboxing: The Production Reality Check"
-date: "2026-02-11T08:00:00+00:00"
+date: "2026-02-9T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/02/ai-agent-security-architecture.svg"
