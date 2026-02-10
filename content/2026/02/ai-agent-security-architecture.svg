@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="ztGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sandboxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="600" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">
+    AI Agent Security: Zero Trust + Sandboxing
+  </text>
+  <rect x="350" y="95" width="500" height="3" fill="url(#ztGrad)" opacity="0.6"/>
+
+  <!-- Left Side: Zero Trust -->
+  <g filter="url(#shadow)">
+    <!-- Zero Trust Container -->
+    <rect x="80" y="160" width="280" height="380" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+
+    <!-- Header -->
+    <rect x="80" y="160" width="280" height="60" rx="16" fill="url(#ztGrad)"/>
+    <rect x="80" y="208" width="280" height="12" fill="url(#ztGrad)"/>
+
+    <!-- Shield icon -->
+    <path d="M 220 180 L 200 170 L 220 160 L 240 170 Z M 220 165 L 220 195 M 210 175 L 230 175 M 215 185 L 225 185"
+          stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="220" y="210" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Zero Trust</text>
+
+    <!-- Zero Trust Components -->
+    <g transform="translate(100, 245)">
+      <!-- Authentication -->
+      <rect width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="25" r="8" fill="url(#ztGrad)"/>
+      <text x="40" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Authentication</text>
+      <text x="40" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">User-scoped tokens</text>
+
+      <!-- Authorization -->
+      <rect y="65" width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="90" r="8" fill="url(#ztGrad)"/>
+      <text x="40" y="87" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Authorization</text>
+      <text x="40" y="103" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Just-in-time access</text>
+
+      <!-- Policy Engine -->
+      <rect y="130" width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="155" r="8" fill="url(#ztGrad)"/>
+      <text x="40" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Policy Engine</text>
+      <text x="40" y="168" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">RBAC/ABAC rules</text>
+
+      <!-- Audit Logging -->
+      <rect y="195" width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="220" r="8" fill="url(#ztGrad)"/>
+      <text x="40" y="217" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Audit Logging</text>
+      <text x="40" y="233" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Every action tracked</text>
+    </g>
+  </g>
+
+  <!-- Center: Agent with Attack Vectors -->
+  <g filter="url(#shadow)">
+    <!-- Agent Container -->
+    <rect x="460" y="240" width="280" height="220" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+
+    <!-- AI Agent Icon -->
+    <circle cx="600" cy="310" r="35" fill="url(#sandboxGrad)" filter="url(#glow)"/>
+    <text x="600" y="320" font-family="system-ui, sans-serif" font-size="28" fill="white" text-anchor="middle">🤖</text>
+
+    <text x="600" y="365" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">AI Agent</text>
+
+    <!-- Attack Indicators -->
+    <g opacity="0.8">
+      <!-- Prompt Injection -->
+      <circle cx="520" cy="400" r="6" fill="url(#alertGrad)" filter="url(#glow)"/>
+      <text x="535" y="405" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">Prompt Injection</text>
+
+      <!-- Credential Theft -->
+      <circle cx="520" cy="425" r="6" fill="url(#alertGrad)" filter="url(#glow)"/>
+      <text x="535" y="430" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">Credential Theft</text>
+
+      <!-- Container Escape -->
+      <circle cx="635" cy="400" r="6" fill="url(#alertGrad)" filter="url(#glow)"/>
+      <text x="650" y="405" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">Container Escape</text>
+
+      <!-- API Manipulation -->
+      <circle cx="635" cy="425" r="6" fill="url(#alertGrad)" filter="url(#glow)"/>
+      <text x="650" y="430" font-family="system-ui, sans-serif" font-size="11" fill="#ef4444">API Manipulation</text>
+    </g>
+  </g>
+
+  <!-- Right Side: Sandbox -->
+  <g filter="url(#shadow)">
+    <!-- Sandbox Container -->
+    <rect x="840" y="160" width="280" height="380" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+
+    <!-- Header -->
+    <rect x="840" y="160" width="280" height="60" rx="16" fill="url(#sandboxGrad)"/>
+    <rect x="840" y="208" width="280" height="12" fill="url(#sandboxGrad)"/>
+
+    <!-- Container icon -->
+    <rect x="965" y="170" width="30" height="30" rx="4" stroke="white" stroke-width="2.5" fill="none"/>
+    <rect x="972" y="177" width="16" height="16" rx="2" stroke="white" stroke-width="2" fill="none"/>
+
+    <text x="980" y="210" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Sandbox</text>
+
+    <!-- Sandbox Components -->
+    <g transform="translate(860, 245)">
+      <!-- Read-Only FS -->
+      <rect width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="25" r="8" fill="url(#sandboxGrad)"/>
+      <text x="40" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Read-Only FS</text>
+      <text x="40" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Prevent malware install</text>
+
+      <!-- Capabilities -->
+      <rect y="65" width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="90" r="8" fill="url(#sandboxGrad)"/>
+      <text x="40" y="87" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Drop Capabilities</text>
+      <text x="40" y="103" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Minimal privileges</text>
+
+      <!-- Resource Limits -->
+      <rect y="130" width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="155" r="8" fill="url(#sandboxGrad)"/>
+      <text x="40" y="152" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Resource Limits</text>
+      <text x="40" y="168" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">CPU/Memory/Time</text>
+
+      <!-- Network Policy -->
+      <rect y="195" width="240" height="50" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <circle cx="20" cy="220" r="8" fill="url(#sandboxGrad)"/>
+      <text x="40" y="217" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">Network Policy</text>
+      <text x="40" y="233" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Egress filtering</text>
+    </g>
+  </g>
+
+  <!-- Connecting Arrows -->
+  <!-- Left arrow: Zero Trust to Agent -->
+  <defs>
+    <marker id="arrowZT" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#10b981" />
+    </marker>
+    <marker id="arrowSB" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
+    </marker>
+  </defs>
+
+  <path d="M 360 350 L 460 350" stroke="url(#ztGrad)" stroke-width="3" fill="none" marker-end="url(#arrowZT)" opacity="0.7"/>
+  <text x="410" y="340" font-family="system-ui, sans-serif" font-size="11" fill="#10b981" text-anchor="middle">Verify</text>
+
+  <!-- Right arrow: Agent to Sandbox -->
+  <path d="M 740 350 L 840 350" stroke="url(#sandboxGrad)" stroke-width="3" fill="none" marker-end="url(#arrowSB)" opacity="0.7"/>
+  <text x="790" y="340" font-family="system-ui, sans-serif" font-size="11" fill="#3b82f6" text-anchor="middle">Isolate</text>
+
+  <!-- Bottom: Defense in Depth Label -->
+  <g transform="translate(600, 570)">
+    <rect x="-180" y="-25" width="360" height="50" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    <text x="0" y="-5" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#e2e8f0" text-anchor="middle">Defense in Depth</text>
+    <text x="0" y="12" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">ZT validates WHO • Sandbox limits WHAT</text>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="3" fill="#10b981" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="1100" cy="100" r="3" fill="#3b82f6" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="100" cy="580" r="3" fill="#3b82f6" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="1100" cy="580" r="3" fill="#10b981" opacity="0.5" filter="url(#glow)"/>
+</svg>
