@@ -3,14 +3,15 @@ title: "Securing AI Agents with Zero Trust and Sandboxing: The Production Realit
 date: "2026-02-9T08:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/02/ai-agent-security-architecture.svg"
+image: "/content/2026/02/zerotrust.png"
 categories: [AI Agents, Security, Zero Trust, Containers, Engineering]
 published: true
 mermaid: true
 ---
 
 A financial services company deployed an AI agent to process customer support tickets. 
-Within 48 hours, a crafted prompt injection allowed an attacker to extract API keys from the agent's memory, access customer data outside the authorized scope, and pivot to internal systems. The agent wasn't hacked through a CVE—it was doing exactly what it was told. By an attacker.
+Within 48 hours, a crafted prompt injection allowed an attacker to extract API keys from the 
+agent's memory, access customer data outside the authorized scope, and pivot to internal systems. The agent wasn't hacked through a CVE—it was doing exactly what it was told. By an attacker.
 
 **Here's the thing**: Traditional perimeter security is useless when the threat actor is already inside your trust boundary, wearing the disguise of a helpful assistant.
 
