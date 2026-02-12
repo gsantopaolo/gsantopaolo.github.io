@@ -616,9 +616,9 @@ ReAct excels at dynamic, multi-step tasks. But it's not always the right pattern
 | Use Case | Best Pattern | Why |
 |----------|--------------|-----|
 | **Multi-step research** | ReAct ✅ | Needs reasoning + tools |
-| **Complex planning** | [Planning Pattern](/posts/Planning-Pattern-for-AI-Agents-Strategic-Reasoning-Before-Action/) | Upfront strategy better than reactive |
-| **Multi-agent workflows** | [Multi-Agent Orchestration](/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/) | Specialized agents collaborate |
-| **Long conversations** | [Memory + RAG](/posts/Memory-and-Context-Management-for-Long-Running-AI-Agents/) | Context beyond single session |
+| **Complex planning** | [Planning Pattern](https://genmind.ch/posts/Planning-Pattern-for-AI-Agents-Strategic-Reasoning-Before-Action/) | Upfront strategy better than reactive |
+| **Multi-agent workflows** | [Multi-Agent Orchestration](https://genmind.ch/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/) | Specialized agents collaborate |
+| **Long conversations** | [Memory + RAG](https://genmind.ch/posts/Memory-and-Context-Management-for-Long-Running-AI-Agents/) | Context beyond single session |
 | **Static knowledge** | Simple prompting | No tools needed |
 
 **Future posts in this series**:

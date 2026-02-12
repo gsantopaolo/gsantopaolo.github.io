@@ -19,7 +19,7 @@ In this post, I'll show you how to build your own Planning pattern agents using 
 
 ## Why Planning Matters (And When ReAct Isn't Enough)
 
-I covered the ReAct pattern in my [previous post about building ReAct agents with CrewAI](/posts/Building-ReAct-Agents-with-CrewAI-From-Theory-to-Production/). ReAct excels at unpredictable scenarios where agents need to adapt dynamically. But there's a cost problem.
+I covered the ReAct pattern in my [previous post about building ReAct agents with CrewAI](https://genmind.ch/posts/Building-ReAct-Agents-with-CrewAI-From-Theory-to-Production/). ReAct excels at unpredictable scenarios where agents need to adapt dynamically. But there's a cost problem.
 
 **The ReAct Tax**: Continuous reasoning loops mean the LLM generates thoughts, actions, and observations repeatedly. For a 10-step research task, ReAct might use 40,000-50,000 tokens. At Claude Opus 4.6 pricing ($15/million input tokens), that's **$0.60-0.75 per query**.
 
@@ -760,7 +760,7 @@ The Planning pattern excels at predictable workflows, but there are scenarios wh
 - Use ReAct loops within each step for adaptation
 - Re-plan if major assumptions violated
 
-**Coming soon**: [Multi-Agent Orchestration Patterns](/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/) - combining Planning and ReAct agents in teams
+**Coming soon**: [Multi-Agent Orchestration Patterns](https://genmind.ch/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/) - combining Planning and ReAct agents in teams
 
 ### Scenario 2: Complex Dependencies Require State Management
 
@@ -771,7 +771,7 @@ The Planning pattern excels at predictable workflows, but there are scenarios wh
 - Use vector database for context retrieval
 - Apply RAG to enhance plan generation
 
-**Coming soon**: [Memory and Context Management for Long-Running AI Agents](/posts/Memory-and-Context-Management-for-Long-Running-AI-Agents/)
+**Coming soon**: [Memory and Context Management for Long-Running AI Agents](https://genmind.ch/posts/Memory-and-Context-Management-for-Long-Running-AI-Agents/)
 
 ### Scenario 3: Tools Need Dynamic Discovery
 
@@ -782,7 +782,7 @@ The Planning pattern excels at predictable workflows, but there are scenarios wh
 - Agent searches catalog during planning
 - Load tools on-demand instead of upfront
 
-**Coming soon**: [Tool Design Patterns for Production AI Agents](/posts/Tool-Design-Patterns-for-Production-AI-Agents/)
+**Coming soon**: [Tool Design Patterns for Production AI Agents](https://genmind.ch/posts/Tool-Design-Patterns-for-Production-AI-Agents/)
 
 ---
 
@@ -886,7 +886,7 @@ Ready to implement the Planning pattern in your organization? Here's your step-b
 ### Code & Examples
 - **Complete implementation**: [GitHub - planning-claude-sdk-market-research](https://github.com/gsantopaolo/gsantopaolo.github.io/tree/main/examples/planning-claude-sdk-market-research)
 - **Sample output**: [Market Research Report](https://github.com/gsantopaolo/gsantopaolo.github.io/blob/main/examples/planning-claude-sdk-market-research/examples/sample-output.md)
-- **Comparison project**: [ReAct Pattern with CrewAI](/posts/Building-ReAct-Agents-with-CrewAI-From-Theory-to-Production/)
+- **Comparison project**: [ReAct Pattern with CrewAI](https://genmind.ch/posts/Building-ReAct-Agents-with-CrewAI-From-Theory-to-Production/)
 
 ### Microsoft Agent Framework
 - [Official Documentation](https://learn.microsoft.com/agent-framework/)
@@ -907,7 +907,7 @@ Ready to implement the Planning pattern in your organization? Here's your step-b
 ### Production Case Studies
 - [Goldman Sachs Claude Deployment](https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html) - 12K+ users, 30% time savings
 - [Google Cloud: ROI of AI Agents](https://cloud.google.com/transform/roi-of-ai-how-agents-help-business) - Enterprise metrics
-- [Securing AI Agents with Zero Trust](/posts/Securing-AI-Agents-with-Zero-Trust-and-Sandboxing/) - Production security practices
+- [Securing AI Agents with Zero Trust](https://genmind.ch/posts/Securing-AI-Agents-with-Zero-Trust-and-Sandboxing/) - Production security practices
 
 ---
 
@@ -916,8 +916,8 @@ Ready to implement the Planning pattern in your organization? Here's your step-b
 **Questions?** Drop a comment below or reach out via the contact form.
 
 **Coming next in the series**:
-- [Multi-Agent Orchestration Patterns](/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/) - Building teams of Planning and ReAct agents
-- [Memory and Context Management](/posts/Memory-and-Context-Management-for-Long-Running-AI-Agents/) - Making agents remember across sessions
-- [Tool Design Patterns](/posts/Tool-Design-Patterns-for-Production-AI-Agents/) - Building production-grade tools
+- [Multi-Agent Orchestration Patterns](https://genmind.ch/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/) - Building teams of Planning and ReAct agents
+- [Memory and Context Management](https://genmind.ch/posts/Memory-and-Context-Management-for-Long-Running-AI-Agents/) - Making agents remember across sessions
+- [Tool Design Patterns](https://genmind.ch/posts/Tool-Design-Patterns-for-Production-AI-Agents/) - Building production-grade tools
 
 ⭐ **If this post helped you, please share it with your team and star the [GitHub repository](https://github.com/gsantopaolo/gsantopaolo.github.io)!**
