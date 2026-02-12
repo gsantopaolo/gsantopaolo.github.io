@@ -29,7 +29,7 @@ LLMs are excellent reasoners, but they're limited to their training data. Ask Cl
 
 **ReAct combines the best of both**: reasoning traces help the model plan and adapt, while tool actions let it access real-time data, APIs, and databases.
 
-**Source**: [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., ICLR 2023)](https://arxiv.org/abs/2210.03629)
+<!-- **Source**: [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., ICLR 2023)](https://arxiv.org/abs/2210.03629) -->
 
 ### The ReAct Loop
 
@@ -79,9 +79,9 @@ ReAct Agent:
 - ✅ **Adaptive**: Agent adjusts based on what it observes
 - ✅ **Production-ready**: Powers systems like Erica handling billions of requests
 
-**Sources**:
+<!-- **Sources**:
 - [ReAct Paper (Yao et al., ICLR 2023)](https://arxiv.org/abs/2210.03629)
-- [Towards AI - Bank of America Case Study](https://pub.towardsai.net/production-ready-ai-agents-8-patterns-that-actually-work-with-real-examples-from-bank-of-america-12b7af5a9542)
+- [Towards AI - Bank of America Case Study](https://pub.towardsai.net/production-ready-ai-agents-8-patterns-that-actually-work-with-real-examples-from-bank-of-america-12b7af5a9542) -->
 
 
 ---
@@ -102,9 +102,9 @@ Microsoft Agent Framework is the **official unified successor** to Semantic Kern
 - **JM Family BAQA Genie**: Cut QA time by 60%, requirements from weeks to days
 - **Fujitsu**: Reduced sales proposal time by 67%
 
-**Sources**:
+<!-- **Sources**:
 - [Visual Studio Magazine - Agent Framework Announcement](https://visualstudiomagazine.com/articles/2025/10/01/semantic-kernel-autogen--open-source-microsoft-agent-framework.aspx)
-- [Microsoft Azure Blog - Agent Factory Use Cases](https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/)
+- [Microsoft Azure Blog - Agent Factory Use Cases](https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/) -->
 
 
 ### Microsoft Agent Framework vs Other Frameworks
@@ -118,7 +118,7 @@ Microsoft Agent Framework is the **official unified successor** to Semantic Kern
 | **Observability** | OpenTelemetry + DevUI | Basic logging | LangSmith (paid) |
 | **Production Readiness** | Public preview (Q1 2026 GA) | Stable | Stable |
 
-**Source**: [Softcery - 14 AI Agent Frameworks Compared](https://softcery.com/lab/top-14-ai-agent-frameworks-of-2025-a-founders-guide-to-building-smarter-systems)
+<!-- **Source**: [Softcery - 14 AI Agent Frameworks Compared](https://softcery.com/lab/top-14-ai-agent-frameworks-of-2025-a-founders-guide-to-building-smarter-systems) -->
 
 
 ---
@@ -127,7 +127,7 @@ Microsoft Agent Framework is the **official unified successor** to Semantic Kern
 
 Microsoft Agent Framework implements a **Sense → Plan → Act → Reflect (SPAR)** reasoning cycle, which is an extended variant of the classic ReAct pattern.
 
-**Source**: [Juan G. Carmona - Agentic Reasoning with Microsoft Agent Framework](https://jgcarmona.com/agentic-reasoning-with-microsoft-agent-framework/)
+<!-- **Source**: [Juan G. Carmona - Agentic Reasoning with Microsoft Agent Framework](https://jgcarmona.com/agentic-reasoning-with-microsoft-agent-framework/) -->
 
 
 ### Architecture Overview
@@ -187,7 +187,7 @@ graph TB
 
 **Key difference from basic ReAct**: Explicit planning and reflection phases improve multi-step reasoning.
 
-**Source**: [Microsoft Learn - Agent Framework Overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)
+<!-- **Source**: [Microsoft Learn - Agent Framework Overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) -->
 
 ---
 
@@ -213,7 +213,7 @@ export SERPER_API_KEY=your-serper-key-here
 
 **Note**: The `--pre` flag is required while the framework is in public preview (GA target: Q1 2026).
 
-**Source**: [Microsoft Learn - Installation Guide](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)
+<!-- **Source**: [Microsoft Learn - Installation Guide](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) -->
 
 ### Step 2: Define Tools
 
@@ -360,7 +360,7 @@ def calculator(
 
 **Critical security practice**: Never use `eval()` on user input. AST parsing ensures only mathematical operations are allowed—no arbitrary code execution.
 
-**Source**: [Microsoft Learn - Using Function Tools](https://learn.microsoft.com/en-us/agent-framework/tutorials/agents/function-tools)
+<!-- **Source**: [Microsoft Learn - Using Function Tools](https://learn.microsoft.com/en-us/agent-framework/tutorials/agents/function-tools) -->
 
 
 ### Step 3: Create the ReAct Agent
@@ -406,7 +406,7 @@ IMPORTANT:
 - `tools`: List of functions the agent can call
 - `client`: LLM client (Azure OpenAI, Anthropic Claude, etc.)
 
-**Source**: [Microsoft Learn - Agent Quickstart](https://learn.microsoft.com/en-us/agent-framework/tutorials/quick-start)
+<!-- **Source**: [Microsoft Learn - Agent Quickstart](https://learn.microsoft.com/en-us/agent-framework/tutorials/quick-start) -->
 
 ### Step 4: Execute the ReAct Loop
 
@@ -462,7 +462,7 @@ asyncio.run(main())
 8. **THINK**: "I have enough information"
 9. **ANSWER**: Synthesizes final report
 
-**Source**: [Microsoft Learn - Multi-Turn Conversations](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/multi-turn-conversation)
+<!-- **Source**: [Microsoft Learn - Multi-Turn Conversations](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/multi-turn-conversation) -->
 
 
 ### Step 5: Add Observability (See the ReAct Loop)
@@ -524,7 +524,7 @@ research_agent.add_function_middleware(logging_function_middleware)
 [Final report with citations]
 ```
 
-**Source**: [Microsoft Learn - Agent Middleware](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-middleware)
+<!-- **Source**: [Microsoft Learn - Agent Middleware](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-middleware) -->
 
 ---
 
@@ -560,7 +560,7 @@ simple_client = OpenAIChatClient(model="gpt-4o-mini")
 # Use simple model for research, complex for synthesis
 ```
 
-**Source**: Microsoft Agent Framework best practices (community-derived, no official benchmarks yet)
+<!-- **Source**: Microsoft Agent Framework best practices (community-derived, no official benchmarks yet) -->
 
 
 ### 2. Error Handling and Recovery
@@ -597,7 +597,7 @@ research_agent.add_function_middleware(error_handling_middleware)
 
 **Important**: Microsoft Agent Framework warns that terminating the function call loop might leave chat history in an inconsistent state. Always provide fallback responses instead of terminating.
 
-**Source**: [Microsoft Learn - Agent Middleware](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-middleware)
+<!-- **Source**: [Microsoft Learn - Agent Middleware](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-middleware) -->
 
 
 ### 3. Security Best Practices
@@ -634,7 +634,7 @@ def web_search(query: str) -> str:
 response = requests.post(url, timeout=10)  # Prevent hanging
 ```
 
-**Source**: OWASP Top 10 security practices + Python security guidelines
+<!-- **Source**: OWASP Top 10 security practices + Python security guidelines -->
 
 
 ### 4. Observability and Debugging
@@ -663,7 +663,7 @@ trace.get_tracer_provider().add_span_processor(
 - Trace token usage per iteration
 - Identify bottlenecks and failures
 
-**Source**: [DevBlogs - Golden Triangle of Agentic Development](https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/)
+<!-- **Source**: [DevBlogs - Golden Triangle of Agentic Development](https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/) -->
 
 
 ### 5. Streaming Responses
@@ -692,7 +692,7 @@ asyncio.run(run_market_research_streaming("AI agent market size 2024-2026"))
 - Real-time feedback to users
 - Better UX for long-running research
 
-**Source**: [C-Sharp Corner - Real-Time Streaming for AI Agents](https://www.c-sharpcorner.com/article/real-time-streaming-for-ai-agents-implementing-ag-ui-protocol-with-microsoft-ag/)
+<!-- **Source**: [C-Sharp Corner - Real-Time Streaming for AI Agents](https://www.c-sharpcorner.com/article/real-time-streaming-for-ai-agents-implementing-ag-ui-protocol-with-microsoft-ag/) -->
 
 
 ---
@@ -715,7 +715,7 @@ ReAct excels at dynamic, multi-step tasks. But it's not always the right pattern
 - Memory and Context Management *(April 2026)*
 - Tool Design Patterns for Production Agents *(May 2026)*
 
-**Source**: Comparison derived from [Microsoft Learn - Agent Framework Overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)
+<!-- **Source**: Comparison derived from [Microsoft Learn - Agent Framework Overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview) -->
 
 
 ---
@@ -741,7 +741,7 @@ ReAct excels at dynamic, multi-step tasks. But it's not always the right pattern
 - **ReAct**: Unpredictable scenarios, real-time adaptation
 - **Planning**: Predictable workflows, cost optimization
 
-**Source**: Controlled benchmark test (code available at GitHub)
+<!-- **Source**: Controlled benchmark test (code available at GitHub) -->
 
 ---
 
