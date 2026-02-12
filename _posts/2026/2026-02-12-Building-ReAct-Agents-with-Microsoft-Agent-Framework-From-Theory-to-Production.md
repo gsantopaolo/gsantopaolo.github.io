@@ -3,7 +3,7 @@ title: "Building ReAct Agents with Microsoft Agent Framework: From Theory to Pro
 date: "2026-02-12T08:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/02/react-microsoft-agent-framework.png"
+image: "/content/2026/02/reactagent.png"
 categories: [AI Agents, Microsoft Agent Framework, ReAct, Agentic AI, LLMs]
 published: true
 mermaid: true
