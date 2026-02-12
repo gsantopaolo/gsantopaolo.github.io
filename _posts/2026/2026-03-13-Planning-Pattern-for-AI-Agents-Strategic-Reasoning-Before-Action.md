@@ -19,7 +19,7 @@ In this post, I'll show you how to build your own Planning pattern agents using 
 
 ## Why Planning Matters (And When ReAct Isn't Enough)
 
-I covered the ReAct pattern in my [previous post about building ReAct agents with CrewAI](https://genmind.ch/posts/Building-ReAct-Agents-with-CrewAI-From-Theory-to-Production/). ReAct excels at unpredictable scenarios where agents need to adapt dynamically. But there's a cost problem.
+I covered the ReAct pattern in my [previous post about building ReAct agents with Microsoft Agent Framework](https://genmind.ch/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/). ReAct excels at unpredictable scenarios where agents need to adapt dynamically. But there's a cost problem.
 
 **The ReAct Tax**: Continuous reasoning loops mean the LLM generates thoughts, actions, and observations repeatedly. For a 10-step research task, ReAct might use 40,000-50,000 tokens. At Claude Opus 4.6 pricing ($15/million input tokens), that's **$0.60-0.75 per query**.
 
@@ -577,7 +577,7 @@ I ran identical market research tasks using both patterns to quantify the differ
 
 ### Results
 
-| Metric | Planning (This Post) | ReAct (CrewAI) | Improvement |
+| Metric | Planning (This Post) | ReAct (Microsoft Agent Framework) | Improvement |
 |--------|---------------------|----------------|-------------|
 | **Tokens Used** | 8,500 | 45,000 | **5.3x reduction** |
 | **Execution Time** | 45 seconds | 180 seconds | **4x faster** |
@@ -886,7 +886,7 @@ Ready to implement the Planning pattern in your organization? Here's your step-b
 ### Code & Examples
 - **Complete implementation**: [GitHub - planning-claude-sdk-market-research](https://github.com/gsantopaolo/gsantopaolo.github.io/tree/main/examples/planning-claude-sdk-market-research)
 - **Sample output**: [Market Research Report](https://github.com/gsantopaolo/gsantopaolo.github.io/blob/main/examples/planning-claude-sdk-market-research/examples/sample-output.md)
-- **Comparison project**: [ReAct Pattern with CrewAI](https://genmind.ch/posts/Building-ReAct-Agents-with-CrewAI-From-Theory-to-Production/)
+- **Comparison project**: [ReAct Pattern with Microsoft Agent Framework](https://genmind.ch/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/)
 
 ### Microsoft Agent Framework
 - [Official Documentation](https://learn.microsoft.com/agent-framework/)

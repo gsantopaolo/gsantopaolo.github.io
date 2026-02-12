@@ -15,7 +15,6 @@ Bank of America's AI assistant Erica handles over **3 billion customer interacti
 
 In this post, I'll show you how to build your own production-ready ReAct agent using **Microsoft Agent Framework**—the official successor to Semantic Kernel and AutoGen, combining enterprise-grade features with simple multi-agent patterns.
 
-**Confidence Level: HIGH** - All claims sourced from official Microsoft documentation (updated February 2026), academic papers, and verified production deployments.
 
 ---
 
@@ -31,7 +30,6 @@ LLMs are excellent reasoners, but they're limited to their training data. Ask Cl
 **ReAct combines the best of both**: reasoning traces help the model plan and adapt, while tool actions let it access real-time data, APIs, and databases.
 
 **Source**: [ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., ICLR 2023)](https://arxiv.org/abs/2210.03629)
-**Confidence**: HIGH - Original academic paper introducing the pattern
 
 ### The ReAct Loop
 
@@ -85,7 +83,6 @@ ReAct Agent:
 - [ReAct Paper (Yao et al., ICLR 2023)](https://arxiv.org/abs/2210.03629)
 - [Towards AI - Bank of America Case Study](https://pub.towardsai.net/production-ready-ai-agents-8-patterns-that-actually-work-with-real-examples-from-bank-of-america-12b7af5a9542)
 
-**Confidence**: HIGH - Original research paper + verified production deployment
 
 ---
 
@@ -109,7 +106,6 @@ Microsoft Agent Framework is the **official unified successor** to Semantic Kern
 - [Visual Studio Magazine - Agent Framework Announcement](https://visualstudiomagazine.com/articles/2025/10/01/semantic-kernel-autogen--open-source-microsoft-agent-framework.aspx)
 - [Microsoft Azure Blog - Agent Factory Use Cases](https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/)
 
-**Confidence**: HIGH - Official Microsoft documentation and verified enterprise deployments
 
 ### Microsoft Agent Framework vs Other Frameworks
 
@@ -124,7 +120,6 @@ Microsoft Agent Framework is the **official unified successor** to Semantic Kern
 
 **Source**: [Softcery - 14 AI Agent Frameworks Compared](https://softcery.com/lab/top-14-ai-agent-frameworks-of-2025-a-founders-guide-to-building-smarter-systems)
 
-**Confidence**: MEDIUM - Community comparison, not official benchmarks
 
 ---
 
@@ -134,7 +129,6 @@ Microsoft Agent Framework implements a **Sense → Plan → Act → Reflect (SPA
 
 **Source**: [Juan G. Carmona - Agentic Reasoning with Microsoft Agent Framework](https://jgcarmona.com/agentic-reasoning-with-microsoft-agent-framework/)
 
-**Confidence**: HIGH - Technical deep dive from Microsoft community expert
 
 ### Architecture Overview
 
@@ -194,8 +188,6 @@ graph TB
 **Key difference from basic ReAct**: Explicit planning and reflection phases improve multi-step reasoning.
 
 **Source**: [Microsoft Learn - Agent Framework Overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)
-
-**Confidence**: HIGH - Official Microsoft documentation (updated February 2026)
 
 ---
 
@@ -370,7 +362,6 @@ def calculator(
 
 **Source**: [Microsoft Learn - Using Function Tools](https://learn.microsoft.com/en-us/agent-framework/tutorials/agents/function-tools)
 
-**Confidence**: HIGH - Official Microsoft documentation and Python security best practices
 
 ### Step 3: Create the ReAct Agent
 
@@ -473,7 +464,6 @@ asyncio.run(main())
 
 **Source**: [Microsoft Learn - Multi-Turn Conversations](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/multi-turn-conversation)
 
-**Confidence**: HIGH - Official documentation with code examples
 
 ### Step 5: Add Observability (See the ReAct Loop)
 
@@ -536,8 +526,6 @@ research_agent.add_function_middleware(logging_function_middleware)
 
 **Source**: [Microsoft Learn - Agent Middleware](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-middleware)
 
-**Confidence**: HIGH - Official Microsoft documentation
-
 ---
 
 ## Production Considerations
@@ -574,7 +562,6 @@ simple_client = OpenAIChatClient(model="gpt-4o-mini")
 
 **Source**: Microsoft Agent Framework best practices (community-derived, no official benchmarks yet)
 
-**Confidence**: MEDIUM - Based on community experience, not official Microsoft guidance
 
 ### 2. Error Handling and Recovery
 
@@ -612,7 +599,6 @@ research_agent.add_function_middleware(error_handling_middleware)
 
 **Source**: [Microsoft Learn - Agent Middleware](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-middleware)
 
-**Confidence**: HIGH - Official Microsoft warning in documentation
 
 ### 3. Security Best Practices
 
@@ -650,7 +636,6 @@ response = requests.post(url, timeout=10)  # Prevent hanging
 
 **Source**: OWASP Top 10 security practices + Python security guidelines
 
-**Confidence**: HIGH - Industry-standard security practices
 
 ### 4. Observability and Debugging
 
@@ -680,7 +665,6 @@ trace.get_tracer_provider().add_span_processor(
 
 **Source**: [DevBlogs - Golden Triangle of Agentic Development](https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/)
 
-**Confidence**: HIGH - Official Microsoft blog post with detailed guide
 
 ### 5. Streaming Responses
 
@@ -710,7 +694,6 @@ asyncio.run(run_market_research_streaming("AI agent market size 2024-2026"))
 
 **Source**: [C-Sharp Corner - Real-Time Streaming for AI Agents](https://www.c-sharpcorner.com/article/real-time-streaming-for-ai-agents-implementing-ag-ui-protocol-with-microsoft-ag/)
 
-**Confidence**: HIGH - Community tutorial based on official AG-UI protocol
 
 ---
 
@@ -734,7 +717,6 @@ ReAct excels at dynamic, multi-step tasks. But it's not always the right pattern
 
 **Source**: Comparison derived from [Microsoft Learn - Agent Framework Overview](https://learn.microsoft.com/en-us/agent-framework/overview/agent-framework-overview)
 
-**Confidence**: MEDIUM - Pattern selection guidance is experience-based, not from official benchmarks
 
 ---
 
@@ -754,7 +736,6 @@ ReAct excels at dynamic, multi-step tasks. But it's not always the right pattern
 | **Adaptability** | High | Low | ReAct adjusts per step |
 | **Report Quality** | Excellent | Excellent | Tie |
 
-**Confidence**: LOW - Community-derived metrics, not official Microsoft benchmarks
 
 **When to use ReAct vs Planning**:
 - **ReAct**: Unpredictable scenarios, real-time adaptation
@@ -885,48 +866,3 @@ Ready to implement ReAct agents in your organization? Here's your step-by-step g
 - [C-Sharp Corner - Real-Time Streaming for AI Agents](https://www.c-sharpcorner.com/article/real-time-streaming-for-ai-agents-implementing-ag-ui-protocol-with-microsoft-ag/)
 - [DevBlogs - Golden Triangle of Agentic Development](https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/)
 
----
-
-## Self-Review and Evaluation
-
-### Gaps Identified
-1. **No official performance benchmarks**: Microsoft hasn't published comparative benchmarks for Microsoft Agent Framework vs other frameworks (GA release expected Q1 2026)
-2. **Limited production metrics**: While enterprise case studies exist (KPMG, JM Family), detailed performance metrics are not publicly available
-3. **Cost optimization strategies**: Community-derived best practices, not official Microsoft guidance
-
-### Unsupported Claims Removed
-- Removed specific token usage numbers without citation
-- Removed latency claims without benchmarks
-- Added "Confidence: MEDIUM/LOW" labels where appropriate
-
-### Contradictions Resolved
-- **ReAct vs SPAR terminology**: Clarified that SPAR is an extended ReAct variant
-- **Streaming support**: Confirmed streaming IS supported via `run_stream()`
-
-### Evaluation Scorecard
-
-| Criterion | Score (1-10) | Justification |
-|-----------|--------------|---------------|
-| **Technical Accuracy** | 9/10 | All code examples verified against Microsoft Learn docs (Feb 2026); minor gap: no official benchmarks |
-| **Source Quality** | 9/10 | Primary sources (Microsoft Learn, academic papers, official blogs); community sources clearly labeled |
-| **Production Readiness** | 8/10 | Framework in public preview (not GA); production deployments exist but limited public metrics |
-| **Code Quality (FAANG-level)** | 9/10 | Type hints, error handling, security best practices (AST parsing, timeouts); no unit tests per user request |
-| **Completeness** | 8/10 | Comprehensive coverage of ReAct pattern + Microsoft Agent Framework; missing: advanced workflow patterns |
-| **Clarity** | 9/10 | Step-by-step examples, diagrams, confidence labels; could add more real-world failure scenarios |
-| **Actionability** | 10/10 | Monday Morning Action Plan provides clear implementation roadmap; code repo ready to clone |
-
-**Average Score**: 8.9/10
-
-### Top 3 Improvements with More Time
-
-1. **Official Benchmarks**: Wait for GA release (Q1 2026) to add Microsoft's official performance benchmarks vs CrewAI/LangChain
-2. **Advanced Error Recovery**: Add section on checkpointing and workflow recovery for long-running ReAct loops
-3. **Multi-Agent ReAct**: Expand to show how multiple ReAct agents collaborate (currently only single-agent examples)
-
----
-
-**What's next?** Try Microsoft Agent Framework for your next project and share your results. The code is production-ready and waiting for you at [GitHub](https://github.com/gsantopaolo/gsantopaolo.github.io/tree/main/examples/react-microsoft-agent-framework-market-research).
-
-**Questions?** Drop a comment below or reach out via the contact form.
-
-⭐ **If this post helped you, please share it with your team and star the [GitHub repository](https://github.com/gsantopaolo/gsantopaolo.github.io)!**
