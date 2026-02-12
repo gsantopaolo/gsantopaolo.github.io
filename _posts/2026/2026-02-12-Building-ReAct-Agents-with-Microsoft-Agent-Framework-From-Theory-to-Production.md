@@ -1,6 +1,6 @@
 ---
 title: "Building ReAct Agents with Microsoft Agent Framework: From Theory to Production"
-date: "2026-02-12T08:00:00+00:00"
+date: "2026-02-12T04:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/02/reactagent.png"
