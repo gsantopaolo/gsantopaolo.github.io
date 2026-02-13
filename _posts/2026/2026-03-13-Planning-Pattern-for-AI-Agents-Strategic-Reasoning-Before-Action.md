@@ -3,7 +3,7 @@ title: "Planning Pattern for AI Agents: Strategic Reasoning Before Action"
 date: "2026-02-13T08:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/02/planningagent.png"
+image: "/content/2026/02/planning.png"
 categories: [AI Agents, Planning, Agentic AI, Microsoft Agent Framework, Claude SDK]
 published: true
 mermaid: true
