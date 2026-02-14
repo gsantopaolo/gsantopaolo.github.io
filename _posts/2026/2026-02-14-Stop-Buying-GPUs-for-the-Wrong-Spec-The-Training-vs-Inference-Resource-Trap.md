@@ -5,7 +5,7 @@ author: "gp"
 layout: "post"
 image: "/content/2026/02/training-vs-inference.png"
 categories: [GPU, VRAM, Training, Inference, NVIDIA, Ada Lovelace]
-published: false
+published: true
 math: true
 mermaid: true
 ---
