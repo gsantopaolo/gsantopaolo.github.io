@@ -1,6 +1,6 @@
 ---
 title: "Stop Buying GPUs for the Wrong Spec: The Training vs Inference Resource Trap"
-date: "2026-02-13T09:00:00+01:00"
+date: "2026-02-13T12:00:00+01:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/02/training-vs-inference.png"
