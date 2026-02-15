@@ -130,44 +130,60 @@ flowchart TD
 
 Agent teams require:
 - **Claude Code** at the latest version (run `claude update`)
-- **Opus 4.6** model (the default model for Claude Max subscribers as of February 2026)
-- **tmux** installed on your system (agent teams use tmux panes for parallel sessions)
+- **A Claude Max or Team subscription** (agent teams use multiple parallel sessions)
 
-### Configuration
+### Enabling Agent Teams
 
-Enable agent teams in your Claude Code settings:
+Agent teams are **disabled by default** and currently marked as experimental. You enable them with a single environment variable—either in your shell or in Claude Code's settings file.
+
+**Option A: Environment variable** (quick test):
+
+```bash
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+claude
+```
+
+**Option B: Settings file** (persistent across sessions):
 
 ```json
 // ~/.claude/settings.json
 {
-  "agentTeams": {
-    "enabled": true,
-    "maxAgents": 8,
-    "splitPanes": true,
-    "defaultModel": "opus"
-  },
-  "terminal": {
-    "multiplexer": "tmux"
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   }
 }
 ```
 
-### tmux Setup
+That's it. No other configuration keys are needed. Claude Code handles the rest.
 
-If you don't already use tmux, here's the minimal setup:
+### Display Modes: In-Process vs. Split Panes
+
+Agent teams support two display modes:
+
+**In-process (default, no extra setup)**:
+All teammates run inside your main terminal. Use `Shift+Up/Down` to select and message individual teammates. Works everywhere—Terminal.app, VS Code terminal, iTerm2.
+
+**Split panes (requires tmux or iTerm2)**:
+Each teammate gets its own visible pane. You can see all agents working simultaneously and click into any pane to interact directly.
+
+To use split panes, start inside a tmux session **before** launching Claude:
 
 ```bash
-# Install tmux (macOS)
+# Install tmux if needed (macOS)
 brew install tmux
 
-# Create a named session for your project
+# Start a tmux session, then launch Claude Code inside it
 tmux new-session -s myproject
-
-# Claude Code will automatically create panes when you start an agent team
-# Each teammate gets its own pane within your tmux session
+claude
 ```
 
-> **Tip**: If you're using VS Code or Cursor with the Claude Code extension, agent teams will open in split terminal panes automatically—no tmux configuration required.
+You can also force split-pane mode for a single session:
+
+```bash
+claude --teammate-mode split-panes
+```
+
+> **Tip**: If you're not in tmux, Claude defaults to in-process mode. You'll still get the full agent team functionality—you just won't see each agent in a separate pane.
 
 ### Starting Your First Team
 
@@ -181,7 +197,7 @@ You: Create an agent team to refactor our authentication module.
 
 Claude will:
 1. Analyze the task and determine the number of teammates needed
-2. Create a tmux session with panes for the team leader + each teammate
+2. Spawn teammate sessions (in separate panes if in tmux, or in-process otherwise)
 3. Assign specific subtasks to each teammate
 4. Begin coordinated execution
 
@@ -247,9 +263,10 @@ to team leader for joint analysis.
 ### Communicating with Individual Agents
 
 Once the team is running, you can:
-- **Talk to the team leader**: Type in the team leader's pane. The leader coordinates and can relay instructions.
-- **Talk to a specific teammate**: Switch to that agent's tmux pane (`Ctrl-b` + arrow key) and type directly.
-- **Monitor progress**: The team leader's pane shows status updates from all teammates.
+- **Talk to the team leader**: Type in the main session. The leader coordinates and can relay instructions to teammates.
+- **Talk to a specific teammate (in-process mode)**: Use `Shift+Up/Down` to select a teammate, then type your message directly to that agent.
+- **Talk to a specific teammate (split-pane mode)**: Click into the agent's tmux pane (or `Ctrl-b` + arrow key) and type directly.
+- **Monitor progress**: The team leader tracks status updates from all teammates. Use `Ctrl+T` to toggle the task list in in-process mode.
 
 ### Graceful Shutdown
 
