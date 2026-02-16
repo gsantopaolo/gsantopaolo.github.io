@@ -3,7 +3,7 @@ title: "How to Get the Best from Claude Code: From Single Sessions to 16-Agent T
 date: "2026-02-13T12:00:00+01:00"
 author: "gp"
 layout: "post"
-#image: "/content/2026/02/claude-code-teams.png"
+image: "/content/2026/02/claudeteam.png"
 categories: [Claude Code, AI Agents, Agentic AI, Developer Tools, Productivity]
 published: true
 mermaid: true
