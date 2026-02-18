@@ -11,7 +11,8 @@ mermaid: true
 
 Your chatbot forgets who it's talking to after 15 messages. Your RAG pipeline hallucinates because the relevant answer is buried in token 47,000. You're paying $3.20 per conversation because you send the full history every turn. The context window is not a memory system — it's a scratchpad.
 
-This is Part 1 of a two-part series on LLM memory management in production. We'll cover the full taxonomy of memory strategies — from naive buffer memory to external systems like Mem0 and Zep — with real cost math, architectural tradeoffs, and the peer-reviewed research that explains why your 128K-context model still forgets things it saw an hour ago. For the infrastructure side — RAG pipelines, vector store selection, and GPU math — see Part 2: [RAG, Vector Stores, and the GPU Math Behind LLM Memory](https://genmind.ch/posts/RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/).
+This is Part 1 of a two-part series on LLM memory management in production. We'll cover the full taxonomy of memory strategies — from naive buffer memory to external systems like Mem0 and Zep — with real cost math, architectural tradeoffs, and the peer-reviewed research that explains why your 128K-context model still forgets things it saw an hour ago. For the infrastructure side — RAG pipelines, vector store selection, and GPU math — see Part 2: 
+<!--[RAG, Vector Stores, and the GPU Math Behind LLM Memory](https://genmind.ch/posts/RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/).-->
 
 ---
 
