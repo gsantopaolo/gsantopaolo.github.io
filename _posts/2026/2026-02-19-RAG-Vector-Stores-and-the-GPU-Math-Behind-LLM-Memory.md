@@ -11,7 +11,7 @@ mermaid: true
 
 You built a RAG pipeline. It retrieves 20 chunks, sends 20,000 tokens to the LLM, and 16 of those chunks are noise. Your RTX 6000 Ada has 48 GB of VRAM — and your KV cache just ate 40 of them. Memory management isn't just a software problem. It's a hardware budget.
 
-This is **Part 2** of a two-part series on LLM memory management in production. Where [Part 1](/posts/Your-LLM-Has-Amnesia-A-Production-Guide-to-Memory-That-Actually-Works/) covered in-process memory strategies — buffer memory, summarization, entity graphs, and managed systems like Mem0 and Zep — this post covers the external infrastructure layer: RAG pipelines, chunking strategies, vector store selection, hybrid search, and the GPU math that determines whether your system fits in VRAM or falls over. Expect concrete benchmarks, cost numbers, and decision tables you can act on today.
+This is **Part 2** of a two-part series on LLM memory management in production. Where [Part 1](https://genmind.ch/posts/Your-LLM-Has-Amnesia-A-Production-Guide-to-Memory-That-Actually-Works/) covered in-process memory strategies — buffer memory, summarization, entity graphs, and managed systems like Mem0 and Zep — this post covers the external infrastructure layer: RAG pipelines, chunking strategies, vector store selection, hybrid search, and the GPU math that determines whether your system fits in VRAM or falls over. Expect concrete benchmarks, cost numbers, and decision tables you can act on today.
 
 ---
 
@@ -361,7 +361,7 @@ The architecture has four layers, and each layer has a job. Get the boundaries r
 
 **Re-ranking:** **ColBERT** or **Cohere Rerank** narrows your top-10 candidates to the top-3 that actually matter.
 
-**Conversation Memory:** The `SummaryBufferMemory` or Mem0 patterns from [Part 1](/posts/Your-LLM-Has-Amnesia-A-Production-Guide-to-Memory-That-Actually-Works/) slot in as the `HistoryProvider` and `ContextProvider`. The agent framework treats them as just another context source — which is exactly right.
+**Conversation Memory:** The `SummaryBufferMemory` or Mem0 patterns from [Part 1](https://genmind.ch/posts/Your-LLM-Has-Amnesia-A-Production-Guide-to-Memory-That-Actually-Works/) slot in as the `HistoryProvider` and `ContextProvider`. The agent framework treats them as just another context source — which is exactly right.
 
 ### The Code
 
@@ -506,10 +506,10 @@ I consult on production AI systems — from RAG architecture to GPU selection to
 
 ### Related Posts
 
-- [Your LLM Has Amnesia: A Production Guide to Memory That Actually Works](/posts/Your-LLM-Has-Amnesia-A-Production-Guide-to-Memory-That-Actually-Works/) — Part 1 of this series
-- [Building ReAct Agents with Microsoft Agent Framework](/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/)
-- [Stop Buying GPUs for the Wrong Spec](/posts/Stop-Buying-GPUs-for-the-Wrong-Spec-The-Training-vs-Inference-Resource-Trap/)
-- [Predict Peak VRAM Before Downloading a Model](/posts/Predict-Peak-VRAM-Before-Downloading-A-Model/)
+- [Your LLM Has Amnesia: A Production Guide to Memory That Actually Works](https://genmind.ch/posts/Your-LLM-Has-Amnesia-A-Production-Guide-to-Memory-That-Actually-Works/) — Part 1 of this series
+- [Building ReAct Agents with Microsoft Agent Framework](https://genmind.ch/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/)
+- [Stop Buying GPUs for the Wrong Spec](https://genmind.ch/posts/Stop-Buying-GPUs-for-the-Wrong-Spec-The-Training-vs-Inference-Resource-Trap/)
+- [Predict Peak VRAM Before Downloading a Model](https://genmind.ch/posts/Predict-Peak-VRAM-Before-Downloading-A-Model/)
 
 ### Papers & Research
 

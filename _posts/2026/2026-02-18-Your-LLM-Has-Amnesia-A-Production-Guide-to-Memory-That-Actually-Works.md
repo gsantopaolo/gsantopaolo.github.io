@@ -11,7 +11,7 @@ mermaid: true
 
 Your chatbot forgets who it's talking to after 15 messages. Your RAG pipeline hallucinates because the relevant answer is buried in token 47,000. You're paying $3.20 per conversation because you send the full history every turn. The context window is not a memory system — it's a scratchpad.
 
-This is Part 1 of a two-part series on LLM memory management in production. We'll cover the full taxonomy of memory strategies — from naive buffer memory to external systems like Mem0 and Zep — with real cost math, architectural tradeoffs, and the peer-reviewed research that explains why your 128K-context model still forgets things it saw an hour ago. For the infrastructure side — RAG pipelines, vector store selection, and GPU math — see Part 2: [RAG, Vector Stores, and the GPU Math Behind LLM Memory](/posts/RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/).
+This is Part 1 of a two-part series on LLM memory management in production. We'll cover the full taxonomy of memory strategies — from naive buffer memory to external systems like Mem0 and Zep — with real cost math, architectural tradeoffs, and the peer-reviewed research that explains why your 128K-context model still forgets things it saw an hour ago. For the infrastructure side — RAG pipelines, vector store selection, and GPU math — see Part 2: [RAG, Vector Stores, and the GPU Math Behind LLM Memory](https://genmind.ch/posts/RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/).
 
 ---
 
@@ -540,10 +540,10 @@ I consult on production AI systems — from architecture to deployment to agenti
 
 ### Related Posts
 
-- [RAG, Vector Stores, and the GPU Math Behind LLM Memory](/posts/RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/) — Part 2 of this series
-- [Building ReAct Agents with Microsoft Agent Framework](/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/)
-- [Stop Buying GPUs for the Wrong Spec](/posts/Stop-Buying-GPUs-for-the-Wrong-Spec-The-Training-vs-Inference-Resource-Trap/)
-- [Predict Peak VRAM Before Downloading a Model](/posts/Predict-Peak-VRAM-Before-Downloading-A-Model/)
+- [RAG, Vector Stores, and the GPU Math Behind LLM Memory](RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/) — Part 2 of this series
+- [Building ReAct Agents with Microsoft Agent Framework](https://genmind.ch/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/)
+- [Stop Buying GPUs for the Wrong Spec](https://genmind.ch/posts/Stop-Buying-GPUs-for-the-Wrong-Spec-The-Training-vs-Inference-Resource-Trap/)
+- [Predict Peak VRAM Before Downloading a Model](https://genmind.ch/posts/Predict-Peak-VRAM-Before-Downloading-A-Model/)
 - [Multi-Agent Orchestration Patterns](/posts/Multi-Agent-Orchestration-Patterns-Building-Collaborative-AI-Teams/)
 
 ### Papers & Research
