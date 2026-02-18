@@ -3,7 +3,7 @@ title: "Your LLM Has Amnesia: A Production Guide to Memory That Actually Works"
 date: "2026-02-18T12:00:00+01:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/02/llm-memory-part1.png"
+image: "/content/2026/02/llm-memory.png"
 categories: [LLM, Memory, AI Agents, Microsoft Agent Framework, Cost Optimization]
 published: true
 mermaid: true
