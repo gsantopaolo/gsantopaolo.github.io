@@ -541,7 +541,7 @@ I consult on production AI systems — from architecture to deployment to agenti
 
 ### Related Posts
 
-- [RAG, Vector Stores, and the GPU Math Behind LLM Memory](RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/) — Part 2 of this series
+<!-- - [RAG, Vector Stores, and the GPU Math Behind LLM Memory](RAG-Vector-Stores-and-the-GPU-Math-Behind-LLM-Memory/) — Part 2 of this series -->
 - [Building ReAct Agents with Microsoft Agent Framework](https://genmind.ch/posts/Building-ReAct-Agents-with-Microsoft-Agent-Framework-From-Theory-to-Production/)
 - [Stop Buying GPUs for the Wrong Spec](https://genmind.ch/posts/Stop-Buying-GPUs-for-the-Wrong-Spec-The-Training-vs-Inference-Resource-Trap/)
 - [Predict Peak VRAM Before Downloading a Model](https://genmind.ch/posts/Predict-Peak-VRAM-Before-Downloading-A-Model/)
