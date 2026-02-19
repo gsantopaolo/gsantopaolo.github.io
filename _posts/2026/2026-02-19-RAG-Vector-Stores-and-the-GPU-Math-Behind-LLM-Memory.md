@@ -1,6 +1,6 @@
 ---
 title: "RAG, Vector Stores, and the GPU Math Behind LLM Memory"
-date: "2026-02-19T14:00:00+01:00"
+date: "2026-02-19T08:00:00+01:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/02/llm-memory2.png"
