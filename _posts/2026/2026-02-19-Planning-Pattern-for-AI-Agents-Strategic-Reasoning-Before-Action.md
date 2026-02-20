@@ -562,8 +562,6 @@ Report saved to: planning_market_report.md
 Execution time: 45.2 seconds
 ```
 
-View the full sample output here: [Sample Market Research Report](https://github.com/gsantopaolo/gsantopaolo.github.io/blob/main/examples/planning-claude-sdk-market-research/examples/sample-output.md)
-
 ---
 
 ## Performance Benchmarks: Planning vs ReAct
