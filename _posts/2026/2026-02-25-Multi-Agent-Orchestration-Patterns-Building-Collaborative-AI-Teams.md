@@ -3,7 +3,7 @@ title: "Multi-Agent Orchestration Patterns: Building Collaborative AI Teams"
 date: "2026-02-25T08:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/02/multi-agent-orchestration.png"
+image: "/content/2026/02/agentusecases.png"
 categories: [AI Agents, Multi-Agent Systems, Microsoft Agent Framework, Orchestration]
 published: true
 mermaid: true

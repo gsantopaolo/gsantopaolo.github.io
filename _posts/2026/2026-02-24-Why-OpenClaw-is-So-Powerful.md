@@ -3,7 +3,7 @@ title: "Why OpenClaw is So Powerful"
 date: "2026-02-24T04:00:00+00:00"
 author: "gp"
 layout: "post"
-image: "/content/2026/05/openclaw.png"
+image: "/content/2026/02/openclaw.png"
 categories: [AI Agents, OpenClaw, Privacy, Local-First AI, Enterprise AI]
 published: true
 mermaid: true
