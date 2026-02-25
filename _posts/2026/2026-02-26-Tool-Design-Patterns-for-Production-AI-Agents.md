@@ -1,6 +1,6 @@
 ---
 title: "Tool Design Patterns for Production AI Agents"
-date: "2026-05-10T08:00:00+00:00"
+date: "2026-02-26T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/02/zerotrust.png"

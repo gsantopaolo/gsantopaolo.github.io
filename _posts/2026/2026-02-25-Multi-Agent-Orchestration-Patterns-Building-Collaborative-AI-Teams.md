@@ -1,6 +1,6 @@
 ---
 title: "Multi-Agent Orchestration Patterns: Building Collaborative AI Teams"
-date: "2026-04-01T08:00:00+00:00"
+date: "2026-02-25T08:00:00+00:00"
 author: "gp"
 layout: "post"
 image: "/content/2026/02/zerotrust.png"
